@@ -32,18 +32,10 @@
 
 <body>
 	<div id="wrapper">
-		<!--
-		/////////////////////////////////////////////////////////////////////////
-		//////////     HEADER  CONTENT     ///////////////
-		//////////////////////////////////////////////////////////////////////
-		-->
 		<div id="header">
-
 			<div class="logo-area clearfix">
 				<a href="#" class="logo"></a>
 			</div>
-			<!-- //logo-area-->
-
 			<div class="tools-bar">
 				<ul class="nav navbar-nav nav-main-xs">
 					<li><a href="#menu" class="icon-toolsbar"><i class="fa fa-bars"></i></a></li>
@@ -70,7 +62,6 @@
 								</form>
 							</li>
 						</ul>
-						<!-- //dropdown-menu-->
 					</li>
 					<li class="visible-lg">
 						<a href="#" class="h-seperate fullscreen" data-toggle="tooltip" title="Full Screen" data-container="body" data-placement="left">
@@ -79,17 +70,7 @@
 					</li>
 				</ul>
 			</div>
-			<!-- //tools-bar-->
-
 		</div>
-		<!-- //header-->
-
-
-		<!--
-		/////////////////////////////////////////////////////////////////////////
-		//////////     SLIDE LEFT CONTENT     //////////
-		//////////////////////////////////////////////////////////////////////
-		-->
 		<div id="nav">
 			<div id="nav-scroll">
 				<div class="avatar-slide">
@@ -113,39 +94,19 @@
 							<i class="fa fa-stethoscope"></i><em class="active"></em>
 						</a>
 					</div>
-					<!-- //avatar-link-->
-
 				</div>
-				<!-- //avatar-slide-->
-
-
-
 			</div>
-			<!-- //nav-scroller-->
 		</div>
-		<!-- //nav-->
-
-		<!--
-		/////////////////////////////////////////////////////////////////////////
-		//////////     MAIN SHOW CONTENT     //////////
-		//////////////////////////////////////////////////////////////////////
-		-->
 		<div id="main">
-
 			<ol class="breadcrumb">
 				<li class="active">Inicio</li>
 				<!-- <li><a href="#">Home</a></li> -->
 			</ol>
-			<!-- //breadcrumb-->
-
 			<div id="content">
-
-
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-8" id="panel1">
 						<section class="panel"></section>
 					</div>
-
 					<div class="col-lg-4">
 						<div class="well bg-theme">
 							<div class="widget-tile">
@@ -161,28 +122,15 @@
 								<div id="clock"></div>
 							</div>
 						</section>
-
-
 					</div>
-
 				</div>
-				<!-- //content > row-->
-
 			</div>
-			<!-- //content-->
 		</div>
-		<!-- //main-->
-		<!--
-		///////////////////////////////////////////////////////////////////
-		//////////     MODAL MESSAGES     //////////
-		///////////////////////////////////////////////////////////////
-		-->
 		<div id="md-messages" class="modal fade md-slideUp bg-theme-inverse" tabindex="-1" data-width="450">
 			<div class="modal-header bd-theme-inverse-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-paste"></i> Pacientes en espera</h4>
 			</div>
-			<!-- //modal-header-->
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im">
 					<ul>
@@ -193,7 +141,7 @@
 										<time datetime="2013-11-16">1 : 52 am</time>
 									</span>
 								</div>
-								<h4><a href="javascript:void(0)">Nombre del paciente</a>
+								<h4><a href="#" onclick="showHistoriaClinica(1)">Nombre del paciente</a>
 								</h4>
 								<div class="im-thumbnail"><img alt="" src="{{('Plantilla/assets/img/paciente.png')}}" /></div>
 								<label></label>
@@ -216,25 +164,13 @@
 						</li>
 					</ul>
 				</div>
-				<!-- //widget-im-->
 			</div>
-			<!-- //modal-body-->
 		</div>
-		<!-- //modal-->
-
-
-
-		<!--
-		//////////////////////////////////////////////////////////////////////////
-		//////////     MODAL NOTIFICATION     //////////
-		//////////////////////////////////////////////////////////////////////
-		-->
 		<div id="md-notification" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="500">
 			<div class="modal-header bd-danger-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Notification</h4>
 			</div>
-			<!-- //modal-header-->
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
 					<ul>
@@ -325,19 +261,8 @@
 						</li>
 					</ul>
 				</div>
-				<!-- //widget-im-->
 			</div>
-			<!-- //modal-body-->
 		</div>
-		<!-- //modal-->
-
-
-
-		<!--
-		//////////////////////////////////////////////////////////////
-		//////////     LEFT NAV MENU     //////////
-		///////////////////////////////////////////////////////////
-		-->
 		<nav id="menu">
 			<ul>
 				<li><span><i class="icon  fa fa-laptop"></i> Dashboard</span>
@@ -440,14 +365,7 @@
 				<li><a href="siteMap.html"><i class="icon  fa fa-sitemap"></i>Site Map</a></li>
 			</ul>
 		</nav>
-		<!-- //nav left menu-->
 	</div>
-	<!-- //wrapper-->
-	<!--
-////////////////////////////////////////////////////////////////////////
-//////////     JAVASCRIPT  LIBRARY     //////////
-/////////////////////////////////////////////////////////////////////
--->
 	<!-- Jquery Library -->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.min.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.ui.min.js')}}"></script>
@@ -469,7 +387,8 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/miscellaneous/miscellaneous.js')}}"></script>
 	<!-- Library Themes Customize-->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
-
+	<!--  funciones de historias clinicas -->
+	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 </body>
 
 </html>

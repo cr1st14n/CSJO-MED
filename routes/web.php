@@ -9,3 +9,7 @@ Route::post('login','Auth\LoginController@login');
 Route::post('logout','Auth\LoginController@logout')->name('logout');
 
 Route::get('home','homeController@index')->name('home');
+Route::group(['prefix'=>'historiaClinica'],function ()
+{
+    Route::get('hcl','HistoriaClinciaController@showHCL');
+});
