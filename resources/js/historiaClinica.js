@@ -6,6 +6,7 @@ function showHistoriaClinica(paciente) {
         dataType: "text",
         success: function (dat) {
             $('#panel1').html(dat);
+            $('#md-messages').modal('hide');
         }
     });
   }
