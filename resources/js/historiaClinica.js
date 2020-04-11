@@ -55,3 +55,6 @@ setInterval(() => {
         }
     });
 }, 3000);
+function showModalTipoConsulta() {
+     $('#md-tipoConsulta').modal('show');
+   }

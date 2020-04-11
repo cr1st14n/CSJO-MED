@@ -127,7 +127,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="btn-group btn-group-justified">
-						<a href="#" class="btn btn-theme-inverse btn-transparent "><i class="fa fa-stethoscope"></i>Registrar atencion</a>
+						<a href="#" onclick="showModalTipoConsulta()" class="btn btn-theme-inverse btn-transparent "><i class="fa fa-stethoscope"></i>Registrar atencion</a>
 						<a href="javascript:window.print();" class="btn btn-theme-inverse btn-transparent  "><i class="fa fa-print"></i> Imprimir</a>
 					</div>
 				</div>
