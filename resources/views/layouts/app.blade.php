@@ -86,7 +86,7 @@
 						<a class="btn" data-toggle="modal" href="#md-notification" title="Notification">
 							<i class="fa fa-medkit"></i><em class="green"></em>
 						</a>
-						<a class="btn" data-toggle="modal" href="#md-messages" title="Messages">
+						<a class="btn" onclick="colaPacienteMedAten()" title="Messages">
 							<i class="fa fa-stethoscope"></i><em class="active"></em>
 						</a>
 					</div>
@@ -108,7 +108,7 @@
 							<div class="widget-tile">
 								<section>
 									<h5><strong>Pacientes </strong> En Espera </h5>
-									<h2>4</h2>
+									<h2 id="nroPacientesFila">...</h2>
 								</section>
 								<div class="hold-icon"><i class="fa fa-wheelchair"></i></div>
 							</div>
@@ -122,14 +122,14 @@
 				</div>
 			</div>
 		</div>
-		<div id="md-messages" class="modal fade md-slideUp bg-theme-inverse" tabindex="-1" data-width="450">
+		<div id="md-listPacientesEspera" class="modal fade md-slideUp bg-theme-inverse" tabindex="-1" data-width="450">
 			<div class="modal-header bd-theme-inverse-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-paste"></i> Pacientes en espera</h4>
 			</div>
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im">
-					<ul>
+					<ul id="list_PacientesEspera">
 						<li>
 							<section class="thumbnail-in">
 								<div class="widget-im-tools tooltip-area pull-right">
@@ -295,5 +295,4 @@
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 </body>
-
 </html>

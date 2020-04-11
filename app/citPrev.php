@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class historiaClincia extends Model
+class citPrev extends Model
 {
-
+    //
 }
