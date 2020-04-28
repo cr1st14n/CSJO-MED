@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\citPrev;
 use App\historiaClincia;
 use App\pacientes;
 use Carbon\Carbon;
@@ -9,11 +10,10 @@ use Illuminate\Http\Request;
 
 class HistoriaClinciaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         //
@@ -87,5 +87,16 @@ class HistoriaClinciaController extends Controller
     public function destroy(historiaClincia $historiaClincia)
     {
         //
+    }
+    public function colaPacienteMedAten(Request $request)
+    {
+        return citPrev::join('pacientes','pacientes.pa_id','cp_paciente')
+        ->where('cp_med',17)->where('cp_estado',1)->orderBy('cp_time','asc')
+        ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
+        ->get();
+    }
+    public function nroPacienteCola()
+    {
+        return citPrev::where('cp_med',17)->where('cp_estado',1)->count();
     }
 }

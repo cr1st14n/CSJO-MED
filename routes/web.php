@@ -12,4 +12,6 @@ Route::get('home','homeController@index')->name('home');
 Route::group(['prefix'=>'historiaClinica'],function ()
 {
     Route::get('hcl','HistoriaClinciaController@showHCL');
+    Route::get('colaPacienteMedAten','HistoriaClinciaController@colaPacienteMedAten');
+    Route::get('nroPacienteCola','HistoriaClinciaController@nroPacienteCola');
 });
