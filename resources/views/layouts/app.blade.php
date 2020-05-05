@@ -96,64 +96,10 @@
 					<header>
 						<a href="#"><i class="collapse-caret fa fa-cloud-download "></i> Actual Pacientes en espera </a>
 					</header>
-					<section class="" id="collapseSummary">
-						<div class="widget-im">
-							<ul id="list_PacientesEspera">
-								<li>
-									<section class="thumbnail-in">
-										<div class="widget-im-tools tooltip-area pull-right">
-											<span>
-												<time datetime="2013-11-16">1 : 52 am</time>
-											</span>
-										</div>
-										<h5><a href="#" onclick="showHistoriaClinica(1)">Nombre del paciente</a>
-										</h5>
-										<div class="im-thumbnail"><img alt="" src="{{('Plantilla/assets/img/paciente.png')}}" height="42" width="42" /></div>
-										<label></label>
-										<div class="pre-text">Tipo de procedimiento requerido</div>
-									</section>
-								</li>
-								<li>
-									<section class="thumbnail-in">
-										<div class="widget-im-tools tooltip-area pull-right">
-											<span>
-												<time datetime="2013-11-16">1 : 52 am</time>
-											</span>
-										</div>
-										<h4><a href="javascript:void(0)">Nombre del paciente</a>
-										</h4>
-										<div class="im-thumbnail"><img alt="" src="{{('Plantilla/assets/img/paciente.png')}}" /></div>
-										<label></label>
-										<div class="pre-text">Tipo de procedimiento requerido</div>
-									</section>
-								</li>
-							</ul>
-						</div>
+					<section class="" id="collapseSummary">						
 						<div class="collapse-boby" style="padding:0">
-
-							<div class="widget-mini-chart align-xs-left">
-								<div class="pull-right">
-									<div class="sparkline mini-chart" data-type="bar" data-color="theme" data-bar-width="10" data-height="35"><canvas width="76" height="35" style="display: inline-block; width: 76px; height: 35px; vertical-align: top;"></canvas></div>
-								</div>
-								<p>This week's balance</p>
-								<h4>$12,788</h4>
-							</div>
-							<!-- //widget-mini-chart -->
-
-							<div class="widget-mini-chart align-xs-right">
-								<div class="pull-left">
-									<div class="sparkline mini-chart" data-type="bar" data-color="warning" data-bar-width="10" data-height="45"><canvas width="87" height="45" style="display: inline-block; width: 87px; height: 45px; vertical-align: top;"></canvas></div>
-								</div>
-								<p>This week sales</p>
-								<h4>1,325 item</h4>
-							</div>
-							<!-- //widget-mini-chart -->
-
 						</div>
-						<!-- //collapse-boby-->
-
 					</section>
-					<!-- //collapse-->
 				</div>
 			</div>
 		</div>
@@ -226,10 +172,10 @@
 				</div>
 			</div>
 		</div>
-		<div id="md-tipoConsulta" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="500">
+		<div id="md-tipoConsulta" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="300">
 			<div class="modal-header bd-danger-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Tipo de consulta</h4>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Tipo de procedimiento</h4>
 			</div>
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
@@ -237,16 +183,10 @@
 						<li>
 							<section class="thumbnail-in">
 								<div class="widget-im-tools tooltip-area pull-right">
-									<span>
-										<time class="timeago lasted" datetime="2014">when you opened the page</time>
-									</span>
-									<span>
-										<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
-									</span>
+									
 								</div>
-								<h4>Your request approved</h4>
-								<div class="im-thumbnail bg-theme-inverse"><i class="fa fa-check"></i></div>
-								<div class="pre-text">One Button (click to remove this)</div>
+								<h4>tipo 1</h4><br>
+								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/historiaClinica2.png" alt=""></div>
 							</section>
 							<div class="im-confirm-group">
 								<div class=" btn-group btn-group-justified">

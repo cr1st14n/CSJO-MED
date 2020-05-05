@@ -126,8 +126,8 @@
 			</table>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="btn-group btn-group-justified">
-						<a href="#" onclick="showModalTipoConsulta()" class="btn btn-theme-inverse btn-transparent "><i class="fa fa-stethoscope"></i>Registrar atencion</a>
+					<div class="btn-group btn-group-justified" id="btn_consulta_imprimir">
+						<a href="#" onclick="showModalTipoConsulta('{{$paciente->pa_id}}' )" class="btn btn-theme-inverse btn-transparent "><i class="fa fa-stethoscope"></i>Registrar atencion</a>
 						<a href="javascript:window.print();" class="btn btn-theme-inverse btn-transparent  "><i class="fa fa-print"></i> Imprimir</a>
 					</div>
 				</div>

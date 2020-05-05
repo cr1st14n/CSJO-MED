@@ -6,28 +6,19 @@ function colaPacienteMedAten() {
         dataType: "json",
         success: function (response) {
             console.log(response);
-            $("#md-listPacientesEspera").modal("show");
-            var html = response
+            var html2 = response
                 .map(function (e) {
                     return `
-                    <li>
-                        <section class="thumbnail-in">
-                            <div class="widget-im-tools tooltip-area pull-right">
-                                <span>
-                                    <time datetime="2013-11-16">${e.cp_time}</time>
-                                </span>
+                        <div class="widget-mini-chart align-xs-left">
+                            <div class="pull-right">
+                                <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/historiaClinica2.png"  width="50" height="50" /></div>
                             </div>
-                            <h5><a href="#" onclick="showHistoriaClinica(${e.cp_paciente})">${e.pa_nombre} ${e.pa_appaterno}</a>
-                            </h5>
-                            <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/paciente.png" /></div>
-                            <label></label>
-                            <div class="pre-text">${e.cp_procedimiento}</div>
-                        </section>
-                    </li>
-                    `;
+                            <p style=" color:tan; ">${e.cp_procedimiento}</p>
+                             <a href="#" onclick="showHistoriaClinica(${e.cp_paciente})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
+                        </div>`;
                 })
                 .join(" ");
-                $('#list_PacientesEspera').html(html);
+            $("#collapseSummary").html(html2);
         },
     });
 }
@@ -41,6 +32,7 @@ function showHistoriaClinica(paciente) {
         dataType: "text",
         success: function (dat) {
             $("#panel1").html(dat);
+            
             $("#md-listPacientesEspera").modal("hide");
         },
     });
@@ -52,10 +44,11 @@ setInterval(() => {
         data: "data",
         dataType: "text",
         success: function (pacientes) {
-            $('#nroPacientesFila').text(pacientes);
-        }
+            $("#nroPacientesFila").text(pacientes);
+        },
     });
 }, 3000);
-function showModalTipoConsulta() {
-     $('#md-tipoConsulta').modal('show');
-   }
+function showModalTipoConsulta(idHcl) {
+    console.log(idHcl);
+    $("#md-tipoConsulta").modal("show");
+}
