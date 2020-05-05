@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<!-- Meta information -->
 	<meta charset="utf-8">
@@ -90,6 +91,69 @@
 							<i class="fa fa-stethoscope"></i><em class="active"></em>
 						</a>
 					</div>
+				</div>
+				<div class="widget-collapse dark">
+					<header>
+						<a href="#"><i class="collapse-caret fa fa-cloud-download "></i> Actual Pacientes en espera </a>
+					</header>
+					<section class="" id="collapseSummary">
+						<div class="widget-im">
+							<ul id="list_PacientesEspera">
+								<li>
+									<section class="thumbnail-in">
+										<div class="widget-im-tools tooltip-area pull-right">
+											<span>
+												<time datetime="2013-11-16">1 : 52 am</time>
+											</span>
+										</div>
+										<h5><a href="#" onclick="showHistoriaClinica(1)">Nombre del paciente</a>
+										</h5>
+										<div class="im-thumbnail"><img alt="" src="{{('Plantilla/assets/img/paciente.png')}}" height="42" width="42" /></div>
+										<label></label>
+										<div class="pre-text">Tipo de procedimiento requerido</div>
+									</section>
+								</li>
+								<li>
+									<section class="thumbnail-in">
+										<div class="widget-im-tools tooltip-area pull-right">
+											<span>
+												<time datetime="2013-11-16">1 : 52 am</time>
+											</span>
+										</div>
+										<h4><a href="javascript:void(0)">Nombre del paciente</a>
+										</h4>
+										<div class="im-thumbnail"><img alt="" src="{{('Plantilla/assets/img/paciente.png')}}" /></div>
+										<label></label>
+										<div class="pre-text">Tipo de procedimiento requerido</div>
+									</section>
+								</li>
+							</ul>
+						</div>
+						<div class="collapse-boby" style="padding:0">
+
+							<div class="widget-mini-chart align-xs-left">
+								<div class="pull-right">
+									<div class="sparkline mini-chart" data-type="bar" data-color="theme" data-bar-width="10" data-height="35"><canvas width="76" height="35" style="display: inline-block; width: 76px; height: 35px; vertical-align: top;"></canvas></div>
+								</div>
+								<p>This week's balance</p>
+								<h4>$12,788</h4>
+							</div>
+							<!-- //widget-mini-chart -->
+
+							<div class="widget-mini-chart align-xs-right">
+								<div class="pull-left">
+									<div class="sparkline mini-chart" data-type="bar" data-color="warning" data-bar-width="10" data-height="45"><canvas width="87" height="45" style="display: inline-block; width: 87px; height: 45px; vertical-align: top;"></canvas></div>
+								</div>
+								<p>This week sales</p>
+								<h4>1,325 item</h4>
+							</div>
+							<!-- //widget-mini-chart -->
+
+						</div>
+						<!-- //collapse-boby-->
+
+					</section>
+					<!-- //collapse-->
 				</div>
 			</div>
 		</div>
@@ -295,4 +359,5 @@
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 </body>
+
 </html>
