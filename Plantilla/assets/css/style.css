@@ -430,7 +430,7 @@ body.nav-collapse-in #nav {
 }
 
 a.logo {
-  background: url(../img/logo_white.png) no-repeat center center;
+  background: url(../img/logo_sis_clinic.png) no-repeat center center;
   display: block;
   height: 50px;
   position: relative;
@@ -9408,12 +9408,12 @@ footer#site-footer article p {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   #header .logo-area a.logo {
-    background: url(../img/logo2x.png) no-repeat center center;
+    background: url(../img/logo_sis_clinic.png) no-repeat center center;
     background-size: 120px 30px;
   }
 
   .site-logo {
-    background: url(../img/logo_2x.png) no-repeat center center;
+    background: url(../img/logo_.png) no-repeat center center;
     background-size: 75px 75px;
   }
 }
