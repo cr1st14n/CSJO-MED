@@ -17,11 +17,11 @@ function colaPacienteMedAten() {
                                     <time datetime="2013-11-16">${e.cp_time}</time>
                                 </span>
                             </div>
-                            <h4><a href="#" onclick="showHistoriaClinica(${e.cp_paciente})">${e.pa_nombre} ${e.pa_appaterno}</a>
-                            </h4>
+                            <h5><a href="#" onclick="showHistoriaClinica(${e.cp_paciente})">${e.pa_nombre} ${e.pa_appaterno}</a>
+                            </h5>
                             <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/paciente.png" /></div>
                             <label></label>
-                            <div class="pre-text">Procedimiento: ${e.cp_procedimiento}</div>
+                            <div class="pre-text">${e.cp_procedimiento}</div>
                         </section>
                     </li>
                     `;
@@ -33,6 +33,7 @@ function colaPacienteMedAten() {
 }
 
 function showHistoriaClinica(paciente) {
+    console.log(paciente);
     $.ajax({
         type: "GET",
         url: "historiaClinica/hcl",
