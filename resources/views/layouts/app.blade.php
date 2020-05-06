@@ -175,7 +175,7 @@
 		<div id="md-tipoConsulta" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="300">
 			<div class="modal-header bd-danger-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Tipo de procedimiento</h4>
+				<h4 class="modal-title"><i class="fa fa-plus-square"></i> Tipo de procedimiento</h4>
 			</div>
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
@@ -185,8 +185,78 @@
 								<div class="widget-im-tools tooltip-area pull-right">
 									
 								</div>
-								<h4>tipo 1</h4><br>
-								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/historiaClinica2.png" alt=""></div>
+								<h4>Consulta Externa</h4><br>
+								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/consultaExterna.png" alt=""></div>
+							</section>
+							<div class="im-confirm-group">
+								<div class=" btn-group btn-group-justified">
+									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class="widget-im-tools tooltip-area pull-right">
+									
+								</div>
+								<h4>Prenatal, Parto y Puerperio</h4><br>
+								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/prenatal.png" alt=""></div>
+							</section>
+							<div class="im-confirm-group">
+								<div class=" btn-group btn-group-justified">
+									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class="widget-im-tools tooltip-area pull-right">
+									
+								</div>
+								<h4>Anticoncepcion</h4><br>
+								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/vacunas.png" alt=""></div>
+							</section>
+							<div class="im-confirm-group">
+								<div class=" btn-group btn-group-justified">
+									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class="widget-im-tools tooltip-area pull-right">
+									
+								</div>
+								<h4>Internacines</h4><br>
+								<div class="im-thumbnail bg-inverse"><img src="Plantilla/assets/img/internaciones.png" alt=""></div>
+							</section>
+							<div class="im-confirm-group">
+								<div class=" btn-group btn-group-justified">
+									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class="widget-im-tools tooltip-area pull-right">
+									
+								</div>
+								<h4>Odontologia</h4><br>
+								<div class="im-thumbnail bg-inverse"><img src="Plantilla/assets/img/odontologia.png" alt=""></div>
+							</section>
+							<div class="im-confirm-group">
+								<div class=" btn-group btn-group-justified">
+									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class="widget-im-tools tooltip-area pull-right">
+									
+								</div>
+								<h4>Vacunas</h4><br>
+								<div class="im-thumbnail bg-theme-inverse"><img src="Plantilla/assets/img/vacunas.png"  style="height: 50px; width:50px " ></div>
 							</section>
 							<div class="im-confirm-group">
 								<div class=" btn-group btn-group-justified">
