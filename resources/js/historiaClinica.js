@@ -52,3 +52,16 @@ function showModalTipoConsulta(idHcl) {
     console.log(idHcl);
     $("#md-tipoConsulta").modal("show");
 }
+function ShowModalAtencion(tipo) {
+    switch (tipo) {
+        case 1:
+            $('#md-atencion_consultaExterna').modal('show');
+            setTimeout(() => {
+                // $('#md-atencion_consultaExterna').modal('hide');
+            }, 3000);
+            break;
+    
+        default:
+            break;
+    }
+  }
