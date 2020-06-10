@@ -56,11 +56,16 @@ function ShowModalAtencion(tipo) {
     switch (tipo) {
         case 1:
             $('#md-atencion_consultaExterna').modal('show');
-            setTimeout(() => {
-                // $('#md-atencion_consultaExterna').modal('hide');
-            }, 3000);
+           
             break;
-    
+        case 2:
+            $('#md-atencion_prenatal').modal('show');
+            console.log("SLDFJLK");
+            break;    
+        case 3:
+            $('#md-atencion_anticoncepcion').modal('show');
+            console.log("SLDFJLK");
+            break;    
         default:
             break;
     }

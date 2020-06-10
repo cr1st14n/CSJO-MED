@@ -239,98 +239,40 @@
 				</div>
 			</div>
 		</div>
-		<div id="md-notification" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="500">
+		<div id="md-notification" class="modal fade md-stickTop bg-gradient-blue" tabindex="-1" data-width="500">
 			<div class="modal-header bd-danger-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Notification</h4>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Formularios para cotizaciones</h4>
 			</div>
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
 					<ul>
 						<li>
 							<section class="thumbnail-in">
-								<div class="widget-im-tools tooltip-area pull-right">
-									<span>
-										<time class="timeago lasted" datetime="2014">when you opened the page</time>
-									</span>
-									<span>
-										<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
-									</span>
+								<div class=" pull-right ">
+									<button class="btn btn-circle btn-theme-inverse" onclick="ShowModalAtencion(6)"><i class="fa fa-arrow-right"></i></button>
 								</div>
-								<h4>Your request approved</h4>
-								<div class="im-thumbnail bg-theme-inverse"><i class="fa fa-check"></i></div>
-								<div class="pre-text">One Button (click to remove this)</div>
+								<h4>Gastroenterología</h4><br>
+								<div class="im-thumbnail bg-danger-gradient"><img src="Plantilla/assets/img/vacunas.png" style="height: 40px; width:50px "></div>
 							</section>
-							<div class="im-confirm-group">
-								<div class=" btn-group btn-group-justified">
-									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
-								</div>
-							</div>
 						</li>
 						<li>
 							<section class="thumbnail-in">
-								<div class="widget-im-tools tooltip-area pull-right">
-									<span>
-										<time class="timeago" datetime="2013-11-17T14:24:17Z">timeago</time>
-									</span>
-									<span>
-										<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
-									</span>
+								<div class=" pull-right ">
+									<button class="btn btn-circle btn-theme-inverse" onclick="ShowModalAtencion(6)"><i class="fa fa-arrow-right"></i></button>
 								</div>
-								<h4>Dashboard new design!! you want to see now ? </h4>
-								<div class="im-thumbnail bg-theme"><i class="fa fa-bell-o"></i></div>
-								<div class="pre-text">Two Button (with link and click to close this) Lorem ipsum dolor sit amet, consectetur adipisicing elit, </div>
+								<h4>Traumatologia</h4><br>
+								<div class="im-thumbnail bg-danger-gradient"><img src="Plantilla/assets/img/vacunas.png" style="height: 40px; width:50px "></div>
 							</section>
-							<div class="im-confirm-group">
-								<div class=" btn-group btn-group-justified">
-									<a class="btn btn-inverse" href="dashboard.html">Go Now.</a>
-									<a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">Later.</a>
-								</div>
-							</div>
 						</li>
 						<li>
 							<section class="thumbnail-in">
-								<div class="widget-im-tools tooltip-area pull-right">
-									<span>
-										<time class="timeago" datetime="2013-11-17T01:24:17Z">timeago</time>
-									</span>
-									<span>
-										<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
-									</span>
+								<div class=" pull-right ">
+									<button class="btn btn-circle btn-theme-inverse" onclick="ShowModalAtencion(6)"><i class="fa fa-arrow-right"></i></button>
 								</div>
-								<h4>Error 404 <small>( File not found )</small></h4>
-								<div class="im-thumbnail bg-warning"><i class="fa fa-exclamation-triangle"></i></div>
-								<div class="pre-text">Two Button (click to action and remove) </div>
+								<h4>Traumatologia</h4><br>
+								<div class="im-thumbnail bg-danger-gradient"><img src="Plantilla/assets/img/vacunas.png" style="height: 40px; width:50px "></div>
 							</section>
-							<div class="im-confirm-group">
-								<div class=" btn-group btn-group-justified">
-									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
-									<a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="actionNow">Fixed now.</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<section class="thumbnail-in">
-								<div class="widget-im-tools tooltip-area pull-right">
-									<span>
-										<time class="timeago" datetime="2013-09-17T09:24:17Z">timeago</time>
-									</span>
-									<span>
-										<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
-									</span>
-								</div>
-								<h4>Upgrade Premium ?</h4>
-								<div class="im-thumbnail bg-inverse">
-									<i class="fa fa-cogs"></i></div>
-								<div class="pre-text"> Three button (test action) </div>
-							</section>
-							<div class="im-confirm-group">
-								<div class=" btn-group btn-group-justified">
-									<a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="actionNow">Now.</a>
-									<a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">Later.</a>
-									<a class="btn btn-danger im-confirm" href="javascript:void(0)" data-confirm="yes">Delete.</a>
-								</div>
-							</div>
 						</li>
 					</ul>
 				</div>
@@ -441,7 +383,7 @@
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
 												<input type="text" class="form-control">
-												
+
 											</div>
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
@@ -461,24 +403,253 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" id=""  rows="2"></textarea>
+												<textarea class="form-control" name="" id="" rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" id=""  rows="2"></textarea>
+												<textarea class="form-control" name="" id="" rows="2"></textarea>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<button class="btn btn-theme-inverse align-lg-right" >Registrar en Historial Clinico</button>
+							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
 							<button class="btn btn-danger">Cancelar</button>
 						</form>
 					</div>
 				</div>
-				
+
 			</div>
 
+		</div>
+		<div id="md-atencion_prenatal" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="96%">
+			<div class="modal-header ">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Control Prenatal</h4>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<div class="widget-im notification">
+					<div class="panel-body">
+						<form class="form-horizontal ">
+							<div class="form-group">
+								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
+								<div class="col-md-2">
+									<label>Signos Vitales</label>
+								</div>
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-sm-7">
+											<div class="col-md-4">
+												<span style="color:dimgrey ;font-weight:bolder">Peso (KG) </span>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-8">
+												<span style="color:dimgrey ;font-weight:bolder">Estado nutricional IMC </span>
+												<select name="estadoNutricional" class="form-control">
+													<option value="1">Bajo peso</option>
+													<option value="2">Peso normal</option>
+													<option value="3">Sobre peso</option>
+													<option value="4">Obesidad</option>
+												</select>
+											</div>
+											<div class="col-md-4">
+												<span style="color:dimgrey ;font-weight:bolder">Talla (CM) </span>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-8">
+												<span style="color:dimgrey ;font-weight:bolder">FUM </span>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-sm-5">
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Temperatura </span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">°C</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Fercuencia Cardiaca</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">Pul/Min</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Frecuencia respiratoria</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">RPM</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Precion arterial</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">mmHg</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
+								<div class="col-md-2">
+									<label>Consulta Medica</label>
+								</div>
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Control Prenatal </span>
+												<select class="form-control" name="" id="">
+													<option value="1">Nuevos antes del 5to Mes-Dentro</option>
+													<option value="2">Nuevos antes del 5to Mes-Fuera</option>
+													<option value="3">Nuevos a partir del 5to Mes-Dentro</option>
+													<option value="4">Nuevos a partir del 5to Mes-Fuera</option>
+													<option value="5">Repetidos Dentro</option>
+													<option value="6">Rpetidos Fuera</option>
+												</select>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Con cuatro controles<span>
+														<select class="form-control" name="" id="">
+															<option value="1">Dentro</option>
+															<option value="2">Fuera</option>
+														</select>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
+												<input type="text" class="form-control">
+
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<div class="col-md-12">
+												<span style="color:dimgrey ;font-weight:bolder"> </span>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-12">
+												<span style="color:dimgrey ;font-weight:bolder">Examen fisico </span>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
+								<div class="col-md-2">
+									<label></label>
+								</div>
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-sm-7">
+											<div class="col-md-12">
+												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
+												<textarea class="form-control" name="" id="" rows="2"></textarea>
+											</div>
+											<div class="col-md-12">
+												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
+												<textarea class="form-control" name="" id="" rows="2"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
+							<button class="btn btn-danger">Cancelar</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div id="md-atencion_anticoncepcion" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="50%">
+			<div class="modal-header ">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Anticoncepción</h4>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<div class="widget-im notification">
+					<div class="panel-body">
+						<form class="form-horizontal ">
+							<div class="form-group">
+								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
+								<div class="col-md-2">
+									<label>Signos Vitales</label>
+								</div>
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-sm-7">
+											<div class="col-md-4">
+												<span style="color:dimgrey ;font-weight:bolder">Peso (KG) </span>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-8">
+												<span style="color:dimgrey ;font-weight:bolder">Estado nutricional IMC </span>
+												<select name="estadoNutricional" class="form-control">
+													<option value="1">Bajo peso</option>
+													<option value="2">Peso normal</option>
+													<option value="3">Sobre peso</option>
+													<option value="4">Obesidad</option>
+												</select>
+											</div>
+											<div class="col-md-4">
+												<span style="color:dimgrey ;font-weight:bolder">Talla (CM) </span>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-8">
+												<span style="color:dimgrey ;font-weight:bolder">FUM </span>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-sm-5">
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Temperatura </span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">°C</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Fercuencia Cardiaca</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">Pul/Min</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Frecuencia respiratoria</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">RPM</span>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<span style="color:dimgrey ;font-weight:bolder">Precion arterial</span>
+												<div class="input-group">
+													<input type="text" class="form-control">
+													<span class="input-group-addon">mmHg</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
+							<button class="btn btn-danger">Cancelar</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 		<nav id="menu">
 			<ul>
