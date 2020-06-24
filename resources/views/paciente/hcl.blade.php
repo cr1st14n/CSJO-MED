@@ -18,6 +18,7 @@
 						<tbody>
 							<tr>
 								<td>
+									<label id="paciente_id_HCL" >{{$paciente->pa_id}}</label>
 									<h5>NOMBRE : {{$paciente->pa_appaterno }} {{$paciente->pa_apmaterno }} {{$paciente->pa_nombre }}</h5>
 								</td>
 								<td>

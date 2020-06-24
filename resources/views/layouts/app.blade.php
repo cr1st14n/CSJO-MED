@@ -84,10 +84,10 @@
 					<!-- //avatar-detail-->
 
 					<div class="avatar-link btn-group btn-group-justified">
-						<a class="btn" data-toggle="modal" href="#md-notification" title="Notification">
+						<a class="btn" href="#" onclick="show_modal_corizacion_formulario(1)" title="Formulario de Cotizacion">
 							<i class="fa fa-medkit"></i><em class="green"></em>
 						</a>
-						<a class="btn" onclick="colaPacienteMedAten()" title="Messages">
+						<a class="btn" onclick="colaPacienteMedAten()" title="Pacientes en Espera">
 							<i class="fa fa-stethoscope"></i><em class="active"></em>
 						</a>
 					</div>
@@ -250,6 +250,15 @@
 						<li>
 							<section class="thumbnail-in">
 								<div class=" pull-right ">
+									<button class="btn btn-circle btn-theme-inverse" onclick="show_modal_corizacion_formulario(1)"><i class="fa fa-arrow-right"></i></button>
+								</div>
+								<h4>Formulario Basico</h4><br>
+								<div class="im-thumbnail bg-danger-gradient"><img src="Plantilla/assets/img/vacunas.png" style="height: 40px; width:50px "></div>
+							</section>
+						</li>
+						<li>
+							<section class="thumbnail-in">
+								<div class=" pull-right ">
 									<button class="btn btn-circle btn-theme-inverse" onclick="ShowModalAtencion(6)"><i class="fa fa-arrow-right"></i></button>
 								</div>
 								<h4>Gastroenterología</h4><br>
@@ -300,6 +309,119 @@
 
 
 		<!-- start modal cotizacianes -->
+		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="40%">
+			<div class="modal-header ">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Formulario PRE-COTIZACION</h4>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<div class="widget-im notification">
+					<div class="panel-body">
+						<h4 style="color: black;">Nombre del paciente</h4>
+						<h4 style="color: black;"></h4>
+						<hr>
+						<form class="form-horizontal" data-collabel="3" data-alignlabel="left">
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" for="inputTwo" style="text-align: left;">Quirofano Mayor</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
+								<div class="col-md-9">
+									<input class="form-control rounded" type="text" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
+								<div class="col-md-9">
+									<input class="form-control rounded" type="text" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
+								<div class="col-md-9">
+									<input class="form-control rounded" type="text" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;">Aguja K</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Insumos en Quirofano</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Medicamentos en Quirofano</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Otros</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control rounded" name="">
+								</div>
+							</div>
+							<div class="form-group offset">
+								<div class="col-md-offset-3 col-md-9">
+									<button type="submit" class="btn btn-theme-inverse">Registrar</button>
+									<button type="reset" class="btn btn-danger">Cancelar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -425,11 +547,11 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name=""  rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name=""  rows="2"></textarea>
 											</div>
 										</div>
 									</div>
@@ -570,11 +692,11 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name=""  rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name=""  rows="2"></textarea>
 											</div>
 										</div>
 									</div>
@@ -671,7 +793,7 @@
 										<div class="col-sm-5">
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Control Prenatal </span>
-												<select class="form-control" name="" id="">
+												<select class="form-control" name="" >
 													<option value="1">Nuevos antes del 5to Mes-Dentro</option>
 													<option value="2">Nuevos antes del 5to Mes-Fuera</option>
 													<option value="3">Nuevos a partir del 5to Mes-Dentro</option>
@@ -682,7 +804,7 @@
 											</div>
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Con cuatro controles<span>
-														<select class="form-control" name="" id="">
+														<select class="form-control" name="" >
 															<option value="1">Dentro</option>
 															<option value="2">Fuera</option>
 														</select>
@@ -720,19 +842,19 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" id="" rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
-							<button class="btn btn-danger">Cancelar</button>
 						</form>
+						<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
+						<button class="btn btn-danger">Cancelar</button>
 					</div>
 				</div>
 
