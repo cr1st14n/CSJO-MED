@@ -321,102 +321,108 @@
 						<h4 style="color: black;"></h4>
 						<hr>
 						<form class="form-horizontal" data-collabel="3" data-alignlabel="left">
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
+							<div class=" col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" for="inputTwo" style="text-align: left;">Quirofano Mayor</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
+									<div class="col-md-9">
+										<input class="form-control rounded" type="text" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
+									<div class="col-md-9">
+										<input class="form-control rounded" type="text" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
+									<div class="col-md-9">
+										<input class="form-control rounded" type="text" name="">
+									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
+							<div class=" col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Aguja K</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Insumos en Quirofano</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Medicamentos en Quirofano</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Otros</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="">
+									</div>
+								</div>
+								<div class="form-group offset">
+									<div class="col-md-offset-3 col-md-9">
+										<button type="submit" class="btn btn-theme-inverse">Registrar</button>
+										<button type="reset" class="btn btn-danger">Cancelar</button>
+									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" for="inputTwo" style="text-align: left;">Quirofano Mayor</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
-								<div class="col-md-9">
-									<input class="form-control rounded" type="text" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
-								<div class="col-md-9">
-									<input class="form-control rounded" type="text" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
-								<div class="col-md-9">
-									<input class="form-control rounded" type="text" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;">Aguja K</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Insumos en Quirofano</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Medicamentos en Quirofano</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Otros</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control rounded" name="">
-								</div>
-							</div>
-							<div class="form-group offset">
-								<div class="col-md-offset-3 col-md-9">
-									<button type="submit" class="btn btn-theme-inverse">Registrar</button>
-									<button type="reset" class="btn btn-danger">Cancelar</button>
-								</div>
-							</div>
+
+
 						</form>
 					</div>
 				</div>
@@ -547,11 +553,11 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name=""  rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name=""  rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 										</div>
 									</div>
@@ -692,11 +698,11 @@
 										<div class="col-sm-7">
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name=""  rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 											<div class="col-md-12">
 												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name=""  rows="2"></textarea>
+												<textarea class="form-control" name="" rows="2"></textarea>
 											</div>
 										</div>
 									</div>
@@ -793,7 +799,7 @@
 										<div class="col-sm-5">
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Control Prenatal </span>
-												<select class="form-control" name="" >
+												<select class="form-control" name="">
 													<option value="1">Nuevos antes del 5to Mes-Dentro</option>
 													<option value="2">Nuevos antes del 5to Mes-Fuera</option>
 													<option value="3">Nuevos a partir del 5to Mes-Dentro</option>
@@ -804,7 +810,7 @@
 											</div>
 											<div class="col-md-6">
 												<span style="color:dimgrey ;font-weight:bolder">Con cuatro controles<span>
-														<select class="form-control" name="" >
+														<select class="form-control" name="">
 															<option value="1">Dentro</option>
 															<option value="2">Fuera</option>
 														</select>
