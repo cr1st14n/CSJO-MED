@@ -5,7 +5,7 @@ function colaPacienteMedAten() {
         data: "data",
         dataType: "json",
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             var html2 = response
                 .map(function (e) {
                     return `
@@ -24,7 +24,7 @@ function colaPacienteMedAten() {
 }
 
 function showHistoriaClinica(paciente) {
-    console.log(paciente);
+    // console.log(paciente);
     $.ajax({
         type: "GET",
         url: "historiaClinica/hcl",
@@ -71,18 +71,3 @@ function ShowModalAtencion(tipo) {
     }
   }
 /* Show modal Formularios  */
-function show_modal_corizacion_formulario(num_form) {
-    switch (num_form) {
-        case num_form:
-            $('#md_cotizacion_fomr_1').modal('show');
-             console.log($('#paciente_id_HCL').val( ))
-
-
-
-            break;
-    
-        default:
-            break;
-    }
-    $('#md_cotizacion_fomr_1').modal('show');
-  }

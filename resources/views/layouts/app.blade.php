@@ -302,6 +302,9 @@
 							</section>
 						</li>
 					</ul>
+=======
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -320,54 +323,54 @@
 						<h4 style="color: black;">Nombre del paciente</h4>
 						<h4 style="color: black;"></h4>
 						<hr>
-						<form class="form-horizontal" data-collabel="3" data-alignlabel="left">
+						<form class="form-horizontal" data-collabel="3" data-alignlabel="left" id="form_new_cotizacion">@csrf
 							<div class=" col-lg-6">
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="cirujano">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="anesteseologo">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" for="inputTwo" style="text-align: left;">Quirofano Mayor</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="quirofano_mayor">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="sala_endoscopia">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="sala_partos">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="">
+										<input class="form-control rounded" type="text" name="equipo_laparoscopia">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="">
+										<input class="form-control rounded" type="text" name="ayudante_1">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="">
+										<input class="form-control rounded" type="text" name="ayudante_2">
 									</div>
 								</div>
 							</div>
@@ -375,43 +378,43 @@
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="instrumentador">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="circulante">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="oxigeno">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Aguja K</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="aguja_k">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Insumos en Quirofano</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="insumos_quirofano">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Medicamentos en Quirofano</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="medicamentos_quirofano">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Otros</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="">
+										<input type="text" class="form-control rounded" name="otros">
 									</div>
 								</div>
 								<div class="form-group offset">
@@ -421,8 +424,6 @@
 									</div>
 								</div>
 							</div>
-
-
 						</form>
 					</div>
 				</div>
@@ -981,6 +982,7 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
 </body>
 
 </html>

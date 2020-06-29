@@ -18,7 +18,8 @@
 						<tbody>
 							<tr>
 								<td>
-									<label id="paciente_id_HCL" >{{$paciente->pa_id}}</label>
+									<input type="number" id="paciente_id_HCL" value="{{$paciente->pa_id}}" hidden>
+									<label id="paciente_id_HCL" ></label>
 									<h5>NOMBRE : {{$paciente->pa_appaterno }} {{$paciente->pa_apmaterno }} {{$paciente->pa_nombre }}</h5>
 								</td>
 								<td>

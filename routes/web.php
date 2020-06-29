@@ -15,3 +15,7 @@ Route::group(['prefix'=>'historiaClinica'],function ()
     Route::get('colaPacienteMedAten','HistoriaClinciaController@colaPacienteMedAten');
     Route::get('nroPacienteCola','HistoriaClinciaController@nroPacienteCola');
 });
+Route::group(['prefix'=>'cotizacion'],function ()
+{
+    Route::post('create','CotizacionController@create');
+});
