@@ -320,7 +320,7 @@
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
 					<div class="panel-body">
-						<h4 style="color: black;">Nombre del paciente</h4>
+						<h5 style="color: black;">- Dia de internacion 100 Bs. <br>- Procedimientos de enfermeria se cobra segun el consumo <br>- RX, Lab, Medicamentos en SALA: Tienen un costo adicional </h5>
 						<h4 style="color: black;"></h4>
 						<hr>
 						<form class="form-horizontal" data-collabel="3" data-alignlabel="left" id="form_new_cotizacion">@csrf
@@ -331,6 +331,7 @@
 										<input type="text" class="form-control rounded" name="cirujano">
 									</div>
 								</div>
+								<input type="text" class="form-control" id="id_paciente_new_cotizacion" name="id_paciente_new_cotizacion">
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
 									<div class="col-md-9">
@@ -412,10 +413,19 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Otros</label>
+									<label class="control-label col-md-3" for="otros" style="text-align: left;">Otros</label>
 									<div class="col-md-9">
 										<input type="text" class="form-control rounded" name="otros">
 									</div>
+								</div>
+								<hr>
+								<div class="form-group">
+								<label class="control-label col-md-3" style="text-align: left;" >Procedimiento</label>
+								<select class="form-control" name="procedimiento" >
+									<option value="1">Mayor</option>
+									<option value="2">Mediana</option>
+									<option value="3">Menor</option>
+								</select>
 								</div>
 								<div class="form-group offset">
 									<div class="col-md-offset-3 col-md-9">

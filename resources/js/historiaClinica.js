@@ -25,6 +25,7 @@ function colaPacienteMedAten() {
 
 function showHistoriaClinica(paciente) {
     // console.log(paciente);
+    $('#form_new_cotizacion').trigger('reset');
     $.ajax({
         type: "GET",
         url: "historiaClinica/hcl",
