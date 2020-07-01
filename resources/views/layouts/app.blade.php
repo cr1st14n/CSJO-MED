@@ -302,8 +302,8 @@
 							</section>
 						</li>
 					</ul>
-=======
-						</li>
+					=======
+					</li>
 					</ul>
 				</div>
 			</div>
@@ -312,7 +312,7 @@
 
 
 		<!-- start modal cotizacianes -->
-		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="40%">
+		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="60%">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Formulario PRE-COTIZACION</h4>
@@ -323,15 +323,33 @@
 						<h5 style="color: black;">- Dia de internacion 100 Bs. <br>- Procedimientos de enfermeria se cobra segun el consumo <br>- RX, Lab, Medicamentos en SALA: Tienen un costo adicional </h5>
 						<h4 style="color: black;"></h4>
 						<hr>
-						<form class="form-horizontal" data-collabel="3" data-alignlabel="left" id="form_new_cotizacion">@csrf
+						<form class="form-horizontal" data-collabel="4" data-alignlabel="left" id="form_new_cotizacion">@csrf
+							<input type="text" id="id_paciente_new_cotizacion" name="id_paciente_new_cotizacion" hidden>
 							<div class=" col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Especialidad Medica</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="EspecialidadMedica" autocomplete="off" require>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Nombre de la Cirugia</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="nombreCirugia" require>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Tiempo Aproximado</label>
+									<div class="col-md-9">
+										<input type="time" class="form-control rounded" name="tiempoAproximado">
+									</div>
+								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
 									<div class="col-md-9">
 										<input type="text" class="form-control rounded" name="cirujano">
 									</div>
 								</div>
-								<input type="text" class="form-control" id="id_paciente_new_cotizacion" name="id_paciente_new_cotizacion">
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
 									<div class="col-md-9">
@@ -420,12 +438,14 @@
 								</div>
 								<hr>
 								<div class="form-group">
-								<label class="control-label col-md-3" style="text-align: left;" >Procedimiento</label>
-								<select class="form-control" name="procedimiento" >
-									<option value="1">Mayor</option>
-									<option value="2">Mediana</option>
-									<option value="3">Menor</option>
-								</select>
+									<label class="control-label col-md-3" style="text-align: left;">Procedimiento</label>
+									<div class="col-md-9">
+										<select class="form-control" name="procedimiento">
+											<option value="1">Mayor</option>
+											<option value="2">Mediana</option>
+											<option value="3">Menor</option>
+										</select>
+									</div>
 								</div>
 								<div class="form-group offset">
 									<div class="col-md-offset-3 col-md-9">

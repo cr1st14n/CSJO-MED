@@ -5,7 +5,7 @@ function show_modal_corizacion_formulario(num_form) {
                 $.notific8('Seleccione Paciente!.',{life:'3000',theme: 'primary'});
             } else {
                 // $('#form_new_cotizacion').trigger('reset');
-                $('#id_paciente_new_cotizacion').val($('#id_paciente_new_cotizacion').val());
+                $('#id_paciente_new_cotizacion').val($('#paciente_id_HCL').val());
                 $('#md_cotizacion_fomr_1').modal('show');
             }
 
