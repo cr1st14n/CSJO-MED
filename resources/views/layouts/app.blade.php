@@ -327,15 +327,15 @@
 							<input type="text" id="id_paciente_new_cotizacion" name="id_paciente_new_cotizacion" hidden>
 							<div class=" col-lg-6">
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Especialidad Medica</label>
+									<label class="control-label col-md-3" style="text-align: left;">Especialidad Medica*</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="EspecialidadMedica" autocomplete="off" require>
+										<input type="text" class="form-control rounded" name="EspecialidadMedica" autocomplete="off" required>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Nombre de la Cirugia</label>
+									<label class="control-label col-md-3" style="text-align: left;">Nombre de la Cirugia*</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="nombreCirugia" require>
+										<input type="text" class="form-control rounded" name="nombreCirugia" required>
 									</div>
 								</div>
 								<div class="form-group">
@@ -347,7 +347,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="cirujano">
+										<input type="text" class="form-control rounded" name="cirujanoHonorarios">
 									</div>
 								</div>
 								<div class="form-group">
