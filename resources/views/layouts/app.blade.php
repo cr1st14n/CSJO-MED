@@ -981,8 +981,8 @@
 			<ul>
 				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
 					<ul>
-						<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> First Design </a></li>
-						<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> Dashboard New </a></li>
+						<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> Pre-Cotizaciones registradas </a></li>
+						<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> </a></li>
 					</ul>
 				</li>
 				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
