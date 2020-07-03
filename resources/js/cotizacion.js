@@ -26,9 +26,10 @@ $("#form_new_cotizacion").submit(function (e) {
         data: $("#form_new_cotizacion").serialize(),
         success: function (response) {
             console.log(response);
-            if (reponse) {
+            if (response) {
                 $('#form_new_cotizacion').trigger('reset');
-                $("md_cotizacion_fomr_1").modal("hide");
+                $("#md_cotizacion_fomr_1").modal("hide");
+                $.notific8("Pre-cotizacion Registrada!.",{life:3000,theme:"theme-inverse"})
             } else {
                 $.notific8("Error de registro. Vuelva a intentarlo",{life:3000, theme:'theme'});
                 console.log('Error-10001')
