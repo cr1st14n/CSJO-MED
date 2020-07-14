@@ -33,9 +33,21 @@
 			<div class="logo-area clearfix">
 				<a href="#" class="logo"></a>
 			</div>
+
 			<div class="tools-bar">
 				<ul class="nav navbar-nav nav-main-xs">
 					<li><a href="#menu" class="icon-toolsbar"><i class="fa fa-bars"></i></a></li>
+				</ul>
+				<ul class="nav navbar-nav nav-top-xs hidden-xs tooltip-area">
+					<li class="h-seperate"></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i class="fa fa-th-large"></i></a>
+						<ul class="dropdown-menu arrow animated fadeInDown fast">
+							<li><a href="#"> Cotizaciones Realizadas</a></li>
+						</ul>
+						<!-- //dropdown-menu-->
+					</li>
+					<li class="h-seperate"></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right tooltip-area">
 					<li><a href="#" class="nav-collapse avatar-header" data-toggle="tooltip" title="Show / hide  menu" data-container="body" data-placement="bottom">
