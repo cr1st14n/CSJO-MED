@@ -48,7 +48,7 @@ setInterval(() => {
             $("#nroPacientesFila").text(pacientes);
         },
     });
-}, 3000);
+}, 10000);
 function showModalTipoConsulta(idHcl) {
     console.log(idHcl);
     $("#md-tipoConsulta").modal("show");
