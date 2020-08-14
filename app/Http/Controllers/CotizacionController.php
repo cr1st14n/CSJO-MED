@@ -48,6 +48,7 @@ class CotizacionController extends Controller
         $cot->cot_medicamentosQuirofano=$request->input('medicamentos_quirofano');
         $cot->cot_otros=$request->input('otros');
         $cot->cot_procedimiento=$request->input('procedimiento');
+        $cot->cot_estado=0;
         
         $cot->ca_usu_cod=Auth::user()->id;
         $cot->ca_tipo="create";

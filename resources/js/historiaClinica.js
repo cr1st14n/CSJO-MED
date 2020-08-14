@@ -25,7 +25,7 @@ function colaPacienteMedAten() {
 
 function showHistoriaClinica(paciente) {
     // console.log(paciente);
-    $('#form_new_cotizacion').trigger('reset');
+    $("#form_new_cotizacion").trigger("reset");
     $.ajax({
         type: "GET",
         url: "historiaClinica/hcl",
@@ -33,7 +33,7 @@ function showHistoriaClinica(paciente) {
         dataType: "text",
         success: function (dat) {
             $("#panel1").html(dat);
-            
+
             $("#md-listPacientesEspera").modal("hide");
         },
     });
@@ -56,19 +56,20 @@ function showModalTipoConsulta(idHcl) {
 function ShowModalAtencion(tipo) {
     switch (tipo) {
         case 1:
-            $('#md-atencion_consultaExterna').modal('show');
-           
+            $("#md-atencion_consultaExterna").modal("show");
+
             break;
         case 2:
-            $('#md-atencion_prenatal').modal('show');
+            $("#md-atencion_prenatal").modal("show");
             console.log("SLDFJLK");
-            break;    
+            break;
         case 3:
-            $('#md-atencion_anticoncepcion').modal('show');
+            $("#md-atencion_anticoncepcion").modal("show");
             console.log("SLDFJLK");
-            break;    
+            break;
         default:
             break;
     }
-  }
+}
 /* Show modal Formularios  */
+
