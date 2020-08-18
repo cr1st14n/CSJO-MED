@@ -1,3 +1,4 @@
+// console.log('hola msss');
 function show_modal_corizacion_formulario(num_form) {
     switch (num_form) {
         case num_form:
