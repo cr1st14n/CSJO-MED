@@ -356,69 +356,122 @@
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="cirujanoHonorarios">
+										<input type="number" class="form-control rounded" name="cirujanoHonorarios">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;"> Especialista en anesteseologia</label>
+									<label class="control-label col-md-3" style="text-align: left;">Anesteseologo</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="anesteseologo">
+										<label class="radio-inline">
+											<input type="radio" name="anesteseologo"  value="0" checked="">
+											NO </label>
+										<label class="radio-inline">
+											<input type="radio" name="anesteseologo"  value="1">
+											SI </label>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" for="inputTwo" style="text-align: left;">Quirofano Mayor</label>
+									<label class="control-label col-md-3" style="text-align: left;">Quirofano MAyor</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="quirofano_mayor">
+										<label class="radio-inline">
+											<input type="radio" name="quirofano_mayor"  value="0" checked="">
+											NO </label>
+										<label class="radio-inline">
+											<input type="radio" name="quirofano_mayor"  value="1">
+											SI </label>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="sala_endoscopia">
+										<label class="radio-inline">
+											<input type="radio" name="sala_endoscopia"  value="0" checked="">
+											NO </label>
+										<label class="radio-inline">
+											<input type="radio" name="sala_endoscopia"  value="1">
+											Si </label>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="sala_partos">
+										<label class="radio-inline">
+											<input type="radio" name="sala_partos"  value="0" checked="">
+											NO </label>
+										<label class="radio-inline">
+											<input type="radio" name="sala_partos"  value="1">
+											SI </label>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="equipo_laparoscopia">
+										<label class="radio-inline">
+											<input type="radio" name="equipo_laparoscopia"  value="0" checked="">
+											NO </label>
+										<label class="radio-inline">
+											<input type="radio" name="equipo_laparoscopia"  value="1">
+											SI </label>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="ayudante_1">
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_1"  value="option1" checked="">
+											SI </label>
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_1"  value="option2">
+											NO </label>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
 									<div class="col-md-9">
-										<input class="form-control rounded" type="text" name="ayudante_2">
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_2"  value="0" checked="">
+											No </label>
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_2"  value="1">
+											Si </label>
 									</div>
 								</div>
 							</div>
 							<div class=" col-lg-6">
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
+									<label class="control-label col-md-3" style="text-align: left;">Intrumentador</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="instrumentador">
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_2"  value="0" checked="">
+											No </label>
+										<label class="radio-inline">
+											<input type="radio" name="ayudante_2"  value="1">
+											Si </label>
 									</div>
 								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="circulante">
-									</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="circulante" value="1" checked="">
+										Circulante </label>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
 									<div class="col-md-9">
 										<input type="text" class="form-control rounded" name="oxigeno">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
+									<div class="col-md-9">
+										<label class="radio-inline">
+											<input type="radio" id="inlineRadio1" value="option1" checked="">
+											one </label>
+										<label class="radio-inline">
+											<input type="radio" id="inlineRadio2" value="option2">
+											two </label>
+										<label class="radio-inline">
+											<input type="radio" id="inlineRadio3" value="option3">
+											three </label>
 									</div>
 								</div>
 								<div class="form-group">

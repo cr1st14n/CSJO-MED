@@ -26,6 +26,7 @@ class CotizacionController extends Controller
      */
     public function create(Request $request)
     {
+        // return $request->input('circulante_123');
         $cot=new cotizacion();
         $cot->cod_cot=cotizacion::max('cod_cot')+1 ;
         $cot->cot_id_paciente=$request->input('id_paciente_new_cotizacion');

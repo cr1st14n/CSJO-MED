@@ -26,6 +26,7 @@ $("#form_new_cotizacion").submit(function (e) {
         url: "cotizacion/create",
         data: $("#form_new_cotizacion").serialize(),
         success: function (response) {
+            console.log(response);
             if (response==1) {
                 $('#form_new_cotizacion').trigger('reset');
                 $("#md_cotizacion_fomr_1").modal("hide");
