@@ -350,7 +350,11 @@
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Tiempo Aproximado</label>
 									<div class="col-md-9">
-										<input type="time" class="form-control rounded" name="tiempoAproximado">
+										<!-- <input type=" number" class="form-control rounded" name="tiempoAproximado"> -->
+										<div class="input-group">
+											<input type="number" class="form-control" name="tiempoAproximado">
+											<span class="input-group-addon">Hora </span> 
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
@@ -359,146 +363,6 @@
 										<input type="number" class="form-control rounded" name="cirujanoHonorarios">
 									</div>
 								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Anesteseologo</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="anesteseologo"  value="0" checked="">
-											NO </label>
-										<label class="radio-inline">
-											<input type="radio" name="anesteseologo"  value="1">
-											SI </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Quirofano MAyor</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="quirofano_mayor"  value="0" checked="">
-											NO </label>
-										<label class="radio-inline">
-											<input type="radio" name="quirofano_mayor"  value="1">
-											SI </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Sala de Endoscopia</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="sala_endoscopia"  value="0" checked="">
-											NO </label>
-										<label class="radio-inline">
-											<input type="radio" name="sala_endoscopia"  value="1">
-											Si </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Sala de Partos</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="sala_partos"  value="0" checked="">
-											NO </label>
-										<label class="radio-inline">
-											<input type="radio" name="sala_partos"  value="1">
-											SI </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Equipo de laparoscopia</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="equipo_laparoscopia"  value="0" checked="">
-											NO </label>
-										<label class="radio-inline">
-											<input type="radio" name="equipo_laparoscopia"  value="1">
-											SI </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Ayudante 1</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_1"  value="option1" checked="">
-											SI </label>
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_1"  value="option2">
-											NO </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Ayudante 2</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_2"  value="0" checked="">
-											No </label>
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_2"  value="1">
-											Si </label>
-									</div>
-								</div>
-							</div>
-							<div class=" col-lg-6">
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Intrumentador</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_2"  value="0" checked="">
-											No </label>
-										<label class="radio-inline">
-											<input type="radio" name="ayudante_2"  value="1">
-											Si </label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="circulante" value="1" checked="">
-										Circulante </label>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="oxigeno">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Oxigeno</label>
-									<div class="col-md-9">
-										<label class="radio-inline">
-											<input type="radio" id="inlineRadio1" value="option1" checked="">
-											one </label>
-										<label class="radio-inline">
-											<input type="radio" id="inlineRadio2" value="option2">
-											two </label>
-										<label class="radio-inline">
-											<input type="radio" id="inlineRadio3" value="option3">
-											three </label>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Aguja K</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="aguja_k">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Insumos en Quirofano</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="insumos_quirofano">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" for="exampleInputFile" style="text-align: left;">Medicamentos en Quirofano</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="medicamentos_quirofano">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" for="otros" style="text-align: left;">Otros</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="otros">
-									</div>
-								</div>
-								<hr>
 								<div class="form-group">
 									<label class="control-label col-md-3" style="text-align: left;">Procedimiento</label>
 									<div class="col-md-9">
@@ -509,11 +373,92 @@
 										</select>
 									</div>
 								</div>
-								<div class="form-group offset">
-									<div class="col-md-offset-3 col-md-9">
-										<button type="submit" class="btn btn-theme-inverse">Registrar</button>
-										<button type="reset" class="btn btn-danger">Cancelar</button>
+								<div class="form-group">
+									<label class="control-label col-md-3" for="otros" style="text-align: left;">Otros</label>
+									<div class="col-md-9">
+										<textarea name="otros" cols="25" rows="2" class="form-control"></textarea>
 									</div>
+								</div>
+							</div>
+							<div class=" col-lg-6">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="anesteseologo" value="1">
+										Anesteseologo </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="quirofano_mayor" value="1">
+										Quirofano mayor </label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="sala_endoscopia" value="1">
+										Sala de endoscopia </label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="sala_partos" value="1">
+										Sala de Partos </label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="equipo_laparoscopia" value="1">
+										Equipo de laparoscopia </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="ayudante_1" value="1">
+										Ayudante 1 </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="ayudante_2" value="1">
+										Ayudante 2 </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="instrumentador" value="1">
+										Intrumentador</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="circulante" value="1">
+										Circulante </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="oxigeno" value="1">
+										Oxigeno </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="aguja_k" value="1">
+										Aguja K </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="insumos_quirofano" value="1">
+										Insumos en Quirofano </label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="medicamentos_quirofano" value="1">
+										Medicamentos en quirofano </label>
+								</div>
+
+
+
+							</div>
+							<hr>
+							<div class="form-group offset">
+								<div class="col-md-offset-3 col-md-9">
+									<button type="submit" class="btn btn-theme-inverse">Registrar</button>
+									<button type="reset" class="btn btn-danger">Cancelar</button>
 								</div>
 							</div>
 						</form>
