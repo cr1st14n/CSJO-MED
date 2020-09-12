@@ -412,12 +412,12 @@
 								<div class="checkbox">
 									<label>
 										<input type="checkbox" name="ayudante_1" value="1">
-										Ayudante 1 </label>
+										Un Ayudante </label>
 								</div>
 								<div class="checkbox">
 									<label>
 										<input type="checkbox" name="ayudante_2" value="1">
-										Ayudante 2 </label>
+										Dos Ayudantes </label>
 								</div>
 								<div class="checkbox">
 									<label>
