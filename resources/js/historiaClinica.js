@@ -5,7 +5,7 @@ function colaPacienteMedAten() {
         data: "data",
         dataType: "json",
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             var html2 = response
                 .map(function (e) {
                     return `
@@ -13,8 +13,8 @@ function colaPacienteMedAten() {
                             <div class="pull-right">
                                 <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/historiaClinica2.png"  width="50" height="50" /></div>
                             </div>
-                            <p style=" color:tan; ">${e.cp_procedimiento}</p>
-                             <a href="#" onclick="showHistoriaClinica(${e.cp_paciente})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
+                            <p style=" color:tan; ">${e.ate_procedimiento}</p>
+                             <a href="#" onclick="showHistoriaClinica(${e.pa_id})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
                         </div>`;
                 })
                 .join(" ");
