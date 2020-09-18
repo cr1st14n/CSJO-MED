@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\pacientes;
 use Illuminate\Http\Request;
 
-class descargoMedicoContrller extends Controller
+class descargoMedicoController extends Controller
 {
-    public function index(Request $request)
+    public function make(Request $request)
     {
-        $paciente=pacientes::where('pa_di',$request->pacientes)->first();
-        return view('ProceMedicos.descargoQuirurgico')->compact('pacientes');
+        // return "qwer";
+        $paciente=pacientes::where('pa_id',$request->input('paciente'))->first();
+        return view('ProceMedicos.descargoQuirurgico',compact('paciente'));
     }
 }

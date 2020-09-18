@@ -21,5 +21,5 @@ Route::group(['prefix'=>'cotizacion'],function ()
 });
 Route::group(['prefix'=>'Descargo'],function ()
 {
-    Route::get('create','descargoMedicoController@viewCreateDescargo');
+    Route::get('make','descargoMedicoController@make');
 });

@@ -125,8 +125,9 @@
 			</ol>
 			<div id="content">
 				<div class="row">
-					<div class="col-lg-8" id="panel1">
+					<div class="col-lg-8" id="panel1_descargo">
 						<section class="panel"></section>
+						
 					</div>
 					<div class="col-lg-4">
 						<section class="panel">
@@ -134,6 +135,8 @@
 								<div id="clock"></div>
 							</div>
 						</section>
+						<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-plus-square"></i> Agregar Medicamento </button>
+						<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-medkit"></i> Agregar Insumo</button>
 					</div>
 				</div>
 			</div>
