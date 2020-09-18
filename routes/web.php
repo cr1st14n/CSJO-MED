@@ -19,3 +19,7 @@ Route::group(['prefix'=>'cotizacion'],function ()
 {
     Route::post('create','CotizacionController@create');
 });
+Route::group(['prefix'=>'Descargo'],function ()
+{
+    Route::get('create','descargoMedicoController@viewCreateDescargo');
+});

@@ -102,7 +102,16 @@ function storePM1(id_paciente) {
 
 }
 function storePM2(id_paciente) {
-    console.log('añlsdkfj');
+    console.log(id_paciente);
+    $.ajax({
+      type: "get",
+      url: "cotizacion/viewCreateDescargo",
+      data: {paciente:id_paciente},
+      dataType: "dataType",
+      success: function (response) {
+       $('#panel1').html(response); 
+      }
+    });
     $('#md-searchPacienteDescargo').modal('hide');
 
 }
