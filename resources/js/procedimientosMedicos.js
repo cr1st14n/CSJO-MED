@@ -78,14 +78,14 @@ $("#NOMBRESpaciente_promed").keyup(function (e) {
 function listPacientes(data) {
     var html = data
         .map(function (elem, index) {
-            return `<tr>
+            return r=`<tr>
                       <td>${elem.pa_hcl}</td>
                       <td>${elem.pa_ci}</td>
                       <td>${elem.pa_nombre}</td>
                       <td>${elem.pa_appaterno} / ${elem.pa_apmaterno}</td>
                         <td>
-                            <button type="button" onClick="storePM1(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-list-alt"></i></button>
-                            <button type="button" onClick="storePM2(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-arrow-right"></i></button>
+                            <button type="button" title="Descargo quirofano" onClick="storePM1(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-pencil"></i> Q</button>
+                            <button type="button" title="Descargo endoscopia" onClick="storePM2(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-pencil"></i> E</button>
                         </td>
                      
                 </tr>`;
@@ -94,17 +94,37 @@ function listPacientes(data) {
     //   document.getElementById("resulBusqPacientes_proCot").innerHTML = html;
     $("#resulBusqPacientes_promed").html(html);
 }
-
-function storePM1(id_paciente) {}
-function storePM2(id_paciente) {
+function storePM1(id_paciente) {
     $.ajax({
         type: "get",
         url: "Descargo/make",
-        data: { paciente: id_paciente },
+        data: { paciente: id_paciente,'tipo':'quirofano' },
         // dataType: "",
         success: function (response) {
+            // console.log(response);
             $("#panel1_descargo").html(response);
+            $('#panelQuirofano').show();
+            $('#panelEndoscopia').hide();
+
         },
     });
     $("#md-searchPacienteDescargo").modal("hide");
 }
+function storePM2(id_paciente) {
+    $.ajax({
+        type: "get",
+        url: "Descargo/make",
+        data: { paciente: id_paciente,'tipo':'endoscopia' },
+        // dataType: "",
+        success: function (response) {
+            // console.log(response);
+            $("#panel1_descargo").html(response);
+            $('#panelEndoscopia').show();
+            $('#panelQuirofano').hide();
+
+        },
+    });
+    $("#md-searchPacienteDescargo").modal("hide");
+}
+
+

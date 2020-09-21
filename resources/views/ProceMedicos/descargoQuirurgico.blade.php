@@ -6,7 +6,8 @@
 					<a href="#"><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}"></a>
 				</div>
 				<div class="col-sm-6 align-lg-center">
-					<h4>Descargo Quirurgico <br># HCL.:{{$paciente->pa_hcl}} </h4>
+					
+					<h4>Descargo {{$tipo}} <br># HCL.:{{$paciente->pa_hcl}} </h4>
 				</div>
 			</div>
 			<hr>

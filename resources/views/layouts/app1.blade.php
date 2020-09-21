@@ -127,7 +127,7 @@
 				<div class="row">
 					<div class="col-lg-8" id="panel1_descargo">
 						<section class="panel"></section>
-						
+
 					</div>
 					<div class="col-lg-4">
 						<section class="panel">
@@ -135,8 +135,64 @@
 								<div id="clock"></div>
 							</div>
 						</section>
-						<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-plus-square"></i> Agregar Medicamento </button>
-						<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-medkit"></i> Agregar Insumo</button>
+						<section class="panel" id="panelQuirofano" hidden>
+							<header class="panel-heading">
+								<h4>procedimiento<strong>Quirofano</strong></h2>
+							</header>
+							<form role="form">
+								<div class="panel-body">
+									<div class="form-group">
+										<label class="color">Medicamento</label>
+										<select name="medicamento" class="form-control">
+											<option value="">1</option>
+											<option value="">20</option>
+											<option value="">21</option>
+											<option value="">22</option>
+											<option value="">23</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="color">Cantidad</label>
+										<input type="text" class="form-control" name="cantidad" autocomplete="off">
+									</div>
+								</div>
+								<footer class="panel-footer">
+									<button type="submit" class="btn btn-theme-inverse">Agregar</button>
+								</footer>
+							</form>
+						</section>
+						<section class="panel" id="panelEndoscopia" hidden>
+							<header class="panel-heading">
+								<h4>procedimiento<strong>Endoscopia</strong></h2>
+							</header>
+							<form role="form">
+								<div class="panel-body">
+									<div class="form-group">
+										<label class="color">Medicamento</label>
+										<select name="medicamento" class="form-control">
+											<option value="">1</option>
+											<option value="">20</option>
+											<option value="">21</option>
+											<option value="">22</option>
+											<option value="">23</option>
+											<option value="">3</option>
+											<option value="">4</option>
+											<option value="">5</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="color">Cantidad</label>
+										<input type="text" class="form-control" name="cantidad" autocomplete="off">
+									</div>
+								</div>
+								<footer class="panel-footer">
+									<button type="submit" class="btn btn-theme-inverse">Agregar</button>
+								</footer>
+							</form>
+						</section>
 					</div>
 				</div>
 			</div>
@@ -170,7 +226,7 @@
 												<th>CI</th>
 												<th>Nombre</th>
 												<th>Apellido</th>
-												<th width="30%">Action</th>
+												<th width="30%">Descargo</th>
 											</tr>
 										</thead>
 										<tbody align="center" id="resulBusqPacientes_promed">
@@ -1035,7 +1091,7 @@
 				</div>
 			</div>
 		</div>
-		<nav id="menu">
+		<!-- <nav id="menu">
 			<ul>
 				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
 					<ul>
@@ -1045,7 +1101,7 @@
 				</li>
 				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
 			</ul>
-		</nav>
+		</nav> -->
 	</div>
 	<!-- Jquery Library -->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.min.js')}}"></script>
