@@ -1,5 +1,6 @@
 <?php
 
+use App\descargoMedicoCont;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,4 +23,5 @@ Route::group(['prefix'=>'cotizacion'],function ()
 Route::group(['prefix'=>'Descargo'],function ()
 {
     Route::get('make','descargoMedicoController@make');
+    Route::apiResource('desMedCont',descargoMedicoContController::class);
 });

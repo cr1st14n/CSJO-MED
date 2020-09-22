@@ -160,7 +160,7 @@
 									</div>
 								</div>
 								<footer class="panel-footer">
-									<button type="submit" class="btn btn-theme-inverse">Agregar</button>
+									<button type="button" id="btnPru" class="btn btn-theme-inverse">Agregar</button>
 								</footer>
 							</form>
 						</section>

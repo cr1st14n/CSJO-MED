@@ -127,4 +127,17 @@ function storePM2(id_paciente) {
     $("#md-searchPacienteDescargo").modal("hide");
 }
 
+$('#btnPru').click(function (e) { 
+    e.preventDefault();
+    $.ajax({
+        type: "delete",
+        url: "Descargo/desMedCont/"+"88",
+        data: {id:'ididid'},
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+        }
+    });
+});
+
 
