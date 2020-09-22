@@ -16,6 +16,15 @@ class CreateDescargoMedicoContsTable extends Migration
         Schema::create('descargo_medico_conts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->integer('id_descMed');
+            $table->integer('id_descItem');
+            $table->string('dmc_cantidad')->nullable();
+            
+            $table->integer('ca_usu_cod')->nullable();
+            $table->string('ca_tipo',10)->nullable();
+            $table->dateTime('ca_fecha')->nullable();
+            $table->integer('ca_estado')->nullable();
         });
     }
 
