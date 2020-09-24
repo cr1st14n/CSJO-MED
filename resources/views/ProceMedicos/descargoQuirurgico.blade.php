@@ -43,6 +43,10 @@
 								</tr>
 							</thead>
 							<tbody id="desQui_list1">
+								<tr>
+									<th></th>
+									<th></th>
+								</tr>
 							</tbody>
 						</table>
 					</div>

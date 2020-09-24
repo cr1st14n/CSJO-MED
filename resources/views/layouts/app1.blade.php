@@ -135,32 +135,58 @@
 								<div id="clock"></div>
 							</div>
 						</section>
-						<section class="panel" id="panelQuirofano" hidden>
+						<section class="panel align-xs-center" id="panelQuirofano" hidden>
 							<header class="panel-heading">
 								<h4>procedimiento<strong>Quirofano</strong></h2>
 							</header>
-							<form role="form">
-								<div class="panel-body">
+							<div class="panel-body align-xs-center">
+
+								<div class="btn-group  align-xs-center">
+									<button type="button" class="btn btn-inverse btn-transparent" id="btn-qui-tipo_1">Medicamentos </button>
+									<button type="button" class="btn btn-inverse btn-transparent" id="btn-qui-tipo_2">Insumo</button>
+								</div>
+							</div>
+
+							<form role="form" id="form-quirRegisterMed" hidden>@csrf
+								<input type="text" name="id_desMed_createDesCon" hidden>
+								<input type="text" name="tipo_create" value="quirofano1" hidden>
+
+								<div class="panel-body align-lg-left">
 									<div class="form-group">
-										<label class="color">Medicamento</label>
-										<select name="medicamento" class="form-control">
-											<option value="">1</option>
-											<option value="">20</option>
-											<option value="">21</option>
-											<option value="">22</option>
-											<option value="">23</option>
-											<option value="">3</option>
-											<option value="">4</option>
-											<option value="">5</option>
+										<select class="selectpicker form-control" name="item" data-size="10" data-live-search="true">
+											<option value="">Seleccionar Medicamento </option>
+											@foreach($items1 as $item)
+											<option value="{{$item->id}}">{{$item->dmi_nombre}}</option>
+											@endforeach
 										</select>
 									</div>
-									<div class="form-group">
-										<label class="color">Cantidad</label>
-										<input type="text" class="form-control" name="cantidad" autocomplete="off">
+									<div class="input-group"> <span class="input-group-addon">Cantidad</span>
+										<input type="text" name="cantidad" class="form-control" placeholder="....">
 									</div>
 								</div>
 								<footer class="panel-footer">
-									<button type="button" id="btnPru" class="btn btn-theme-inverse">Agregar</button>
+									<button type="submit "  class="btn btn-theme-inverse btn-block">Agregar</button>
+								</footer>
+							</form>
+							<form id="form-quirRegisterInsu" hidden>@csrf
+								<input type="text" name="id_desMed_createDesCon" hidden>
+								<input type="text" name="tipo_create" value="quirofano1" hidden>
+
+								<div class="panel-body align-lg-left">
+									<div class="form-group">
+										<select class="selectpicker form-control" name="item" data-size="10" data-live-search="true">
+											<option value="">Seleccionar Insumo </option>
+											@foreach($items2 as $item)
+											<option value="{{$item->id}}">{{$item->dmi_nombre}}</option>
+											@endforeach
+										</select>
+									</div>
+									<div class="input-group"> <span class="input-group-addon">Cantidad</span>
+										<input type="text"  name="cantidad"  class="form-control" placeholder="....">
+									</div>
+								</div>
+								<footer class="panel-footer">
+									<button type="submit"  class="btn btn-theme-inverse btn-block">Agregar</button>
 								</footer>
 							</form>
 						</section>
@@ -168,28 +194,55 @@
 							<header class="panel-heading">
 								<h4>procedimiento<strong>Endoscopia</strong></h2>
 							</header>
-							<form role="form">
-								<div class="panel-body">
+							<div class="panel-body align-xs-center">
+
+								<div class="btn-group  align-xs-center">
+									<button type="button" class="btn btn-inverse btn-transparent" id="btn-end-tipo_1">Medicamentos </button>
+									<button type="button" class="btn btn-inverse btn-transparent" id="btn-end-tipo_2">Insumo</button>
+								</div>
+							</div>
+
+							<form role="form" id="form-endRegisterMed" hidden>@csrf
+								<input type="text" name="id_desMed_createDesCon" hidden>
+								<input type="text" name="tipo_create" value="quirofano1" hidden>
+
+								<div class="panel-body align-lg-left">
 									<div class="form-group">
-										<label class="color">Medicamento</label>
-										<select name="medicamento" class="form-control">
-											<option value="">1</option>
-											<option value="">20</option>
-											<option value="">21</option>
-											<option value="">22</option>
-											<option value="">23</option>
-											<option value="">3</option>
-											<option value="">4</option>
-											<option value="">5</option>
+										<select class="selectpicker form-control" name="item" data-size="10" data-live-search="true">
+											<option value="">Seleccionar Medicamento </option>
+											@foreach($items1 as $item)
+											<option value="{{$item->id}}">{{$item->dmi_nombre}}</option>
+											@endforeach
 										</select>
 									</div>
-									<div class="form-group">
-										<label class="color">Cantidad</label>
-										<input type="text" class="form-control" name="cantidad" autocomplete="off">
+									<div class="input-group"> <span class="input-group-addon">Cantidad</span>
+										<input type="text" class="form-control"  name="cantidad" placeholder="....">
 									</div>
 								</div>
 								<footer class="panel-footer">
-									<button type="submit" class="btn btn-theme-inverse">Agregar</button>
+									<button type="submit"  class="btn btn-theme-inverse btn-block">Agregar</button>
+								</footer>
+							</form>
+							<form role="form" id="form-endRegisterInsu" hidden>@csrf
+								<input type="text" name="id_desMed_createDesCon" hidden>
+								<input type="text" name="tipo_create" value="quirofano1" hidden>
+
+
+								<div class="panel-body align-lg-left">
+									<div class="form-group">
+										<select class="selectpicker form-control" name="item" data-size="10" data-live-search="true">
+											<option value="">Seleccionar Insumo </option>
+											@foreach($items2 as $item)
+											<option value="{{$item->id}}">{{$item->dmi_nombre}}</option>
+											@endforeach
+										</select>
+									</div>
+									<div class="input-group"> <span class="input-group-addon">Cantidad</span>
+										<input type="text" class="form-control" name="cantidad" placeholder="....">
+									</div>
+								</div>
+								<footer class="panel-footer">
+									<button type="submit"  class="btn btn-theme-inverse btn-block">Agregar</button>
 								</footer>
 							</form>
 						</section>
@@ -428,146 +481,105 @@
 
 
 		<!-- start modal cotizacianes -->
-		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="60%">
+		<div id="md-createDescargoMedico" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="60%">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Formulario PRE-COTIZACION</h4>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Nuevo Descargo medico</h4>
 			</div>
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
 					<div class="panel-body">
-						<h5 style="color: black;">- Dia de internacion 100 Bs. <br>- Procedimientos de enfermeria se cobra segun el consumo <br>- RX, Lab, Medicamentos en SALA: Tienen un costo adicional </h5>
-						<h4 style="color: black;"></h4>
 						<hr>
-						<form class="form-horizontal" data-collabel="4" data-alignlabel="left" id="form_new_cotizacion">@csrf
-							<input type="text" id="id_paciente_new_cotizacion" name="id_paciente_new_cotizacion" hidden>
+						<form class="form-horizontal" data-collabel="4" data-alignlabel="left" id="form_new_descargoMed1">@csrf
+							<input type="text" id="idpacienteCreateDesMed" name="idpacienteCreateDesMed" hidden>
 							<div class=" col-lg-6">
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Especialidad Medica*</label>
+									<label class="control-label col-md-3" style="text-align: left;">Fecha</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="EspecialidadMedica" autocomplete="off" required>
+										<input type="date" class="form-control rounded" name="dmFecha" autocomplete="off" required>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Nombre de la Cirugia*</label>
+									<label class="control-label col-md-3" style="text-align: left;">Diagnostico</label>
 									<div class="col-md-9">
-										<input type="text" class="form-control rounded" name="nombreCirugia" required>
+										<input type="text" class="form-control rounded" name="dmDiagnostico" required>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Tiempo Aproximado</label>
+									<label class="control-label col-md-3" style="text-align: left;">Operacion</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="dmOperacion" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Hora Inicio</label>
 									<div class="col-md-9">
 										<!-- <input type=" number" class="form-control rounded" name="tiempoAproximado"> -->
 										<div class="input-group">
-											<input type="number" class="form-control" name="tiempoAproximado">
-											<span class="input-group-addon">Hora </span>
+											<input type="time" class="form-control" name="dmHoraInicio">
 										</div>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Cirujano (Honorarios Solicitados)</label>
+									<label class="control-label col-md-3" style="text-align: left;">Hora Culminacion</label>
 									<div class="col-md-9">
-										<input type="number" class="form-control rounded" name="cirujanoHonorarios">
+										<!-- <input type=" number" class="form-control rounded" name="tiempoAproximado"> -->
+										<div class="input-group">
+											<input type="time" class="form-control" name="dmHoraCulminacion">
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-3" style="text-align: left;">Procedimiento</label>
+									<label class="control-label col-md-3" style="text-align: left;">Duracion</label>
 									<div class="col-md-9">
-										<select class="form-control" name="procedimiento">
-											<option value="1">Mayor</option>
-											<option value="2">Mediana</option>
-											<option value="3">Menor</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-3" for="otros" style="text-align: left;">Otros</label>
-									<div class="col-md-9">
-										<textarea name="otros" cols="25" rows="2" class="form-control"></textarea>
+										<input type="number" class="form-control rounded" name="dmDuracion">
 									</div>
 								</div>
 							</div>
 							<div class=" col-lg-6">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="anesteseologo" value="1">
-										Anesteseologo </label>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Area procedimiento</label>
+									<div class="col-md-9">
+										<label class="radio-inline">
+											<input type="radio" id="inlineRadio1" name="areaProcedimiento" value="Quirofano" required>
+											Quirofano </label>
+										<label class="radio-inline">
+											<input type="radio" id="inlineRadio2" name="areaProcedimiento" value="Endoscopia" required>
+											Endoscopia </label>
+									</div>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="quirofano_mayor" value="1">
-										Quirofano mayor </label>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Cirujano</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="dmCirujano" required>
+									</div>
 								</div>
-
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="sala_endoscopia" value="1">
-										Sala de endoscopia </label>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Anesteseologo</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="dmAnesteseologo">
+									</div>
 								</div>
-
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="sala_partos" value="1">
-										Sala de Partos </label>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Instrumentador</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="dmInstrumentador">
+									</div>
 								</div>
-
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="equipo_laparoscopia" value="1">
-										Equipo de laparoscopia </label>
+								<div class="form-group">
+									<label class="control-label col-md-3" style="text-align: left;">Circulante</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control rounded" name="dmCirculante">
+									</div>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="ayudante_1" value="1">
-										Un Ayudante </label>
+								<div class="form-group offset">
+									<div class="col-md-offset-3 col-md-9">
+										<button type="submit" class="btn btn-theme-inverse">Crear </button>
+										<button type="reset" class="btn btn-danger">Cancelar</button>
+									</div>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="ayudante_2" value="1">
-										Dos Ayudantes </label>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="instrumentador" value="1">
-										Intrumentador</label>
-								</div>
-
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="circulante" value="1">
-										Circulante </label>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="oxigeno" value="1">
-										Oxigeno </label>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="aguja_k" value="1">
-										Aguja K </label>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="insumos_quirofano" value="1">
-										Insumos en Quirofano </label>
-								</div>
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="medicamentos_quirofano" value="1">
-										Medicamentos en quirofano </label>
-								</div>
-
-
-
 							</div>
 							<hr>
-							<div class="form-group offset">
-								<div class="col-md-offset-3 col-md-9">
-									<button type="submit" class="btn btn-theme-inverse">Registrar</button>
-									<button type="reset" class="btn btn-danger">Cancelar</button>
-								</div>
-							</div>
 						</form>
 					</div>
 				</div>
@@ -1125,6 +1137,7 @@
 	<!-- Library Themes Customize-->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
 	<!--  funciones de historias clinicas -->
+	<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/procedimientosMedicos.js') }}"></script>
 
 </body>

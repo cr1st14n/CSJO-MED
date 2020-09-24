@@ -78,66 +78,208 @@ $("#NOMBRESpaciente_promed").keyup(function (e) {
 function listPacientes(data) {
     var html = data
         .map(function (elem, index) {
-            return r=`<tr>
+            return (r = `<tr>
                       <td>${elem.pa_hcl}</td>
                       <td>${elem.pa_ci}</td>
                       <td>${elem.pa_nombre}</td>
                       <td>${elem.pa_appaterno} / ${elem.pa_apmaterno}</td>
                         <td>
-                            <button type="button" title="Descargo quirofano" onClick="storePM1(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-pencil"></i> Q</button>
-                            <button type="button" title="Descargo endoscopia" onClick="storePM2(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-pencil"></i> E</button>
+                            <button type="button" title="Descargo quirofano" onClick="showModalCreateDescargo(${elem.pa_id})" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-pencil"></i></button>
                         </td>
                      
-                </tr>`;
+                </tr>`);
         })
         .join(" ");
     //   document.getElementById("resulBusqPacientes_proCot").innerHTML = html;
     $("#resulBusqPacientes_promed").html(html);
 }
-function storePM1(id_paciente) {
+function storePM1(id_dm, id_paciente) {
+    console.log(id_dm, id_paciente);
     $.ajax({
         type: "get",
         url: "Descargo/make",
-        data: { paciente: id_paciente,'tipo':'quirofano' },
+        data: { paciente: id_paciente, tipo: "quirofano" },
         // dataType: "",
         success: function (response) {
             // console.log(response);
             $("#panel1_descargo").html(response);
-            $('#panelQuirofano').show();
-            $('#panelEndoscopia').hide();
-
+            $("#panelQuirofano").show();
+            $("#panelEndoscopia").hide();
+            $("input:text[name=id_desMed_createDesCon]").val(id_dm);
         },
     });
     $("#md-searchPacienteDescargo").modal("hide");
 }
-function storePM2(id_paciente) {
+function storePM2(id_dm, id_paciente) {
+    console.log(id_dm, id_paciente);
     $.ajax({
         type: "get",
         url: "Descargo/make",
-        data: { paciente: id_paciente,'tipo':'endoscopia' },
+        data: { paciente: id_paciente, tipo: "endoscopia" },
         // dataType: "",
         success: function (response) {
             // console.log(response);
             $("#panel1_descargo").html(response);
-            $('#panelEndoscopia').show();
-            $('#panelQuirofano').hide();
-
+            $("#panelEndoscopia").show();
+            $("#panelQuirofano").hide();
+            $("input:text[name=id_desMed_createDesCon]").val(id_dm);
         },
     });
     $("#md-searchPacienteDescargo").modal("hide");
 }
 
-$('#btnPru').click(function (e) { 
+$("#btnPru").click(function (e) {
     e.preventDefault();
     $.ajax({
         type: "delete",
-        url: "Descargo/desMedCont/"+"88",
-        data: {id:'ididid'},
+        url: "Descargo/desMedCont/" + "88",
+        data: { id: "ididid" },
         // dataType: "dataType",
         success: function (response) {
             console.log(response);
-        }
+        },
     });
 });
 
+$("#btn-qui-tipo_1").click(function (e) {
+    e.preventDefault();
+    $("#form-quirRegisterMed").show();
+    $("#form-quirRegisterInsu").hide();
+});
+$("#btn-qui-tipo_2").click(function (e) {
+    e.preventDefault();
+    $("#form-quirRegisterInsu").show();
+    $("#form-quirRegisterMed").hide();
+});
+$("#btn-end-tipo_1").click(function (e) {
+    e.preventDefault();
+    $("#form-endRegisterMed").show();
+    $("#form-endRegisterInsu").hide();
+});
+$("#btn-end-tipo_2").click(function (e) {
+    e.preventDefault();
+    $("#form-endRegisterInsu").show();
+    $("#form-endRegisterMed").hide();
+});
 
+function showModalCreateDescargo(paciente) {
+    $("#md-searchPacienteDescargo").modal("hide");
+    $("#md-createDescargoMedico").modal("show");
+    $("#idpacienteCreateDesMed").val(paciente);
+}
+$("#form_new_descargoMed1").submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: "Descargo/desMed",
+        data: $("#form_new_descargoMed1").serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+            if (response == 0) {
+                notif("2", "Error.!!!");
+            } else {
+                if (response["dm_area"] == "Quirofano") {
+                    storePM1(response["idDM"], response["idPaciente"]);
+                    $("#md-createDescargoMedico").modal("hide");
+                }
+                if (response["dm_area"] == "Endoscopia") {
+                    storePM2(response["idDM"], response["idPaciente"]);
+                    $("#md-createDescargoMedico").modal("hide");
+                } else {
+                    notif("2", "Error. vuelba a intentarlo");
+                }
+            }
+        },
+    });
+});
+
+$("#form-quirRegisterMed").submit(function (e) {
+    e.preventDefault();
+    console.log($("#form-quirRegisterMed").serialize());
+    $.ajax({
+        type: "post",
+        url: "Descargo/desMedCont",
+        data: $("#form-quirRegisterMed").serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+            descList1(response);
+            notif("1", "Item Aregado");
+        },
+    });
+});
+$("#form-quirRegisterInsu").submit(function (e) {
+    e.preventDefault();
+
+    // console.log($("#form-quirRegisterInsu").serialize());
+
+
+    // e.preventDefault();
+    // console.log($("#form-quirRegisterInsu").serialize());
+    $.ajax({
+        type: "post",
+        url: "Descargo/desMedCont",
+        data: $("#form-quirRegisterInsu").serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+            descList2(response);
+            notif("1", "Item Aregado");
+        },
+    });
+});
+$("#form-endRegisterMed").submit(function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: "post",
+        url: "Descargo/desMedCont",
+        data: $("#form-endRegisterMed").serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+            descList1(response);
+            notif("1", "Item Aregado");
+        },
+    });
+});
+$("#form-endRegisterInsu").submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "post",
+        url: "Descargo/desMedCont",
+        data: $("#form-endRegisterInsu").serialize(),
+        // dataType: "dataType",
+        success: function (response) {
+            descList2(response);
+            notif("1", "Item Aregado");
+        },
+    });
+});
+
+function descList1(data) {
+    console.log(data);
+    var html = data
+        .map(function (elem, index) {
+            return (a = `
+            <tr>
+                <th>${elem.dmi_nombre}</th>
+                <th>${elem.dmc_cantidad}</th>
+            </tr>
+        `);
+        })
+        .join(" ");
+    $("#desQui_list1").html(html);
+}
+function descList2(data) {
+    console.log(data);
+    var html = data
+        .map(function (elem, index) {
+            return (a = `
+            <tr>
+                <th>${elem.dmi_nombre}</th>
+                <th>${elem.dmc_cantidad}</th>
+            </tr>
+        `);
+        })
+        .join(" ");
+    $("#desQui_list2").html(html);
+}

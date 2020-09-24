@@ -23,5 +23,6 @@ Route::group(['prefix'=>'cotizacion'],function ()
 Route::group(['prefix'=>'Descargo'],function ()
 {
     Route::get('make','descargoMedicoController@make');
+    Route::apiResource('desMed',descargoMedicoController::class,['only'=>['store']]);
     Route::apiResource('desMedCont',descargoMedicoContController::class);
 });
