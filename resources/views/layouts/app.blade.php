@@ -123,7 +123,9 @@
 			<div id="content">
 				<div class="row">
 					<div class="col-lg-8" id="panel1">
-						<section class="panel"></section>
+						<section class="panel">
+
+						</section>
 					</div>
 					<div class="col-lg-4">
 						<div class="well bg-theme">
@@ -138,6 +140,17 @@
 						<section class="panel">
 							<div class="widget-clock">
 								<div id="clock"></div>
+							</div>
+						</section>
+						<section class="panel">
+							<div class="panel-body align-xs-center">
+								<h4>Funciones Medicas</h4>
+								<br>
+								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-floppy-disk"></i></button>
+								<button type="button" id="form_resetarioMedico" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
+								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-headphones"></i></button>
+								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-print"></i></button>
+								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-signal"></i></button>
 							</div>
 						</section>
 					</div>
@@ -251,7 +264,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="md-notification" class="modal fade md-stickTop bg-gradient-blue" tabindex="-1" data-width="500">
+
+		<!-- modal de cotizaciones -->
+		<div id="md-notification" class="modal fade md-stickTop bg-gradient-blue " tabindex="-1" data-width="500">
 			<div class="modal-header bd-danger-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Formularios para cotizaciones</h4>
@@ -318,7 +333,24 @@
 			</div>
 		</div>
 
+		<!-- modal recetario virtual -->
+		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="600">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h3>Stack One</h3>
+			</div>
+			<div class="modal-body">
+				<p>One fine body…</p>
+				<p>Two fine body…</p>
+				<p>Three fine body…</p>
 
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
+			</div>
+		</div>
 
 		<!-- start modal cotizacianes -->
 		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="60%">
@@ -353,7 +385,7 @@
 										<!-- <input type=" number" class="form-control rounded" name="tiempoAproximado"> -->
 										<div class="input-group">
 											<input type="number" class="form-control" name="tiempoAproximado">
-											<span class="input-group-addon">Hora </span> 
+											<span class="input-group-addon">Hora </span>
 										</div>
 									</div>
 								</div>
@@ -1020,6 +1052,7 @@
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
 </body>
 
 </html>
