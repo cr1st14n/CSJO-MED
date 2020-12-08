@@ -334,16 +334,49 @@
 		</div>
 
 		<!-- modal recetario virtual -->
-		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="600">
+		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="800">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h3>Stack One</h3>
+				<h3>Crear Nueva receta</h3>
 			</div>
 			<div class="modal-body">
-				<p>One fine body…</p>
-				<p>Two fine body…</p>
-				<p>Three fine body…</p>
+				<div class="row">
+					<form id="">
+						<div class="form-group col-lg-3">
+							<label>Rounded</label>
+							<select name="" id="">
+								
+							</select>
+						</div>
+						<div class="form-group col-lg-4">
+							<label>Rounded</label>
+							<input type="text" class="form-control rounded">
+						</div>
+						<div class="form-group col-lg-4">
+							<label>Rounded</label>
+							<input type="text" class="form-control rounded">
+						</div>
+						<div class="form-group col-lg-1">
+							<br>
+							<button class="btn btn-theme-inverse" type="button"><i class="fa fa-check"></i></button>
+						</div>
+					</form>
+				</div>
+				<table class="table">
+					<thead>
+						<th>Medicamento </th>
+						<th>Forma farmaceutica</th>
+						<th>Dosis, Duracion</th>
+					</thead>
+					<tbody align="center">
+						<tr>
+							<td>afs</td>
+							<td>Tratamiento </td>
+							<td>Tratamiento </td>
+						</tr>
 
+					</tbody>
+				</table>
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
