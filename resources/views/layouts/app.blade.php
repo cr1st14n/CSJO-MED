@@ -341,24 +341,27 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<form id="">
+					<form id="form-createRecetario">
 						<div class="form-group col-lg-3">
-							<label>Rounded</label>
-							<select name="" id="">
-								
+							<label>Farmaceutico</label>
+							<select class="selectpicker form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
+								<option value="">Sleccinar ... </option>
+								<option value="paracetamol">paracetamol</option>
+								<option value="ibuprofeno">ibuprofeno</option>
+								<option value="quetorolaco">quetorolaco </option>
 							</select>
 						</div>
 						<div class="form-group col-lg-4">
-							<label>Rounded</label>
-							<input type="text" class="form-control rounded">
+							<label>Forma Farmaceutica</label>
+							<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
 						</div>
 						<div class="form-group col-lg-4">
-							<label>Rounded</label>
-							<input type="text" class="form-control rounded">
+							<label>Dosis Duración</label>
+							<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
 						</div>
 						<div class="form-group col-lg-1">
 							<br>
-							<button class="btn btn-theme-inverse" type="button"><i class="fa fa-check"></i></button>
+							<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-check"></i></button>
 						</div>
 					</form>
 				</div>
@@ -367,21 +370,17 @@
 						<th>Medicamento </th>
 						<th>Forma farmaceutica</th>
 						<th>Dosis, Duracion</th>
+						<th></th>
 					</thead>
-					<tbody align="center">
-						<tr>
-							<td>afs</td>
-							<td>Tratamiento </td>
-							<td>Tratamiento </td>
-						</tr>
-
+					<tbody align="center" id="tableBodilistMedicamentos">
 					</tbody>
 				</table>
 			</div>
 			<div class="modal-footer">
-				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+				<button type="button" class="btn btn-inverse"><i class="fa fa-refresh" id="refreshRecetario"></i></button>
 
-				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Registrar</button>
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Registrar e Imprimir <i class="fa fa-print"></i></button>
 			</div>
 		</div>
 
@@ -1083,6 +1082,7 @@
 	<!-- Library Themes Customize-->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
 	<!--  funciones de historias clinicas -->
+	<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
