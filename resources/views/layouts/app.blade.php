@@ -5,6 +5,8 @@
 	<!-- Meta information -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 	<!-- Title-->
 	<title>{{ config('app.name', 'Laravel') }} | Med</title>
 	<!-- Favicons -->
@@ -344,10 +346,11 @@
 					<form id="form-createRecetario">
 						<div class="form-group col-lg-3">
 							<label>Farmaceutico</label>
-							<select class="selectpicker form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
-								<option value="">Sleccinar ... </option>
+							<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
+								<option value="">Selecionar ... </option>
 								<option value="paracetamol">paracetamol</option>
 								<option value="ibuprofeno">ibuprofeno</option>
+								<option value="ibuprofeno">iboprofeno</option>
 								<option value="quetorolaco">quetorolaco </option>
 							</select>
 						</div>
@@ -378,9 +381,8 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-inverse"><i class="fa fa-refresh" id="refreshRecetario"></i></button>
-
-				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Registrar</button>
-				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Registrar e Imprimir <i class="fa fa-print"></i></button>
+				<button class="btn btn-primary" onclick="registerReceta(1)">Registrar</button>
+				<button class="btn btn-theme-inverse" onclick="registerReceta(2)">Registrar e Imprimir <i class="fa fa-print"></i></button>
 			</div>
 		</div>
 

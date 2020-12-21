@@ -1,46 +1,40 @@
-
 let Receta = [];
 // $('#btn-addMedicamento').on("click",addMedicamento);
-$('#form-createRecetario').submit(function (e) { 
+$("#form-createRecetario").submit(function (e) {
     e.preventDefault();
-    addMedicamento();});
-$('#refreshRecetario').on('click',refreshRecetario);
-$('#form_resetarioMedico').click(function (e) { 
+    addMedicamento();
+});
+$("#refreshRecetario").on("click", refreshRecetario);
+$("#form_resetarioMedico").click(function (e) {
     e.preventDefault();
-    $('#md-form1_recetario').modal('show')
+    if ($("#paciente_id_HCL").val() == null) {
+        $.notific8("Seleccione Paciente!.", {
+            life: "3000",
+            theme: "primary",
+        });
+    } else {
+        $("#id_paciente_new_cotizacion").val($("#paciente_id_HCL").val());
+        $("#md-form1_recetario").modal("show");
+    }
 });
 function addMedicamento() {
-    if ($('#c_medi').val() == "") {
-        notif('2','Error! Seleccione Medicamento');
+    if ($("#c_medi").val() == "") {
+        notif("2", "Error! Seleccione Medicamento");
     } else {
-        var medicamentos={a:$('#c_medi').val(),b:$('#c_forma').val(),c:$('#c_dosis').val()};
+        var medicamentos = {
+            a: $("#c_medi").val(),
+            b: $("#c_forma").val(),
+            c: $("#c_dosis").val(),
+        };
         Receta.push(medicamentos);
-        $html=Receta.map(
-            function (e,i) {
-                return variable= `
-                <tr>
-                    <td>${e.a}</td>
-                    <td>${e.b} </td>
-                    <td>${e.c} </td>
-                    <td>
-                        <button class="btn btn-danger" onclick="listReceMedicDelete(${i})"> <i class="fa fa-ban"></i></button>
-                    </td>
-                <tr>    
-                `;
-            }
-        ).join(" ");
-        $('#tableBodilistMedicamentos').html($html);
-        $('#c_medi').focus();
+        listRecetario();
+        $("#c_medi").focus();
     }
-  }
-function refreshRecetario() {
-    $('#form-createRecetario').trigger('reset');
-  }
-function listReceMedicDelete(dit) {
-    Receta.splice(dit,1);
-        $html=Receta.map(
-            function (e,i) {
-                return variable= `
+}
+function listRecetario() {
+    const html = Receta.map(
+        (e, i) =>
+            (variable = `
                 <tr>
                     <td>${e.a}</td>
                     <td>${e.b} </td>
@@ -49,10 +43,59 @@ function listReceMedicDelete(dit) {
                         <button class="btn btn-danger" onclick="listReceMedicDelete(${i})"> <i class="fa fa-ban"></i></button>
                     </td>
                 <tr>    
-                `;
-            }
-        ).join(" ");
-        console.log($html);
-        $('#tableBodilistMedicamentos').html($html);
+                `)
+    ).join(" ");
+    $("#tableBodilistMedicamentos").html(html);
+}
 
-  }
+function refreshRecetario() {
+    $("#c_medi").val("");
+    $("#form-createRecetario").trigger("reset");
+    Receta = [];
+    listRecetario();
+}
+function listReceMedicDelete(dit) {
+    Receta.splice(dit, 1);
+    listRecetario();
+}
+
+function registerReceta(tipo) {
+    $("#paciente_id_HCL").val();
+    if (Receta == "") {
+        console.log("no hay regsiros");
+    } else {
+        switch (tipo) {
+            case 1:
+                var resp = createReceta(1);
+                if (resp.a == 0) {
+                    notif(2, "Error!, Vuelva a intentarlo");
+                } else {
+                    refreshRecetario();
+                    notif("1", "Receta Guardada Exitosamente");
+                    $("#md-form1_recetario").modal("hide");
+                }
+                break;
+            case 2:
+                var resp = createReceta(1);
+                
+                break;
+        }
+        console.log(t);
+    }
+}
+
+function createReceta(tipo) {
+    $.ajax({
+        type: "POST",
+        url: "recetarioM/create",
+        data: {
+            _token: $("meta[name=csrf-token]").attr("content"),
+            paciente: $("#paciente_id_HCL").val(),
+            data: Receta,
+        },
+        // dataType: "dataType",
+        success: function (response) {
+            return response;
+        },
+    });
+}

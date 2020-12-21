@@ -1,6 +1,7 @@
 <?php
 
 use App\descargoMedicoCont;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,4 +26,8 @@ Route::group(['prefix'=>'Descargo'],function ()
     Route::get('make','descargoMedicoController@make');
     Route::apiResource('desMed',descargoMedicoController::class,['only'=>['store']]);
     Route::apiResource('desMedCont',descargoMedicoContController::class);
+});
+Route::group(['prefix'=>'recetarioM'],function()
+{
+    route::POST('create','recetarioMController@create');
 });
