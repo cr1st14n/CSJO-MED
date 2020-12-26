@@ -64,38 +64,32 @@ function registerReceta(tipo) {
     if (Receta == "") {
         console.log("no hay regsiros");
     } else {
-        switch (tipo) {
-            case 1:
-                var resp = createReceta(1);
-                if (resp.a == 0) {
+        $.ajax({
+            type: "POST",
+            url: "recetarioM/create",
+            data: {
+                _token: $("meta[name=csrf-token]").attr("content"),
+                paciente: $("#paciente_id_HCL").val(),
+                data: Receta,
+            },
+            // dataType: "dataType",
+            success: function (response) {
+                if (response.a == 0) {
                     notif(2, "Error!, Vuelva a intentarlo");
                 } else {
-                    refreshRecetario();
-                    notif("1", "Receta Guardada Exitosamente");
-                    $("#md-form1_recetario").modal("hide");
+                    posCreate(tipo, response);
                 }
-                break;
-            case 2:
-                var resp = createReceta(1);
-                
-                break;
-        }
-        console.log(t);
+            },
+        });
     }
 }
 
-function createReceta(tipo) {
-    $.ajax({
-        type: "POST",
-        url: "recetarioM/create",
-        data: {
-            _token: $("meta[name=csrf-token]").attr("content"),
-            paciente: $("#paciente_id_HCL").val(),
-            data: Receta,
-        },
-        // dataType: "dataType",
-        success: function (response) {
-            return response;
-        },
-    });
+function posCreate(tipo, response) {
+    notif("1", "Registrado.");
+    refreshRecetario();
+    $("#md-form1_recetario").modal("hide");
+    if (tipo==2) {
+        // * se procede a abrir modal para imprimir el recetario
+        
+    } 
 }

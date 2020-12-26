@@ -5,7 +5,7 @@
 	<!-- Meta information -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<!-- Title-->
 	<title>{{ config('app.name', 'Laravel') }} | Med</title>
@@ -365,6 +365,10 @@
 						<div class="form-group col-lg-1">
 							<br>
 							<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-check"></i></button>
+						</div>
+						<div class="form-group col-lg-12">
+							<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="2"></textarea>
+							<span class="help-block "><strong>Datos del tratamiento</strong></span>
 						</div>
 					</form>
 				</div>
