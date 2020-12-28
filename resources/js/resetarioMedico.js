@@ -90,6 +90,6 @@ function posCreate(tipo, response) {
     $("#md-form1_recetario").modal("hide");
     if (tipo==2) {
         // * se procede a abrir modal para imprimir el recetario
-        
+        $('#md-form1_vistaReceta').modal('show');
     } 
 }

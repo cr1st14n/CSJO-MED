@@ -390,6 +390,15 @@
 			</div>
 		</div>
 
+		<!-- modal para vista previa de la receta medica -->
+		<div id="md-form1_vistaReceta" class="modal fade md-slideRight" tabindex="-1" data-width="800" >
+			
+			<div class="moda-body" height=800>
+				<embed src="http://localhost/CSJO-MED/dev1" type="" width="800" height="800">
+			</div>
+
+		</div>
+
 		<!-- start modal cotizacianes -->
 		<div id="md_cotizacion_fomr_1" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="60%">
 			<div class="modal-header ">

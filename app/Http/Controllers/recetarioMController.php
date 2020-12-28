@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class recetarioMController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -60,5 +61,11 @@ class recetarioMController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function pdfReceta()
+    {
+        return view('recetario.receta_a');
+
     }
 }

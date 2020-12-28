@@ -1,8 +1,14 @@
 <?php
 
 use App\descargoMedicoCont;
+use Facade\FlareClient\View;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
+
+Route::get('dev1',function()
+{
+    return view('recetario.receta_a');
+});
 
 Route::get('/', function () {
     return view('auth.SysLogin');
@@ -30,4 +36,5 @@ Route::group(['prefix'=>'Descargo'],function ()
 Route::group(['prefix'=>'recetarioM'],function()
 {
     route::POST('create','recetarioMController@create');
+    Route::get('pdf_recetamedica','recetarioMController@pdfReceta');
 });
