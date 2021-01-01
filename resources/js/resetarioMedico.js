@@ -24,7 +24,8 @@ function addMedicamento() {
         var medicamentos = {
             a: $("#c_medi").val(),
             b: $("#c_forma").val(),
-            c: $("#c_dosis").val(),
+            c: $("#c_via").val(),
+            d: $("#c_dosis").val(),
         };
         Receta.push(medicamentos);
         listRecetario();
@@ -39,6 +40,7 @@ function listRecetario() {
                     <td>${e.a}</td>
                     <td>${e.b} </td>
                     <td>${e.c} </td>
+                    <td>${e.d} </td>
                     <td>
                         <button class="btn btn-danger" onclick="listReceMedicDelete(${i})"> <i class="fa fa-ban"></i></button>
                     </td>

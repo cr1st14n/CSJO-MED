@@ -1,84 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSJO RECETARIO</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <style>
-        body {
-            background: white;
-            margin-top: 10px;
-            margin-bottom: 10px;
+    <title>Aloha!</title>
+    <style type="text/css">
+        * {
+            font-family: Verdana, Arial, sans-serif;
+        }
 
+        table {
+            font-size: x-small;
+        }
+
+        tfoot tr td {
+            font-weight: bold;
+            font-size: x-small;
+        }
+
+        .gray {
+            background-color: lightgray
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row " heigth=100>
-                            <div class="col-md-3">
-                                <img alt="" src="{{asset('Plantilla/assets/img/logoCSJO.jpg')}}" width="180px" height="100px" class="circle">
-                            </div>
-                            <div class="col-md-9 text-center">
-                                <h4 class="font-weight-bold mb-1" style="font-size: 18;">Centro de salud Jesus Obrero <br> Recetario Medico </h4>
-                                <p class="text-muted ">Medico: nombre del medico <br> Fecha: dd-mm-yyyy</p>
-                            </div>
-                        </div>
-                        <p> <strong> Paciente:</strong> Nombre y datos del paciente </p>
-                        <div class="row p-1" style="height: min-content=800px;">
-                            <div class="col-md-12">
-                                <table class=" table table-sm text-center">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-0 text-uppercase small font-weight-bold">Medicamento</th>
-                                            <th class="border-0 text-uppercase small font-weight-bold">Forma</th>
-                                            <th class="border-0 text-uppercase small font-weight-bold">Dosis Duración</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody style="font-size: small;">
-                                        <tr>
-                                            <td>paracetamol</td>
-                                            <td>pastillas 200 mg </td>
-                                            <td>tamar cada 8 horas por 6 diasajslñfjaslfjaslñjfñlasjasdfafñdiasajslñfjaslfjaslñjfñlasjfñ</td>
-                                        </tr>
-                                        <tr>
-                                            <td>paracetamol</td>
-                                            <td>pastillas 200 mg asdfa</td>
-                                            <td>tamar cada 8 horas por 6 diasajslñfjaslfjaslñjfñlasjfñdiasajslñfjaslfjaslñjfñlasjfñ</td>
-                                        </tr>
-                                        <tr>
-                                            <td>paracetamol</td>
-                                            <td>pastillas 200 mg asdfa</td>
-                                            <td>tamar cada 8 horas por 6 diasajslñfjaslfjaslñjfñlasjfñdiasajslñfjaslfjaslñjfñlasjfñ</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p> <strong> Nota:</strong> en esta seccion se dispondra de notas del tratamiento que el medico indica </p>
+    <table width="100%">
+        <tr>
+            <td valign="" width=40%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
+            </td>
+            <td align="left">
+                <h3>Receta Medica</h3>
+                <!-- <pre>
+                </pre> -->
+            </td>
+        </tr>
+    </table>
+    <table width="100%">
+        <tr>
+            <td width=40%><strong>Paciente:</strong>Eladio Christopher calderon nogales</td>
+            <td><strong>Medico:</strong> mmmmm mmmmm mmmmm mmmmm</td>
+        </tr>
+    </table>
+    <table width="100%">
+        <thead style="background-color: lightgray;">
+            <tr>
+                <th>Medicamento</th>
+                <th>Forma</th>
+                <th>Via</th>
+                <th>Dosis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <th scope="row">1</th>
+                <td>Playstation IV - Black</td>
+                <td align="right">1</td>
+                <td align="right">1400.00</td>
+                <td align="right">1400.00</td>
+            </tr> -->
+            <tr>
+                <td>Paracetamol</td>
+                <td align="center">pastillas de 400mg</td>
+                <td align="center">I.V.</td>
+                <td align="center">tomar cada 8 horas</td>
+            </tr>
+           
+        </tbody>
 
-                            </div>
-                        </div>
-                        <div class="row " heigth=100>
-                            <div class="col-md-6">
-                                <p style="font-size: small;">Esta receta medica contiene un codigo de control QR y a la ves esta almacenada en nuestros servidores</p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <td align="right">Subtotal $</td>
+                <td align="right">1635.00</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td align="right">Tax $</td>
+                <td align="right">294.3</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td align="right">Total $</td>
+                <td align="right" class="gray">$ 1929.3</td>
+            </tr>
+        </tfoot> -->
+    </table>
+    <table width="100%">
+        <tr>
+            </td>
+            <td align="left">
+                <p>
+                    <strong>Nota: en esta seccion se dispondra de datos referentes a dosis de los medicamentos </strong>
+                </p>
+            </td>
+            <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt="">
+        </tr>
+    </table>
 </body>
 
 </html>

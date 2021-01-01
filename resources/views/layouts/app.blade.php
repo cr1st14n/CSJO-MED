@@ -336,7 +336,7 @@
 		</div>
 
 		<!-- modal recetario virtual -->
-		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="800">
+		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="1000">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Crear Nueva receta</h3>
@@ -344,7 +344,7 @@
 			<div class="modal-body">
 				<div class="row">
 					<form id="form-createRecetario">
-						<div class="form-group col-lg-3">
+						<div class="form-group col-lg-2">
 							<label>Farmaceutico</label>
 							<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
 								<option value="">Selecionar ... </option>
@@ -354,9 +354,20 @@
 								<option value="quetorolaco">quetorolaco </option>
 							</select>
 						</div>
-						<div class="form-group col-lg-4">
+						<div class="form-group col-lg-3">
 							<label>Forma Farmaceutica</label>
 							<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
+						</div>
+						<div class="form-group col-lg-2">
+							<label>Via de administración</label>
+							<select class="form-control" data-size="10" data-live-search="true" name="c_via" id="c_via" require>
+								<option value="">Selecionar ... </option>
+								<option value="I.M.">I.M.</option>
+								<option value="I.V">I.V</option>
+								<option value="Sub. Cut.">Sub. Cut.</option>
+								<option value="V.O.">V.O.</option>
+								<option value="Canalización">Canalización</option>
+							</select>
 						</div>
 						<div class="form-group col-lg-4">
 							<label>Dosis Duración</label>
@@ -376,7 +387,8 @@
 					<thead>
 						<th>Medicamento </th>
 						<th>Forma farmaceutica</th>
-						<th>Dosis, Duracion</th>
+						<th>Via</th>
+						<th>Dosis</th>
 						<th></th>
 					</thead>
 					<tbody align="center" id="tableBodilistMedicamentos">
@@ -394,7 +406,7 @@
 		<div id="md-form1_vistaReceta" class="modal fade md-slideRight" tabindex="-1" data-width="800" >
 			
 			<div class="moda-body" height=800>
-				<embed src="http://localhost/CSJO-MED/dev1" type="" width="800" height="800">
+				<embed src="http://localhost/CSJO-MED/recetarioM/pdf_recetamedica" type="" width="800" height="800">
 			</div>
 
 		</div>
