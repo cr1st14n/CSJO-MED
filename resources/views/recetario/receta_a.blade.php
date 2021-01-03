@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Aloha!</title>
+	<!-- <link type="text/css" rel="stylesheet" href="{{ asset('Plantilla/bootstrap/style.css')}}" /> -->
     <style type="text/css">
         * {
             font-family: Verdana, Arial, sans-serif;
@@ -23,7 +24,6 @@
         }
     </style>
 </head>
-
 <body>
     <table width="100%">
         <tr>
@@ -65,7 +65,7 @@
                 <td align="center">I.V.</td>
                 <td align="center">tomar cada 8 horas</td>
             </tr>
-           
+
         </tbody>
 
         <!-- <tfoot>
@@ -94,7 +94,7 @@
                     <strong>Nota: en esta seccion se dispondra de datos referentes a dosis de los medicamentos </strong>
                 </p>
             </td>
-            <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt="">
+            <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
         </tr>
     </table>
 </body>

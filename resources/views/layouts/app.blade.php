@@ -403,10 +403,10 @@
 		</div>
 
 		<!-- modal para vista previa de la receta medica -->
-		<div id="md-form1_vistaReceta" class="modal fade md-slideRight" tabindex="-1" data-width="800" >
+		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="800" >
 			
 			<div class="moda-body" height=800>
-				<embed src="http://localhost/CSJO-MED/recetarioM/pdf_recetamedica" type="" width="800" height="800">
+				<embed src="http://localhost/CSJO-MED/recetarioM/pdf_recetamedica" type="" width="800" height="400">
 			</div>
 
 		</div>

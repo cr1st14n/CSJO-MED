@@ -8,9 +8,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 // use Barryvdh\DomPDF\PDF;
-use Dompdf\Dompdf;
+// use Dompdf\Dompdf;
 use PDF;
-use PDO;
+use SimpleSoftwareIO\QrCode\Facades\QrCode as QrCode;
 
 class recetarioMController extends Controller
 {
@@ -70,10 +70,15 @@ class recetarioMController extends Controller
 
     public function pdfReceta()
     {
+        $a = array();
+        $a = [1, 2, 3, 4, 5, 6, 7, 8];
+        $a = implode(",",$a);
+        // return $a;
+        return  QrCode::generate($a);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
-        $dompdf= PDF::loadView('recetario.receta_a');
-        $dompdf->setPaper('letter','portrait');
+        $dompdf = PDF::loadView('recetario.receta_a');
+        $dompdf->setPaper('letter', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }
 }
