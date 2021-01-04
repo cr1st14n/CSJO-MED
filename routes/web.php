@@ -36,5 +36,5 @@ Route::group(['prefix'=>'Descargo'],function ()
 Route::group(['prefix'=>'recetarioM'],function()
 {
     route::POST('create','recetarioMController@create');
-    Route::get('pdf_recetamedica','recetarioMController@pdfReceta');
+    Route::get('pdf_recetamedica/{receta}','recetarioMController@pdfReceta');
 });

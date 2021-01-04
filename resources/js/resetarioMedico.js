@@ -90,8 +90,12 @@ function posCreate(tipo, response) {
     notif("1", "Registrado.");
     refreshRecetario();
     $("#md-form1_recetario").modal("hide");
+    $("#linkUrlPdf").attr("src","");
     if (tipo==2) {
+        console.log(response.b);
         // * se procede a abrir modal para imprimir el recetario
+        var url= `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${response.b}`;
+        $("#linkUrlPdf").attr("src",url);
         $('#md-form1_vistaReceta').modal('show');
     } 
 }

@@ -68,16 +68,27 @@ class recetarioMController extends Controller
         //
     }
 
-    public function pdfReceta()
+    public function pdfReceta($data)
     {
+        // return $data;
         $a = array();
         $a = [1, 2, 3, 4, 5, 6, 7, 8];
         $a = implode(",",$a);
         // return $a;
-        return  QrCode::generate($a);
+        $datos = recetarioM::where('id',$data)->first();
+        $medic=unserialize($datos['rm_Contenido']);
+        return $medic;
+        $receta=['Centro de salud Jesus Obero',
+        'medico'=>$datos['id_usuMed'],
+        'Paciente'=>$datos['id_Paciente'],
+        'fecha'=>$datos['created_at'],
+        
+        ];
+        return $receta;
+        $qr=QrCode::generate($a);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
-        $dompdf = PDF::loadView('recetario.receta_a');
+        $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$qr]);
         $dompdf->setPaper('letter', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }
