@@ -77,13 +77,26 @@ class recetarioMController extends Controller
         // return $a;
         $datos = recetarioM::where('id',$data)->first();
         $medic=unserialize($datos['rm_Contenido']);
-        return $medic;
-        $receta=['Centro de salud Jesus Obero',
-        'medico'=>$datos['id_usuMed'],
-        'Paciente'=>$datos['id_Paciente'],
-        'fecha'=>$datos['created_at'],
-        
-        ];
+        // return $medic;
+        $recetaA='"Centro de salud Jesus Obero"  '.
+        'medico:'.$datos['id_usuMed'].
+        'Paciente:'.$datos['id_Paciente'].
+        'fecha:'.$datos['created_at'].''  
+        ;
+        $receta= array();
+        $cont=0;
+        foreach ($medic as $key => $value) {
+            
+            $data='  *'.($key+1).') medicamento:'. $value['a'].
+            ',Forma:'. $value['b'].
+            ',Via:'. $value['c'].
+            ',Dosis:'. $value['d'].' ';
+            array_push($receta, $data);
+        }
+        // return $receta;
+        $recetaB= implode(",",$receta);
+        return $recetaC= $recetaA.
+
         return $receta;
         $qr=QrCode::generate($a);
         // return view('recetario.receta_a');
