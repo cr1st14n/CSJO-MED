@@ -145,6 +145,14 @@
 							</div>
 						</section>
 						<section class="panel">
+						<header class="panel-heading">
+						</header>
+							<div class=" panel-body align-xs-center">
+								<ul class=" bs-glyphicons">
+								</ul>
+							</div>
+						</section>
+						<section class="panel">
 							<div class="panel-body align-xs-center">
 								<h4>Funciones Medicas</h4>
 								<br>
@@ -403,8 +411,8 @@
 		</div>
 
 		<!-- modal para vista previa de la receta medica -->
-		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="800" >
-			
+		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="800">
+
 			<div class="moda-body" height=800 id="">
 				<embed src="" type="" width="800" height="400" id="linkUrlPdf">
 			</div>

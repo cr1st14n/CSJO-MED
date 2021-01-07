@@ -39,8 +39,8 @@
     </table>
     <table width="100%">
         <tr>
-            <td width=40%><strong>Paciente:</strong>Eladio Christopher calderon nogales</td>
-            <td><strong>Medico:</strong> mmmmm mmmmm mmmmm mmmmm</td>
+            <td width=40%><strong>Paciente:</strong>{{$paciente1}}</td>
+            <td><strong>Medico:</strong> {{$medico->usu_nombre  }} {{ $medico->usu_appaterno  }} {{  $medico->usu_apMaterno}}</td>
         </tr>
     </table>
     <table width="100%">
@@ -95,7 +95,7 @@
                 </p>
             </td>
             <td align="right">
-                <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="70">
+                <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="100">
             </td>
             <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
         </tr>

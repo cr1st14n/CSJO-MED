@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\pacientes;
 use App\recetarioM;
+use App\User;
 use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -76,13 +78,18 @@ class recetarioMController extends Controller
         $a = implode(",",$a);
         // return $a;
         $datos = recetarioM::where('id',$data)->first();
+        $medico= User::where('id',$datos['id_usuMed'])->select('usu_nombre','usu_apPaterno','usu_apMaterno')->first();
         $medic=unserialize($datos['rm_Contenido']);
+        
+        $Paciente= pacientes::where('pa_id',$datos['id_Paciente'])->select('pa_id','pa_nombre','pa_appaterno','pa_apmaterno')->first();
+        $Paciente1=''.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno'].'';
         // return $medic;
         $recetaA='"Centro de salud Jesus Obero"  '.
-        'medico:'.$datos['id_usuMed'].
-        'Paciente:'.$datos['id_Paciente'].
-        'fecha:'.$datos['created_at'].''  
+        '  medico:  '.$medico['usu_nombre']  .$medico['usu_apPaterno']  .$medico['usu_apMaterno']  .
+        '  Paciente:  '.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno']  .
+        '  fecha:  '.$datos['created_at']  .''  
         ;
+        // return $recetaA;
         $receta= array();
         $cont=0;
         foreach ($medic as $key => $value) {
@@ -95,13 +102,14 @@ class recetarioMController extends Controller
         }
         // return $receta;
         $recetaB= implode(",",$receta);
-        return $recetaC= $recetaA.
+        // return $recetaC= $recetaA
 
-        return $receta;
-        $qr=QrCode::generate($a);
+        $datosQr= ''.$recetaA.''.$recetaB.'';
+        // return $datosQr;
+        $Qr= QrCode::generate($datosQr);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
-        $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$qr]);
+        $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1]);
         $dompdf->setPaper('letter', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }

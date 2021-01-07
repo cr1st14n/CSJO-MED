@@ -74,7 +74,7 @@
 				<thead>
 					<tr>
 						<th width="20%"> FECHA</th>
-						<th class="text-center">EVOLUCION</th>
+						<th class="text-center">DESCRIPCION</th>
 
 					</tr>
 				</thead>
