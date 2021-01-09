@@ -6,6 +6,7 @@ use App\atencion;
 use App\citPrev;
 use App\historiaClincia;
 use App\pacientes;
+use App\recetarioM;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -52,7 +53,15 @@ class HistoriaClinciaController extends Controller
         $paciente=pacientes::where('pa_id',$request->input('id'))->first();
         $fechnac=$paciente->pa_fechnac;
         $fechnac=Carbon::parse($fechnac)->format('d-m-Y');
-        $vista= view('paciente.hcl')->with('paciente',$paciente)->with('fechnac',$fechnac); 
+        $receta=recetarioM::where('id_Paciente',$request->input('id'))
+                ->join('Users as u','u.id','=','recetario_m_s.id_usuMed')
+                ->select('recetario_m_s.*')
+                ->addSelect('u.usu_nombre','u.usu_appaterno','u.usu_apmaterno')
+                ->get();
+        $vista= view('paciente.hcl')
+                ->with('paciente',$paciente)
+                ->with('fechnac',$fechnac) 
+                ->with('receta',$receta); 
         return $vista;
     }
 

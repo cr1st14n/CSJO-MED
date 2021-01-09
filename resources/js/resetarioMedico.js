@@ -99,3 +99,17 @@ function posCreate(tipo, response) {
         $('#md-form1_vistaReceta').modal('show');
     } 
 }
+
+function showHCL2(id) {
+    $('#loadingAni').show();
+    $('#md-form1_vistaReceta').modal('show');
+    var url= `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${id}`;
+    $("#linkUrlPdf").attr("src",url);
+    setTimeout(() => {
+        $('#loadingAni').hide();
+    }, 1200);
+    if ($("#linkUrlPdf").attr("src")=="") {
+        console.log('esta vacio');
+    }
+    
+  }
