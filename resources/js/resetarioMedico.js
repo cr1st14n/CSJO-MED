@@ -113,3 +113,7 @@ function showHCL2(id) {
     }
     
   }
+
+  setTimeout(() => {
+      console.log('hola mundo');
+  }, 5000);
