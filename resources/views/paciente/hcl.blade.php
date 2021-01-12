@@ -56,7 +56,7 @@
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="tab1">
-						<table class="table table-bordered">
+						<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 							<thead>
 								<tr>
 									<th>Fecha</th>
@@ -70,106 +70,101 @@
 								<tr>
 									<td>{{$r->created_at}}</td>
 									<td>Medicina Familiar</td>
-									<td>{{$r->usu_nombre }} {{$r->usu_appaterno }} {{$r->usu_apmaterno  }}</td>
+									<td>{{$r->usu_nombre }} {{$r->usu_appaterno }} {{$r->usu_apmaterno }}</td>
 									<td>
-										<button class="btn btn-theme-inverse" onclick='showHCL2("{{$r->id}}")'><i class="fa fa-chain"></i></button>
+										<span class="tooltip-area">
+											<button onclick='showHCL2("{{$r->id}}")' class="btn btn-default btn-sm" title="Edit"><i class=" glyphicon glyphicon-eye-open"></i></button>
+										</span>
 									</td>
 								</tr>
 								@endforeach
 							</tbody>
 						</table>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 					<div class="tab-pane fade" id="tab2">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="table-responsive">
+							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>Fecha</th>
+										<th>Especialidad</th>
+										<th>Medico</th>
+										<th width="30%"></th>
+									</tr>
+								</thead>
+								<tbody align="center">
+									<tr>
+										<td>1</td>
+										<td>dd-mm-yyyy</td>
+										<td valign="middle">Medicina Familiar</td>
+										<td><span class="label label-success">Nombre del medico</span></td>
+										<td>
+											<span class="tooltip-area">
+												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-pencil"></i></a>
+												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Delete"><i class="fa fa-trash-o"></i></a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<div class="tab-pane fade" id="tab3">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="table-responsive">
+							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>Fecha</th>
+										<th>Descripcion</th>
+										<th width="30%"></th>
+									</tr>
+								</thead>
+								<tbody align="center">
+									<tr>
+										<td>1</td>
+										<td>dd-mm-yyyy</td>
+										<td>Prueva de sangre</td>
+										<td>
+											<span class="tooltip-area">
+												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-pencil"></i></a>
+												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Delete"><i class="fa fa-trash-o"></i></a>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 					<div class="tab-pane fade" id="tab4">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<div class="table-responsive">
+							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>No.</th>
+										<th>Fecha</th>
+										<th>Descripcion</th>
+										<th width="30%"></th>
+									</tr>
+								</thead>
+								<tbody align="center">
+									<tr>
+										<td>1</td>
+										<td>dd-mm-yyyy</td>
+										<td>placa de brazo</td>
+										<td>
+											<span class="tooltip-area">
+												<button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th class="text-center">ANTECEDENTES</th>
-
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-					</tr>
-
-				</tbody>
-			</table>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th width="20%"> FECHA</th>
-						<th class="text-center">DESCRIPCION</th>
-
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-					<tr>
-						<td class="text-center"></td>
-						<td class="text-center"></td>
-					</tr>
-				</tbody>
-			</table>
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="btn-group btn-group-justified" id="btn_consulta_imprimir">

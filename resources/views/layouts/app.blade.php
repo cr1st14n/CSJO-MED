@@ -156,11 +156,11 @@
 							<div class="panel-body align-xs-center">
 								<h4>Funciones Medicas</h4>
 								<br>
-								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-floppy-disk"></i></button>
+								<button type="button" id="btn_showFormSignosVitales" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-signal"></i></button>
+								<button type="button" id="btn_showFormConsulta" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-plus-sign"></i></button>
 								<button type="button" id="form_resetarioMedico" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
 								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-headphones"></i></button>
 								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-print"></i></button>
-								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-signal"></i></button>
 							</div>
 						</section>
 					</div>
@@ -207,6 +207,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- start modal modal list tipos de procedimientos -->
 		<div id="md-tipoConsulta" class="modal fade md-stickTop bg-danger" tabindex="-1" data-width="300">
 			<div class="modal-header bg-theme-inverse-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -343,6 +344,80 @@
 			</div>
 		</div>
 
+		<!-- modal form registro de signos vitales -->
+
+		<div id="md-formSignosVitales" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="800">
+			<div class="modal-header ">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Registro de signos vitales</h4>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<div class="widget-im notification">
+					<div class="panel-body">
+						<form id="form_create_signosVitales">
+							<div class="row">
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Precion Arterial </span>
+									<div class="input-group">
+										<input type="text" class="form-control" tabindex="1" name="pa">
+										<span class="input-group-addon">P.A.</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Frecuencia Cardiaca</span>
+									<div class="input-group">
+										<input type="text" class="form-control" tabindex="2" name="fc">
+										<span class="input-group-addon">F.C.</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Frecuencia Respiratoria </span>
+									<div class="input-group">
+										<input type="text" class="form-control" tabindex="3" name="fr">
+										<span class="input-group-addon">F.R.</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Saturacion</span>
+									<div class="input-group">
+										<input type="text" class="form-control" tabindex="4">
+										<span class="input-group-addon">SAT.</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Peso</span>
+									<div class="input-group">
+										<input type="number" class="form-control" id="pesoPaciente" onkeyup="calcularIMC()" tabindex="5">
+										<span class="input-group-addon">Kg.</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Temperatura</span>
+									<div class="input-group">
+										<input type="text" class="form-control" tabindex="7">
+										<span class="input-group-addon">°C</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<span style="color:dimgrey ;font-weight:bolder">Talla</span>
+									<div class="input-group">
+										<input type="number" class="form-control" id="tallaPaciente" onkeyup="calcularIMC()" tabindex="6">
+										<span class="input-group-addon">Cm.</span>
+									</div>
+								</div>
+								<div class="col-md-6" style="color: black;">
+									<h2>Indice de masa corporal: <strong id="icmPaciente">44</strong></h2>
+								</div>
+							</div>
+							<br>
+							<button class="btn btn-theme-inverse align-lg-right" id="btn_submitFormCreateSV" tabindex="8">Registrar en Historial Clinico</button>
+							<button class="btn btn-danger">Cancelar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- modal recetario virtual -->
 		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="1000">
 			<div class="modal-header">
@@ -413,7 +488,7 @@
 		<!-- modal para vista previa de la receta medica -->
 		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="800">
 
-			<div class="moda-body" height=800 id="" style="background-color: black;" >
+			<div class="moda-body" height=800 id="" style="background-color: black;">
 				<div align="center" id="loadingAni">
 					<svg width="51px" height="50px" viewBox="0 0 51 50">
 
@@ -585,6 +660,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -1141,6 +1217,7 @@
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
 </body>
 
 </html>

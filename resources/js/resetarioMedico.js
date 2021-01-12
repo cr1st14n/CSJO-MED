@@ -114,6 +114,11 @@ function showHCL2(id) {
     
   }
 
+  $('#btn_showFormConsulta').click(function (e) { 
+      e.preventDefault();
+      
+  });
+
   setTimeout(() => {
       console.log('hola mundo');
   }, 5000);

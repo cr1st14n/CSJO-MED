@@ -1,3 +1,4 @@
+let idPacienteSelect;
 function colaPacienteMedAten() {
     $.ajax({
         type: "get",
@@ -24,20 +25,24 @@ function colaPacienteMedAten() {
 }
 
 function showHistoriaClinica(paciente) {
-    // console.log(paciente);
+    console.log(paciente);
+    idPacienteSelect=paciente;
     $("#form_new_cotizacion").trigger("reset");
     $.ajax({
         type: "GET",
         url: "historiaClinica/hcl",
-        data: { id: paciente },
+        data: { id: idPacienteSelect },
         dataType: "text",
         success: function (dat) {
             $("#panel1").html(dat);
-
             $("#md-listPacientesEspera").modal("hide");
         },
     });
 }
+$('#btn_showFormConsulta').click(function () { 
+    console.log(idPacienteSelect);
+    $("#md-tipoConsulta").modal("show");
+});
 setInterval(() => {
     $.ajax({
         type: "GET",
@@ -49,8 +54,8 @@ setInterval(() => {
         },
     });
 }, 10000);
-function showModalTipoConsulta(idHcl) {
-    console.log(idHcl);
+function showModalTipoConsulta() {
+    
     $("#md-tipoConsulta").modal("show");
 }
 function ShowModalAtencion(tipo) {
