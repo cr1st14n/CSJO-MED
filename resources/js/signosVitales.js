@@ -27,7 +27,38 @@ function calcularIMC() {
 }
 $('#btn_submitFormCreateSV').click(function (e) { 
     e.preventDefault();
-    a = $('#form_create_signosVitales').serialize();
-    console.log(a);
-    
+    $.ajax({
+        type: "post",
+        url: "signosVitales/store",
+        data: {
+            _token: $("meta[name=csrf-token]").attr("content"),
+            paciente:idPacienteSelect,
+            data: $('#form_create_signosVitales').serialize(),
+        },
+        // dataType: "dataType",
+        success: function (response) {
+            console.log( response);
+            if (response) {
+                $('#form_create_signosVitales').trigger('reset');
+                $("#md-formSignosVitales").modal("hide");
+                $("#icmPaciente").html("");
+            } else {
+                notif('2','Error Vuelva a intertarlo!.')
+            }
+        }
+    });
 });
+
+
+
+function premier() {
+    $.ajax({
+        type: "get",
+        url: "signosVitales/list1",
+        data: {paciente:idPacienteSelect},
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+        }
+    });    
+  }

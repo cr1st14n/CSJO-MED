@@ -380,28 +380,28 @@
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Saturacion</span>
 									<div class="input-group">
-										<input type="text" class="form-control" tabindex="4">
+										<input type="text" class="form-control" tabindex="4" name="sat">
 										<span class="input-group-addon">SAT.</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Peso</span>
 									<div class="input-group">
-										<input type="number" class="form-control" id="pesoPaciente" onkeyup="calcularIMC()" tabindex="5">
+										<input type="number" class="form-control" id="pesoPaciente" name="peso" onkeyup="calcularIMC()" tabindex="5">
 										<span class="input-group-addon">Kg.</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Temperatura</span>
 									<div class="input-group">
-										<input type="text" class="form-control" tabindex="7">
+										<input type="text" class="form-control" tabindex="7" name="temp">
 										<span class="input-group-addon">°C</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Talla</span>
 									<div class="input-group">
-										<input type="number" class="form-control" id="tallaPaciente" onkeyup="calcularIMC()" tabindex="6">
+										<input type="number" class="form-control" id="tallaPaciente" name="talla" onkeyup="calcularIMC()" tabindex="6">
 										<span class="input-group-addon">Cm.</span>
 									</div>
 								</div>

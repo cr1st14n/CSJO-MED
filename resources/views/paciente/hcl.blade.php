@@ -53,6 +53,7 @@
 					<li><a href="#tab2" data-toggle="tab">Consulta Medica</a></li>
 					<li><a href="#tab3" data-toggle="tab"> Laboratorios</a></li>
 					<li><a href="#tab4" data-toggle="tab"> Rayos X</a></li>
+					<li><a href="#tab5" data-toggle="tab" id="btn_listSV" onclick="premier()"> Signos Vitales</a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="tab1">
@@ -153,6 +154,44 @@
 										<td>1</td>
 										<td>dd-mm-yyyy</td>
 										<td>placa de brazo</td>
+										<td>
+											<span class="tooltip-area">
+												<button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>
+											</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tab5">
+						<div class="table-responsive">
+							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
+								<thead>
+									<tr>
+										<th>Fecha</th>
+										<th>P. A.</th>
+										<th>F. C.</th>
+										<th>F. R.</th>
+										<th>Sat.</th>
+										<th>Tempe</th>
+										<th>Peso</th>
+										<th>Talla</th>
+										<th>IMC</th>
+										<th width="30%"></th>
+									</tr>
+								</thead>
+								<tbody align="center">
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 										<td>
 											<span class="tooltip-area">
 												<button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>

@@ -38,3 +38,8 @@ Route::group(['prefix'=>'recetarioM'],function()
     route::POST('create','recetarioMController@create');
     Route::get('pdf_recetamedica/{receta}','recetarioMController@pdfReceta');
 });
+Route::Group(['prefix'=>'signosVitales'],function()
+{
+    route::post('store','SignosvitalesController@store');
+    route::get('list1','SignosvitalesController@list1');
+});
