@@ -42,7 +42,13 @@ class SignosvitalesController extends Controller
     {
         $sv=new signosvitales();
         $sv->sv_idPaciente=$request['paciente'];
-        $sv->sv_datos=serialize($request['data']);
+        $sv->sv_pa=$request->input('pc');
+        $sv->sv_fc=$request->input('fc');
+        $sv->sv_fr=$request->input('fr');
+        $sv->sv_st=$request->input('st');
+        $sv->sv_pe=$request->input('pe');
+        $sv->sv_te=$request->input('te');
+        $sv->sv_ta=$request->input('ta');
 
         $sv->ca_usu_cod = Auth::user()->id;
         $sv->ca_tipo = 'create';
@@ -100,10 +106,11 @@ class SignosvitalesController extends Controller
 
     public function list1(Request $request)
     {
+        $array=[];
         $d= signosvitales::where('sv_idPaciente',$request['paciente'])->get();
-        // foreach ($d as $key => $value) {
-            
-        // }  
+        foreach ($d as $key => $value) {
+            $d[$key]=unserialize($d['sv_datos']);
+        }  
         
         return $d;
     }
