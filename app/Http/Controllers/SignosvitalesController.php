@@ -40,9 +40,13 @@ class SignosvitalesController extends Controller
      */
     public function store(Request $request)
     {
+        $data=$request->input('data');
+        $data=unserialize($data);
+        return $data;
         $sv=new signosvitales();
         $sv->sv_idPaciente=$request['paciente'];
-        $sv->sv_pa=$request->input('pc');
+        $sv->sv_pa=$request->input('pa');
+        $sv->sv_pa='23';
         $sv->sv_fc=$request->input('fc');
         $sv->sv_fr=$request->input('fr');
         $sv->sv_st=$request->input('st');
@@ -106,12 +110,6 @@ class SignosvitalesController extends Controller
 
     public function list1(Request $request)
     {
-        $array=[];
-        $d= signosvitales::where('sv_idPaciente',$request['paciente'])->get();
-        foreach ($d as $key => $value) {
-            $d[$key]=unserialize($d['sv_datos']);
-        }  
-        
-        return $d;
+        return signosvitales::where('sv_idPaciente',$request->input('paciente'))->get();
     }
 }
