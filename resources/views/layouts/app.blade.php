@@ -355,6 +355,7 @@
 				<div class="widget-im notification">
 					<div class="panel-body">
 						<form id="form_create_signosVitales">
+						@csrf
 							<div class="row">
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Precion Arterial </span>

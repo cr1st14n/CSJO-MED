@@ -28,20 +28,16 @@ function calcularIMC() {
 $('#btn_submitFormCreateSV').click(function (e) { 
     e.preventDefault();
     $.ajax({
-        type: "post",
-        url: "signosVitales/store",
-        data: {
-            _token: $("meta[name=csrf-token]").attr("content"),
-            paciente:idPacienteSelect,
-            data: $('#form_create_signosVitales').serialize(),
-        },
-        // dataType: "dataType",
+        type: 'post',
+        url: `signosVitales/store/${idPacienteSelect}`,
+        data:$('#form_create_signosVitales').serialize(),
         success: function (response) {
             console.log( response);
             if (response) {
                 $('#form_create_signosVitales').trigger('reset');
                 $("#md-formSignosVitales").modal("hide");
                 $("#icmPaciente").html("");
+                notif('1','Signos registrados.')
             } else {
                 notif('2','Error Vuelva a intertarlo!.')
             }

@@ -38,15 +38,11 @@ class SignosvitalesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($idPaciente, Request $request)
     {
-        $data=$request->input('data');
-        $data=unserialize($data);
-        return $data;
         $sv=new signosvitales();
         $sv->sv_idPaciente=$request['paciente'];
         $sv->sv_pa=$request->input('pa');
-        $sv->sv_pa='23';
         $sv->sv_fc=$request->input('fc');
         $sv->sv_fr=$request->input('fr');
         $sv->sv_st=$request->input('st');

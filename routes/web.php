@@ -40,6 +40,6 @@ Route::group(['prefix'=>'recetarioM'],function()
 });
 Route::Group(['prefix'=>'signosVitales'],function()
 {
-    route::post('store','SignosvitalesController@store');
+    route::post('store/{paciente}','SignosvitalesController@store');
     route::get('list1','SignosvitalesController@list1');
 });
