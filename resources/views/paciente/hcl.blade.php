@@ -53,7 +53,7 @@
 					<li><a href="#tab2" data-toggle="tab">Consulta Medica</a></li>
 					<li><a href="#tab3" data-toggle="tab"> Laboratorios</a></li>
 					<li><a href="#tab4" data-toggle="tab"> Rayos X</a></li>
-					<li><a href="#tab5" data-toggle="tab" id="btn_listSV" onclick="premier()"> Signos Vitales</a></li>
+					<li><a href="#tab5" data-toggle="tab" onclick="btn_listSV()"> Signos Vitales</a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="tab1">
@@ -178,10 +178,10 @@
 										<th>Peso</th>
 										<th>Talla</th>
 										<th>IMC</th>
-										<th width="30%"></th>
+										<th width="10%"></th>
 									</tr>
 								</thead>
-								<tbody align="center">
+								<tbody align="center" id="table_listSV">
 									<tr>
 										<td></td>
 										<td></td>

@@ -47,7 +47,7 @@ $('#btn_submitFormCreateSV').click(function (e) {
 
 
 
-function premier() {
+function btn_listSV() {
     $.ajax({
         type: "get",
         url: "signosVitales/list1",
@@ -55,6 +55,32 @@ function premier() {
         // dataType: "dataType",
         success: function (response) {
             console.log(response);
+            var html=response.map(
+                function ( a,b) {
+                    var f=new Date(a.created_at);
+                    f=f.toLocaleString("es-ES",'dd/mm/yyyy');
+                    // console.log(f.format('dd/mm/yyyy'));
+                    return a=`
+                    <tr>
+                        <td>${f}</td>
+                        <td>${a.sv_pa}</td>
+                        <td>${a.sv_fc}</td>
+                        <td>${a.sv_fr}</td>
+                        <td>${a.sv_st}</td>
+                        <td>${a.sv_te}</td>
+                        <td>${a.sv_pe}</td>
+                        <td>${a.sv_ta}</td>
+                        <td>${a.sv_ta}</td>
+                        <td>
+                            <span class="tooltip-area">
+                                <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>
+                            </span>
+                        </td>
+                </tr>
+                    `;
+                  }
+            ).join(' ');
+            $('#table_listSV').html(html);
         }
     });    
   }
