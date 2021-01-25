@@ -434,31 +434,11 @@
 							<button class="btn btn-danger">Cancelar</button>
 						</form>
 					</div> -->
-					<form  id="form_cargar_RX" method="POST" enctype=" multipart/form-data">
+					<form action="{{route('312654')}}" id="form_cargar_RX" method="POST" enctype=" multipart/form-data">
 						@csrf
-						<div class="panel-body">
-							<div class="form-group">
-								<label class="control-label">Images Preview</label>
-								<div>
+						<input type="file" name="file" accept="image/*">
+						<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
 
-									<div class="fileinput fileinput-new" data-provides="fileinput" >
-										<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;" ></div>
-										<div>
-											<span class="btn btn-default btn-file">
-												<span class="fileinput-new">Seleccionar imagen</span><span class="fileinput-exists">Cambiar</span>
-												<input type="file" name="imagen" id="" accept="image/*">
-											</span>
-											<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
-										</div>
-									</div><!-- //fileinput-->
-
-								</div>
-							</div><!-- //form-group-->
-							<input type="file" name="img">
-						</div><!-- //panel-body-->
-						<div class=" panel-footer">
-							<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
-						</div>
 					</form>
 				</div>
 			</div>
