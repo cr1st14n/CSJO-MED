@@ -160,7 +160,7 @@
 								<button type="button" id="btn_showFormConsulta" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-plus-sign"></i></button>
 								<button type="button" id="form_resetarioMedico" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
 								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-headphones"></i></button>
-								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-print"></i></button>
+								<button type="button" id="btn_showFormRx" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon  glyphicon-camera "></i></button>
 							</div>
 						</section>
 					</div>
@@ -355,7 +355,7 @@
 				<div class="widget-im notification">
 					<div class="panel-body">
 						<form id="form_create_signosVitales">
-						@csrf
+							@csrf
 							<div class="row">
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Precion Arterial </span>
@@ -402,7 +402,7 @@
 								<div class="col-md-6">
 									<span style="color:dimgrey ;font-weight:bolder">Talla</span>
 									<div class="input-group">
-										<input type="number" class="form-control" id="tallaPaciente" name="ta" onkeyup="calcularIMC()" tabindex="6">
+										<input type="number" class="form-control" id="tallaPaciente" name="ta" onkeyup="calcularIMC()" tabindex="6" placeholder="Medica en Centimetros">
 										<span class="input-group-addon">Cm.</span>
 									</div>
 								</div>
@@ -415,6 +415,51 @@
 							<button class="btn btn-danger">Cancelar</button>
 						</form>
 					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal form carga de imagen de RX -->
+
+		<div id="md-formCargaRX" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="800">
+			<div class="modal-header ">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Carga de placa radiografica digitalizada</h4>
+			</div>
+			<div class="modal-body" style="padding:0">
+				<div class="widget-im notification">
+					<!-- <div class="panel-body">
+						<form id="form_create_signosVitales">
+							@csrf
+							<button class="btn btn-theme-inverse align-lg-right" id="btn_submitFormCreateSV" tabindex="8">Registrar en Historial Clinico</button>
+							<button class="btn btn-danger">Cancelar</button>
+						</form>
+					</div> -->
+					<form  id="form_cargar_RX" method="POST" enctype=" multipart/form-data">
+						@csrf
+						<div class="panel-body">
+							<div class="form-group">
+								<label class="control-label">Images Preview</label>
+								<div>
+
+									<div class="fileinput fileinput-new" data-provides="fileinput" >
+										<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;" ></div>
+										<div>
+											<span class="btn btn-default btn-file">
+												<span class="fileinput-new">Seleccionar imagen</span><span class="fileinput-exists">Cambiar</span>
+												<input type="file" name="imagen" id="" accept="image/*">
+											</span>
+											<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
+										</div>
+									</div><!-- //fileinput-->
+
+								</div>
+							</div><!-- //form-group-->
+							<input type="file" name="img">
+						</div><!-- //panel-body-->
+						<div class=" panel-footer">
+							<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -1219,6 +1264,7 @@
 	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 </body>
 
 </html>

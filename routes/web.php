@@ -43,3 +43,7 @@ Route::Group(['prefix'=>'signosVitales'],function()
     route::post('store/{paciente}','SignosvitalesController@store');
     route::get('list1','SignosvitalesController@list1');
 });
+Route::Group(['prefix'=>'servRX'],function()
+{
+    route::post('store','ServrxController@store');
+});
