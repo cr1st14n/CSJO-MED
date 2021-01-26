@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\servrx;
 use Illuminate\Http\Request;
 
+use App\File;
+use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Storage;
+
 class ServrxController extends Controller
 {
     /**
@@ -35,7 +39,18 @@ class ServrxController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        // return $request;
+        // $request->validate([
+        //     'file' => 'required|image|max:2048'
+        // ]);
+
+        $imagenes = $request->file('file')->store('public/imagenes');
+
+        $url = Store::url($imagenes);
+
+        servrx::create([
+            'rx_rutaImagen' => $url
+        ]);
     }
 
     /**
