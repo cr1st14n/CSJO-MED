@@ -46,7 +46,7 @@ class ServrxController extends Controller
 
         $imagenes = $request->file('file')->store('public/imagenes');
 
-        $url = Store::url($imagenes);
+        $url = Storage::url($imagenes);
 
         servrx::create([
             'rx_rutaImagen' => $url

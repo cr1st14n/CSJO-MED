@@ -434,7 +434,7 @@
 							<button class="btn btn-danger">Cancelar</button>
 						</form>
 					</div> -->
-					<form action="{{route('312654')}}" id="form_cargar_RX" method="POST" enctype=" multipart/form-data">
+					<form action="{{route('312654')}}" id="form_cargar_RX" method="POST" enctype="multipart/form-data">
 						@csrf
 						<input type="file" name="file" accept="image/*">
 						<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
