@@ -27,6 +27,9 @@
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style3" href="{{ asset('Plantilla/assets/css/styleTheme3.css')}}" />
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="{{ asset('Plantilla/assets/css/styleTheme4.css')}}" />
 
+	<!-- css de dropzone para carga de imagenes -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css" integrity="sha512-3g+prZHHfmnvE1HBLwUnVuunaPOob7dpksI7/v6UnF/rnKGwHf/GdEq9K7iEN7qTtW+S0iivTcGpeTBqqB04wA==" crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -420,7 +423,7 @@
 		</div>
 		<!-- modal form carga de imagen de RX -->
 
-		<div id="md-formCargaRX" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="800">
+		<div id="md-formCargaRX" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Carga de placa radiografica digitalizada</h4>
@@ -438,6 +441,11 @@
 						@csrf
 						<input type="file" name="file" accept="image/*">
 						<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
+
+					</form>
+
+					<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
+
 
 					</form>
 				</div>
@@ -1245,6 +1253,21 @@
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/rayosx.js') }}"></script>
+
+	<!-- js de dropzone -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>
+	<script>
+		Dropzone.options.myAwesomeDropzone = {
+			headers: {
+				'X-CSRF-TOKEN': "{{csrf_token()}}"
+			},
+			dicDefaultMessage:'Arrastre una imagen al recuadro para cargar al sistema',
+			acceptedFiles:'image/*',
+			maxFilesize:2,
+			maxFiles:2,
+		};
+	</script>
 </body>
 
 </html>

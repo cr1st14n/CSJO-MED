@@ -1,3 +1,1 @@
-function show_modalPlacaRX(idPlacaRX) {
-    
-  }
+function show_modalPlacaRX(idPlacaRX) {}

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\File;
 use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ServrxController extends Controller
@@ -39,18 +40,20 @@ class ServrxController extends Controller
      */
     public function store(Request $request)
     {
+        //* correr en terminal el comando php artisan storage link
         // return $request;
-        // $request->validate([
-        //     'file' => 'required|image|max:2048'
-        // ]);
+        $request->validate([
+            'file' => 'required|image|max:2048'
+        ]);
 
         $imagenes = $request->file('file')->store('public/imagenes');
 
         $url = Storage::url($imagenes);
-
-        servrx::create([
-            'rx_rutaImagen' => $url
-        ]);
+        // return $url;
+        $file=new servrx();
+        $file->id_paciente=Auth::user()->id;
+        $file->rx_rutaImagen=$url;
+        $file->save();
     }
 
     /**
