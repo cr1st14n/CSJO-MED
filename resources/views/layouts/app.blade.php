@@ -28,7 +28,8 @@
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="{{ asset('Plantilla/assets/css/styleTheme4.css')}}" />
 
 	<!-- css de dropzone para carga de imagenes -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css" integrity="sha512-3g+prZHHfmnvE1HBLwUnVuunaPOob7dpksI7/v6UnF/rnKGwHf/GdEq9K7iEN7qTtW+S0iivTcGpeTBqqB04wA==" crossorigin="anonymous" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css" integrity="sha512-3g+prZHHfmnvE1HBLwUnVuunaPOob7dpksI7/v6UnF/rnKGwHf/GdEq9K7iEN7qTtW+S0iivTcGpeTBqqB04wA==" crossorigin="anonymous" /> -->
+	<link href="{{ asset('Plantilla/dropzone/dist/dropzone.css')}}" rel="stylesheet" />
 
 </head>
 
@@ -423,35 +424,52 @@
 		</div>
 		<!-- modal form carga de imagen de RX -->
 
-		<div id="md-formCargaRX" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
-			<div class="modal-header ">
+		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="700">
+			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Carga de placa radiografica digitalizada</h4>
+				<h3>Stack One</h3>
 			</div>
-			<div class="modal-body" style="padding:0">
-				<div class="widget-im notification">
-					<!-- <div class="panel-body">
-						<form id="form_create_signosVitales">
-							@csrf
-							<button class="btn btn-theme-inverse align-lg-right" id="btn_submitFormCreateSV" tabindex="8">Registrar en Historial Clinico</button>
-							<button class="btn btn-danger">Cancelar</button>
+			<div class="modal-body" style="padding: 0;">
+				<div class="panel panel-primary" >
+					<div class="panel-heading">
+						Dropzone
+					</div>
+					<div class="panel-body" width>
+						<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
+							<div class="dz-message" style="height:100px;">
+								Drop your files here
+							</div>
+							<div class="dropzone-previews"></div>
+							<button type="submit" class="btn btn-success" id="submit">Save</button>
 						</form>
-					</div> -->
-					<form action="{{route('312654')}}" id="form_cargar_RX" method="POST" enctype="multipart/form-data">
-						@csrf
-						<input type="file" name="file" accept="image/*">
-						<button type="submit" class="btn btn-block btn-theme-inverse">Cargar</button>
-
-					</form>
-
-					<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
-
-
-					</form>
+					</div>
 				</div>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
 			</div>
 		</div>
 
+		<div id="md-stack" class="modal fade" tabindex="-1" data-width="600">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h3>Stack One</h3>
+			</div>
+			<div class="modal-body">
+				<p>One fine body…</p>
+				<p>Two fine body…</p>
+				<p>Three fine body…</p>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
+			</div>
+		</div>
 		<!-- modal recetario virtual -->
 		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="1000">
 			<div class="modal-header">
@@ -1256,16 +1274,53 @@
 	<script type="text/javascript" src="{{ asset('resources/js/rayosx.js') }}"></script>
 
 	<!-- js de dropzone -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>
+	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/min/dropzone.min.js')}}"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script> -->
 	<script>
 		Dropzone.options.myAwesomeDropzone = {
 			headers: {
 				'X-CSRF-TOKEN': "{{csrf_token()}}"
 			},
-			dicDefaultMessage:'Arrastre una imagen al recuadro para cargar al sistema',
-			acceptedFiles:'image/*',
-			maxFilesize:2,
-			maxFiles:2,
+			dicDefaultMessage: 'Arrastre una imagen al recuadro para cargar al sistema',
+			acceptedFiles: 'image/*',
+			maxFilesize: 2,
+			maxFiles: 2,
+		};
+	</script>
+	<script>
+		Dropzone.options.myDropzone = {
+			headers: {
+				'X-CSRF-TOKEN': "{{csrf_token()}}"
+			},
+			dicDefaultMessage: 'Arrastre una imagen al recuadro para cargar al sistema',
+			acceptedFiles: 'image/*',
+			autoProcessQueue: false,
+			uploadMultiple: false,
+			maxFilezise: 50,
+			maxFiles: 2,
+
+			init: function() {
+				var submitBtn = document.querySelector("#submit");
+				myDropzone = this;
+
+				submitBtn.addEventListener("click", function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+					myDropzone.processQueue();
+				});
+				this.on("addedfile", function(file) {
+					alert("file uploaded");
+				});
+
+				this.on("complete", function(file) {
+					myDropzone.removeFile(file);
+				});
+
+				this.on("success",
+					myDropzone.processQueue.bind(myDropzone)
+				);
+			}
 		};
 	</script>
 </body>
