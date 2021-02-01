@@ -51,3 +51,9 @@ function notif(tipo, texto) {
       }
     }
   }
+
+  //* Crear variable token 
+  var token = $('meta[name=csrf-token]').attr('content');
+  // _token: $('meta[name=csrf-token]').attr('content'),
+
+

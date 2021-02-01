@@ -436,6 +436,8 @@
 					</div>
 					<div class="panel-body" id="dropzoneContend">
 						<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
+							<label for="">Previa descripción de los datos subidos</label>
+							<input type="text" class="form-control" placeholder="" name="data22" value="data33">
 							<div class="dz-message" style="height:100px;">
 								Cargar imagen
 							</div>
@@ -1263,41 +1265,9 @@
 	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/rayosx.js') }}"></script>
-
 	<!-- js de dropzone -->
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/min/dropzone.min.js')}}"></script>
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script> -->
-
-	<script>
-		Dropzone.options.myAwesomeDropzone = {
-			headers: {
-				'X-CSRF-TOKEN': "{{csrf_token()}}"
-			},
-			maxFilesize: 12,
-			renameFile: function(file) {
-				var dt = new Date();
-				var time = dt.getTime();
-				return time + file.name;
-			},
-			acceptedFiles: ".jpeg,.jpg,.png,.gif",
-			addRemoveLinks: true,
-			timeout: 5000,
-			complete:function(file){
-				setTimeout(() => {
-					this.removeFile(file);
-				}, 3000);
-			},
-			success: function(file, response) {
-				console.log(response);
-			},
-			error: function(file, response) {
-				return false;
-			},
-		}
-	</script>
+	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 </body>
 
 </html>

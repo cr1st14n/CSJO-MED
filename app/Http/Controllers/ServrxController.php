@@ -41,7 +41,6 @@ class ServrxController extends Controller
     public function store(Request $request)
     {
         //* correr en terminal el comando php artisan storage link
-        // return $request;
         $request->validate([
             'file' => 'required|image|max:2048'
         ]);
@@ -53,6 +52,7 @@ class ServrxController extends Controller
         $file=new servrx();
         $file->id_paciente=Auth::user()->id;
         $file->rx_rutaImagen=$url;
+        $file->rx_descripcion=$request->input('data22');
         $file->save();
         return '1';
     }
