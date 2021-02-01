@@ -54,6 +54,7 @@ class ServrxController extends Controller
         $file->id_paciente=Auth::user()->id;
         $file->rx_rutaImagen=$url;
         $file->save();
+        return '1';
     }
 
     /**

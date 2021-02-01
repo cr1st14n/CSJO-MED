@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
+
 	<!-- Meta information -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-
 	<!-- Title-->
 	<title>{{ config('app.name', 'Laravel') }} | Med</title>
 	<!-- Favicons -->
@@ -424,32 +424,25 @@
 		</div>
 		<!-- modal form carga de imagen de RX -->
 
-		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="700">
+		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="400">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h3>Stack One</h3>
+				<h3>Imagen radiografica</h3>
 			</div>
 			<div class="modal-body" style="padding: 0;">
-				<div class="panel panel-primary" >
+				<div class="panel panel-primary">
 					<div class="panel-heading">
-						Dropzone
+						Carga de imagen a Servidor
 					</div>
-					<div class="panel-body" width>
+					<div class="panel-body" id="dropzoneContend">
 						<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
 							<div class="dz-message" style="height:100px;">
-								Drop your files here
+								Cargar imagen
 							</div>
 							<div class="dropzone-previews"></div>
-							<button type="submit" class="btn btn-success" id="submit">Save</button>
 						</form>
 					</div>
 				</div>
-			</div>
-
-			<div class="modal-footer">
-				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
-
-				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
 			</div>
 		</div>
 
@@ -1277,51 +1270,33 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/min/dropzone.min.js')}}"></script>
 
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script> -->
+
 	<script>
 		Dropzone.options.myAwesomeDropzone = {
 			headers: {
 				'X-CSRF-TOKEN': "{{csrf_token()}}"
 			},
-			dicDefaultMessage: 'Arrastre una imagen al recuadro para cargar al sistema',
-			acceptedFiles: 'image/*',
-			maxFilesize: 2,
-			maxFiles: 2,
-		};
-	</script>
-	<script>
-		Dropzone.options.myDropzone = {
-			headers: {
-				'X-CSRF-TOKEN': "{{csrf_token()}}"
+			maxFilesize: 12,
+			renameFile: function(file) {
+				var dt = new Date();
+				var time = dt.getTime();
+				return time + file.name;
 			},
-			dicDefaultMessage: 'Arrastre una imagen al recuadro para cargar al sistema',
-			acceptedFiles: 'image/*',
-			autoProcessQueue: false,
-			uploadMultiple: false,
-			maxFilezise: 50,
-			maxFiles: 2,
-
-			init: function() {
-				var submitBtn = document.querySelector("#submit");
-				myDropzone = this;
-
-				submitBtn.addEventListener("click", function(e) {
-					e.preventDefault();
-					e.stopPropagation();
-					myDropzone.processQueue();
-				});
-				this.on("addedfile", function(file) {
-					alert("file uploaded");
-				});
-
-				this.on("complete", function(file) {
-					myDropzone.removeFile(file);
-				});
-
-				this.on("success",
-					myDropzone.processQueue.bind(myDropzone)
-				);
-			}
-		};
+			acceptedFiles: ".jpeg,.jpg,.png,.gif",
+			addRemoveLinks: true,
+			timeout: 5000,
+			complete:function(file){
+				setTimeout(() => {
+					this.removeFile(file);
+				}, 3000);
+			},
+			success: function(file, response) {
+				console.log(response);
+			},
+			error: function(file, response) {
+				return false;
+			},
+		}
 	</script>
 </body>
 
