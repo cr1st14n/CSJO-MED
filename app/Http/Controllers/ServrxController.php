@@ -40,40 +40,27 @@ class ServrxController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         //* correr en terminal el comando php artisan storage link
         $request->validate([
             'file' => 'required|image|max:2048'
         ]);
-
         $imagenes = $request->file('file')->store('public/imagenes');
-
         $url = Storage::url($imagenes);
-        // return $url;
         $file=new servrx();
         $file->id_paciente=Auth::user()->id;
         $file->rx_rutaImagen=$url;
-        $file->rx_descripcion=$request->input('data22');
-        $file->save();
-        return '1';
+        $file->rx_descripcion=$request->input('rxDescImagen');
+        $res= $file->save();
+        $retVal = ($res) ? 1 : 0 ;
+        return $retVal;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\servrx  $servrx
-     * @return \Illuminate\Http\Response
-     */
     public function show(servrx $servrx)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\servrx  $servrx
-     * @return \Illuminate\Http\Response
-     */
     public function edit(servrx $servrx)
     {
         //

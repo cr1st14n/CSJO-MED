@@ -1,4 +1,3 @@
-let idPacienteSelect;
 function colaPacienteMedAten() {
     $.ajax({
         type: "get",

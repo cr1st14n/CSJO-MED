@@ -429,21 +429,22 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Imagen radiografica</h3>
 			</div>
-			<div class="modal-body" style="padding: 0;">
+			<div class="modal-body">
 				<div class="panel panel-primary">
-					<div class="panel-heading">
-						Carga de imagen a Servidor
-					</div>
-					<div class="panel-body" id="dropzoneContend">
-						<form action="{{route('312654')}}" method="POST" class="dropzone" id="my-awesome-dropzone">
-							<label for="">Previa descripción de los datos subidos</label>
-							<input type="text" class="form-control" placeholder="" name="data22" value="data33">
-							<div class="dz-message" style="height:100px;">
-								Cargar imagen
+
+					<input type="text" class="form-control" onkeyup="clonar(this.value)" placeholder="Descripcion del archivo a cargar" >
+					<hr>
+					<label > Cuadro de arrastre para carga de imagen</label>
+					<div class="panel-body" id="myId" style="padding: 0;">
+						<form id="subImagen" class="dropzone">
+							<input type="text" id="textRX2" name="rxDescImagen" hidden>
+							<div class="fallback" id="2121">
+								<input name="file" type="file" multiple />
 							</div>
-							<div class="dropzone-previews"></div>
 						</form>
 					</div>
+				</div>
+				<div>
 				</div>
 			</div>
 		</div>
@@ -1266,7 +1267,7 @@
 	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
 	<!-- js de dropzone -->
-	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/min/dropzone.min.js')}}"></script>
+	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 </body>
 
