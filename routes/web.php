@@ -45,5 +45,5 @@ Route::Group(['prefix'=>'signosVitales'],function()
 });
 Route::Group(['prefix'=>'servRX'],function()
 {
-    route::post('store','ServrxController@store')->name('312654');
+    route::post('store/{paciente    }','ServrxController@store')->name('312654');
 });

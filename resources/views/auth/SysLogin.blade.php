@@ -191,7 +191,7 @@
                                 life: 3000,
                                 horizontalEdge: "top",
                                 theme: "danger",
-                                heading: " ERROR :); "
+                                heading: " ERROR :; "
                             }); 
                             }, 1700);
                         }

@@ -57,4 +57,7 @@ function notif(tipo, texto) {
     }
   }
 
+// * verificar que se tenga un paciente seleccionado
+function verPaSelect() {
 
+}
