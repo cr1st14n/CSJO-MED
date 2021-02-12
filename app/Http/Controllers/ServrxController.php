@@ -6,6 +6,7 @@ use App\servrx;
 use Illuminate\Http\Request;
 
 use App\File;
+use Carbon\Carbon;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -38,7 +39,7 @@ class ServrxController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$paciente)
     {
         // return $request;
         //* correr en terminal el comando php artisan storage link
@@ -48,9 +49,13 @@ class ServrxController extends Controller
         $imagenes = $request->file('file')->store('public/imagenes');
         $url = Storage::url($imagenes);
         $file=new servrx();
-        $file->id_paciente=Auth::user()->id;
-        $file->rx_rutaImagen=$url;
+        $file->id_paciente=$paciente;
+        $file->rx_rutaImagen="public$url";
         $file->rx_descripcion=$request->input('rxDescImagen');
+        $file->ca_usu_cod=Auth::user()->id;
+        $file->ca_tipo='create';
+        $file->ca_fecha=Carbon::now();
+        $file->ca_estado='1';
         $res= $file->save();
         $retVal = ($res) ? 1 : 0 ;
         return $retVal;
@@ -87,5 +92,14 @@ class ServrxController extends Controller
     public function destroy(servrx $servrx)
     {
         //
+    }
+
+    public function listPaciSerRX(Request $request)
+    {
+        return servrx::where('id_paciente',$request->input('paciente'))->get();
+    }
+    public function showPlacaRX(Request $request)
+    {
+        return servrx::where('id',$request->input('id_rx'))->first();
     }
 }

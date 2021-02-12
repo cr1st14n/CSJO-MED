@@ -52,7 +52,7 @@
 					<li class="active"><a href="#tab1" data-toggle="tab">Historico de recetas </a></li>
 					<li><a href="#tab2" data-toggle="tab">Consulta Medica</a></li>
 					<li><a href="#tab3" data-toggle="tab"> Laboratorios</a></li>
-					<li><a href="#tab4" data-toggle="tab"> Rayos X</a></li>
+					<li><a href="#tab4" data-toggle="tab" onclick="btn_funlistserRX()"> Rayos X</a></li>
 					<li><a href="#tab5" data-toggle="tab" onclick="btn_listSV()"> Signos Vitales</a></li>
 				</ul>
 				<div class="tab-content">
@@ -143,23 +143,12 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>
-										<th>No.</th>
 										<th>Fecha</th>
 										<th>Descripcion</th>
 										<th width="30%"></th>
 									</tr>
 								</thead>
-								<tbody align="center">
-									<tr>
-										<td>1</td>
-										<td>dd-mm-yyyy</td>
-										<td>placa de brazo</td>
-										<td>
-											<span class="tooltip-area">
-												<button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>
-											</span>
-										</td>
-									</tr>
+								<tbody align="center" id="table_listServRX">
 								</tbody>
 							</table>
 						</div>

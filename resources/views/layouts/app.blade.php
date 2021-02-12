@@ -27,9 +27,60 @@
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style3" href="{{ asset('Plantilla/assets/css/styleTheme3.css')}}" />
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="{{ asset('Plantilla/assets/css/styleTheme4.css')}}" />
 
+
+	<style>
+		/* styles unrelated to zoom */
+		* {
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		p {
+			position: absolute;
+			top: 3px;
+			right: 28px;
+			color: #555;
+			font: bold 13px/1 sans-serif;
+		}
+
+		/* these styles are for the demo, but are not required for the plugin */
+		.zoom {
+			display: inline-block;
+			position: relative;
+		}
+
+		/* magnifying glass icon */
+		.zoom:after {
+			content: '';
+			display: block;
+			width: 33px;
+			height: 33px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: url(icon.png);
+		}
+
+		.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection {
+			background-color: transparent;
+		}
+
+		#ex2 img:hover {
+			cursor: url(grab.cur), default;
+		}
+
+		#ex2 img:active {
+			cursor: url(grabbed.cur), default;
+		}
+	</style>
 	<!-- css de dropzone para carga de imagenes -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css" integrity="sha512-3g+prZHHfmnvE1HBLwUnVuunaPOob7dpksI7/v6UnF/rnKGwHf/GdEq9K7iEN7qTtW+S0iivTcGpeTBqqB04wA==" crossorigin="anonymous" /> -->
 	<link href="{{ asset('Plantilla/dropzone/dist/dropzone.css')}}" rel="stylesheet" />
+
 
 </head>
 
@@ -171,6 +222,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div id="md-listPacientesEspera" class="modal fade md-slideUp bg-theme-inverse" tabindex="-1" data-width="450">
 			<div class="modal-header bd-theme-inverse-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -424,7 +476,7 @@
 		</div>
 		<!-- modal form carga de imagen de RX -->
 
-		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="400">
+		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="550">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Imagen radiografica</h3>
@@ -432,9 +484,8 @@
 			<div class="modal-body">
 				<div class="panel panel-primary">
 
-					<input type="text" class="form-control" onkeyup="clonar(this.value)" placeholder="Descripcion del archivo a cargar" >
+					<input type="text" class="form-control" onkeyup="clonar(this.value)" placeholder="Descripcion del archivo a cargar">
 					<hr>
-					<label > Cuadro de arrastre para carga de imagen</label>
 					<div class="panel-body" id="myId" style="padding: 0;">
 						<form id="subImagen" class="dropzone">
 							<input type="text" id="textRX2" name="rxDescImagen" hidden>
@@ -448,6 +499,20 @@
 				</div>
 			</div>
 		</div>
+		<div id="md-formCarga-imagenRX" class="modal fade md-flipVer" tabindex="-1" data-width="500">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4>Placa radiografica:</h4><br>
+				<h4 id="md_body_show_desc"></h4>
+			</div>
+			<div class="modal-body" id="md_body_show_imagen">
+				<span class='zoom' id='ex1'>
+					<img src='http://localhost/CSJO-MED/public/storage/imagenes/bEYagRfrw2ZA2Y1p2rVqdU48LnEAy1sLFDvEDyIK.jpg' width='455' height='' alt='Daisy on the Ohoopee' />
+					<p>Hover</p>
+				</span>
+			</div>
+		</div>
+
 
 		<div id="md-stack" class="modal fade" tabindex="-1" data-width="600">
 			<div class="modal-header">
@@ -1260,6 +1325,10 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/miscellaneous/miscellaneous.js')}}"></script>
 	<!-- Library Themes Customize-->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
+
+	<script type="text/javascript" src="{{ asset('Plantilla/zoom/jquery.zoom.js')}}"></script>
+
+
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
@@ -1269,6 +1338,14 @@
 	<!-- js de dropzone -->
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom({ on:'grab' ,magnifi:100});
+			$('#ex3').zoom({ on:'click' });			 
+			$('#ex4').zoom({ on:'toggle' });
+		});
+	</script>
 </body>
 
 </html>
