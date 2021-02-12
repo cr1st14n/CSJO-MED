@@ -36,13 +36,13 @@
 			padding: 0;
 		}
 
-		p {
+		/* p {
 			position: absolute;
 			top: 3px;
 			right: 28px;
 			color: #555;
 			font: bold 13px/1 sans-serif;
-		}
+		} */
 
 		/* these styles are for the demo, but are not required for the plugin */
 		.zoom {
@@ -507,8 +507,7 @@
 			</div>
 			<div class="modal-body" id="md_body_show_imagen">
 				<span class='zoom' id='ex1'>
-					<img src='http://localhost/CSJO-MED/public/storage/imagenes/bEYagRfrw2ZA2Y1p2rVqdU48LnEAy1sLFDvEDyIK.jpg' width='455' height='' alt='Daisy on the Ohoopee' />
-					<p>Hover</p>
+					<img id="srcImagenPlacaRX" src='' width='455' height='' alt='Daisy on the Ohoopee' />
 				</span>
 			</div>
 		</div>
@@ -1339,12 +1338,7 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 	<script>
-		$(document).ready(function(){
-			$('#ex1').zoom();
-			$('#ex2').zoom({ on:'grab' ,magnifi:100});
-			$('#ex3').zoom({ on:'click' });			 
-			$('#ex4').zoom({ on:'toggle' });
-		});
+		
 	</script>
 </body>
 

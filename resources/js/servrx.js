@@ -70,15 +70,15 @@ function show_modalPlacaRX(id_placaRX) {
         url: "servRX/showPlacaRX",
         data: { id_rx: id_placaRX },
         success: function (response) {
-            var html =
-                "<img id='zoom_01' src=/CSJO-MED/" +
-                response.rx_rutaImagen +
-                ' alt="" width="400">';
+            var url ="/CSJO-MED/" +response.rx_rutaImagen;
             // $("#md_body_show_imagen ").html(html);
+            $('#srcImagenPlacaRX').attr('src', url);
             $("#md_body_show_desc").html(response.rx_descripcion);
             console.log(response);
             $("#md-formCarga-imagenRX").modal("show");
-           
+            $(document).ready(function(){
+                $('#ex1').zoom({magnifi:1000});
+            });
         },
     });
 }
