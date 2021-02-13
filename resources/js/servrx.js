@@ -7,6 +7,7 @@ var myDropzone = new Dropzone("#subImagen", {
         console.log(response);
         if (response) {
             notif("1", "Imagen cargada a sistema");
+            btn_funlistserRX();
         } else {
         }
     },
