@@ -1,6 +1,8 @@
 <?php
 
 use App\descargoMedicoCont;
+use App\Http\Controllers\conMedController;
+use App\Http\Controllers\ConsClinicaController;
 use App\Http\Controllers\ServrxController;
 use Facade\FlareClient\View;
 use Illuminate\Routing\RouteGroup;
@@ -39,9 +41,13 @@ Route::Group(['prefix' => 'signosVitales'], function () {
     route::get('list1', 'SignosvitalesController@list1');
 });
 Route::Group(['prefix' => 'servRX'], function () {
-    route::post('store/{paciente}','ServrxController@store')->name('312654');
-    route::get('listPaciSerRX/','ServrxController@listPaciSerRX');
-    route::get('showPlacaRX/','ServrxController@showPlacaRX');
-    route::get('delete/{id}','ServrxController@delete');
-    route::post('delete/{id}',[ServrxController::class,'delete']);
+    route::post('store/{paciente}', 'ServrxController@store')->name('312654');
+    route::get('listPaciSerRX/', 'ServrxController@listPaciSerRX');
+    route::get('showPlacaRX/', 'ServrxController@showPlacaRX');
+    route::get('delete/{id}', 'ServrxController@delete');
+    route::post('delete/{id}', [ServrxController::class, 'delete']);
+});
+Route::group(['prefix'=>'consultaMedica'],function ()
+{
+    route::post('create',[ConsClinicaController::class,'store']);
 });

@@ -40,8 +40,10 @@ function showHistoriaClinica(paciente) {
 }
 $('#btn_showFormConsulta').click(function () { 
     console.log(idPacienteSelect);
-    $("#md-tipoConsulta").modal("show");
 });
+function showModalFormConsulta() {
+    $("#md-tipoConsulta").modal("show");
+  }
 setInterval(() => {
     $.ajax({
         type: "GET",

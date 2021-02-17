@@ -75,6 +75,7 @@ function show_modalPlacaRX(id_placaRX) {
         type: "get",
         url: "servRX/showPlacaRX",
         data: { id_rx: id_placaRX },
+        init: function () {return false  },
         success: function (response) {
             var url = "/CSJO-MED/" + response.rx_rutaImagen;
             // $("#md_body_show_imagen ").html(html);

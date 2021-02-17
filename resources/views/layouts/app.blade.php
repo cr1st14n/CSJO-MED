@@ -27,9 +27,6 @@
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style3" href="{{ asset('Plantilla/assets/css/styleTheme3.css')}}" />
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="{{ asset('Plantilla/assets/css/styleTheme4.css')}}" />
 
-
-
-
 	<style>
 		/* styles unrelated to zoom */
 		* {
@@ -82,8 +79,6 @@
 	</style>
 	<!-- css de dropzone para carga de imagenes -->
 	<link href="{{ asset('Plantilla/dropzone/dist/dropzone.css')}}" rel="stylesheet" />
-
-
 </head>
 
 <body>
@@ -92,7 +87,6 @@
 			<div class="logo-area clearfix">
 				<a href="#" class="logo"></a>
 			</div>
-
 			<div class="tools-bar">
 				<ul class="nav navbar-nav nav-main-xs">
 					<li><a href="#menu" class="icon-toolsbar"><i class="fa fa-bars"></i></a></li>
@@ -215,7 +209,7 @@
 								<br>
 								<button type="button" id="btn_showFormSignosVitales" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-signal"></i></button>
 								<button type="button" id="btn_showFormConsulta" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-plus-sign"></i></button>
-								<button type="button" id="form_resetarioMedico" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
+								<button type="button" id="" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
 								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-headphones"></i></button>
 								<button type="button" id="btn_showFormRx" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon  glyphicon-camera "></i></button>
 							</div>
@@ -403,7 +397,6 @@
 		</div>
 
 		<!-- modal form registro de signos vitales -->
-
 		<div id="md-formSignosVitales" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="800">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -476,8 +469,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- modal form carga de imagen de RX -->
 
+		<!-- modal form carga de imagen de RX -->
 		<div id="md-formCargaRX" class="modal fade md-flipVer" tabindex="-1" data-width="550">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -533,6 +526,7 @@
 				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
 			</div>
 		</div>
+
 		<!-- modal recetario virtual -->
 		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="1000">
 			<div class="modal-header">
@@ -775,6 +769,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- modal parar consulta externa -->
 		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -783,285 +779,57 @@
 			<div class="modal-body" style="padding:0">
 				<div class="widget-im notification">
 					<div class="panel-body">
-						<form class="form-horizontal ">
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label>Signos Vitales</label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-4">
-												<span style="color:dimgrey ;font-weight:bolder">Peso (KG) </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-8">
-												<span style="color:dimgrey ;font-weight:bolder">Estado nutricional IMC </span>
-												<select name="estadoNutricional" class="form-control">
-													<option value="1">Bajo peso</option>
-													<option value="2">Peso normal</option>
-													<option value="3">Sobre peso</option>
-													<option value="4">Obesidad</option>
-												</select>
-											</div>
-											<div class="col-md-4">
-												<span style="color:dimgrey ;font-weight:bolder">Talla (CM) </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-8">
-												<span style="color:dimgrey ;font-weight:bolder">Talla Edad </span>
-												<select name="estadoNutricional" class="form-control">
-													<option value="1">Talla Normal</option>
-													<option value="2">Talla Baja</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Temperatura </span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">°C</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Fercuencia Cardiaca</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">Pul/Min</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Frecuencia respiratoria</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">RPM</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Precion arterial</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">mmHg</span>
-												</div>
-											</div>
-										</div>
+						<form class="form-horizontal" id="form_registrarConsulta">@csrf
+							<div class="row">
+								<div class="col-lg-7">
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder"> Motivo de la consulta </span>
+										<textarea class="form-control" name="razon" rows="2"></textarea>
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Examen fisico </span>
+										<textarea class="form-control" name="examenFisico" rows="2"></textarea>
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
+										<textarea class="form-control" name="diagnostico" rows="2"></textarea>
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
+										<textarea class="form-control" name="tratamiento" rows="2"></textarea>
 									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label>Consulta Medica</label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder"> Motivo de la consulta </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder">Examen fisico </span>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Inyectable </span>
-												<input type="text" class="form-control">
+								<div class="col-lg-5">
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Inyectable </span>
+										<input type="text" class="form-control" name="inyectable">
 
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Suero<span>
-														<input type="text" class="form-control">
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
-												<input type="text" class="form-control">
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Suero<span>
+												<input type="text" class="form-control" name="suero">
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
+										<textarea class="form-control" name="curacionSuturas" rows="2"></textarea>
 
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
-												<input type="text" class="form-control">
-											</div>
-										</div>
+
+									</div>
+									<div class="col-md-12">
+										<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
+										<textarea class="form-control" name="otros" rows="2"></textarea>
+
 									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label></label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" rows="2"></textarea>
-											</div>
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" rows="2"></textarea>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
-							<button class="btn btn-danger">Cancelar</button>
+							<button class="btn btn-theme-inverse align-lg-right" type="submit">Registrar en Historial Clinico</button>
+							<button class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End Cotizaciones -->
-		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
-			<div class="modal-header ">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Consulta externa</h4>
-			</div>
-			<div class="modal-body" style="padding:0">
-				<div class="widget-im notification">
-					<div class="panel-body">
-						<form class="form-horizontal ">
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label>Signos Vitales</label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-4">
-												<span style="color:dimgrey ;font-weight:bolder">Peso (KG) </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-8">
-												<span style="color:dimgrey ;font-weight:bolder">Estado nutricional IMC </span>
-												<select name="estadoNutricional" class="form-control">
-													<option value="1">Bajo peso</option>
-													<option value="2">Peso normal</option>
-													<option value="3">Sobre peso</option>
-													<option value="4">Obesidad</option>
-												</select>
-											</div>
-											<div class="col-md-4">
-												<span style="color:dimgrey ;font-weight:bolder">Talla (CM) </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-8">
-												<span style="color:dimgrey ;font-weight:bolder">Talla Edad </span>
-												<select name="estadoNutricional" class="form-control">
-													<option value="1">Talla Normal</option>
-													<option value="2">Talla Baja</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Temperatura </span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">°C</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Fercuencia Cardiaca</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">Pul/Min</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Frecuencia respiratoria</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">RPM</span>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Precion arterial</span>
-												<div class="input-group">
-													<input type="text" class="form-control">
-													<span class="input-group-addon">mmHg</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label>Consulta Medica</label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder"> Motivo de la consulta </span>
-												<input type="text" class="form-control">
-											</div>
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder">Examen fisico </span>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-										<div class="col-sm-5">
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Inyectable </span>
-												<input type="text" class="form-control">
-
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Suero<span>
-														<input type="text" class="form-control">
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
-												<input type="text" class="form-control">
-
-											</div>
-											<div class="col-md-6">
-												<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
-												<input type="text" class="form-control">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<!-- <label class="control-label col-md-2">Signos Vitales</label> -->
-								<div class="col-md-2">
-									<label></label>
-								</div>
-								<div class="col-md-10">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-												<textarea class="form-control" name="" rows="2"></textarea>
-											</div>
-											<div class="col-md-12">
-												<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-												<textarea class="form-control" name="" rows="2"></textarea>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<button class="btn btn-theme-inverse align-lg-right">Registrar en Historial Clinico</button>
-							<button class="btn btn-danger">Cancelar</button>
-						</form>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
 		<div id="md-atencion_prenatal" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="96%">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -1311,10 +1079,10 @@
 			<!-- //modal-header-->
 			<div class="modal-body">
 				<div class="col-lg-6 align-lg-left">
-					<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar" ><i class="fa fa-check"></i>Confirmar</button>
+					<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar"><i class="fa fa-check"></i>Confirmar</button>
 				</div>
-				<div class="col-lg-6 align-lg-right" >
-					<button class="btn btn-danger btn-block" data-dismiss="modal"  ><i class="fa fa-warning"></i> Cancelar</button>
+				<div class="col-lg-6 align-lg-right">
+					<button class="btn btn-danger btn-block" data-dismiss="modal"><i class="fa fa-warning"></i> Cancelar</button>
 				</div>
 			</div>
 			<!-- //modal-body-->
@@ -1359,6 +1127,7 @@
 	<!-- js de dropzone -->
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/consultaMedica.js') }}"></script>
 </body>
 
 </html>

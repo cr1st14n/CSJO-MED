@@ -17,6 +17,17 @@ $("#form_resetarioMedico").click(function (e) {
         $("#md-form1_recetario").modal("show");
     }
 });
+function showFormRcetario() {
+    if ($("#paciente_id_HCL").val() == null) {
+        $.notific8("Seleccione Paciente!.", {
+            life: "3000",
+            theme: "primary",
+        });
+    } else {
+        $("#id_paciente_new_cotizacion").val($("#paciente_id_HCL").val());
+        $("#md-form1_recetario").modal("show");
+    }
+}
 function addMedicamento() {
     if ($("#c_medi").val() == "") {
         notif("2", "Error! Seleccione Medicamento");
@@ -90,35 +101,33 @@ function posCreate(tipo, response) {
     notif("1", "Registrado.");
     refreshRecetario();
     $("#md-form1_recetario").modal("hide");
-    $("#linkUrlPdf").attr("src","");
-    if (tipo==2) {
+    $("#linkUrlPdf").attr("src", "");
+    if (tipo == 2) {
         console.log(response.b);
         // * se procede a abrir modal para imprimir el recetario
-        var url= `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${response.b}`;
-        $("#linkUrlPdf").attr("src",url);
-        $('#md-form1_vistaReceta').modal('show');
-    } 
+        var url = `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${response.b}`;
+        $("#linkUrlPdf").attr("src", url);
+        $("#md-form1_vistaReceta").modal("show");
+    }
 }
 
 function showHCL2(id) {
-    $('#loadingAni').show();
-    $('#md-form1_vistaReceta').modal('show');
-    var url= `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${id}`;
-    $("#linkUrlPdf").attr("src",url);
+    $("#loadingAni").show();
+    $("#md-form1_vistaReceta").modal("show");
+    var url = `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${id}`;
+    $("#linkUrlPdf").attr("src", url);
     setTimeout(() => {
-        $('#loadingAni').hide();
+        $("#loadingAni").hide();
     }, 1200);
-    if ($("#linkUrlPdf").attr("src")=="") {
-        console.log('esta vacio');
+    if ($("#linkUrlPdf").attr("src") == "") {
+        console.log("esta vacio");
     }
-    
-  }
+}
 
-  $('#btn_showFormConsulta').click(function (e) { 
-      e.preventDefault();
-      
-  });
+$("#btn_showFormConsulta").click(function (e) {
+    e.preventDefault();
+});
 
-  setTimeout(() => {
-      console.log('hola mundo');
-  }, 5000);
+setTimeout(() => {
+    console.log("hola mundo");
+}, 5000);

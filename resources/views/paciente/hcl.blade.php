@@ -1,4 +1,4 @@
-<section class="panel ">
+<section class="panel">
 	<div class="panel-body">
 		<div class="invoice">
 			<div class="row">
@@ -49,7 +49,7 @@
 			<hr>
 			<div class="tabbable">
 				<ul class="nav nav-tabs" data-provide="tabdrop">
-					<li class="active"><a href="#tab1" data-toggle="tab">Historico de recetas </a></li>
+					<li class="active"><a href="#tab1" data-toggle="tab">Recetas Medicas </a></li>
 					<li><a href="#tab2" data-toggle="tab">Consulta Medica</a></li>
 					<li><a href="#tab3" data-toggle="tab"> Laboratorios</a></li>
 					<li><a href="#tab4" data-toggle="tab" onclick="btn_funlistserRX()"> Rayos X</a></li>
@@ -57,6 +57,7 @@
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="tab1">
+						<button class="btn btn-theme-inverse btn-block btn-sm" onclick="showFormRcetario()"><i class="fa fa-plus"></i></button>
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 							<thead>
 								<tr>
@@ -83,6 +84,7 @@
 						</table>
 					</div>
 					<div class="tab-pane fade" id="tab2">
+						<button class="btn btn-theme-inverse btn-block btn-sm" onclick="showModalFormConsulta()"><i class="fa fa-plus"></i></button>
 						<div class="table-responsive">
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
