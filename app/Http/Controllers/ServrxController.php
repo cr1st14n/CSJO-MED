@@ -13,32 +13,10 @@ use Illuminate\Support\Facades\Storage;
 
 class ServrxController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function __construct()
     {
-        //
+        $this->middleware('auth');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request,$paciente)
     {
         // return $request;
@@ -61,45 +39,19 @@ class ServrxController extends Controller
         return $retVal;
     }
 
-    public function show(servrx $servrx)
-    {
-        //
-    }
-
-    public function edit(servrx $servrx)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\servrx  $servrx
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, servrx $servrx)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\servrx  $servrx
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(servrx $servrx)
-    {
-        //
-    }
-
     public function listPaciSerRX(Request $request)
     {
-        return servrx::where('id_paciente',$request->input('paciente'))->get();
+        return servrx::where('id_paciente',$request->input('paciente'))->where('ca_estado','1')->get();
     }
     public function showPlacaRX(Request $request)
     {
         return servrx::where('id',$request->input('id_rx'))->first();
+    }
+    public function delete($id)
+    {
+        $rx=servrx::find($id);
+        // return $res=$rx->delete();
+        $rx->ca_estado='0';
+        return $res=$rx->save();
     }
 }

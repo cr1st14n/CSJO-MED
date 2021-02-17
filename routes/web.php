@@ -1,6 +1,7 @@
 <?php
 
 use App\descargoMedicoCont;
+use App\Http\Controllers\ServrxController;
 use Facade\FlareClient\View;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -41,4 +42,6 @@ Route::Group(['prefix' => 'servRX'], function () {
     route::post('store/{paciente}','ServrxController@store')->name('312654');
     route::get('listPaciSerRX/','ServrxController@listPaciSerRX');
     route::get('showPlacaRX/','ServrxController@showPlacaRX');
+    route::get('delete/{id}','ServrxController@delete');
+    route::post('delete/{id}',[ServrxController::class,'delete']);
 });

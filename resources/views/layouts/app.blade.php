@@ -28,6 +28,8 @@
 	<link type="text/css" rel="alternate stylesheet" media="screen" title="style4" href="{{ asset('Plantilla/assets/css/styleTheme4.css')}}" />
 
 
+
+
 	<style>
 		/* styles unrelated to zoom */
 		* {
@@ -222,7 +224,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="md-listPacientesEspera" class="modal fade md-slideUp bg-theme-inverse" tabindex="-1" data-width="450">
 			<div class="modal-header bd-theme-inverse-darken">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -499,7 +501,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="md-formCarga-imagenRX" class="modal fade md-flipVer" tabindex="-1" data-width="500">
+
+		<div id="md-formCarga-imagenRX" class="modal fade md-flipVer" tabindex="-1" data-width="700">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4>Placa radiografica:</h4><br>
@@ -507,7 +510,7 @@
 			</div>
 			<div class="modal-body" id="md_body_show_imagen">
 				<span class='zoom' id='ex1'>
-					<img id="srcImagenPlacaRX" src='' width='455' height='' alt='Daisy on the Ohoopee' />
+					<img id="srcImagenPlacaRX" src='' width='650' height='' alt='Daisy on the Ohoopee' />
 				</span>
 			</div>
 		</div>
@@ -772,7 +775,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -915,8 +917,6 @@
 				</div>
 			</div>
 		</div>
-
-
 		<!-- End Cotizaciones -->
 		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
 			<div class="modal-header ">
@@ -1302,7 +1302,27 @@
 				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
 			</ul>
 		</nav>
+		<!-- modal para confirmacion de eliminar -->
+		<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
+			<div class="modal-header bg-inverse bd-inverse-darken">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title">Desea eliminar elemento?</h4>
+			</div>
+			<!-- //modal-header-->
+			<div class="modal-body">
+				<div class="col-lg-6 align-lg-left">
+					<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar" ><i class="fa fa-check"></i>Confirmar</button>
+				</div>
+				<div class="col-lg-6 align-lg-right" >
+					<button class="btn btn-danger btn-block" data-dismiss="modal"  ><i class="fa fa-warning"></i> Cancelar</button>
+				</div>
+			</div>
+			<!-- //modal-body-->
+		</div>
 	</div>
+
+
+
 	<!-- Jquery Library -->
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.min.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.ui.min.js')}}"></script>
@@ -1328,6 +1348,8 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/zoom/jquery.zoom.js')}}"></script>
 
 
+
+
 	<!--  funciones de historias clinicas -->
 	<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
@@ -1337,9 +1359,6 @@
 	<!-- js de dropzone -->
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
-	<script>
-		
-	</script>
 </body>
 
 </html>
