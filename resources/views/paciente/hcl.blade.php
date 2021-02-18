@@ -89,14 +89,14 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>
-										<th>No.</th>
 										<th>Fecha</th>
-										<th>Especialidad</th>
+										<th>Motivo</th>
+										<th>Diagnostico</th>
 										<th>Medico</th>
-										<th width="30%"></th>
+										<th width="10%"></th>
 									</tr>
 								</thead>
-								<tbody align="center">
+								<tbody align="center" id="listConsultasMedicas">
 									<tr>
 										<td>1</td>
 										<td>dd-mm-yyyy</td>

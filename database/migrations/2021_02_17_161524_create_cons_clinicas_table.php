@@ -21,7 +21,7 @@ class CreateConsClinicasTable extends Migration
             $table->string('id_paciente')->nullable();
             $table->string('cc_diagnostico')->nullable();
             $table->string('cc_motivo')->nullable();
-            $table->jsonb('cc_data')->nullable();
+            $table->longText('cc_data')->nullable();
 
 
             $table->integer('ca_usu_cod')->nullable();

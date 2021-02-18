@@ -51,4 +51,5 @@ Route::group(['prefix'=>'consultaMedica'],function ()
 {
     route::post('create/{id}',[ConsClinicaController::class,'store']);
     route::get('show/{id}',[ConsClinicaController::class,'show']);
+    route::get('showdatos/{id}',[ConsClinicaController::class,'showdatos']);
 });

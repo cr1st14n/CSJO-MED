@@ -827,6 +827,64 @@
 				</div>
 			</form>
 		</div>
+		<!-- modal mostrar detalle de consulta -->
+		<div id="md-detalleContulstaClinica" class="modal fade" tabindex="-1" data-width="800">
+			<div class="moda-header">
+				<section class="panel">
+					<header class="panel-heading">
+						<h2><strong>Consulta</strong> Medica</h2>
+						<label class="color">Detalle completo de consulta medica</label>
+					</header>
+					<div id="bodyDetalleConsulta">
+						<div class="col-lg-6">
+							<ul class="list-group">
+								<li class="list-group-item">
+									<label for="">Motivo de la consulta:</label>
+									<h4>asdfasdf</h4>
+								</li>
+								<li class="list-group-item">
+									<label for="">Examen Fisico:</label>
+									<h4></h4>
+								</li>
+								<li class="list-group-item">
+									<label for="">Diagnostico:</label>
+									<h4></h4>
+								</li>
+								<li class="list-group-item">
+									<label for="">Tramamiento:</label>
+									<h4></h4>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-6">
+
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<label for="">Inyectable:</label>
+								<h4></h4>
+							</li>
+							<li class="list-group-item">
+								<label for="">Suero:</label>
+								<h4></h4>
+							</li>
+							<li class="list-group-item">
+								<label for="">Curaciones o Suturas:</label>
+								<h4></h4>
+							</li>
+							<li class="list-group-item">
+								<label for="">Otras Actividades:</label>
+								<h4></h4>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+			<div class=" modal-footer">
+			<p>
+			</p>
+			</div>
+		</div>
 		<!-- End Cotizaciones -->
 		<div id="md-atencion_prenatal" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="96%">
 			<div class="modal-header ">
@@ -978,6 +1036,7 @@
 			</div>
 
 		</div>
+
 		<div id="md-atencion_anticoncepcion" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="50%">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -1057,6 +1116,7 @@
 				</div>
 			</div>
 		</div>
+
 		<nav id="menu">
 			<ul>
 				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
@@ -1068,6 +1128,7 @@
 				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
 			</ul>
 		</nav>
+
 		<!-- modal para confirmacion de eliminar -->
 		<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
 			<div class="modal-header bg-inverse bd-inverse-darken">

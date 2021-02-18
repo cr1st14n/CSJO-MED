@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Console\Input\Input;
 
 use function Opis\Closure\serialize;
+use function Opis\Closure\unserialize;
 
 class ConsClinicaController extends Controller
 {
@@ -58,18 +59,14 @@ class ConsClinicaController extends Controller
         $cc->ca_tipo = 'create';
         $cc->ca_fecha = Carbon::now();
         $cc->ca_estado = 1;
-        return $re1s=$cc->save();
+        return $re1s = $cc->save();
     }
 
     public function show($id)
     {
-        return consClinica::where('id_paciente',$id)->select('*')->selectRaw(unserialize('cc_data') )->get();
+        return consClinica::where('id_paciente', $id)->get();
     }
 
-    public function des()
-    {
-        return'ñlaks';
-    }
     public function edit(consClinica $consClinica)
     {
         //
@@ -89,5 +86,13 @@ class ConsClinicaController extends Controller
     public function destroy(consClinica $consClinica)
     {
         //
+    }
+
+    public function showdatos($id)
+    {
+        $data= consClinica::where('id', $id)->first();
+        $datab=unserialize($data['cc_data']);
+        $data=['a'=>$data,'b'=>$datab];
+        return $data;   
     }
 }
