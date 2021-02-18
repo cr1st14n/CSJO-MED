@@ -771,63 +771,61 @@
 		</div>
 
 		<!-- modal parar consulta externa -->
-		<div id="md-atencion_consultaExterna" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="1000">
+		<div id="md-atencion_consultaExterna" class="modal fade " tabindex="-1" data-width="1000">
 			<div class="modal-header ">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4 class="modal-title"><i class="fa fa-bell-o"></i> Consulta externa</h4>
 			</div>
-			<div class="modal-body" style="padding:0">
-				<div class="widget-im notification">
-					<div class="panel-body">
-						<form class="form-horizontal" id="form_registrarConsulta">@csrf
+			<form class="form-horizontal" id="form_registrarConsulta">@csrf
+				<div class="modal-body" style="padding:0">
+					<div class="widget-im notification">
+						<div class="panel-body">
 							<div class="row">
 								<div class="col-lg-7">
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder"> Motivo de la consulta </span>
-										<textarea class="form-control" name="razon" rows="2"></textarea>
+										<span style="color:dimgrey ;font-weight:bolder"> Motivo de la consulta: </span>
+										<textarea class="form-control" name="razon" rows="2" required></textarea>
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Examen fisico </span>
+										<span style="color:dimgrey ;font-weight:bolder">Examen fisico: </span>
 										<textarea class="form-control" name="examenFisico" rows="2"></textarea>
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder"> Diagnostico </span>
-										<textarea class="form-control" name="diagnostico" rows="2"></textarea>
+										<span style="color:dimgrey ;font-weight:bolder"> Diagnostico: </span>
+										<textarea class="form-control" name="diagnostico" rows="2" required></textarea>
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Tratamiento </span>
-										<textarea class="form-control" name="tratamiento" rows="2"></textarea>
+										<span style="color:dimgrey ;font-weight:bolder">Tratamiento: </span>
+										<textarea class="form-control" name="tratamiento" rows="2" required></textarea>
 									</div>
 								</div>
 								<div class="col-lg-5">
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Inyectable </span>
+										<span style="color:dimgrey ;font-weight:bolder">Inyectable: </span>
 										<input type="text" class="form-control" name="inyectable">
-
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Suero<span>
+										<span style="color:dimgrey ;font-weight:bolder">Suero:<span>
 												<input type="text" class="form-control" name="suero">
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas</span>
+										<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas:</span>
 										<textarea class="form-control" name="curacionSuturas" rows="2"></textarea>
-
-
 									</div>
 									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria</span>
+										<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria:</span>
 										<textarea class="form-control" name="otros" rows="2"></textarea>
-
 									</div>
 								</div>
 							</div>
-							<button class="btn btn-theme-inverse align-lg-right" type="submit">Registrar en Historial Clinico</button>
-							<button class="btn btn-danger" data-dismiss="modal" >Cancelar</button>
-						</form>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="modal-footer">
+					<button class="btn btn-theme-inverse align-lg-right" type="submit">Registrar en Historial Clinico</button>
+					<button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+				</div>
+			</form>
 		</div>
 		<!-- End Cotizaciones -->
 		<div id="md-atencion_prenatal" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="96%">

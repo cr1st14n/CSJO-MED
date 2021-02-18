@@ -49,5 +49,6 @@ Route::Group(['prefix' => 'servRX'], function () {
 });
 Route::group(['prefix'=>'consultaMedica'],function ()
 {
-    route::post('create',[ConsClinicaController::class,'store']);
+    route::post('create/{id}',[ConsClinicaController::class,'store']);
+    route::get('show/{id}',[ConsClinicaController::class,'show']);
 });

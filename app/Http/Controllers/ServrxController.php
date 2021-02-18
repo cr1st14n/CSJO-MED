@@ -43,10 +43,12 @@ class ServrxController extends Controller
     {
         return servrx::where('id_paciente',$request->input('paciente'))->where('ca_estado','1')->get();
     }
+
     public function showPlacaRX(Request $request)
     {
         return servrx::where('id',$request->input('id_rx'))->first();
     }
+    
     public function delete($id)
     {
         $rx=servrx::find($id);
