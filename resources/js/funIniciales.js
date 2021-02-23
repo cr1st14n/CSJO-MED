@@ -35,7 +35,7 @@ function notif(tipo, texto) {
 }
 function veriNull(texto) {
     if (texto == null || texto.length == 0) {
-        return "";
+        return "--";
     } else {
         return texto;
     }

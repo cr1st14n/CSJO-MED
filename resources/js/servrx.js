@@ -12,14 +12,14 @@ var myDropzone = new Dropzone("#subImagen", {
         }
     },
 });
-$("#btn_showFormRx").click(function (e) {
-    e.preventDefault();
+
+function showModalRegisterfunlistserRX() {
     if (fun001()) {
         showModalFormRX();
     } else {
         notif("4", "Seleccione un Paciente!");
     }
-});
+}
 
 function showModalFormRX() {
     $("#md-formCargaRX").modal("show");
@@ -28,9 +28,18 @@ function showModalFormRX() {
 }
 
 // *Funcion de DROOPZONE
-function clonar(data) {
-    console.log(data);
-    $("#textRX2").val(data);
+function clonar(data,tipo) {
+    switch (tipo) {
+        case 1:
+            $("#textRX1").val(data);            
+            break;
+        case 2:
+            $("#textRX2").val(data);
+            break;
+        case 3:
+            $("#textRX3").val(data);
+            break;
+    }
 }
 
 function btn_funlistserRX() {
@@ -49,11 +58,15 @@ function btn_funlistserRX() {
                     return (a = `
                 <tr>
                     <td>${f}</td>
-                    <td>${index.rx_descripcion}</td>
+                    <td>${veriNull(index.rx_descripcion)}</td>
                     <td>
                         <span class="tooltip-area">
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${
+                                index.id
+                            })"><i class="fa fa-eye"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${
+                                index.id
+                            })"><i class="fa fa-trash-o"></i></button>
                         </span>
                     </td>
                 </tr>
@@ -75,7 +88,9 @@ function show_modalPlacaRX(id_placaRX) {
         type: "get",
         url: "servRX/showPlacaRX",
         data: { id_rx: id_placaRX },
-        init: function () {return false  },
+        init: function () {
+            return false;
+        },
         success: function (response) {
             var url = "/CSJO-MED/" + response.rx_rutaImagen;
             // $("#md_body_show_imagen ").html(html);
@@ -85,7 +100,8 @@ function show_modalPlacaRX(id_placaRX) {
             $("#md-formCarga-imagenRX").modal("show");
             $(document).ready(function () {
                 $("#ex1").zoom({
-                    magnify: 1.5,
+                    magnify: 1.6,
+                    on:'click'
                 });
             });
         },
@@ -114,3 +130,23 @@ function deletePlacaRX(id) {
         },
     });
 }
+
+// function () {
+//     fetch('https://httpbin.org/post', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/x-www-form-urlencoded'
+//         },
+//         body: 'a=1&b=2'
+//     })
+//     .then(function(response) {
+//         console.log('response =', response);
+//         return response.json();
+//     })
+//     .then(function(data) {
+//         console.log('data = ', data);
+//     })
+//     .catch(function(err) {
+//         console.error(err);
+//     });
+//   }

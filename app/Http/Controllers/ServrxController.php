@@ -30,6 +30,8 @@ class ServrxController extends Controller
         $file->id_paciente=$paciente;
         $file->rx_rutaImagen="public$url";
         $file->rx_descripcion=$request->input('rxDescImagen');
+        $file->rx_factura=$request->input('rxfactura');
+        $file->rx_medicoTratante=$request->input('rxmedicoTratante');
         $file->ca_usu_cod=Auth::user()->id;
         $file->ca_tipo='create';
         $file->ca_fecha=Carbon::now();

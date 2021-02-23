@@ -142,6 +142,8 @@
 					</div>
 					<div class="tab-pane fade" id="tab4">
 						<div class="table-responsive">
+							<button class="btn btn-theme-inverse btn-block btn-sm" onclick="showModalRegisterfunlistserRX()"><i class="fa fa-plus"></i></button>
+
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>
@@ -197,10 +199,10 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<div class="btn-group btn-group-justified" id="btn_consulta_imprimir">
+					<!-- <div class="btn-group btn-group-justified" id="btn_consulta_imprimir">
 						<a href="#" onclick="showModalTipoConsulta('{{$paciente->pa_id}}' )" class="btn btn-theme-inverse btn-transparent "><i class="fa fa-stethoscope"></i>Registrar atencion</a>
 						<a href="javascript:window.print();" class="btn btn-theme-inverse btn-transparent  "><i class="fa fa-print"></i> Imprimir</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

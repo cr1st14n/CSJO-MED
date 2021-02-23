@@ -207,11 +207,7 @@
 							<div class="panel-body align-xs-center">
 								<h4>Funciones Medicas</h4>
 								<br>
-								<button type="button" id="btn_showFormSignosVitales" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-signal"></i></button>
-								<button type="button" id="btn_showFormConsulta" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-plus-sign"></i></button>
-								<button type="button" id="" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-file"></i></button>
-								<button type="button" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon glyphicon-headphones"></i></button>
-								<button type="button" id="btn_showFormRx" class="btn btn-theme-inverse btn-transparent"><i class="glyphicon  glyphicon-camera "></i></button>
+
 							</div>
 						</section>
 					</div>
@@ -478,12 +474,23 @@
 			</div>
 			<div class="modal-body">
 				<div class="panel panel-primary">
+					<div class="row">
+						<div class="col-lg-6">
+							<input type="number" class="form-control" onkeyup="clonar(this.value,1)" placeholder="# de factura">
+						</div>
+						<div class="col-lg-6">
+							<input type="text" class="form-control" onkeyup="clonar(this.value,2)" placeholder="Medico designante">
+						</div>
+					</div>
+					<br>
+					<input type="text" class="form-control" onkeyup="clonar(this.value,3)" placeholder="Descripcion del archivo a cargar">
 
-					<input type="text" class="form-control" onkeyup="clonar(this.value)" placeholder="Descripcion del archivo a cargar">
 					<hr>
 					<div class="panel-body" id="myId" style="padding: 0;">
 						<form id="subImagen" class="dropzone">
-							<input type="text" id="textRX2" name="rxDescImagen" hidden>
+							<input type="text" id="textRX1" name="rxDescImagen" hidden>
+							<input type="text" id="textRX2" name="rxfactura" hidden>
+							<input type="text" id="textRX3" name="rxmedicoTratante" hidden>
 							<div class="fallback" id="2121">
 								<input name="file" type="file" multiple />
 							</div>
@@ -836,53 +843,12 @@
 						<label class="color">Detalle completo de consulta medica</label>
 					</header>
 					<div id="bodyDetalleConsulta">
-						<div class="col-lg-6">
-							<ul class="list-group">
-								<li class="list-group-item">
-									<label for="">Motivo de la consulta:</label>
-									<h4>asdfasdf</h4>
-								</li>
-								<li class="list-group-item">
-									<label for="">Examen Fisico:</label>
-									<h4></h4>
-								</li>
-								<li class="list-group-item">
-									<label for="">Diagnostico:</label>
-									<h4></h4>
-								</li>
-								<li class="list-group-item">
-									<label for="">Tramamiento:</label>
-									<h4></h4>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-6">
-
-						</div>
-						<ul class="list-group">
-							<li class="list-group-item">
-								<label for="">Inyectable:</label>
-								<h4></h4>
-							</li>
-							<li class="list-group-item">
-								<label for="">Suero:</label>
-								<h4></h4>
-							</li>
-							<li class="list-group-item">
-								<label for="">Curaciones o Suturas:</label>
-								<h4></h4>
-							</li>
-							<li class="list-group-item">
-								<label for="">Otras Actividades:</label>
-								<h4></h4>
-							</li>
-						</ul>
 					</div>
 				</section>
 			</div>
 			<div class=" modal-footer">
-			<p>
-			</p>
+				<p>
+				</p>
 			</div>
 		</div>
 		<!-- End Cotizaciones -->
