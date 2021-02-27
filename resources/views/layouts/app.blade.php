@@ -476,14 +476,14 @@
 				<div class="panel panel-primary">
 					<div class="row">
 						<div class="col-lg-6">
-							<input type="number" class="form-control" onkeyup="clonar(this.value,1)" placeholder="# de factura">
+							<input type="number" class="form-control" id="textrx1" onkeyup="clonar(this.value,1)" placeholder="# de factura">
 						</div>
 						<div class="col-lg-6">
-							<input type="text" class="form-control" onkeyup="clonar(this.value,2)" placeholder="Medico designante">
+							<input type="text" class="form-control" id="textrx2" onkeyup="clonar(this.value,2)" placeholder="Medico designante">
 						</div>
 					</div>
 					<br>
-					<input type="text" class="form-control" onkeyup="clonar(this.value,3)" placeholder="Descripcion del archivo a cargar">
+					<input type="text" class="form-control" id="textrx3" onkeyup="clonar(this.value,3)" placeholder="Descripcion del archivo a cargar">
 
 					<hr>
 					<div class="panel-body" id="myId" style="padding: 0;">

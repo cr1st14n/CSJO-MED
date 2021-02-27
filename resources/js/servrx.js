@@ -3,6 +3,22 @@ var myDropzone = new Dropzone("#subImagen", {
     headers: {
         "X-CSRF-TOKEN": $("meta[name=csrf-token]").attr("content"),
     },
+    paramName: "file", // The name that will be used to transfer the file
+    maxFilesize: 15, // MB
+    accept: function (file, done) {
+        a = $("#textrx1").val();
+        b = $("#textrx2").val();
+        c = $("#textrx3").val();
+        if (a.length > 0 && b.length > 0 && b.length > 0) {
+            done("");
+        } else {
+            setTimeout(() => {
+                myDropzone.removeFile(file);
+            }, 3000);
+            notif("2", "Error! ");
+            done("Error en llenado de detalle");
+        }
+    },
     success: function (file, response) {
         console.log(response);
         if (response) {
@@ -28,10 +44,10 @@ function showModalFormRX() {
 }
 
 // *Funcion de DROOPZONE
-function clonar(data,tipo) {
+function clonar(data, tipo) {
     switch (tipo) {
         case 1:
-            $("#textRX1").val(data);            
+            $("#textRX1").val(data);
             break;
         case 2:
             $("#textRX2").val(data);
@@ -101,7 +117,7 @@ function show_modalPlacaRX(id_placaRX) {
             $(document).ready(function () {
                 $("#ex1").zoom({
                     magnify: 1.6,
-                    on:'click'
+                    on: "click",
                 });
             });
         },

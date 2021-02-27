@@ -43,7 +43,7 @@ class ServrxController extends Controller
 
     public function listPaciSerRX(Request $request)
     {
-        return servrx::where('id_paciente',$request->input('paciente'))->where('ca_estado','1')->get();
+        return servrx::where('id_paciente',$request->input('paciente'))->where('ca_estado','1')->orderBy('created_at','desc')->get();
     }
 
     public function showPlacaRX(Request $request)
