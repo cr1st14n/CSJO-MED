@@ -1,5 +1,5 @@
-$("#btn_showFormSignosVitales").click(function (e) {
-    // e.preventDefault();
+
+function showFormSignosVitales() {
     if (idPacienteSelect == null) {
         notif("3", "Seleccione un Paciente");
     } else {
@@ -7,7 +7,7 @@ $("#btn_showFormSignosVitales").click(function (e) {
         $("#md-formSignosVitales").modal("show");
         $("#icmPaciente").html("");
     }
-});
+}
 
 function calcularIMC() {
     t = $("#tallaPaciente").val();
@@ -42,26 +42,25 @@ function calcularIMC1(t, p) {
     if (t >= 0 && p >= 0) {
         imc = Math.round(p / (t * t)).toFixed(2);
         if (imc <= 18.5) {
-           return `${imc} -> Bajo Peso`;
+            return `${imc} -> Bajo Peso`;
         }
         if (imc >= 18.5 && imc < 25.0) {
-           return `${imc} -> Peso Normal`;
+            return `${imc} -> Peso Normal`;
         }
         if (imc >= 25.0 && imc < 30.0) {
-           return `${imc} -> Sobre Peso`;
+            return `${imc} -> Sobre Peso`;
         }
         if (imc >= 30.0 && imc < 35.0) {
-           return `${imc} -> Obesidad grado `;
+            return `${imc} -> Obesidad grado `;
         }
         if (imc >= 35.0 && imc < 40.0) {
-           return `${imc} -> Obesidad grado I`;
+            return `${imc} -> Obesidad grado I`;
         }
         if (40.0 < imc) {
-           return `${imc} -> Obesidad grado II`;
+            return `${imc} -> Obesidad grado II`;
         }
     } else {
         return `--`;
-        
     }
 }
 
@@ -109,7 +108,7 @@ function btn_listSV() {
                         <td>${a.sv_te}</td>
                         <td>${a.sv_pe}</td>
                         <td>${a.sv_ta}</td>
-                        <td>${ calcularIMC1(a.sv_ta, a.sv_pe) }</td>
+                        <td>${calcularIMC1(a.sv_ta, a.sv_pe)}</td>
                         <td>
                             <span class="tooltip-area">
                                 <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(55)"><i class="fa fa-eye-slash"></i></button>

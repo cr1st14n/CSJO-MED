@@ -77,12 +77,8 @@ function btn_funlistserRX() {
                     <td>${veriNull(index.rx_descripcion)}</td>
                     <td>
                         <span class="tooltip-area">
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${
-                                index.id
-                            })"><i class="fa fa-eye"></i></button>
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${
-                                index.id
-                            })"><i class="fa fa-trash-o"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
                         </span>
                     </td>
                 </tr>
