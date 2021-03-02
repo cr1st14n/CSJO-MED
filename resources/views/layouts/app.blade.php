@@ -175,12 +175,12 @@
 			</ol>
 			<div id="content">
 				<div class="row">
-					<div class="col-lg-8" id="panel1">
+					<div class="col-lg-10" id="panel1">
 						<section class="panel">
 
 						</section>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-2">
 						<div class="well bg-theme">
 							<div class="widget-tile">
 								<section>
@@ -197,17 +197,10 @@
 						</section>
 						<section class="panel">
 							<header class="panel-heading">
+								<h5>Reportes Informes</h5>
 							</header>
 							<div class=" panel-body align-xs-center">
-								<ul class=" bs-glyphicons">
-								</ul>
-							</div>
-						</section>
-						<section class="panel">
-							<div class="panel-body align-xs-center">
-								<h4>Funciones Medicas</h4>
-								<br>
-
+								<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button>
 							</div>
 						</section>
 					</div>
@@ -488,9 +481,9 @@
 					<hr>
 					<div class="panel-body" id="myId" style="padding: 0;">
 						<form id="subImagen" class="dropzone">
-							<input type="text" id="textRX1" name="rxDescImagen" hidden>
-							<input type="text" id="textRX2" name="rxfactura" hidden>
-							<input type="text" id="textRX3" name="rxmedicoTratante" hidden>
+							<input type="text" id="textRX1" name="rxfactura" hidden>
+							<input type="text" id="textRX2" name="rxmedicoTratante" hidden>
+							<input type="text" id="textRX3" name="rxDescImagen" hidden>
 							<div class="fallback" id="2121">
 								<input name="file" type="file" multiple />
 							</div>
@@ -502,7 +495,7 @@
 			</div>
 		</div>
 
-		<div id="md-formCarga-imagenRX" class="modal fade md-flipVer" tabindex="-1" data-width="700">
+		<div id="md-formCarga-imagenRX" class="modal fade md-flipVer" tabindex="-1" data-width="1000">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h4>Placa radiografica:</h4><br>
@@ -510,7 +503,7 @@
 			</div>
 			<div class="modal-body" id="md_body_show_imagen">
 				<span class='zoom' id='ex1'>
-					<img id="srcImagenPlacaRX" src='' width='650' height='' alt='Daisy on the Ohoopee' />
+					<img id="srcImagenPlacaRX" src='' width='950' height='' alt='Daisy on the Ohoopee' />
 				</span>
 			</div>
 		</div>

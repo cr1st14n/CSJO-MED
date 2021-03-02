@@ -20,6 +20,8 @@ class CreateServrxesTable extends Migration
             $table->integer('id_paciente');
             $table->longText('rx_rutaImagen')->nullable();
             $table->longText('rx_descripcion')->nullable();
+            $table->string('rx_factura',100)->nullable();
+            $table->longText('rx_medicoTratante')->nullable();
 
             $table->integer('ca_usu_cod')->nullable();
             $table->string('ca_tipo',10)->nullable();

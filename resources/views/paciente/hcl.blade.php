@@ -147,9 +147,11 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>
+										<th># factura</th>
 										<th>Fecha</th>
-										<th>Descripcion</th>
-										<th width="30%"></th>
+										<th>Medico</th>
+										<th>Detalle</th>
+										<th width="20%"></th>
 									</tr>
 								</thead>
 								<tbody align="center" id="table_listServRX">

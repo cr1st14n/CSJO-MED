@@ -73,12 +73,18 @@ function btn_funlistserRX() {
                     f = f.toLocaleString("es-ES", "dd/mm/yyyy");
                     return (a = `
                 <tr>
+                    <td>${veriNull(index.rx_factura)}</td>
                     <td>${f}</td>
+                    <td>${veriNull(index.rx_medicoTratante)}</td>
                     <td>${veriNull(index.rx_descripcion)}</td>
                     <td>
                         <span class="tooltip-area">
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
-                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${index.id})"><i class="fa fa-eye-slash"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalPlacaRX(${
+                                index.id
+                            })"><i class="fa fa-eye-slash"></i></button>
+                            <button class="btn btn-default btn-sm" title="Edit" onclick="show_modalDeleteRX(${
+                                index.id
+                            })"><i class="fa fa-eye-slash"></i></button>
                         </span>
                     </td>
                 </tr>
@@ -112,7 +118,7 @@ function show_modalPlacaRX(id_placaRX) {
             $("#md-formCarga-imagenRX").modal("show");
             $(document).ready(function () {
                 $("#ex1").zoom({
-                    magnify: 1.6,
+                    magnify: 2.7,
                     on: "click",
                 });
             });
