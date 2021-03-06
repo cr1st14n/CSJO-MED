@@ -115,6 +115,7 @@
 					</div>
 					<div class="tab-pane fade" id="tab3">
 						<div class="table-responsive">
+							<button class="btn btn-theme-inverse btn-block btn-sm" onclick="showModSelectTipoPro()"><i class="fa fa-plus"></i></button>
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>

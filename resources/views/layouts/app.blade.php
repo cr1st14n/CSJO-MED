@@ -1075,7 +1075,273 @@
 				</div>
 			</div>
 		</div>
+		<!-- Inicio Modal para vistas de laboratorio -->
+		<div id="md_selectTipoPro" class="modal fade container md-stickTop">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h3>Procedimientos de laboratori</h3>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<form id="form-selectTipoLab">
+						<div class="col-lg-4">
+							<ul class="" data-style="square" data-color="green">
+								<li>
+									<input type="checkbox" name="lab_1" id="check_lab_1" value="1" onchange="showContent(this.name)">
+									<label>Bioquimica Clinica</label>
+								</li>
+								<li>
+									<input type="checkbox" name="lab_2" id="check_lab_2" value="1" onchange="showContent(this.name)">
+									<label>Coagulograma</label>
+								</li>
+								<li>
+									<input type="checkbox" name="lab_3" id="check_lab_3" value="1" onchange="showContent(this.name)">
+									<label>Biometria Hematica</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label></label>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-8">
+							<div id="lab_1" style="display: none;">
+								<hr>
+								<h3>Bioquimica Clinica</h3>
+								<form>
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label>Perfil Metabolico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Glucemia</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Ac. Urico</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Proteinas Totales</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Albumina</span>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Perfil Renal</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Creatinina</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Nitrogeno Ureico</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Urea</span>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Perfil Metabolico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Colesterol</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">trigliceridos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">HDL-COL</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">LDL-COL</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">VLDL</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label>Perfil Hepatico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">B. total</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">B. Directa</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">B. Indirecta</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">AST/GOT</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">AST/GPT</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">F. Alcalina</span>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Perfil Pancreatico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Amilasa</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Lipasa</span>
+												</div>
 
+											</div>
+											<div class="form-group">
+												<label>Perfil Electrolitico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Sodio (NA)</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Potasio(K)</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Cloro(Cl)</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Calcio(Ca)</span>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+
+								</form>
+
+							</div>
+							<div id="lab_2" style="display: none;">
+								<hr>
+								<h3>Coagulograma</h3>
+								<form>
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label>Perfil Metabolico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Tiempo de coagulación</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Tiempo de Sangria</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Tiempo de protrombina</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Actividad Protombinica</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">INR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div id="lab_3" style="display: none;">
+								<hr>
+								<h3>Biometria Hematica</h3>
+								<form>
+									<div class="row">
+											<div class="col-lg-6">
+												<div class="form-group">
+													<label>Cuadro Hematico</label>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Globulos rojos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Hemoglobina</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Hematocrito</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">VES</span>
+													</div>
+												</div>
+
+											</div>
+											<div class="col-lg-6">
+												<div class="form-group">
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Leucocitos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Cayados</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Neutrolitos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Eosinofilos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Basofilos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Linfocitos</span>
+													</div>
+													<div class="input-group">
+														<input type="text" class="form-control" placeholder="Username">
+														<span class="input-group-addon">Monocitos</span>
+													</div>
+												</div>
+											</div>
+									</div>
+								</form>
+							</div>
+						</div>
+				</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+				<button class="btn btn-theme" id="btn-showLabSeleccionados">Continuar</button>
+			</div>
+		</div>
+
+		<!-- Fin Modal para vistas de laboratorio -->
 		<nav id="menu">
 			<ul>
 				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
@@ -1146,6 +1412,7 @@
 	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('resources/js/consultaMedica.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('resources/js/laboratorio.js') }}"></script>
 </body>
 
 </html>
