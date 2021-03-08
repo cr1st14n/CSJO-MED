@@ -1083,8 +1083,149 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
+					<div class="col-md-12  align-xs-center">
+						<div class="btn-toolbar" role="toolbar">
+							<div class="btn-group btn-group-sm">
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" data-toggle="modal" data-target="#md-stack">Bioquimica Clinica</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent">Coagulograma</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent">Biometria Hematica</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<h3>Bioquimica Clinica</h3>
+						<div class="row">
+							<div class="col-lg-6">
+								<h4>Perfil Metabolico</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Glucemia</td>
+										<td width="10%">45</td>
+										<td>70-110 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Ac urico</td>
+										<td width="10%">56</td>
+										<td>2.0-6.0 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Proteinas totales</td>
+										<td width="10%">8</td>
+										<td>6.2-8.5 g/dL</td>
+									</tr>
+									<tr>
+										<td>Albumina</td>
+										<td width="10%">65</td>
+										<td>3.5-5.3 g/dL</td>
+									</tr>
+								</table><hr>
+								<h4>Perfil Renal</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Creatinina</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Nitrogeno ureico</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Urea</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil lipidico</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Colesterol</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Triglicericos</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>HDL-COL</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>LDL-COL</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>VLDL</td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+							<div class="col-lg-6">
+								<p>
+								<h4>Perfil Hepatico</h4><br>
+								B. total: <br>
+								B. directa: <br>
+								B. indirecta: <br>
+								AST/GOT: <br>
+								Alt/GPT: <br>
+								F. Alcalina: <br>
+								</p>
+								<p>
+								<h4>Perfil Pancreatico</h4><br>
+								Amilasa: <br>
+								Lipasa: <br>
+								</p>
+								<p>
+								<h4>Perfil Electrolitico</h4><br>
+								Sodio(NA): <br>
+								Potasio(K): <br>
+								Cloro(Cl): <br>
+								Calcio(Cl): <br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<h3>Coagulograma</h3>
+						<div class="row">
+							<p>
+								Tiempo de coagulacion: <br>
+								Tiempo de Sangria: <br>
+								Tiempo de protrombina: <br>
+								Actividad Protombina: <br>
+								INR: <br>
+							</p>
+							<h4>Control</h4>
+							<table class=" table-bordered" width="100%">
+								<tr>
+									<td>Tiempo de protrombina</td>
+									<td>13 seg</td>
+								</tr>
+								<tr>
+									<td>Actividad Protombina</td>
+									<td>100%</td>
+								</tr>
+								<tr>
+									<td>INR</td>
+									<td>1.0</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--//row-->
+				<div class="row">
 					<form id="form-selectTipoLab">
-						<div class="col-lg-4">
+						<div class="col-lg-12">
 							<ul class="" data-style="square" data-color="green">
 								<li>
 									<input type="checkbox" name="lab_1" id="check_lab_1" value="1" onchange="showContent(this.name)">
@@ -1104,7 +1245,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-12">
 							<div id="lab_1" style="display: none;">
 								<hr>
 								<h3>Bioquimica Clinica</h3>
@@ -1274,60 +1415,60 @@
 								<h3>Biometria Hematica</h3>
 								<form>
 									<div class="row">
-											<div class="col-lg-6">
-												<div class="form-group">
-													<label>Cuadro Hematico</label>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Globulos rojos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Hemoglobina</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Hematocrito</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">VES</span>
-													</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label>Cuadro Hematico</label>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Globulos rojos</span>
 												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Hemoglobina</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Hematocrito</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">VES</span>
+												</div>
+											</div>
 
-											</div>
-											<div class="col-lg-6">
-												<div class="form-group">
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Leucocitos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Cayados</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Neutrolitos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Eosinofilos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Basofilos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Linfocitos</span>
-													</div>
-													<div class="input-group">
-														<input type="text" class="form-control" placeholder="Username">
-														<span class="input-group-addon">Monocitos</span>
-													</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Leucocitos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Cayados</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Neutrolitos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Eosinofilos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Basofilos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Linfocitos</span>
+												</div>
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Username">
+													<span class="input-group-addon">Monocitos</span>
 												</div>
 											</div>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -1338,6 +1479,21 @@
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
 				<button class="btn btn-theme" id="btn-showLabSeleccionados">Continuar</button>
+			</div>
+		</div>
+		<div id="md-stack" class="modal fade md-flipHor" tabindex="-1" data-width="600">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h3>Stack One</h3>
+			</div>
+			<div class="modal-body">
+				<p>One fine body…</p>
+				<p>Two fine body…</p>
+				<p>Three fine body…</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
+				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
 			</div>
 		</div>
 
