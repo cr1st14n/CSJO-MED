@@ -1094,49 +1094,50 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4">
-						<h3>Bioquimica Clinica</h3>
+					<div class="col-lg-6">
+						<h3 align="center">-----Bioquimica Clinica-----</h3><br>
 						<div class="row">
 							<div class="col-lg-6">
-								<h4>Perfil Metabolico</h4>
-								<table class="table-bordered" width="100%">
+								<h4>Perfil Metabolico</h4><br>
+								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
 									<tr>
 										<td>Glucemia</td>
 										<td width="10%">45</td>
-										<td>70-110 mg/dL</td>
+										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
 									</tr>
 									<tr>
 										<td>Ac urico</td>
 										<td width="10%">56</td>
-										<td>2.0-6.0 mg/dL</td>
+										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
 									</tr>
 									<tr>
 										<td>Proteinas totales</td>
 										<td width="10%">8</td>
-										<td>6.2-8.5 g/dL</td>
+										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
 									</tr>
 									<tr>
 										<td>Albumina</td>
 										<td width="10%">65</td>
-										<td>3.5-5.3 g/dL</td>
+										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
 									</tr>
-								</table><hr>
-								<h4>Perfil Renal</h4>
+								</table>
+								<hr>
+								<h4>Perfil Renal</h4><br>
 								<table class="table-bordered" width="100%">
 									<tr>
 										<td>Creatinina</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
 									</tr>
 									<tr>
 										<td>Nitrogeno ureico</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
 									</tr>
 									<tr>
 										<td>Urea</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
 									</tr>
 								</table>
 								<hr>
@@ -1145,78 +1146,290 @@
 									<tr>
 										<td>Colesterol</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 200mg/dL</td>
+
 									</tr>
 									<tr>
 										<td>Triglicericos</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
 									</tr>
 									<tr>
 										<td>HDL-COL</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
 									</tr>
 									<tr>
 										<td>LDL-COL</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 155 mg/dL</td>
 									</tr>
 									<tr>
 										<td>VLDL</td>
 										<td></td>
-										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 40mg/dL</td>
 									</tr>
 								</table>
 							</div>
 							<div class="col-lg-6">
-								<p>
-								<h4>Perfil Hepatico</h4><br>
-								B. total: <br>
-								B. directa: <br>
-								B. indirecta: <br>
-								AST/GOT: <br>
-								Alt/GPT: <br>
-								F. Alcalina: <br>
-								</p>
-								<p>
-								<h4>Perfil Pancreatico</h4><br>
-								Amilasa: <br>
-								Lipasa: <br>
-								</p>
-								<p>
-								<h4>Perfil Electrolitico</h4><br>
-								Sodio(NA): <br>
-								Potasio(K): <br>
-								Cloro(Cl): <br>
-								Calcio(Cl): <br>
-								</p>
+								<h4>Perfil Metabolico</h4><br>
+								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+									<tr>
+										<td>Glucemia</td>
+										<td width="10%">45</td>
+										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Ac urico</td>
+										<td width="10%">56</td>
+										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Proteinas totales</td>
+										<td width="10%">8</td>
+										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
+									</tr>
+									<tr>
+										<td>Albumina</td>
+										<td width="10%">65</td>
+										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil Renal</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Creatinina</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Nitrogeno ureico</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
+									</tr>
+									<tr>
+										<td>Urea</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil lipidico</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Colesterol</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 200mg/dL</td>
+
+									</tr>
+									<tr>
+										<td>Triglicericos</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
+									</tr>
+									<tr>
+										<td>HDL-COL</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
+									</tr>
+									<tr>
+										<td>LDL-COL</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 155 mg/dL</td>
+									</tr>
+									<tr>
+										<td>VLDL</td>
+										<td></td>
+										<td style="font-size: x-small;" align="right">
+											< 40mg/dL</td>
+									</tr>
+								</table>
 							</div>
 						</div>
+						<h3 align="center">----- // -----</h3><br>
 					</div>
-					<div class="col-lg-4">
-						<h3>Coagulograma</h3>
-						<div class="row">
-							<p>
-								Tiempo de coagulacion: <br>
-								Tiempo de Sangria: <br>
-								Tiempo de protrombina: <br>
-								Actividad Protombina: <br>
-								INR: <br>
-							</p>
+					<div class="col-lg-6">
+						<h3 align="center">-----Coagulograma-----</h3>
+						<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+							<tr>
+								<td>tiempo de coagulación</td>
+								<td width="">min</td>
+								<td style="font-size: x-small;" align="right">6 - 12 min</td>
+							</tr>
+							<tr>
+								<td>Tiempo de sangria</td>
+								<td width="">56 min</td>
+								<td style="font-size: x-small;" align="right">1 - 3 min</td>
+							</tr>
+							<tr>
+								<td>Tiempo de protombina</td>
+								<td width="">8 segundos</td>
+								<td style="font-size: x-small;" align="right"></td>
+							</tr>
+							<tr>
+								<td>Actividad protombinica</td>
+								<td width="">65</td>
+								<td style="font-size: x-small;" align="right"></td>
+							</tr>
+							<tr>
+								<td>INR</td>
+								<td width="">65</td>
+								<td style="font-size: x-small;" align="right"></td>
+							</tr>
+						</table>
+						<br>
+						<h4>Control</h4>
+						<p>
+							Tiempo de protrombina => 13 seg <br>
+							Actividad protrombinica => 100% <br>
+							INR =>
+						</p>
+						<h3 align="center">----- // -----</h3><br>
+					</div>
+					<div class="col-lg-6">
+						<h3 align="center">----- Biometria Hepatica-----</h3><br>
+						<div class="col-lg-7">
+							<h4 align="center">Cuadro Hepatico</h4>
+							<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+								<tr>
+									<td>Globulos rojos</td>
+									<td width=""></td>
+									<td style="font-size: x-small;" align="right">6 - 12 min</td>
+								</tr>
+								<tr>
+									<td>Hemoglobina</td>
+									<td width="">56 min</td>
+									<td style="font-size: x-small;" align="right">1 - 3 min</td>
+								</tr>
+								<tr>
+									<td>Hematocrito</td>
+									<td width="">8 segundos</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>VES</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>LEUCOCITOS</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Cayados</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Neutrofilos</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Eosinófilos</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Basófilos</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Linfositos</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr>
+								<tr>
+									<td>Monocitos</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right"></td>
+								</tr><br>
+								<tr>
+									<td>Glicemia</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right">mg/dL</td>
+								</tr>
+								<tr>
+									<td>Creatinina</td>
+									<td width="">65</td>
+									<td style="font-size: x-small;" align="right">mg/dL</td>
+								</tr>
+							</table>
+							<br>
 							<h4>Control</h4>
-							<table class=" table-bordered" width="100%">
+							<p>
+								Tiempo de protrombina => 13 seg <br>
+								Actividad protrombinica => 100% <br>
+								INR =>
+							</p>
+							<h3 align="center">----- // -----</h3><br>
+
+						</div>
+						<div class="col-lg-5">
+						<h4>Valores de referencia</h4>
+							<table class=" table-striped">
 								<tr>
-									<td>Tiempo de protrombina</td>
-									<td>13 seg</td>
+									<td style="font-size: x-small;" align="right">VARON </td>
+									<td style="font-size: x-small;" align="right">MUJER</td>
+									<td style="font-size: x-small;" align="right">NIÑOS</td>
 								</tr>
 								<tr>
-									<td>Actividad Protombina</td>
-									<td>100%</td>
+									<td style="font-size: x-small;" align="right">5.2 - 6.6</td>
+									<td style="font-size: x-small;" align="right">4.5 - 5.8</td>
+									<td style="font-size: x-small;" align="right">3.8 - 5.5</td>
 								</tr>
 								<tr>
-									<td>INR</td>
-									<td>1.0</td>
+									<td style="font-size: x-small;" align="right">16.5 - 19.0</td>
+									<td style="font-size: x-small;" align="right">14.4 - 17.0</td>
+									<td style="font-size: x-small;" align="right">11.0 - 16</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right">48 - 57</td>
+									<td style="font-size: x-small;" align="right">44 - 53</td>
+									<td style="font-size: x-small;" align="right">31 - 43</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right">1 - 10</td>
+									<td style="font-size: x-small;" align="right">1 - 10</td>
+									<td style="font-size: x-small;" align="right">1 - 10</td>
+								</tr>
+							</table><br><br>
+							<table class=" table-striped">
+								<tr>
+									<td style="font-size: x-small;" align="right">VARON - Mujer </td>
+									<td style="font-size: x-small;" align="right">NIÑOS</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right">5000 - 10000</td>
+									<td style="font-size: x-small;" align="right"> 6.200 - 12000</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right">%</td>
+									<td style="font-size: x-small;" align="right">%</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right">0 - 3</td>
+									<td style="font-size: x-small;" align="right">0 - 3</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right"> 0 - 1</td>
+									<td style="font-size: x-small;" align="right"> 0 - 2</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right"> 25 - 35</td>
+									<td style="font-size: x-small;" align="right"> 30 - 40</td>
+								</tr>
+								<tr>
+									<td style="font-size: x-small;" align="right"> 2 - 8</td>
+									<td style="font-size: x-small;" align="right"> 2 - 6</td>
 								</tr>
 							</table>
 						</div>
