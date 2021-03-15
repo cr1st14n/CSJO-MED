@@ -991,9 +991,7 @@
 						<button class="btn btn-danger">Cancelar</button>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
 
 		<div id="md-atencion_anticoncepcion" class="modal fade md-flipVer bg-theme-inverse-lighten" tabindex="-1" data-width="50%">
@@ -1086,7 +1084,7 @@
 					<div class="col-md-12  align-xs-center">
 						<div class="btn-toolbar" role="toolbar">
 							<div class="btn-group btn-group-sm">
-								<button type="button" class="btn btn-theme-inverse  btn-transparent" data-toggle="modal" data-target="#md-stack">Bioquimica Clinica</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent">Coagulograma</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent">Biometria Hematica</button>
 							</div>
@@ -1374,7 +1372,7 @@
 
 						</div>
 						<div class="col-lg-5">
-						<h4>Valores de referencia</h4>
+							<h4>Valores de referencia</h4>
 							<table class=" table-striped">
 								<tr>
 									<td style="font-size: x-small;" align="right">VARON </td>
@@ -1694,15 +1692,12 @@
 				<button class="btn btn-theme" id="btn-showLabSeleccionados">Continuar</button>
 			</div>
 		</div>
-		<div id="md-stack" class="modal fade md-flipHor" tabindex="-1" data-width="600">
+		<div id="md_lab_form1" class="modal fade md-flipHor" tabindex="-1" data-width="600">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Stack One</h3>
 			</div>
-			<div class="modal-body">
-				<p>One fine body…</p>
-				<p>Two fine body…</p>
-				<p>Three fine body…</p>
+			<div class="modal-body" id="lab_form1">
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
