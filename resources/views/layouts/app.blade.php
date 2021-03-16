@@ -1695,12 +1695,10 @@
 		<div id="md_lab_form1" class="modal fade md-flipHor" tabindex="-1" data-width="600">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h3>Stack One</h3>
+				<h3>Registro de resultados en laboratorio</h3>
 			</div>
-			<div class="modal-body" id="lab_form1">
-			<hr>
-			<button class="btn btn-theme-inverse"  align="right">Registrar</button>
-			</div>
+			<div class="modal-body">
+			<form id="lab_form1"></form>
 		</div>
 
 		<!-- Fin Modal para vistas de laboratorio -->
