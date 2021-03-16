@@ -1698,10 +1698,8 @@
 				<h3>Stack One</h3>
 			</div>
 			<div class="modal-body" id="lab_form1">
-			</div>
-			<div class="modal-footer">
-				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
-				<button class="btn btn-theme" data-toggle="modal" data-target="#md-stack2">Launch modal</button>
+			<hr>
+			<button class="btn btn-theme-inverse"  align="right">Registrar</button>
 			</div>
 		</div>
 

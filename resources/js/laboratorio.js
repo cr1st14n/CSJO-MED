@@ -18,15 +18,15 @@ function showMdFormLab(tipo) {
     console.log(tipo);
     switch (tipo) {
         case 1:
-            $('#lab_form1').html(contentFormLab(1));
-            $('#md_lab_form1').modal('show');
+            $("#lab_form1").html(contentFormLab(1));
+            $("#md_lab_form1").modal("show");
             break;
         case 2:
-            $('#').modal('show');
+            $("#").modal("show");
 
             break;
         case 3:
-            $('#').modal('show');
+            $("#").modal("show");
 
             break;
         default:
@@ -156,15 +156,16 @@ function contentFormLab(tipo) {
                           <input type="text" class="form-control" placeholder="Username">
                           <span class="input-group-addon">Calcio(Ca)</span>
                       </div>
-
                   </div>
               </div>
           </div>
+          <hr>
+			<button class="btn btn-theme-inverse" >Registrar</button>
       </form>
       `;
-    b=`
+    b = `
     
-    `;  
+    `;
     switch (tipo) {
         case 1:
             return a;
@@ -177,5 +178,5 @@ function contentFormLab(tipo) {
             break;
         default:
             break;
-    }  
+    }
 }
