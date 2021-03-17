@@ -1,4 +1,4 @@
-let contLab=Array;
+var contLab=[];
 
 function showModSelectTipoPro() {
     $("#form-selectTipoLab").trigger("reset");
@@ -191,5 +191,5 @@ $('#lab_form1').submit(function (e) {
     lab1={'bioquimicaClinica':a}
     lab2={'coagulograma':a}
     contLab.push(lab2);
-    console.log(contLab+);
+    console.log(contLab);
 });
