@@ -45,57 +45,57 @@ function contentFormLab(tipo) {
                   <div class="form-group">
                       <label>Perfil Metabolico</label>
                       <div class="input-group">
-                          <input type="text" name="glucemia" class="form-control" placeholder="Username">
+                          <input type="text" name="glucemia" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Glucemia</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="acUrico" class="form-control" placeholder="Username">
+                          <input type="text" name="acUrico" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Ac. Urico</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="proteinasTotales" class="form-control" placeholder="Username">
+                          <input type="text" name="proteinasTotales" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Proteinas Totales</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="albumina" class="form-control" placeholder="Username">
+                          <input type="text" name="albumina" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Albumina</span>
                       </div>
                   </div>
                   <div class="form-group">
                       <label>Perfil Renal</label>
                       <div class="input-group">
-                          <input type="text" name="creatinina" class="form-control" placeholder="Username">
+                          <input type="text" name="creatinina" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Creatinina</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="nitrogenoUreico" class="form-control" placeholder="Username">
+                          <input type="text" name="nitrogenoUreico" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Nitrogeno Ureico</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="urea" class="form-control" placeholder="Username">
+                          <input type="text" name="urea" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Urea</span>
                       </div>
                   </div>
                   <div class="form-group">
                       <label>Perfil Metabolico</label>
                       <div class="input-group">
-                          <input type="text" name="colesterol" class="form-control" placeholder="Username">
+                          <input type="text" name="colesterol" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Colesterol</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="trigliceridos" class="form-control" placeholder="Username">
+                          <input type="text" name="trigliceridos" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">trigliceridos</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="hdlCol" class="form-control" placeholder="Username">
+                          <input type="text" name="hdlCol" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">HDL-COL</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="ldlCol" class="form-control" placeholder="Username">
+                          <input type="text" name="ldlCol" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">LDL-COL</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="vldl" class="form-control" placeholder="Username">
+                          <input type="text" name="vldl" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">VLDL</span>
                       </div>
                   </div>
@@ -104,38 +104,38 @@ function contentFormLab(tipo) {
                   <div class="form-group">
                       <label>Perfil Hepatico</label>
                       <div class="input-group">
-                          <input type="text" name="bTotal" class="form-control" placeholder="Username">
+                          <input type="text" name="bTotal" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">B. total</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="bDirecta" class="form-control" placeholder="Username">
+                          <input type="text" name="bDirecta" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">B. Directa</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="bIndirecta" class="form-control" placeholder="Username">
+                          <input type="text" name="bIndirecta" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">B. Indirecta</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="astGot" class="form-control" placeholder="Username">
+                          <input type="text" name="astGot" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">AST/GOT</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="astGpt" class="form-control" placeholder="Username">
+                          <input type="text" name="astGpt" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">AST/GPT</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="fAlcalina" class="form-control" placeholder="Username">
+                          <input type="text" name="fAlcalina" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">F. Alcalina</span>
                       </div>
                   </div>
                   <div class="form-group">
                       <label>Perfil Pancreatico</label>
                       <div class="input-group">
-                          <input type="text" name="amilasa" class="form-control" placeholder="Username">
+                          <input type="text" name="amilasa" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Amilasa</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="lipasa" class="form-control" placeholder="Username">
+                          <input type="text" name="lipasa" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Lipasa</span>
                       </div>
 
@@ -143,19 +143,19 @@ function contentFormLab(tipo) {
                   <div class="form-group">
                       <label>Perfil Electrolitico</label>
                       <div class="input-group">
-                          <input type="text" name="sodio" class="form-control" placeholder="Username">
+                          <input type="text" name="sodio" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Sodio (NA)</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="potasio" class="form-control" placeholder="Username">
+                          <input type="text" name="potasio" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Potasio(K)</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="cloro" class="form-control" placeholder="Username">
+                          <input type="text" name="cloro" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Cloro(Cl)</span>
                       </div>
                       <div class="input-group">
-                          <input type="text" name="calcio" class="form-control" placeholder="Username">
+                          <input type="text" name="calcio" class="form-control" placeholder="--" autocomplete="off">
                           <span class="input-group-addon">Calcio(Ca)</span>
                       </div>
                   </div>
@@ -184,10 +184,10 @@ function contentFormLab(tipo) {
 
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
-    a=$('#lab_form1').serializeArray();
-    // b=$('#lab_form1').serializeJson();
-    // console.log(JSON.stringify(a));
-    // console.log(b);
+    form=$('#lab_form1')
+    a= form.serializeArray();
+    
+    
     lab1={'bioquimicaClinica':a}
     lab2={'coagulograma':a}
     contLab.push(lab2);

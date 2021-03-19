@@ -1466,7 +1466,7 @@
 											<div class="form-group">
 												<label>Perfil Metabolico</label>
 												<div class="input-group">
-													<input type="text" class="form-control" placeholder="Username">
+													<input type="text" class="form-control" placeholder="Username" autocomplete="off">
 													<span class="input-group-addon">Glucemia</span>
 												</div>
 												<div class="input-group">
