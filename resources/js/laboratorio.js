@@ -1,5 +1,5 @@
 var contLab=[];
-
+var labformselect;
 function showModSelectTipoPro() {
     $("#form-selectTipoLab").trigger("reset");
     $("#md_selectTipoPro").modal("show");
@@ -17,6 +17,7 @@ function showContent(form) {
 }
 
 function showMdFormLab(tipo) {
+    labformselect=tipo;
     console.log(tipo);
     switch (tipo) {
         case 1:
@@ -184,12 +185,19 @@ function contentFormLab(tipo) {
 
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
+
+    var data= new Object();
+    data.numFac=89;
+    data.tipoPago="facturado o autorizado";
+    data.hcl=idPacienteSelect;    
     form=$('#lab_form1')
     a= form.serializeArray();
     
     
     lab1={'bioquimicaClinica':a}
     lab2={'coagulograma':a}
+    contLab.push(lab1);
     contLab.push(lab2);
-    console.log(contLab);
+    data.labs=contLab;
+    console.log(data);
 });

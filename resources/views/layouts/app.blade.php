@@ -1077,16 +1077,16 @@
 		<div id="md_selectTipoPro" class="modal fade container md-stickTop">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h3>Procedimientos de laboratori</h3>
+				<h3>Informe de analisis de laboratorio</h3>
 			</div>
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-md-12  align-xs-center">
 						<div class="btn-toolbar" role="toolbar">
-							<div class="btn-group btn-group-sm">
-								<button type="button" class="btn btn-theme-inverse  btn-transparent" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
-								<button type="button" class="btn btn-theme-inverse  btn-transparent">Coagulograma</button>
-								<button type="button" class="btn btn-theme-inverse  btn-transparent">Biometria Hematica</button>
+							<div class="btn-group btn-group-sm" id="sec_btn_formlab">
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form1" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form2" onclick="showMdFormLab(2)">Coagulograma</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form3" onclick="showMdFormLab(3)">Biometria Hematica</button>
 							</div>
 						</div>
 					</div>
@@ -1698,81 +1698,81 @@
 				<h3>Registro de resultados en laboratorio</h3>
 			</div>
 			<div class="modal-body">
-			<form id="lab_form1"></form>
+				<form id="lab_form1"></form>
+			</div>
+
+			<!-- Fin Modal para vistas de laboratorio -->
+			<nav id="menu">
+				<ul>
+					<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
+						<ul>
+							<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> Pre-Cotizaciones registradas </a></li>
+							<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> </a></li>
+						</ul>
+					</li>
+					<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
+				</ul>
+			</nav>
+
+			<!-- modal para confirmacion de eliminar -->
+			<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
+				<div class="modal-header bg-inverse bd-inverse-darken">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+					<h4 class="modal-title">Desea eliminar elemento?</h4>
+				</div>
+				<!-- //modal-header-->
+				<div class="modal-body">
+					<div class="col-lg-6 align-lg-left">
+						<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar"><i class="fa fa-check"></i>Confirmar</button>
+					</div>
+					<div class="col-lg-6 align-lg-right">
+						<button class="btn btn-danger btn-block" data-dismiss="modal"><i class="fa fa-warning"></i> Cancelar</button>
+					</div>
+				</div>
+				<!-- //modal-body-->
+			</div>
 		</div>
 
-		<!-- Fin Modal para vistas de laboratorio -->
-		<nav id="menu">
-			<ul>
-				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
-					<ul>
-						<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> Pre-Cotizaciones registradas </a></li>
-						<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> </a></li>
-					</ul>
-				</li>
-				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
-			</ul>
-		</nav>
-
-		<!-- modal para confirmacion de eliminar -->
-		<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
-			<div class="modal-header bg-inverse bd-inverse-darken">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-				<h4 class="modal-title">Desea eliminar elemento?</h4>
-			</div>
-			<!-- //modal-header-->
-			<div class="modal-body">
-				<div class="col-lg-6 align-lg-left">
-					<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar"><i class="fa fa-check"></i>Confirmar</button>
-				</div>
-				<div class="col-lg-6 align-lg-right">
-					<button class="btn btn-danger btn-block" data-dismiss="modal"><i class="fa fa-warning"></i> Cancelar</button>
-				</div>
-			</div>
-			<!-- //modal-body-->
-		</div>
-	</div>
 
 
+		<!-- Jquery Library -->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.min.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.ui.min.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/bootstrap/bootstrap.min.js')}}"></script>
+		<!-- Modernizr Library For HTML5 And CSS3 -->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/modernizr/modernizr.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/mmenu/jquery.mmenu.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/styleswitch.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/styleswitch.js')}}"></script>
+		<!-- Library 10+ Form plugins-->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/form/form.js')}}"></script>
+		<!-- Datetime plugins -->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/datetime/datetime.js')}}"></script>
+		<!-- Library Chart-->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/chart/chart.js')}}"></script>
+		<!-- Library  5+ plugins for bootstrap -->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/pluginsForBS/pluginsForBS.js')}}"></script>
+		<!-- Library 10+ miscellaneous plugins -->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/miscellaneous/miscellaneous.js')}}"></script>
+		<!-- Library Themes Customize-->
+		<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
 
-	<!-- Jquery Library -->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.min.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/jquery.ui.min.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/bootstrap/bootstrap.min.js')}}"></script>
-	<!-- Modernizr Library For HTML5 And CSS3 -->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/modernizr/modernizr.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/mmenu/jquery.mmenu.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/styleswitch.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/styleswitch.js')}}"></script>
-	<!-- Library 10+ Form plugins-->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/form/form.js')}}"></script>
-	<!-- Datetime plugins -->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/datetime/datetime.js')}}"></script>
-	<!-- Library Chart-->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/chart/chart.js')}}"></script>
-	<!-- Library  5+ plugins for bootstrap -->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/pluginsForBS/pluginsForBS.js')}}"></script>
-	<!-- Library 10+ miscellaneous plugins -->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/plugins/miscellaneous/miscellaneous.js')}}"></script>
-	<!-- Library Themes Customize-->
-	<script type="text/javascript" src="{{ asset('Plantilla/assets/js/caplet.custom.js')}}"></script>
-
-	<script type="text/javascript" src="{{ asset('Plantilla/zoom/jquery.zoom.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('Plantilla/zoom/jquery.zoom.js')}}"></script>
 
 
 
 
-	<!--  funciones de historias clinicas -->
-	<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
-	<!-- js de dropzone -->
-	<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/consultaMedica.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('resources/js/laboratorio.js') }}"></script>
+		<!--  funciones de historias clinicas -->
+		<script type="text/javascript" src="{{ asset('resources/js/funIniciales.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/historiaClinica.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/cotizacion.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/resetarioMedico.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/signosVitales.js') }}"></script>
+		<!-- js de dropzone -->
+		<script type="text/javascript" src="{{ asset('Plantilla/dropzone/dist/dropzone.js')}}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/consultaMedica.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/laboratorio.js') }}"></script>
 </body>
 
 </html>
