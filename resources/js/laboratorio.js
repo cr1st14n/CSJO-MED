@@ -1,6 +1,7 @@
 var contLab=[];
 var labformselect;
 function showModSelectTipoPro() {
+    var data= new Object();
     $("#form-selectTipoLab").trigger("reset");
     $("#md_selectTipoPro").modal("show");
 }
@@ -166,7 +167,6 @@ function contentFormLab(tipo) {
 			<button class="btn btn-theme-inverse" type="submit">Registrar</button>
       `;
     b = `
-    
     `;
     switch (tipo) {
         case 1:
@@ -185,8 +185,6 @@ function contentFormLab(tipo) {
 
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
-
-    var data= new Object();
     data.numFac=89;
     data.tipoPago="facturado o autorizado";
     data.hcl=idPacienteSelect;    
