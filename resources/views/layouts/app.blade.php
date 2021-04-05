@@ -1081,7 +1081,14 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-12  align-xs-center">
+					<div class="col-md-4">
+						<select name="slc_tipo_pago" id="">
+							<option value=""></option>
+							<option value=""></option>
+						</select>
+						<input type="input" class="form-control" placeholder="ingrese">
+					</div>
+					<div class="col-md-8  align-xs-center">
 						<div class="btn-toolbar" role="toolbar">
 							<div class="btn-group btn-group-sm" id="sec_btn_formlab">
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form1" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
