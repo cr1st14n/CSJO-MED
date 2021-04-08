@@ -199,3 +199,7 @@ $('#lab_form1').submit(function (e) {
     data.labs=contLab;
     console.log(data);
 });
+
+function funDectTipoPago(tipo) {
+    console.log(tipo);
+  }
