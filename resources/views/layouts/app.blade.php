@@ -1082,12 +1082,29 @@
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-md-4">
-						<label for="">Tipo de pago</label>
-						<select name="slc_tipo_pago" id="">
-							<option value="factu">Facturado</option>
-							<option value="">Autorizado</option>
-						</select>
-						<input type="input" class="form-control" placeholder="ingrese">
+						<div class="col-md-6">
+							<label for="">Tipo de pago</label>
+							<ul class="" data-color="red">
+								<li>
+									<input type="radio" name="name-radio" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
+									<label>Facturado</label>
+								</li>
+								<li>
+									<input type="radio" name="name-radio" value="2" onchange="funDectTipoPago(this.value)">
+									<label>Autorizado</label>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<div style="display: none;">
+								<input type="text">
+
+							</div>
+							<div style="display: none;">
+
+							</div>
+
+						</div>
 					</div>
 					<div class="col-md-8  align-xs-center">
 						<div class="btn-toolbar" role="toolbar">
