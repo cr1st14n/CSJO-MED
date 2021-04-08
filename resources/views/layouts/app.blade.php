@@ -1082,9 +1082,9 @@
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-md-4">
-						<select name="slc_tipo_pago" id="">
-							<option value=""></option>
-							<option value=""></option>
+						<select name="slc_tipo_pago" id="" onchange="showTipoPago()">
+							<option value="1">Facturado</option>
+							<option value="2">Autorizado</option>
 						</select>
 						<input type="input" class="form-control" placeholder="ingrese">
 					</div>
