@@ -201,5 +201,14 @@ $('#lab_form1').submit(function (e) {
 });
 
 function funDectTipoPago(tipo) {
-    console.log(tipo);
+    sect_1=document.getElementById('sec_input_pago_1');    
+    sect_2=document.getElementById('sec_input_pago_2');    
+    if (tipo == 1) {
+        sect_1.style.display="block";
+        sect_2.style.display="none";
+    } else {
+        sect_1.style.display="none";
+        sect_2.style.display="block";
+        
+    }
   }
