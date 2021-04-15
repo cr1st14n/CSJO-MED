@@ -753,9 +753,6 @@
 										<input type="checkbox" name="medicamentos_quirofano" value="1">
 										Medicamentos en quirofano </label>
 								</div>
-
-
-
 							</div>
 							<hr>
 							<div class="form-group offset">
@@ -1086,23 +1083,22 @@
 						<div class="col-md-5">
 							<ul class="" data-color="red">
 								<li>
-									<input type="radio" name="name-radio" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
+									<input type="radio" name="lab_TipoPago" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
 									<label>Facturado</label>
 								</li>
 								<li>
-									<input type="radio" name="name-radio" value="2" onchange="funDectTipoPago(this.value)">
+									<input type="radio" name="lab_TipoPago" value="2" onchange="funDectTipoPago(this.value)">
 									<label>Autorizado</label>
 								</li>
 							</ul>
 						</div>
 						<div class="col-md-7">
 							<div id="sec_input_pago_1">
-								<input type="text" class="form-control" placeholder="# de factura" id="">
+								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1">
 							</div>
 							<div style="display: none;" id="sec_input_pago_2">
-								<input type="text" class="form-control" placeholder="Autorizacion...">
+								<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago2">
 							</div>
-
 						</div>
 					</div>
 					<div class="col-md-8  align-xs-center">

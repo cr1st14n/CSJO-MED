@@ -27,11 +27,9 @@ function showMdFormLab(tipo) {
             break;
         case 2:
             $("#").modal("show");
-
             break;
         case 3:
             $("#").modal("show");
-
             break;
         default:
             break;
@@ -185,9 +183,15 @@ function contentFormLab(tipo) {
 
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
-    data.numFac=89;
-    data.tipoPago="facturado o autorizado";
-    data.hcl=idPacienteSelect;    
+    data=new Object;
+    data.hcl=idPacienteSelect;     ...contLab.concat.apply...contLab.concat.apply.apply.apply.apply.apply...contLab.concat.apply.apply.apply...contLab
+    .concat.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply....$
+
+
+    .$.
+    ......
+    data.tipoPago=$("input[name='lab_TipoPago']:checked").val();;
+    data.desTipoPago=89;
     form=$('#lab_form1')
     a= form.serializeArray();
     
