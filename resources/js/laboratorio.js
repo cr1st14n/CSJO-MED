@@ -184,12 +184,7 @@ function contentFormLab(tipo) {
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
     data=new Object;
-    data.hcl=idPacienteSelect;     ...contLab.concat.apply...contLab.concat.apply.apply.apply.apply.apply...contLab.concat.apply.apply.apply...contLab
-    .concat.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply.apply....$
-
-
-    .$.
-    ......
+    data.hcl=idPacienteSelect; 
     data.tipoPago=$("input[name='lab_TipoPago']:checked").val();;
     data.desTipoPago=89;
     form=$('#lab_form1')
