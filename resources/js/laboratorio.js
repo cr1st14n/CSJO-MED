@@ -1,7 +1,9 @@
+var labformselect; //*variable para asignar tipo de formualrio a llenar
 var contLab=[];
-var labformselect;
-function showModSelectTipoPro() {
+
+function showModSelectTipoLab() {
     var data= new Object();
+    var contLab=[];
     $("#form-selectTipoLab").trigger("reset");
     $("#md_selectTipoPro").modal("show");
 }
@@ -183,20 +185,19 @@ function contentFormLab(tipo) {
 
 $('#lab_form1').submit(function (e) { 
     e.preventDefault();
-    data=new Object;
-    data.hcl=idPacienteSelect; 
-    data.tipoPago=$("input[name='lab_TipoPago']:checked").val();;
-    data.desTipoPago=89;
+    // data=new Object;
+    // data.hcl=idPacienteSelect; 
+    // data.tipoPago=$("input[name='lab_TipoPago']:checked").val();;
+    // data.desTipoPago=89;
     form=$('#lab_form1')
     a= form.serializeArray();
     
-    
-    lab1={'bioquimicaClinica':a}
-    lab2={'coagulograma':a}
+    lab1={tipo:labformselect,data:a}
+    // lab2={'coagulograma':a}
     contLab.push(lab1);
-    contLab.push(lab2);
-    data.labs=contLab;
-    console.log(data);
+    // contLab.push(lab2);
+    // data.labs=contLab;
+    console.log(lab1);
 });
 
 function funDectTipoPago(tipo) {
