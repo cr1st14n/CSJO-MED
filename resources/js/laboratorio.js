@@ -22,6 +22,8 @@ function showContent(form) {
 function showMdFormLab(tipo) {
     labformselect = tipo;
     console.log(tipo);
+    console.log(contLab);
+    https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find
     switch (tipo) {
         case 1:
             $("#lab_form1").html(contentFormLab(1));
