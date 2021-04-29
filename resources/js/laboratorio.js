@@ -168,18 +168,18 @@ function contentFormLab(tipo) {
 			<button class="btn btn-theme-inverse" type="submit">Registrar</button>
       `;
     b = `
-      <h3>Coagulograma</h3>
+      <h3>Coagulograma</h3><br>
           <div class="row">
 			<input type="hidden" value="1">
-              <div class="col-lg-6">
+              <div class="col-lg-12">
                   <div class="form-group">
                       <div class="input-group">
                           <input type="text" name="glucemia" class="form-control" placeholder="Tiempo de coagulación" autocomplete="off">
-                          <span class="input-group-addon">MIN</span>
+                          <span class="input-group-addon">MIN // 6 - 12 min</span>
                       </div>
                       <div class="input-group">
                           <input type="text" name="acUrico" class="form-control" placeholder="Timepo de sangria" autocomplete="off">
-                          <span class="input-group-addon">MIN</span>
+                          <span class="input-group-addon">MIN // 1 - 3 min</span>
                       </div>
                       <div class="input-group">
                           <input type="text" name="proteinasTotales" class="form-control" placeholder="--" autocomplete="off">
