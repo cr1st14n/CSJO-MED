@@ -1094,7 +1094,7 @@
 						</div>
 						<div class="col-md-7">
 							<div id="sec_input_pago_1">
-								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1">
+								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1" >
 							</div>
 							<div style="display: none;" id="sec_input_pago_2">
 								<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago2">
@@ -1461,6 +1461,7 @@
 				<button class="btn btn-theme" id="btn-showLabSeleccionados">Continuar</button>
 			</div>
 		</div>
+		<!-- modal registro de formularios laboratorio -->
 		<div id="md_lab_form1" class="modal fade md-flipHor" tabindex="-1" data-width="600">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
@@ -1469,37 +1470,37 @@
 			<div class="modal-body">
 				<form id="lab_form1"></form>
 			</div>
+		</div>
 
-			<!-- Fin Modal para vistas de laboratorio -->
-			<nav id="menu">
-				<ul>
-					<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
-						<ul>
-							<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> Pre-Cotizaciones registradas </a></li>
-							<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> </a></li>
-						</ul>
-					</li>
-					<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
-				</ul>
-			</nav>
+		<!-- Fin Modal para vistas de laboratorio -->
+		<nav id="menu">
+			<ul>
+				<li><span><i class="icon  fa fa-laptop"></i> Registor de atencion</span>
+					<ul>
+						<li><a href="dashboard.html"><i class="icon  fa fa-rocket"></i> Pre-Cotizaciones registradas </a></li>
+						<li><a href="dashboard2.html"><i class="icon  fa fa-th"></i> </a></li>
+					</ul>
+				</li>
+				<li><a href="front/index.html"><i class="icon  fa fa-rocket"></i> Front End </a></li>
+			</ul>
+		</nav>
 
-			<!-- modal para confirmacion de eliminar -->
-			<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
-				<div class="modal-header bg-inverse bd-inverse-darken">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-					<h4 class="modal-title">Desea eliminar elemento?</h4>
-				</div>
-				<!-- //modal-header-->
-				<div class="modal-body">
-					<div class="col-lg-6 align-lg-left">
-						<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar"><i class="fa fa-check"></i>Confirmar</button>
-					</div>
-					<div class="col-lg-6 align-lg-right">
-						<button class="btn btn-danger btn-block" data-dismiss="modal"><i class="fa fa-warning"></i> Cancelar</button>
-					</div>
-				</div>
-				<!-- //modal-body-->
+		<!-- modal para confirmacion de eliminar -->
+		<div id="md-confEliminacion" class="modal fade md-stickTop" tabindex="-1" data-width="280">
+			<div class="modal-header bg-inverse bd-inverse-darken">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+				<h4 class="modal-title">Desea eliminar elemento?</h4>
 			</div>
+			<!-- //modal-header-->
+			<div class="modal-body">
+				<div class="col-lg-6 align-lg-left">
+					<button class="btn btn-theme-inverse btn-block" id="btn_funEliminar"><i class="fa fa-check"></i>Confirmar</button>
+				</div>
+				<div class="col-lg-6 align-lg-right">
+					<button class="btn btn-danger btn-block" data-dismiss="modal"><i class="fa fa-warning"></i> Cancelar</button>
+				</div>
+			</div>
+			<!-- //modal-body-->
 		</div>
 
 
