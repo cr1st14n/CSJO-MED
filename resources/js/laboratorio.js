@@ -21,24 +21,35 @@ function showContent(form) {
 
 function showMdFormLab(tipo) {
     labformselect = tipo;
-    console.log(tipo);
-    console.log(contLab);
-    https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    switch (tipo) {
-        case 1:
-            $("#lab_form1").html(contentFormLab(1));
-            $("#md_lab_form1").modal("show");
-            break;
-        case 2:
-            $("#lab_form1").html(contentFormLab(2));
-            $("#md_lab_form1").modal("show");
-            break;
-        case 3:
-            $("#").modal("show");
-            break;
-        default:
-            break;
+    if (ComprobarLab(tipo)) {
+        notif('4','Formuario ya cargado!')
+    } else {
+        switch (tipo) {
+            case 1:
+                $("#lab_form1").html(contentFormLab(1));
+                $("#md_lab_form1").modal("show");
+                break;
+            case 2:
+                $("#lab_form1").html(contentFormLab(2));
+                $("#md_lab_form1").modal("show");
+                break;
+            case 3:
+                $("#").modal("show");
+                break;
+            default:
+                break;
+        }
     }
+}
+
+function ComprobarLab(tipo) {
+    let pueblo = contLab.find((x) => x.tipo == tipo);
+    if (pueblo) {
+        pueblo = true;
+    } else {
+        pueblo = false;
+    }
+    return pueblo;
 }
 
 function contentFormLab(tipo) {
@@ -215,23 +226,39 @@ function contentFormLab(tipo) {
     }
 }
 
-$("#lab_form1").submit(function (e) {
+$("#lab_form1").submit(function (e) {//* validacion y registro 
     e.preventDefault();
-    // data=new Object;
-    // data.hcl=idPacienteSelect;
-    // data.tipoPago=$("input[name='lab_TipoPago']:checked").val();;
-    // data.desTipoPago=89;
     form = $("#lab_form1");
     a = form.serializeArray();
-
     lab1 = { tipo: labformselect, data: a };
-    // lab2={'coagulograma':a}
     contLab.push(lab1);
-    // contLab.push(lab2);
-    // data.labs=contLab;
-    console.log(contLab);
-    $('#md_lab_form1').modal('hide');
+    $("#md_lab_form1").modal("hide");
+    mostrarVista(lab1);
 });
+function mostrarVista(dat) {
+    console.log(dat);
+    switch (dat.tipo) {
+        case 1:
+            console.log(dat.data[5].name);
+            var a1=`
+            
+            `;
+            
+            break;
+    
+        case 2:
+            
+            break;
+    
+        case 3:
+            
+            break;
+    
+        default:
+            break;
+    }
+
+  }
 
 function funDectTipoPago(tipo) {
     sect_1 = document.getElementById("sec_input_pago_1");

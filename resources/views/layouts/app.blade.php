@@ -1113,7 +1113,7 @@
 				</div>
 				<hr>
 				<div class="row" id="sect_result_lab">
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<h3 align="center">-----Bioquimica Clinica-----</h3><br>
 						<div class="row">
 							<div class="col-lg-6">
@@ -1273,7 +1273,7 @@
 						</div>
 						<h3 align="center">----- // -----</h3><br>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<h3 align="center">-----Coagulograma-----</h3>
 						<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
 							<tr>
@@ -1311,7 +1311,7 @@
 						</p>
 						<h3 align="center">----- // -----</h3><br>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<h3 align="center">----- Biometria Hepatica-----</h3><br>
 						<div class="col-lg-7">
 							<h4 align="center">Cuadro Hepatico</h4>
