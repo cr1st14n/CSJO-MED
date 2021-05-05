@@ -1071,28 +1071,32 @@
 			</div>
 		</div>
 		<!-- Inicio Modal para vistas de laboratorio -->
-		<div id="md_selectTipoPro" class="modal fade container md-stickTop">
+		<div id="md_selectTipoPro" class="modal fade  md-stickTop" data-width="700">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Informe de analisis de laboratorio</h3>
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-md-4">
-						<label for="">Tipo de pago</label>
-						<div class="col-md-5">
+					<label for="">Tipo de 	pago</label>
+					<div class="col-md-12">
+						<div class="col-md-2">
 							<ul class="" data-color="red">
-								<li>
-									<input type="radio" name="lab_TipoPago" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
-									<label>Facturado</label>
-								</li>
 								<li>
 									<input type="radio" name="lab_TipoPago" value="2" onchange="funDectTipoPago(this.value)">
 									<label>Autorizado</label>
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-7">
+						<div class="col-md-2">
+							<ul class="" data-color="red">
+								<li>
+									<input type="radio" name="lab_TipoPago" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
+									<label>Facturado</label>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-3">
 							<div id="sec_input_pago_1">
 								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1" >
 							</div>
@@ -1101,7 +1105,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-8  align-xs-center">
+					<br>
+					<div class="col-md-12  align-xs-center">
+						<br>
 						<div class="btn-toolbar" role="toolbar">
 							<div class="btn-group btn-group-sm" id="sec_btn_formlab">
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form1" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
