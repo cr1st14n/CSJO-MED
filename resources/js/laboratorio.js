@@ -241,7 +241,166 @@ function mostrarVista(dat) {
         case 1:
             console.log(dat.data[5].name);
             var a1=`
-            
+            <div class="col-lg-12">
+						<h3 align="center">-----Bioquimica Clinica-----</h3><br>
+						<div class="row">
+							<div class="col-lg-6">
+								<h4>Perfil Metabolico</h4><br>
+								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+									<tr>
+										<td>Glucemia</td>
+										<td width="10%">${dat.data[0].value}</td>
+										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Ac urico</td>
+										<td width="10%">${dat.data[1].value}</td>
+										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Proteinas totales</td>
+										<td width="10%">${dat.data[2].value}</td>
+										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
+									</tr>
+									<tr>
+										<td>Albumina</td>
+										<td width="10%">${dat.data[3].value}</td>
+										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil Renal</h4><br>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Creatinina</td>
+										<td>${dat.data[4].value}</td>
+										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Nitrogeno ureico</td>
+										<td>${dat.data[5].value}</td>
+										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
+									</tr>
+									<tr>
+										<td>Urea</td>
+										<td>${dat.data[6].value}</td>
+										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil lipidico</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Colesterol</td>
+										<td>${dat.data[7].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 200mg/dL</td>
+
+									</tr>
+									<tr>
+										<td>Triglicericos</td>
+										<td>${dat.data[8].value}</td>
+										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
+									</tr>
+									<tr>
+										<td>HDL-COL</td>
+										<td>${dat.data[9].value}</td>
+										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
+									</tr>
+									<tr>
+										<td>LDL-COL</td>
+										<td>${dat.data[10].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 155 mg/dL</td>
+									</tr>
+									<tr>
+										<td>VLDL</td>
+										<td>${dat.data[11].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 40mg/dL</td>
+									</tr>
+								</table>
+                                <div class="col-lg-6">
+                                </div>
+								<h4>Perfil Metabolico</h4><br>
+								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+									<tr>
+										<td>Glucemia</td>
+										<td width="10%">${dat.data[12].value}</td>
+										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Ac urico</td>
+										<td width="10%">${dat.data[13].value}</td>
+										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Proteinas totales</td>
+										<td width="10%">${dat.data[14].value}</td>
+										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
+									</tr>
+									<tr>
+										<td>Albumina</td>
+										<td width="10%">${dat.data[15].value}</td>
+										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil Renal</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Creatinina</td>
+										<td>${dat.data[16].value}</td>
+										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
+									</tr>
+									<tr>
+										<td>Nitrogeno ureico</td>
+										<td>${dat.data[17].value}</td>
+										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
+									</tr>
+									<tr>
+										<td>Urea</td>
+										<td>${dat.data[18].value}</td>
+										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
+									</tr>
+								</table>
+								<hr>
+								<h4>Perfil lipidico</h4>
+								<table class="table-bordered" width="100%">
+									<tr>
+										<td>Colesterol</td>
+										<td>${dat.data[19].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 200mg/dL</td>
+
+									</tr>
+									<tr>
+										<td>Triglicericos</td>
+										<td>${dat.data[20].value}</td>
+										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
+									</tr>
+									<tr>
+										<td>HDL-COL</td>
+										<td>${dat.data[21].value}</td>
+										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
+									</tr>
+									<tr>
+										<td>LDL-COL</td>
+										<td>${dat.data[22].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 155 mg/dL</td>
+									</tr>
+									<tr>
+										<td>VLDL</td>
+										<td>${dat.data[23].value}</td>
+										<td style="font-size: x-small;" align="right">
+											< 40mg/dL</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<h3 align="center">----- // -----</h3><br>
+					</div>
             `;
             
             break;
@@ -256,6 +415,7 @@ function mostrarVista(dat) {
     
         default:
             break;
+            
     }
 
   }
