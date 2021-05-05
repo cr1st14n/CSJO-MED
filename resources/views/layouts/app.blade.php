@@ -1096,7 +1096,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-5">
 							<div id="sec_input_pago_1">
 								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1" >
 							</div>
