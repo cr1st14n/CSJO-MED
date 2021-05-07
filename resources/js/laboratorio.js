@@ -471,7 +471,7 @@ function mostrarVista(dat) {
     }
     $("#sect_result_lab").append(a1);
 }
-function eraseFormLab(nom,tipo) {
+function eraseFormLab(nom, tipo) {
     console.log(nom);
     console.log(tipo);
     $(`#${nom}`).remove();
@@ -479,13 +479,12 @@ function eraseFormLab(nom,tipo) {
     for (let i = 0; i < contLab.length; i++) {
         if (contLab[i].tipo == tipo) {
             console.log(contLab[i].tipo);
-            contLab.splice(i,1);
+            contLab.splice(i, 1);
         } else {
-            
-        }        
+        }
     }
     console.log(contLab);
-  }
+}
 
 function funDectTipoPago(tipo) {
     sect_1 = document.getElementById("sec_input_pago_1");
@@ -496,5 +495,37 @@ function funDectTipoPago(tipo) {
     } else {
         sect_1.style.display = "none";
         sect_2.style.display = "block";
+    }
+}
+
+function regLab_create() {
+    var tipoPago = $("input:radio[name=lab_TipoPago]:checked").val();
+    switch (tipoPago) {
+        case "1":
+            var medioEjec = $("#inp_tipoPago_fac").val();
+            break;
+        case "2":
+            var medioEjec = $("#inp_tipoPago_aut").val();
+            break;
+        default:
+            var medioEjec = "casa blanda";
+            break;
+    }
+    console.log(tipoPago, medioEjec);
+    if (tipoPago.length == 0 && medioEjec.length == 0) {
+        notif("4", "Completar Autorizacion o # de facturación");
+    } else {
+        data = new Object();
+        data.a={paciente:idPacienteSelect, tipoDePago:tipoPago,respaldo:medioEjec};
+        data.b=contLab;
+        console.log(data);
+        
+        // $.ajax({
+        //     type: "post",
+        //     url: "",
+        //     data: "data",
+        //     dataType: "dataType",
+        //     success: function (response) {},
+        // });
     }
 }

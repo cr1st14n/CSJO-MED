@@ -1098,10 +1098,10 @@
 						</div>
 						<div class="col-md-5">
 							<div id="sec_input_pago_1">
-								<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago1" >
+								<input type="text" class="form-control" placeholder="# de factura" 	  id="inp_tipoPago_fac" >
 							</div>
-							<div style="display: none;" id="sec_input_pago_2">
-								<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago2">
+							<div id="sec_input_pago_2" style="display: none;">
+								<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago_aut">
 							</div>
 						</div>
 					</div>
@@ -1119,204 +1119,6 @@
 				</div>
 				<hr>
 				<div class="row" id="sect_result_lab">
-					<div class="col-lg-12">
-						<h3 align="center">-----Bioquimica Clinica-----</h3><br>
-						<div class="row">
-							<div class="col-lg-6">
-								<h4>Perfil Metabolico</h4><br>
-								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
-									<tr>
-										<td>Glucemia</td>
-										<td width="10%">45</td>
-										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Ac urico</td>
-										<td width="10%">56</td>
-										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Proteinas totales</td>
-										<td width="10%">8</td>
-										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
-									</tr>
-									<tr>
-										<td>Albumina</td>
-										<td width="10%">65</td>
-										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
-									</tr>
-								</table>
-								<hr>
-								<h4>Perfil Renal</h4><br>
-								<table class="table-bordered" width="100%">
-									<tr>
-										<td>Creatinina</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Nitrogeno ureico</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
-									</tr>
-									<tr>
-										<td>Urea</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
-									</tr>
-								</table>
-								<hr>
-								<h4>Perfil lipidico</h4>
-								<table class="table-bordered" width="100%">
-									<tr>
-										<td>Colesterol</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 200mg/dL</td>
-
-									</tr>
-									<tr>
-										<td>Triglicericos</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
-									</tr>
-									<tr>
-										<td>HDL-COL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
-									</tr>
-									<tr>
-										<td>LDL-COL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 155 mg/dL</td>
-									</tr>
-									<tr>
-										<td>VLDL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 40mg/dL</td>
-									</tr>
-								</table>
-							</div>
-							<div class="col-lg-6">
-								<h4>Perfil Metabolico</h4><br>
-								<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
-									<tr>
-										<td>Glucemia</td>
-										<td width="10%">45</td>
-										<td style="font-size: x-small;" align="right">70-110 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Ac urico</td>
-										<td width="10%">56</td>
-										<td style="font-size: x-small;" align="right">2.0-6.0 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Proteinas totales</td>
-										<td width="10%">8</td>
-										<td style="font-size: x-small;" align="right">6.2-8.5 g/dL</td>
-									</tr>
-									<tr>
-										<td>Albumina</td>
-										<td width="10%">65</td>
-										<td style="font-size: x-small;" align="right">3.5-5.3 g/dL</td>
-									</tr>
-								</table>
-								<hr>
-								<h4>Perfil Renal</h4>
-								<table class="table-bordered" width="100%">
-									<tr>
-										<td>Creatinina</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">0.6 - 1.4 mg/dL</td>
-									</tr>
-									<tr>
-										<td>Nitrogeno ureico</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">7.0 - 25 mg&dL</td>
-									</tr>
-									<tr>
-										<td>Urea</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">15 - 45 mg/dL</td>
-									</tr>
-								</table>
-								<hr>
-								<h4>Perfil lipidico</h4>
-								<table class="table-bordered" width="100%">
-									<tr>
-										<td>Colesterol</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 200mg/dL</td>
-
-									</tr>
-									<tr>
-										<td>Triglicericos</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">30 -150 mg/dL</td>
-									</tr>
-									<tr>
-										<td>HDL-COL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">30-85 mg/dL</td>
-									</tr>
-									<tr>
-										<td>LDL-COL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 155 mg/dL</td>
-									</tr>
-									<tr>
-										<td>VLDL</td>
-										<td></td>
-										<td style="font-size: x-small;" align="right">
-											< 40mg/dL</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-						<h3 align="center">----- // -----</h3><br>
-					</div>
-					<div class="col-lg-12">
-						<h3 align="center">-----Coagulograma-----</h3>
-						<table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
-							<tr>
-								<td>tiempo de coagulación</td>
-								<td width="">min</td>
-								<td style="font-size: x-small;" align="right">6 - 12 min</td>
-							</tr>
-							<tr>
-								<td>Tiempo de sangria</td>
-								<td width="">56 min</td>
-								<td style="font-size: x-small;" align="right">1 - 3 min</td>
-							</tr>
-							<tr>
-								<td>Tiempo de protombina</td>
-								<td width="">8 segundos</td>
-								<td style="font-size: x-small;" align="right"></td>
-							</tr>
-							<tr>
-								<td>Actividad protombinica</td>
-								<td width="">65</td>
-								<td style="font-size: x-small;" align="right"></td>
-							</tr>
-							<tr>
-								<td>INR</td>
-								<td width="">65</td>
-								<td style="font-size: x-small;" align="right"></td>
-							</tr>
-						</table>
-						<br>
-						<h4>Control</h4>
-						<p>
-							Tiempo de protrombina => 13 seg <br>
-							Actividad protrombinica => 100% <br>
-							INR =>
-						</p>
-						<h3 align="center">----- // -----</h3><br>
-					</div>
 					<div class="col-lg-12">
 						<h3 align="center">----- Biometria Hepatica-----</h3><br>
 						<div class="col-lg-7">
@@ -1464,7 +1266,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" data-dismiss="modal" class="btn btn-inverse">Close</button>
-				<button class="btn btn-theme" id="btn-showLabSeleccionados">Continuar</button>
+				<button class="btn btn-theme" id="btn-showLabSeleccionados" onclick="regLab_create()">Continuar</button>
 			</div>
 		</div>
 		<!-- modal registro de formularios laboratorio -->
