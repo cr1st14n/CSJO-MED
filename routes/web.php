@@ -3,6 +3,7 @@
 use App\descargoMedicoCont;
 use App\Http\Controllers\conMedController;
 use App\Http\Controllers\ConsClinicaController;
+use App\Http\Controllers\LaboratorioController;
 use App\Http\Controllers\ServrxController;
 use Facade\FlareClient\View;
 use Illuminate\Routing\RouteGroup;
@@ -51,4 +52,8 @@ Route::group(['prefix' => 'consultaMedica'], function () {
     route::post('create/{id}', [ConsClinicaController::class, 'store']);
     route::get('show/{id}', [ConsClinicaController::class, 'show']);
     route::get('showdatos/{id}', [ConsClinicaController::class, 'showdatos']);
+});
+Route::group(['prefix'=>'laboratorio'], function ()
+{
+    route::get('registerLab',[LaboratorioController::class,'storeLab']);
 });

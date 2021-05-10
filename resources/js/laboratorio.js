@@ -511,8 +511,7 @@ function regLab_create() {
             var medioEjec = "casa blanda";
             break;
     }
-    console.log(tipoPago, medioEjec);
-    if (tipoPago.length == 0 && medioEjec.length == 0) {
+    if ( medioEjec.length <= 0) {
         notif("4", "Completar Autorizacion o # de facturación");
     } else {
         data = new Object();
@@ -520,12 +519,14 @@ function regLab_create() {
         data.b=contLab;
         console.log(data);
         
-        // $.ajax({
-        //     type: "post",
-        //     url: "",
-        //     data: "data",
-        //     dataType: "dataType",
-        //     success: function (response) {},
-        // });
+        $.ajax({
+            type: "get",
+            url: "laboratorio/registerLab",
+            data: data,
+            // dataType: "dataType",
+            success: function (response) {
+                console.log(response);
+            },
+        });
     }
 }
