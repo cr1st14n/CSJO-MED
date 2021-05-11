@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\laboratorio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LaboratorioController extends Controller
 {
@@ -27,7 +28,14 @@ class LaboratorioController extends Controller
      */
     public function showHistLabPaci(Request $request)
     {
-         return laboratorio::where('id_paciente',$request->paciente)->get();
+         $co= unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data'));
+         return $co['data'];
+         
+         return unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data'));
+         $cat= laboratorio::where('id_paciente',$request->paciente)
+         ->selectRaw(unserialize('laboratorios.lab_data'),'as data')
+         ->addSelect('laboratorios.*')
+         ->get();
         
     }
 

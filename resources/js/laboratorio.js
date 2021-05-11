@@ -16,13 +16,15 @@ function showHistLabPaciente() {
                 if (e.lab_tipoPago == 1) {var tipoPago='Facturado';} else {var tipoPago='Autorizado';
                 var f = new Date(e.created_at);
                 f = f.toLocaleString("es-ES", "dd/mm/yyyy");}
-                var labs= 
+                console.log(e.lab_data);
+                var listLab=  JSON.parse(e.lab_data);  
+                console.log(listLab);
                 return (body = `
                 <tr>
                     <td>${f}</td>
                     <td>${tipoPago}</td>
                     <td>${e.lab_respaldo}</td>
-                    <td></td>
+                    <td>${listLab}</td>
                     <td>
                         <span class="tooltip-area">
                             <a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
