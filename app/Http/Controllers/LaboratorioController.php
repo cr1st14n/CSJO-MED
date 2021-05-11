@@ -7,26 +7,16 @@ use Illuminate\Http\Request;
 
 class LaboratorioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function storeLab(Request $request )
     {
-        return gettype($request);
-        $dat=$request['a'];
-        return $dat['paciente'];
+        $new=new laboratorio();
+        $new->id_paciente=$request['a']['paciente'];
+        $new->lab_respaldo=$request['a']['respaldo'];
+        $new->lab_tipoPago=$request['a']['tipoDePago'];
+        $new->lab_data=serialize($request['b']);
+        $n=$new->save();
+        return $n;
     }
 
     /**
@@ -35,9 +25,10 @@ class LaboratorioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function showHistLabPaci(Request $request)
     {
-        //
+         return laboratorio::where('id_paciente',$request->paciente)->get();
+        
     }
 
     /**

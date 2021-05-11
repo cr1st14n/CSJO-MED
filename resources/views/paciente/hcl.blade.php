@@ -51,7 +51,7 @@
 				<ul class="nav nav-tabs" data-provide="tabdrop">
 					<li class="active"><a href="#tab1" data-toggle="tab">Recetas Medicas </a></li>
 					<li><a href="#tab2" data-toggle="tab" onclick="btn_listConsultasMedicas()">Consulta Medica</a></li>
-					<li><a href="#tab3" data-toggle="tab"> Laboratorios</a></li>
+					<li><a href="#tab3" data-toggle="tab" onclick="btn_listLab()"> Laboratorios</a></li>
 					<li><a href="#tab4" data-toggle="tab" onclick="btn_funlistserRX()"> Rayos X</a></li>
 					<li><a href="#tab5" data-toggle="tab" onclick="btn_listSV()"> Signos Vitales</a></li>
 				</ul>
@@ -119,21 +119,22 @@
 							<table cellpadding="0" cellspacing="0" border="0" class="table table-bordered table-striped">
 								<thead>
 									<tr>
-										<th>No.</th>
 										<th>Fecha</th>
-										<th>Descripcion</th>
+										<th>Tipo</th>
+										<th>Detalle</th>
+										<th>Laboratorio</th>
 										<th width="30%"></th>
 									</tr>
 								</thead>
-								<tbody align="center">
+								<tbody align="center" id="table_body_labPaciente">
 									<tr>
-										<td>1</td>
-										<td>dd-mm-yyyy</td>
-										<td>Prueva de sangre</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
 										<td>
 											<span class="tooltip-area">
-												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-pencil"></i></a>
-												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Delete"><i class="fa fa-trash-o"></i></a>
+												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
 											</span>
 										</td>
 									</tr>

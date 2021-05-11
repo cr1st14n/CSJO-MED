@@ -56,4 +56,5 @@ Route::group(['prefix' => 'consultaMedica'], function () {
 Route::group(['prefix'=>'laboratorio'], function ()
 {
     route::get('registerLab',[LaboratorioController::class,'storeLab']);
+    route::get('showHistLabPaci',[LaboratorioController::class,'showHistLabPaci']);
 });

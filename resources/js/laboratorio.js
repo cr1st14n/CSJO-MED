@@ -1,6 +1,40 @@
 var labformselect; //*variable para asignar tipo de formualrio a llenar
 var contLab = [];
 
+function btn_listLab() {
+    showHistLabPaciente();
+}
+function showHistLabPaciente() {
+    $.ajax({
+        type: "get",
+        url: "laboratorio/showHistLabPaci",
+        data: { paciente: idPacienteSelect },
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+            var html = response.map(function (e) {
+                if (e.lab_tipoPago == 1) {var tipoPago='Facturado';} else {var tipoPago='Autorizado';
+                var f = new Date(e.created_at);
+                f = f.toLocaleString("es-ES", "dd/mm/yyyy");}
+                var labs= 
+                return (body = `
+                <tr>
+                    <td>${f}</td>
+                    <td>${tipoPago}</td>
+                    <td>${e.lab_respaldo}</td>
+                    <td></td>
+                    <td>
+                        <span class="tooltip-area">
+                            <a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
+                        </span>
+                    </td>
+                </tr>
+                `);
+            }).join(' ');
+            $('#table_body_labPaciente').html(html);
+        },
+    });
+}
 function showModSelectTipoLab() {
     data = new Object();
     contLab = [];
@@ -511,14 +545,18 @@ function regLab_create() {
             var medioEjec = "casa blanda";
             break;
     }
-    if ( medioEjec.length <= 0) {
+    if (medioEjec.length <= 0) {
         notif("4", "Completar Autorizacion o # de facturación");
     } else {
         data = new Object();
-        data.a={paciente:idPacienteSelect, tipoDePago:tipoPago,respaldo:medioEjec};
-        data.b=contLab;
+        data.a = {
+            paciente: idPacienteSelect,
+            tipoDePago: tipoPago,
+            respaldo: medioEjec,
+        };
+        data.b = contLab;
         console.log(data);
-        
+
         $.ajax({
             type: "get",
             url: "laboratorio/registerLab",
@@ -526,6 +564,14 @@ function regLab_create() {
             // dataType: "dataType",
             success: function (response) {
                 console.log(response);
+                if (response) {
+                    notif("1", "Resultado Registrado");
+                    $("#inp_tipoPago_fac").val("");
+                    $("#md_selectTipoPro").modal("hide");
+                    showHistLabPaciente();
+                } else {
+                    notif("2", "Error!. Vuelva a intentarlo");
+                }
             },
         });
     }

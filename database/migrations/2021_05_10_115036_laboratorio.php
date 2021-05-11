@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaboratoriosTable extends Migration
+class Laboratorio extends Migration
 {
     /**
      * Run the migrations.
@@ -16,6 +16,17 @@ class CreateLaboratoriosTable extends Migration
         Schema::create('laboratorios', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+
+            $table->string('id_paciente')->nullable();
+            $table->string('lab_respaldo')->nullable();
+            $table->string('lab_tipoPago')->nullable();
+            $table->longText('lab_data')->nullable();
+
+            $table->integer('ca_usu_cod')->nullable();
+            $table->string('ca_tipo',10)->nullable();
+            $table->dateTime('ca_fecha')->nullable();
+            $table->integer('ca_estado')->nullable();
         });
     }
 
