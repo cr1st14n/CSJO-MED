@@ -28,14 +28,20 @@ class LaboratorioController extends Controller
      */
     public function showHistLabPaci(Request $request)
     {
-         $co= unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data'));
-         return $co['data'];
+         $co= (unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data')))['0']['data'];
          
-         return unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data'));
          $cat= laboratorio::where('id_paciente',$request->paciente)
-         ->selectRaw(unserialize('laboratorios.lab_data'),'as data')
-         ->addSelect('laboratorios.*')
+        //  ->selectRaw(unserialize('laboratorios.lab_data'),'as data')
+        //  ->addSelect('laboratorios.*')
          ->get();
+         $data=0;
+         $cadena=array();
+         foreach ($cat as $key => $value) {
+             $data=unserialize($value['lab_data']);
+             array_push($cadena,['lab'=>$value,'cont'=>$data]);
+         }
+         return $cadena;
+
         
     }
 

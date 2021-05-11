@@ -12,19 +12,31 @@ function showHistLabPaciente() {
         // dataType: "dataType",
         success: function (response) {
             console.log(response);
-            var html = response.map(function (e) {
-                if (e.lab_tipoPago == 1) {var tipoPago='Facturado';} else {var tipoPago='Autorizado';
-                var f = new Date(e.created_at);
-                f = f.toLocaleString("es-ES", "dd/mm/yyyy");}
-                console.log(e.lab_data);
-                var listLab=  JSON.parse(e.lab_data);  
-                console.log(listLab);
-                return (body = `
+            console.log(response[0]["lab"]);
+            var html = response
+                .map(function (e) {
+                    console.log(e.lab.created_at);
+
+                    if (e.lab.lab_tipoPago == 1) {
+                        var tipoPago = "Facturado";
+                    } else {
+                        var tipoPago = "Autorizado";
+                        var f = new Date(e.lab.created_at);
+                        f = f.toLocaleString("es-ES", "dd/mm/yyyy");
+                    }
+                    var hjj='';
+                    var html2= (e.cont).map(function (param) { 
+                        console.log('mas'+param.tipo);
+                        return param.tipo;
+                     }).join(' ');
+
+
+                    return (body = `
                 <tr>
                     <td>${f}</td>
                     <td>${tipoPago}</td>
-                    <td>${e.lab_respaldo}</td>
-                    <td>${listLab}</td>
+                    <td>${e.lab.lab_respaldo}</td>
+                    <td></td>
                     <td>
                         <span class="tooltip-area">
                             <a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
@@ -32,8 +44,9 @@ function showHistLabPaciente() {
                     </td>
                 </tr>
                 `);
-            }).join(' ');
-            $('#table_body_labPaciente').html(html);
+                })
+                .join(" ");
+            $("#table_body_labPaciente").html(html);
         },
     });
 }
