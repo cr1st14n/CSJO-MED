@@ -11,12 +11,8 @@ function showHistLabPaciente() {
         data: { paciente: idPacienteSelect },
         // dataType: "dataType",
         success: function (response) {
-            console.log(response);
-            console.log(response[0]["lab"]);
             var html = response
                 .map(function (e) {
-                    console.log(e.lab.created_at);
-
                     if (e.lab.lab_tipoPago == 1) {
                         var tipoPago = "Facturado";
                     } else {
@@ -24,19 +20,17 @@ function showHistLabPaciente() {
                         var f = new Date(e.lab.created_at);
                         f = f.toLocaleString("es-ES", "dd/mm/yyyy");
                     }
-                    var hjj='';
-                    var html2= (e.cont).map(function (param) { 
-                        console.log('mas'+param.tipo);
-                        return param.tipo;
-                     }).join(' ');
-
-
+                    var html2 = e.cont
+                        .map(function (param) {
+                            return (a = `${verificarTipoDeLab(param.tipo)}`);
+                        })
+                        .join(" ");
                     return (body = `
                 <tr>
                     <td>${f}</td>
                     <td>${tipoPago}</td>
                     <td>${e.lab.lab_respaldo}</td>
-                    <td></td>
+                    <td>${html2}</td>
                     <td>
                         <span class="tooltip-area">
                             <a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
@@ -49,6 +43,20 @@ function showHistLabPaciente() {
             $("#table_body_labPaciente").html(html);
         },
     });
+}
+function verificarTipoDeLab(veri) {
+    switch (veri) {
+        case "1":
+            tipoText = "Bioquimica Clinica,";
+            break;
+        case "2":
+            tipoText = "Coagulograma,";
+            break;
+
+        default:
+            break;
+    }
+    return tipoText;
 }
 function showModSelectTipoLab() {
     data = new Object();
@@ -570,8 +578,6 @@ function regLab_create() {
             respaldo: medioEjec,
         };
         data.b = contLab;
-        console.log(data);
-
         $.ajax({
             type: "get",
             url: "laboratorio/registerLab",
@@ -584,10 +590,19 @@ function regLab_create() {
                     $("#inp_tipoPago_fac").val("");
                     $("#md_selectTipoPro").modal("hide");
                     showHistLabPaciente();
+                    vistaPdfLab(data);
                 } else {
                     notif("2", "Error!. Vuelva a intentarlo");
                 }
             },
         });
     }
+}
+
+function vistaPdfLab(data) {
+    console.log(data);
+    // * se procede a abrir modal para imprimir el recetario
+    var url = `http://localhost/CSJO-MED/laboratorio/viewPdfLabPaciente/${data}`;
+    $("#linkUrlPdf").attr("src", url);
+    $("#md-form1_vistaReceta").modal("show");
 }

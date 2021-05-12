@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\laboratorio;
+use Barryvdh\DomPDF\PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 class LaboratorioController extends Controller
 {
@@ -51,9 +53,11 @@ class LaboratorioController extends Controller
      * @param  \App\laboratorio  $laboratorio
      * @return \Illuminate\Http\Response
      */
-    public function show(laboratorio $laboratorio)
+    public function showPdfPaciente($data)
     {
-        //
+        $dompdf = PDF::loadView('laboratorio.labViewPdf',["data"=>$data]);
+        $dompdf->setPaper('letter', 'portrait');
+        return $dompdf->stream('invoice.pdf');
     }
 
     /**
