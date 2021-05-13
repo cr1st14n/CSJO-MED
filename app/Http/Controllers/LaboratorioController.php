@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\laboratorio;
-use Barryvdh\DomPDF\PDF;
+// use Barryvdh\DomPDF\PDF;
+// use Barryvdh\DomPDF\PDF as DomPDFPDF;
+
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use PDF;
 
 class LaboratorioController extends Controller
 {
@@ -22,12 +25,6 @@ class LaboratorioController extends Controller
         return $n;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function showHistLabPaci(Request $request)
     {
          $co= (unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data')))['0']['data'];
@@ -47,25 +44,15 @@ class LaboratorioController extends Controller
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\laboratorio  $laboratorio
-     * @return \Illuminate\Http\Response
-     */
     public function showPdfPaciente($data)
     {
-        $dompdf = PDF::loadView('laboratorio.labViewPdf',["data"=>$data]);
+        $dompdf = PDF::loadView('laboratorio.labViewPdf');
+        // return View('laborato1rio.labViewPdf');
+        // $dompdf = PDF::loafView();
         $dompdf->setPaper('letter', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\laboratorio  $laboratorio
-     * @return \Illuminate\Http\Response
-     */
     public function edit(laboratorio $laboratorio)
     {
         //

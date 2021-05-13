@@ -17,11 +17,6 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode as QrCode;
 class recetarioMController extends Controller
 {
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
