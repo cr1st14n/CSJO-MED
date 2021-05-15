@@ -46,7 +46,7 @@
     <hr>
     <table width="100%">
         <tr>
-            <td align="left">
+            <td style="width:15px;">
                 <table width="100%">
                     <thead style="background-color: lightgray;">
                         <tr>
@@ -136,7 +136,7 @@
                     </tbody>
                 </table>
             </td>
-            <td align="right">
+            <td style="width:15px;">
                 <table width="100%">
                     <thead style="background-color: lightgray;">
                         <tr>
