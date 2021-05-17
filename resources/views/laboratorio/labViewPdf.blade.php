@@ -22,31 +22,50 @@
         .gray {
             background-color: lightgray
         }
+
+        body {
+            border-style: solid;
+            border-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-color: black;
+        }
     </style>
 </head>
 
 <body>
     <table width="100%">
         <tr>
-            <td valign="" width=40%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
+            <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
+            </td>
+            <td align="center">
+                <h3><br> Microbiologia Quimica Sanguinea e Inmunologia</h3>
+            </td>
+            <td align="rigth" width=10%>
+                <h3># 10000</h3>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table width="100%">
+        <tr>
+            <td align="left" width=50%>
+                <h4 style="font-family:serif;">Nombre: 000000000000 0000000000000000 </h4>
             </td>
             <td align="left">
-                <h3>Laboratorio Clinico Hermatologico, Microbiologia Quimica Sanguinea e Inmunologia</h3>
-                <!-- <pre>
-                </pre> -->
+                <h4 style="font-family:serif;">HCL: 000000000</h4>
             </td>
         </tr>
     </table>
     <hr>
+    @if($da["nombre"]==1)
+    <label for="">es uno</label>
+    @else
+    <label for="">no es uno</label>
+    @endif
     <table width="100%">
         <tr>
-
-        </tr>
-    </table>
-    <hr>
-    <table width="100%">
-        <tr>
-            <td style="width:15px;">
+            <td style="width: min-content;">
                 <table width="100%">
                     <thead style="background-color: lightgray;">
                         <tr>
@@ -57,7 +76,7 @@
                         <tr>
                             <td align="left">Glucemia</td>
                             <td align="center"></td>
-                            <td align="right">70-10 mg/dL</td>
+                            <td align="right">70-110 mg/dL</td>
                         </tr>
                         <tr>
                             <td align="left">Ac. Urico</td>
@@ -136,7 +155,7 @@
                     </tbody>
                 </table>
             </td>
-            <td style="width:15px;">
+            <td style="width: min-content;">
                 <table width="100%">
                     <thead style="background-color: lightgray;">
                         <tr>
@@ -194,97 +213,35 @@
                             <td align="right">1-9 UI/L</td>
                         </tr>
                     </tbody>
-                <table width="100%">
-                    <thead style="background-color: lightgray;">
-                        <tr>
-                            <th colspan="4" align="center">Perfil Electrolito</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td align="left">Sodio(NA)</td>
-                            <td align="center"></td>
-                            <td align="right">136-145 mEq/L</td>
-                        </tr>
-                        <tr>
-                            <td align="left">Potasio(K)</td>
-                            <td align="center"></td>
-                            <td align="right">3.5-5.5 mEq/L</td>
-                        </tr>
-                        <tr>
-                            <td align="left">Cloro</td>
-                            <td align="center"></td>
-                            <td align="right">96-106 mEq/L</td>
-                        </tr>
-                        <tr>
-                            <td align="left">Calcio(Ca)</td>
-                            <td align="center"></td>
-                            <td align="right">8.6-10.4 mEq/L</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
-        </tr>
-    </table>
-
-    <table width="100%">
-        <thead style="background-color: lightgray;">
-            <tr>
-                <th>Medicamento</th>
-                <th>Forma</th>
-                <th>Via</th>
-                <th>Dosis</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr>
-                <th scope="row">1</th>
-                <td>Playstation IV - Black</td>
-                <td align="right">1</td>
-                <td align="right">1400.00</td>
-                <td align="right">1400.00</td>
-            </tr> -->
-            <tr>
-                <td>Paracetamol</td>
-                <td align="center">pastillas de 400mg</td>
-                <td align="center">I.V.</td>
-                <td align="center">tomar cada 8 horas</td>
-            </tr>
-
-        </tbody>
-
-        <!-- <tfoot>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Subtotal $</td>
-                <td align="right">1635.00</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Tax $</td>
-                <td align="right">294.3</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Total $</td>
-                <td align="right" class="gray">$ 1929.3</td>
-            </tr>
-        </tfoot> -->
-    </table>
-
-
-
-
-
-    <table width="100%">
-        <tr>
-            <td align="left">
-                <p>
-                    <strong>Nota: en esta seccion se dispondra de datos referentes a dosis de los medicamentos </strong>
-                </p>
-            </td>
-            <td align="right">
+                    <table width="100%">
+                        <thead style="background-color: lightgray;">
+                            <tr>
+                                <th colspan="4" align="center">Perfil Electrolito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td align="left">Sodio(NA)</td>
+                                <td align="center"></td>
+                                <td align="right">136-145 mEq/L</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Potasio(K)</td>
+                                <td align="center"></td>
+                                <td align="right">3.5-5.5 mEq/L</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Cloro</td>
+                                <td align="center"></td>
+                                <td align="right">96-106 mEq/L</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Calcio(Ca)</td>
+                                <td align="center"></td>
+                                <td align="right">8.6-10.4 mEq/L</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </td>
             <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
         </tr>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\laboratorio;
 // use Barryvdh\DomPDF\PDF;
-// use Barryvdh\DomPDF\PDF as DomPDFPDF;
+// use Barryvdh\DomPDF\PDF as PDF;
 
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class LaboratorioController extends Controller
         $new->lab_tipoPago=$request['a']['tipoDePago'];
         $new->lab_data=serialize($request['b']);
         $n=$new->save();
-        return $n;
+        return ["estR"=>$n,"idR"=>$new->id];
     }
 
     public function showHistLabPaci(Request $request)
@@ -44,9 +44,11 @@ class LaboratorioController extends Controller
         
     }
 
-    public function showPdfPaciente($data)
+    public function showPdfPaciente($data,Request $request)
     {
-        $dompdf = PDF::loadView('laboratorio.labViewPdf');
+        return $data;
+        $da=["nombre"=>3];        
+        $dompdf = PDF::loadView('laboratorio.labViewPdf',["da"=>$da]);
         // return View('laborato1rio.labViewPdf');
         // $dompdf = PDF::loafView();
         $dompdf->setPaper('letter', 'portrait');
