@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\laboratorio;
+use App\pacientes;
 // use Barryvdh\DomPDF\PDF;
 // use Barryvdh\DomPDF\PDF as PDF;
 
@@ -13,42 +14,52 @@ use PDF;
 
 class LaboratorioController extends Controller
 {
-    
-    public function storeLab(Request $request )
+
+    public function storeLab(Request $request)
     {
-        $new=new laboratorio();
-        $new->id_paciente=$request['a']['paciente'];
-        $new->lab_respaldo=$request['a']['respaldo'];
-        $new->lab_tipoPago=$request['a']['tipoDePago'];
-        $new->lab_data=serialize($request['b']);
-        $n=$new->save();
-        return ["estR"=>$n,"idR"=>$new->id];
+        $new = new laboratorio();
+        $new->id_paciente = $request['a']['paciente'];
+        $new->lab_respaldo = $request['a']['respaldo'];
+        $new->lab_tipoPago = $request['a']['tipoDePago'];
+        $new->lab_data = serialize($request['b']);
+        $n = $new->save();
+        return ["estR" => $n, "idR" => $new->id];
     }
 
     public function showHistLabPaci(Request $request)
     {
-         $co= (unserialize(laboratorio::where('id_paciente',$request->paciente)->value('lab_data')))['0']['data'];
-         
-         $cat= laboratorio::where('id_paciente',$request->paciente)
-        //  ->selectRaw(unserialize('laboratorios.lab_data'),'as data')
-        //  ->addSelect('laboratorios.*')
-         ->get();
-         $data=0;
-         $cadena=array();
-         foreach ($cat as $key => $value) {
-             $data=unserialize($value['lab_data']);
-             array_push($cadena,['lab'=>$value,'cont'=>$data]);
-         }
-         return $cadena;
+        $co = (unserialize(laboratorio::where('id_paciente', $request->paciente)->value('lab_data')))['0']['data'];
 
-        
+        $cat = laboratorio::where('id_paciente', $request->paciente)
+            //  ->selectRaw(unserialize('laboratorios.lab_data'),'as data')
+            //  ->addSelect('laboratorios.*')
+            ->get();
+        $data = 0;
+        $cadena = array();
+        foreach ($cat as $key => $value) {
+            $data = unserialize($value['lab_data']);
+            array_push($cadena, ['lab' => $value, 'cont' => $data]);
+        }
+        return $cadena;
     }
 
-    public function showPdfPaciente($data,Request $request)
+    public function showPdfPaciente($res, Request $request)
     {
-        return $data;
-        $da=["nombre"=>3];        
-        $dompdf = PDF::loadView('laboratorio.labViewPdf',["da"=>$da]);
+        $data = laboratorio::where('id', $res)->first();
+        $paciente = pacientes::where('pa_id', $data['id_paciente'])->first();
+        $datoPago = "";
+        if ($data['lab_tipoPago'] == '1') {
+            $datoPago = 'Facturado: # ' . $data['lab_respaldo'];
+        } elseif ($data['lab_tipoPago'] == '2') {
+            $datoPago = 'Autorizado por: ' . $data['lab_respaldo'];
+        }
+
+        $lab = unserialize($data['lab_data']);
+        $html='<label for=""> casa de cera</label>';
+
+        // return $lab[1]["tipo"];
+        $da = ["nombre" => 3];
+        $dompdf = PDF::loadView('laboratorio.labViewPdf', ["da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lab, "ID" => $data['id'],"html" => $html]);
         // return View('laborato1rio.labViewPdf');
         // $dompdf = PDF::loafView();
         $dompdf->setPaper('letter', 'portrait');

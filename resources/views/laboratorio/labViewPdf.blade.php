@@ -39,10 +39,10 @@
             <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
             </td>
             <td align="center">
-                <h3><br> Microbiologia Quimica Sanguinea e Inmunologia</h3>
+                <h3>Laboratorio clinico Hematologica,<br> Microbiologia Quimica Sanguinea e Inmunologia</h3>
             </td>
             <td align="rigth" width=10%>
-                <h3># 10000</h3>
+                <h3># {{$ID}}</h3>
             </td>
         </tr>
     </table>
@@ -50,14 +50,21 @@
     <table width="100%">
         <tr>
             <td align="left" width=50%>
-                <h4 style="font-family:serif;">Nombre: 000000000000 0000000000000000 </h4>
+                <h4 style="font-family:serif;">Nombre: {{$pa->pa_nombre}} {{$pa->pa_appaterno}} {{$pa->pa_apmaterno}}</h4>
             </td>
             <td align="left">
-                <h4 style="font-family:serif;">HCL: 000000000</h4>
+                <h4 style="font-family:serif;">HCL: {{$pa->pa_hcl}}</h4>
             </td>
         </tr>
     </table>
     <hr>
+
+    {{$lbs["0"]}}
+    @foreach($lbs as $g)        
+        {{  gettype( $g["data"])}}
+        
+    @endforeach
+
     @if($da["nombre"]==1)
     <label for="">es uno</label>
     @else

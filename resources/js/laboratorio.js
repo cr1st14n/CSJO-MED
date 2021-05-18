@@ -585,12 +585,12 @@ function regLab_create() {
             // dataType: "dataType",
             success: function (response) {
                 console.log(response);
-                if (response) {
+                if (response.estR) {
                     notif("1", "Resultado Registrado");
                     $("#inp_tipoPago_fac").val("");
                     $("#md_selectTipoPro").modal("hide");
                     showHistLabPaciente();
-                    vistaPdfLab(data);
+                    vistaPdfLab(response.idR);
                 } else {
                     notif("2", "Error!. Vuelva a intentarlo");
                 }
