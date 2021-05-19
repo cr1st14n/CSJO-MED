@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\laboratorio;
 use App\pacientes;
+use Dompdf\Dompdf;
 // use Barryvdh\DomPDF\PDF;
 // use Barryvdh\DomPDF\PDF as PDF;
 
@@ -55,11 +56,16 @@ class LaboratorioController extends Controller
         }
 
         $lab = unserialize($data['lab_data']);
-        $html='<label for=""> casa de cera</label>';
-
-        // return $lab[1]["tipo"];
-        $da = ["nombre" => 3];
-        $dompdf = PDF::loadView('laboratorio.labViewPdf', ["da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lab, "ID" => $data['id'],"html" => $html]);
+        $html = '<label for=""> casa de cera</label>';
+        $html2 =view('laboratorio.formBioClin');
+            // return $lab[1]["tipo"];
+            $da = ["nombre" => 3];
+        $dompdf=new Dompdf();
+        $dompdf->loadHtml($html2);
+        $dompdf = PDF::loadView('laboratorio.labViewPdf', [
+            "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lab, "ID" => $data['id'], "html" => $html
+            ,"html" => $html2
+            ]);
         // return View('laborato1rio.labViewPdf');
         // $dompdf = PDF::loafView();
         $dompdf->setPaper('letter', 'portrait');

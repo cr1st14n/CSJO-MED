@@ -31,10 +31,16 @@
             border-color: black;
         }
     </style>
+
+
 </head>
 
 <body>
-    <table width="100%">
+
+    <script type="text/javascript">
+        $('#yyy').html("");
+    </script>
+    <table width="100%" id="yyy">
         <tr>
             <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
             </td>
@@ -59,17 +65,17 @@
     </table>
     <hr>
 
-    {{$lbs["0"]}}
-    @foreach($lbs as $g)        
-        {{  gettype( $g["data"])}}
-        
-    @endforeach
+
 
     @if($da["nombre"]==1)
     <label for="">es uno</label>
     @else
     <label for="">no es uno</label>
     @endif
+
+    {{$html}}
+
+
     <table width="100%">
         <tr>
             <td style="width: min-content;">
