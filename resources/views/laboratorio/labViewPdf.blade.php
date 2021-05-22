@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Aloha!</title>
-    <!-- <link type="text/css" rel="stylesheet" href="{{ asset('Plantilla/bootstrap/style.css')}}" /> -->
     <style type="text/css">
         * {
             font-family: Verdana, Arial, sans-serif;
@@ -31,21 +30,16 @@
             border-color: black;
         }
     </style>
-
-
 </head>
 
 <body>
 
-    <script type="text/javascript">
-        $('#yyy').html("");
-    </script>
     <table width="100%" id="yyy">
         <tr>
             <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
             </td>
             <td align="center">
-                <h3>Laboratorio clinico Hematologica,<br> Microbiologia Quimica Sanguinea e Inmunologia</h3>
+                <h3>Laboratorio clinico Hematologica,<br> Microbiologia Quimica Sanguinea e Inmunologia <br>{{$dp}}</h3>
             </td>
             <td align="rigth" width=10%>
                 <h3># {{$ID}}</h3>
@@ -64,18 +58,20 @@
         </tr>
     </table>
     <hr>
+    {{$lbs[0]['data'][1]['value']}}
 
+    @foreach($lbs as $lb)
+    1+1     
+        @switch($lb['tipo'])
+            @case("1")
+                primer laboratorio... <br>
+            @break
 
-
-    @if($da["nombre"]==1)
-    <label for="">es uno</label>
-    @else
-    <label for="">no es uno</label>
-    @endif
-
-    {{$html}}
-
-
+            @case("2")
+                segundo laboratorio... <br>
+            @break
+        @endswitch
+    @endforeach
     <table width="100%">
         <tr>
             <td style="width: min-content;">
@@ -256,7 +252,6 @@
                         </tbody>
                     </table>
             </td>
-            <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
         </tr>
     </table>
 </body>
