@@ -68,6 +68,7 @@
             @break
 
             @case("2")
+                
                 segundo laboratorio... <br>
             @break
         @endswitch

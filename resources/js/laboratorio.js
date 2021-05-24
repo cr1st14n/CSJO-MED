@@ -288,8 +288,9 @@ $("#lab_form1").submit(function (e) {
     //* validacion y registro
     e.preventDefault();
     form = $("#lab_form1");
-    a = form.serializeArray();
-    lab1 = { tipo: labformselect, data: a };
+    console.log(form.serialize());
+    console.log(form.serializeArray());
+    lab1 = { tipo: labformselect, dataTa: form.serialize(), data:form.serializeArray()};
     contLab.push(lab1);
     $("#md_lab_form1").modal("hide");
     mostrarVista(lab1);

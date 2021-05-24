@@ -10,9 +10,12 @@ use Dompdf\Dompdf;
 
 use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use PDF;
+
+use function Opis\Closure\unserialize;
 
 class LaboratorioController extends Controller
 {
@@ -45,11 +48,24 @@ class LaboratorioController extends Controller
         return $cadena;
     }
 
+     public function uno(Request $request)
+    {
+        return $request;
+    }
+
     public function showPdfPaciente($res, Request $request)
     {
 
 
         $data = laboratorio::where('id', $res)->first();
+        $bu= unserialize( $data['lab_data']);
+        
+        // return unserialize();
+        return LaboratorioController::uno($bu[0]['dataTa']);
+        
+
+        
+        
         $paciente = pacientes::where('pa_id', $data['id_paciente'])->first();
         $datoPago = "";
         if ($data['lab_tipoPago'] == '1') {
@@ -57,13 +73,13 @@ class LaboratorioController extends Controller
         } elseif ($data['lab_tipoPago'] == '2') {
             $datoPago = 'Autorizado por: ' . $data['lab_respaldo'];
         }
-        $lab = unserialize($data['lab_data']);
+        $lbs = unserialize($data['lab_data']);
         $da = ["nombre" => 3];
 
         $html2 = view('laboratorio.labViewPdf', [
-            "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lab, "ID" => $data['id']
+            "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lbs, "ID" => $data['id']
         ]);
-        // return $lab;
+        return $lbs;
         // return $lab[0]['data'][1]['name'];
         // return $html2;
         $pdf = App::make('dompdf.wrapper');
