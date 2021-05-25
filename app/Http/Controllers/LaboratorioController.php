@@ -61,7 +61,7 @@ class LaboratorioController extends Controller
         $bu= unserialize( $data['lab_data']);
         
         // return unserialize();
-        return LaboratorioController::uno($bu[0]['dataTa']);
+        // return LaboratorioController::uno($bu[0]['dataTa']);
         
 
         
@@ -79,7 +79,14 @@ class LaboratorioController extends Controller
         $html2 = view('laboratorio.labViewPdf', [
             "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lbs, "ID" => $data['id']
         ]);
-        return $lbs;
+        
+
+
+
+
+
+        // return $lbs[0]['tipo'];
+        // return \array_search('2',$lbs);
         // return $lab[0]['data'][1]['name'];
         // return $html2;
         $pdf = App::make('dompdf.wrapper');

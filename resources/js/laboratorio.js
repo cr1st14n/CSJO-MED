@@ -11,6 +11,7 @@ function showHistLabPaciente() {
         data: { paciente: idPacienteSelect },
         // dataType: "dataType",
         success: function (response) {
+            console.log(response);
             var html = response
                 .map(function (e) {
                     if (e.lab.lab_tipoPago == 1) {
@@ -33,7 +34,7 @@ function showHistLabPaciente() {
                     <td>${html2}</td>
                     <td>
                         <span class="tooltip-area">
-                            <a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
+                            <button type="button" onclick="vistaPdfLab(${e.lab.id})" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></button>
                         </span>
                     </td>
                 </tr>
@@ -605,5 +606,9 @@ function vistaPdfLab(data) {
     // * se procede a abrir modal para imprimir el recetario
     var url = `http://localhost/CSJO-MED/laboratorio/viewPdfLabPaciente/${data}`;
     $("#linkUrlPdf").attr("src", url);
+    $("#loadingAni").show();
     $("#md-form1_vistaReceta").modal("show");
+    setTimeout(() => {
+        $("#loadingAni").hide();
+    }, 1200);
 }
