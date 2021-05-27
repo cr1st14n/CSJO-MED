@@ -105,7 +105,7 @@ function posCreate(tipo, response) {
     if (tipo == 2) {
         console.log(response.b);
         // * se procede a abrir modal para imprimir el recetario
-        var url = `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${response.b}`;
+        var url = `http://192.168.0.105/CSJO-MED/recetarioM/pdf_recetamedica/${response.b}`;
         $("#linkUrlPdf").attr("src", url);
         $("#md-form1_vistaReceta").modal("show");
     }
@@ -114,7 +114,7 @@ function posCreate(tipo, response) {
 function showHCL2(id) {
     $("#loadingAni").show();
     $("#md-form1_vistaReceta").modal("show");
-    var url = `http://localhost/CSJO-MED/recetarioM/pdf_recetamedica/${id}`;
+    var url = `http://192.168.0.105/CSJO-MED/recetarioM/pdf_recetamedica/${id}`;
     $("#linkUrlPdf").attr("src", url);
     setTimeout(() => {
         $("#loadingAni").hide();

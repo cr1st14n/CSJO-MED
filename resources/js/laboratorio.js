@@ -11,7 +11,6 @@ function showHistLabPaciente() {
         data: { paciente: idPacienteSelect },
         // dataType: "dataType",
         success: function (response) {
-            console.log(response);
             var html = response
                 .map(function (e) {
                     if (e.lab.lab_tipoPago == 1) {
@@ -93,7 +92,9 @@ function showMdFormLab(tipo) {
                 $("#md_lab_form1").modal("show");
                 break;
             case 3:
-                $("#").modal("show");
+                $("#lab_form1").html(contentFormLab(3));
+                $("#md_lab_form1").modal("show");
+                break;
                 break;
             default:
                 break;
@@ -270,6 +271,62 @@ function contentFormLab(tipo) {
         <hr>
 		<button class="btn btn-theme-inverse" type="submit">Registrar</button>
       `;
+    c = `
+      <h3 align="center">Biometria Hematica</h3><br>
+      <h4>Cuadro Hematico</h4><br>
+          <div class="row">
+              <input type="hidden" value="1">
+              <div class="col-lg-12">
+                  <div class="form-group">
+                        <div class="input-group">
+                        <input type="text" name="Glóbulos Rojos" class="form-control" placeholder="Glóbulos Rojos" autocomplete="off" required>
+                        <span class="input-group-addon">millones/mm3</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Hemoglobina" class="form-control" placeholder="Hemoglobina" autocomplete="off" required>
+                        <span class="input-group-addon">g/dL</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Hematocrito" class="form-control" placeholder="Hematocrito" autocomplete="off" required>
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="VES" class="form-control" placeholder="VES" autocomplete="off">
+                        <span class="input-group-addon">mm/hora</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Leucocitos" class="form-control" placeholder="Leucocitos" autocomplete="off">
+                        <span class="input-group-addon">x/mm3</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Cayados" class="form-control" placeholder="Cayados" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Neutrofilos" class="form-control" placeholder="Neutrofilos" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Eosinófilos" class="form-control" placeholder="Eosinófilos" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Basófilos" class="form-control" placeholder="Basófilos" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Linfocitos" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+                  <div class="input-group">
+                        <input type="text" name="Monocitos" class="form-control" placeholder="Monocitos" autocomplete="off">
+                        <span class="input-group-addon">%</span>
+                  </div>
+              </div>
+          </div>
+      <hr>
+      <button class="btn btn-theme-inverse" type="submit">Registrar</button>
+    `;
     switch (tipo) {
         case 1:
             return a;
@@ -291,7 +348,11 @@ $("#lab_form1").submit(function (e) {
     form = $("#lab_form1");
     console.log(form.serialize());
     console.log(form.serializeArray());
-    lab1 = { tipo: labformselect, dataTa: form.serialize(), data:form.serializeArray()};
+    lab1 = {
+        tipo: labformselect,
+        dataTa: form.serialize(),
+        data: form.serializeArray(),
+    };
     contLab.push(lab1);
     $("#md_lab_form1").modal("hide");
     mostrarVista(lab1);
@@ -604,7 +665,7 @@ function regLab_create() {
 function vistaPdfLab(data) {
     console.log(data);
     // * se procede a abrir modal para imprimir el recetario
-    var url = `http://localhost/CSJO-MED/laboratorio/viewPdfLabPaciente/${data}`;
+    var url = `http://192.168.0.105/CSJO-MED/laboratorio/viewPdfLabPaciente/${data}`;
     $("#linkUrlPdf").attr("src", url);
     $("#loadingAni").show();
     $("#md-form1_vistaReceta").modal("show");

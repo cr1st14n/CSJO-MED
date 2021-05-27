@@ -300,6 +300,27 @@
                 </table>
             </td>
             <td style="width: min-content;">
+                <table width="100%">
+                    <thead style="background-color: lightgray;">
+                        <tr>
+                            <th colspan="4" align="center">Parametros de control</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="left">Tiempo de Protrombina</td>
+                            <td align="right">13 segundos</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Ac. Urico</td>
+                            <td align="right">100 %</td>
+                        </tr>
+                        <tr>
+                            <td align="left">INR</td>
+                            <td align="right">1.0</td>
+                        </tr>
+                    </tbody>
+                </table>
             </td>
         </tr>
     </table>
