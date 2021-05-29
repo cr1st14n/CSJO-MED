@@ -52,6 +52,9 @@ function verificarTipoDeLab(veri) {
         case "2":
             tipoText = "Coagulograma,";
             break;
+        case "3":
+            tipoText = "Biometria Hematica,";
+            break;
 
         default:
             break;
@@ -584,6 +587,78 @@ function mostrarVista(dat) {
             break;
 
         case 3:
+            a1 = `
+            <div class="col-lg-12" id="View_Coag">
+            <h3 align="center">-----Coagulograma-----</h3>
+            <table class="table-striped" style="border-color: black;" width="100%" border="2" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td>Globulos rojos</td>
+                    <td width="">${dat.data[0].value} min</td>
+                    <td style="font-size: x-small;" align="right">millones/mm3</td>
+                </tr>
+                <tr>
+                    <td>Hemoglobina</td>
+                    <td width="">${dat.data[1].value} min</td>
+                    <td style="font-size: x-small;" align="right">g/dL</td>
+                </tr>
+                <tr>
+                    <td>Hematocrito</td>
+                    <td width="">${dat.data[2].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>VES</td>
+                    <td width="">${dat.data[3].value} min</td>
+                    <td style="font-size: x-small;" align="right">mm/hora</td>
+                </tr>
+                <tr>
+                    <td>Leucocitos</td>
+                    <td width="">${dat.data[4].value} min</td>
+                    <td style="fondt-size: x-small;" align="right">x/mm3</td>
+                </tr>
+                <tr>
+                    <td>Cayados</td>
+                    <td width="">${dat.data[5].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>Neutrofilos</td>
+                    <td width="">${dat.data[6].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>Eusinófilos</td>
+                    <td width="">${dat.data[7].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>Basófilos</td>
+                    <td width="">${dat.data[8].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>Linfositos</td>
+                    <td width="">${dat.data[9].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                <tr>
+                    <td>Monocitos</td>
+                    <td width="">${dat.data[10].value} min</td>
+                    <td style="font-size: x-small;" align="right">%</td>
+                </tr>
+                
+            </table>
+            <br>
+            <h4>Control</h4>
+            <p>
+                Tiempo de protrombina => 13 seg <br>
+                Actividad protrombinica => 100% <br>
+                INR =>
+            </p>
+            <button type="button" class="btn btn-danger btn-sm" onclick="eraseFormLab('View_Coag','2')"> <i class="fa fa-eraser"></i> </button>
+            <h3 align="center">----- // -----</h3><br>
+        </div>
+            `;
             break;
 
         default:

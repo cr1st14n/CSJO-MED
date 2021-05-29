@@ -15,7 +15,10 @@
 
         tfoot tr td {
             font-weight: bold;
-            font-size: x-small;
+            font-size: xx-small;
+        }
+        tbody tr td {
+            font-size:11px;
         }
 
         .gray {
@@ -35,11 +38,11 @@
 <body>
 
     <table width="100%" id="yyy">
-        <tr>
-            <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="150" />
+        <tr >
+            <td valign="" width=10%><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}" alt="" width="120" />
             </td>
             <td align="center">
-                <h3>Laboratorio clinico Hematologica,<br> Microbiologia Quimica Sanguinea e Inmunologia <br>{{$dp}}</h3>
+                <h4>Laboratorio clinico Hematologica,<br> Microbiologia Quimica Sanguinea e Inmunologia <br>{{$dp}}</h4>
             </td>
             <td align="rigth" width=10%>
                 <h3># {{$ID}}</h3>
@@ -301,6 +304,105 @@
             </td>
             <td style="width: min-content;">
                 <table width="100%">
+                    <thead style="background-color: lightgray;">
+                        <tr>
+                            <th colspan="4" align="center">Parametros de control</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="left">Tiempo de Protrombina</td>
+                            <td align="right">13 segundos</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Ac. Urico</td>
+                            <td align="right">100 %</td>
+                        </tr>
+                        <tr>
+                            <td align="left">INR</td>
+                            <td align="right">1.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    @break
+    @case("3")
+    
+    <h3>Biometria Hematica</h3>
+    <table width="100%">
+        <tr>
+            <td style="width: min-content;">
+                <table width="100%">
+                    <thead style="background-color: lightgray;">
+                        <tr>
+                            <th colspan="4" align="center">Biometria Hematica</th>
+                        </tr>
+                    </thead>
+                    <tbody  style="font-size:xx-small">
+                        <tr>
+                            <td align="left">Globulos Rojos</td>
+                            <td align="center">{{$lbs[$clave]['data'][0]['value']}}</td>
+                            <td align="right">millones/mm3</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hemoglobina</td>
+                            <td align="center">{{$lbs[$clave]['data'][1]['value']}}</td>
+                            <td align="right">g/dL</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hematocrito</td>
+                            <td align="center">{{$lbs[$clave]['data'][2]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">VES</td>
+                            <td align="center">{{$lbs[$clave]['data'][3]['value']}}</td>
+                            <td align="right">mm/hora</td>
+                        </tr>
+                        <tr>
+                            <td align="left">LEUCOCITOS</td>
+                            <td align="center">{{$lbs[$clave]['data'][4]['value']}}</td>
+                            <td align="right">x/mm3</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Cayados</td>
+                            <td align="center">{{$lbs[$clave]['data'][5]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Neutrofilos</td>
+                            <td align="center">{{$lbs[$clave]['data'][6]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Eosinofilos</td>
+                            <td align="center">{{$lbs[$clave]['data'][7]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Basófilos</td>
+                            <td align="center">{{$lbs[$clave]['data'][8]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Linfocitos</td>
+                            <td align="center">{{$lbs[$clave]['data'][9]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Monocitos</td>
+                            <td align="center">{{$lbs[$clave]['data'][10]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: min-content;">
+                <table width="100%" >
                     <thead style="background-color: lightgray;">
                         <tr>
                             <th colspan="4" align="center">Parametros de control</th>

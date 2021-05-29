@@ -90,7 +90,7 @@ class LaboratorioController extends Controller
         // return $lab[0]['data'][1]['name'];
         // return $html2;
         $pdf = App::make('dompdf.wrapper');
-        $pdf->setPaper('letter', 'portrait');
+        $pdf->setPaper('A5', 'portrait');
         $pdf->loadHTML($html2);
         return $pdf->stream();
     }
