@@ -17,9 +17,9 @@ function showHistLabPaciente() {
                         var tipoPago = "Facturado";
                     } else {
                         var tipoPago = "Autorizado";
-                        var f = new Date(e.lab.created_at);
-                        f = f.toLocaleString("es-ES", "dd/mm/yyyy");
                     }
+                    var f = new Date(e.lab.created_at);
+                    f = f.toLocaleString("es-ES", "dd/mm/yyyy");
                     var html2 = e.cont
                         .map(function (param) {
                             return (a = `${verificarTipoDeLab(param.tipo)}`);

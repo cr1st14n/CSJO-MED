@@ -175,12 +175,12 @@
 			</ol>
 			<div id="content">
 				<div class="row">
-					<div class="col-lg-10" id="panel1">
+					<div class="col-lg-9" id="panel1">
 						<section class="panel">
 
 						</section>
 					</div>
-					<div class="col-lg-2">
+					<div class="col-lg-3">
 						<div class="well bg-theme">
 							<div class="widget-tile">
 								<section>
