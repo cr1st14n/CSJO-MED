@@ -1078,30 +1078,39 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<label for="">Tipo de 	pago</label>
 					<div class="col-md-12">
-						<div class="col-md-2">
-							<ul class="" data-color="red">
-								<li>
-									<input type="radio" name="lab_TipoPago" value="2" onchange="funDectTipoPago(this.value)">
-									<label>Autorizado</label>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-2">
-							<ul class="" data-color="red">
-								<li>
-									<input type="radio" name="lab_TipoPago" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
-									<label>Facturado</label>
-								</li>
-							</ul>
-						</div>
-						<div class="col-md-5">
-							<div id="sec_input_pago_1">
-								<input type="text" class="form-control" placeholder="# de factura" 	  id="inp_tipoPago_fac" >
+						<div class="col-md-6">
+							<div class="col-md-5">
+								<div class="radio">
+									<label>
+										<input type="radio" name="lab_TipoPago" value="2" onchange="funDectTipoPago(this.value)">
+										Autorizado
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="lab_TipoPago" value="1" checked="checked" onchange="funDectTipoPago(this.value)">
+										Facturado
+									</label>
+								</div>
 							</div>
-							<div id="sec_input_pago_2" style="display: none;">
-								<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago_aut">
+		
+							<div class="col-md-7">
+								<div class="form-group">
+									<label >Facturado / Autorizado</label>
+									<div id="sec_input_pago_1">
+										<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago_fac">
+									</div>
+									<div id="sec_input_pago_2" style="display: none;">
+										<input type="text" class="form-control" placeholder="Autorizacion..." id="inp_tipoPago_aut">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Medico Tratante</label>
+								<input type="text" class="form-control">
 							</div>
 						</div>
 					</div>
