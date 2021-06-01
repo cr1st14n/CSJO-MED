@@ -461,9 +461,9 @@
     @break
 
     @endswitch
-
-    @if($clave/2 ==0)
     
+    @if($clave % 2 != 0)
+    <div class="saltoPagina"></div>
     @endif
     @endforeach
 </body>

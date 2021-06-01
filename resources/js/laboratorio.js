@@ -695,6 +695,7 @@ function funDectTipoPago(tipo) {
 
 function regLab_create() {
     var tipoPago = $("input:radio[name=lab_TipoPago]:checked").val();
+    let medicoTratante= $('#lab_medicoTrtante').val();
     switch (tipoPago) {
         case "1":
             var medioEjec = $("#inp_tipoPago_fac").val();
@@ -714,6 +715,7 @@ function regLab_create() {
             paciente: idPacienteSelect,
             tipoDePago: tipoPago,
             respaldo: medioEjec,
+            medicoTratante: medicoTratante,
         };
         data.b = contLab;
         $.ajax({

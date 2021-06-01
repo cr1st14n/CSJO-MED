@@ -618,7 +618,7 @@
 
 					</svg>
 				</div>
-				<embed src="" type="" width="800" height="400" id="linkUrlPdf">
+				<embed src="" type="" width="800" height="600" id="linkUrlPdf">
 			</div>
 
 		</div>
@@ -1110,7 +1110,7 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Medico Tratante</label>
-								<input type="text" class="form-control">
+								<input type="text" class="form-control"  id="lab_medicoTrtante">
 							</div>
 						</div>
 					</div>

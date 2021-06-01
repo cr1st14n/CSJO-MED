@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\laboratorio;
 use App\pacientes;
+use Carbon\Carbon;
 use Dompdf\Dompdf;
 // use Barryvdh\DomPDF\PDF;
 // use Barryvdh\DomPDF\PDF as PDF;
@@ -12,6 +13,7 @@ use Facade\FlareClient\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PDF;
 
@@ -26,7 +28,14 @@ class LaboratorioController extends Controller
         $new->id_paciente = $request['a']['paciente'];
         $new->lab_respaldo = $request['a']['respaldo'];
         $new->lab_tipoPago = $request['a']['tipoDePago'];
+        $new->lab_medTratante = $request['a']['medicoTratante'];
         $new->lab_data = serialize($request['b']);
+        
+        $new->ca_usu_cod = Auth::user()->id;
+        $new->ca_tipo = 'created';
+        $new->ca_fecha = Carbon::now();
+        $new->ca_estado = 1;
+
         $n = $new->save();
         return ["estR" => $n, "idR" => $new->id];
     }
@@ -62,9 +71,6 @@ class LaboratorioController extends Controller
         
         // return unserialize();
         // return LaboratorioController::uno($bu[0]['dataTa']);
-        
-
-        
         
         $paciente = pacientes::where('pa_id', $data['id_paciente'])->first();
         $datoPago = "";
