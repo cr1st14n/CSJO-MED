@@ -19,7 +19,7 @@
         }
 
         tbody tr td {
-            font-size: 8px;
+            font-size: 9px;
         }
 
         .gray {
@@ -79,7 +79,7 @@
             <td>
                 <p>
                     {{$dp}} <br>
-                    Medico Tratante:
+                    Medico Tratante:{{$medTra}}
                 </p>
             </td>
         </tr>

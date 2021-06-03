@@ -83,7 +83,7 @@ class LaboratorioController extends Controller
         $da = ["nombre" => 3];
 
         $html2 = view('laboratorio.labViewPdf', [
-            "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lbs, "ID" => $data['id']
+            "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lbs, "ID" => $data['id'], "medTra" => $data['lab_medTratante']
         ]);
         
 

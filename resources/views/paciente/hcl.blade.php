@@ -123,7 +123,8 @@
 										<th>Tipo</th>
 										<th>Detalle</th>
 										<th>Laboratorio</th>
-										<th width="30%"></th>
+										<th>Medico Tratante</th>
+										<th width="10%"></th>
 									</tr>
 								</thead>
 								<tbody align="center" id="table_body_labPaciente">

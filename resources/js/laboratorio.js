@@ -31,6 +31,7 @@ function showHistLabPaciente() {
                     <td>${tipoPago}</td>
                     <td>${e.lab.lab_respaldo}</td>
                     <td>${html2}</td>
+                    <td>${e.lab.lab_medTratante}</td>
                     <td>
                         <span class="tooltip-area">
                             <button type="button" onclick="vistaPdfLab(${e.lab.id})" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></button>
