@@ -30,6 +30,7 @@ function showHistLabPaciente() {
                     <td>${f}</td>
                     <td>${tipoPago}</td>
                     <td>${e.lab.lab_respaldo}</td>
+                    <td>${e.lab.lab_medTratante}</td>
                     <td>${html2}</td>
                     <td>${e.lab.lab_medTratante}</td>
                     <td>

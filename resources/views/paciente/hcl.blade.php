@@ -128,17 +128,6 @@
 									</tr>
 								</thead>
 								<tbody align="center" id="table_body_labPaciente">
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td>
-											<span class="tooltip-area">
-												<a href="javascript:void(0)" class="btn btn-default btn-sm" title="Mostrar"><i class="fa fa-eye"></i></a>
-											</span>
-										</td>
-									</tr>
 								</tbody>
 							</table>
 						</div>
