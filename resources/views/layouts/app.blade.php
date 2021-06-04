@@ -567,7 +567,7 @@
 						</div>
 						<div class="form-group col-lg-1">
 							<br>
-							<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-check"></i></button>
+							<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-save"></i></button>
 						</div>
 						<div class="form-group col-lg-12">
 							<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="2"></textarea>

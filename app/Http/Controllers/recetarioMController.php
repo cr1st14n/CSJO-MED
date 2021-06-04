@@ -40,30 +40,11 @@ class recetarioMController extends Controller
         return ['a' => $re, 'b' => ($rm->id)];
     }
 
-    public function store(Request $request)
+    public function list($id)
     {
-        //
+        return recetarioM::where('id_paciente',$id)->first();
     }
 
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
-    }
 
     public function pdfReceta($data)
     {
@@ -105,7 +86,7 @@ class recetarioMController extends Controller
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
         $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1]);
-        $dompdf->setPaper('letter', 'portrait');
+        $dompdf->setPaper('A5', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }
 }

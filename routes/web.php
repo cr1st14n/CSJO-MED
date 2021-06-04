@@ -4,6 +4,7 @@ use App\descargoMedicoCont;
 use App\Http\Controllers\conMedController;
 use App\Http\Controllers\ConsClinicaController;
 use App\Http\Controllers\LaboratorioController;
+use App\Http\Controllers\recetarioMController;
 use App\Http\Controllers\ServrxController;
 use Facade\FlareClient\View;
 use Illuminate\Routing\RouteGroup;
@@ -34,7 +35,8 @@ Route::group(['prefix' => 'Descargo'], function () {
     Route::apiResource('desMedCont', descargoMedicoContController::class);
 });
 Route::group(['prefix' => 'recetarioM'], function () {
-    route::POST('create', 'recetarioMController@create');
+    route::POST('create', [recetarioMController::class,'create']);
+    Route::get('list/{paciente}',[recetarioMController::class,'list']);
     Route::get('pdf_recetamedica/{receta}', 'recetarioMController@pdfReceta');
 });
 Route::Group(['prefix' => 'signosVitales'], function () {

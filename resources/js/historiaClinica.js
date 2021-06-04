@@ -8,7 +8,7 @@ function colaPacienteMedAten() {
             console.log(response);
             var html2 = response
                 .map(function (e) {
-                    return `
+                    return a=`
                         <div class="widget-mini-chart align-xs-left">
                             <div class="pull-right">
                                 <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/historiaClinica2.png"  width="50" height="50" /></div>

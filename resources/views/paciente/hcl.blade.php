@@ -49,7 +49,7 @@
 			<hr>
 			<div class="tabbable">
 				<ul class="nav nav-tabs" data-provide="tabdrop">
-					<li class="active"><a href="#tab1" data-toggle="tab">Recetas Medicas </a></li>
+					<li class="active"><a href="#tab1" data-toggle="tab" onclick="">Recetas Medicas </a></li>
 					<li><a href="#tab2" data-toggle="tab" onclick="btn_listConsultasMedicas()">Consulta Medica</a></li>
 					<li><a href="#tab3" data-toggle="tab" onclick="btn_listLab()"> Laboratorios</a></li>
 					<li><a href="#tab4" data-toggle="tab" onclick="btn_funlistserRX()"> Rayos X</a></li>
