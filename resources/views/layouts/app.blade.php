@@ -528,7 +528,7 @@
 		</div>
 
 		<!-- modal recetario virtual -->
-		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="1000">
+		<div id="md-form1_recetario" class="modal fade md-slideRight " tabindex="-1" data-width="80%">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
 				<h3>Crear Nueva receta</h3>
@@ -536,56 +536,60 @@
 			<div class="modal-body">
 				<div class="row">
 					<form id="form-createRecetario">
-						<div class="form-group col-lg-2">
-							<label>Farmaceutico</label>
-							<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
-								<option value="">Selecionar ... </option>
-								<option value="paracetamol">paracetamol</option>
-								<option value="ibuprofeno">ibuprofeno</option>
-								<option value="ibuprofeno">iboprofeno</option>
-								<option value="quetorolaco">quetorolaco </option>
-							</select>
-						</div>
-						<div class="form-group col-lg-3">
-							<label>Forma Farmaceutica</label>
-							<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
-						</div>
-						<div class="form-group col-lg-2">
-							<label>Via de administración</label>
-							<select class="form-control" data-size="10" data-live-search="true" name="c_via" id="c_via" require>
-								<option value="">Selecionar ... </option>
-								<option value="I.M.">I.M.</option>
-								<option value="I.V">I.V</option>
-								<option value="Sub. Cut.">Sub. Cut.</option>
-								<option value="V.O.">V.O.</option>
-								<option value="Canalización">Canalización</option>
-							</select>
-						</div>
-						<div class="form-group col-lg-4">
-							<label>Dosis Duración</label>
-							<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
-						</div>
-						<div class="form-group col-lg-1">
-							<br>
-							<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-save"></i></button>
-						</div>
-						<div class="form-group col-lg-12">
-							<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="2"></textarea>
-							<span class="help-block "><strong>Datos del tratamiento</strong></span>
+						<div class="col-lg-9">
+							<div class="form-group col-lg-2">
+								<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
+									<option value="">Selecionar ... </option>
+									<option value="paracetamol">paracetamol</option>
+									<option value="ibuprofeno">ibuprofeno</option>
+									<option value="ibuprofeno">iboprofeno</option>
+									<option value="quetorolaco">quetorolaco </option>
+								</select>
+								<label>Farmaceutico</label>
+							</div>
+							<div class="form-group col-lg-3">
+								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
+								<label>Forma Farmaceutica</label>
+							</div>
+							<div class="form-group col-lg-2">
+								<select class="form-control" data-size="10" data-live-search="true" name="c_via" id="c_via" require>
+									<option value="">Selecionar ... </option>
+									<option value="I.M.">I.M.</option>
+									<option value="I.V">I.V</option>
+									<option value="Sub. Cut.">Sub. Cut.</option>
+									<option value="V.O.">V.O.</option>
+									<option value="Canalización">Canalización</option>
+								</select>
+								<label>Via de administración</label>
+							</div>
+							<div class="form-group col-lg-4">
+								<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
+								<label>Dosis Duración</label>
+							</div>
+							<div class="form-group col-lg-1">
+								<br>
+								<button class="btn btn-theme-inverse" type="submit" id="btn-addMedicamento"><i class="fa fa-save"></i></button>
+							</div>
 						</div>
 					</form>
 				</div>
-				<table class="table">
-					<thead>
-						<th>Medicamento </th>
-						<th>Forma farmaceutica</th>
-						<th>Via</th>
-						<th>Dosis</th>
-						<th></th>
-					</thead>
-					<tbody align="center" id="tableBodilistMedicamentos">
-					</tbody>
-				</table>
+				<div class="col-lg-9">
+					<table class="table col-lg-9">
+						<thead>
+							<th>Medicamento </th>
+							<th>Forma farmaceutica</th>
+							<th>Via</th>
+							<th>Dosis</th>
+							<th></th>
+						</thead>
+						<tbody align="center" id="tableBodilistMedicamentos">
+						</tbody>
+					</table>
+				</div>
+				<div class="form-group col-lg-3">
+					<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="5"></textarea>
+					<span class="help-block "><strong>Datos del tratamiento</strong></span>
+				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-inverse"><i class="fa fa-refresh" id="refreshRecetario"></i></button>
@@ -1094,10 +1098,10 @@
 									</label>
 								</div>
 							</div>
-		
+
 							<div class="col-md-7">
 								<div class="form-group">
-									<label >Facturado / Autorizado</label>
+									<label>Facturado / Autorizado</label>
 									<div id="sec_input_pago_1">
 										<input type="text" class="form-control" placeholder="# de factura" id="inp_tipoPago_fac">
 									</div>
@@ -1110,7 +1114,7 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Medico Tratante</label>
-								<input type="text" class="form-control"  id="lab_medicoTrtante">
+								<input type="text" class="form-control" id="lab_medicoTrtante">
 							</div>
 						</div>
 					</div>
