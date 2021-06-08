@@ -1,6 +1,5 @@
-<section class="panel">
+<section class="panel" >
 	<div class="panel-body">
-		<div class="invoice">
 			<div class="row">
 				<div class="col-sm-6">
 					<a href="#"><img src="{{ asset('Plantilla/assets/img/logo_reporte.png')}}"></a>
@@ -200,7 +199,5 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- //invoice -->
 	</div>
 </section>

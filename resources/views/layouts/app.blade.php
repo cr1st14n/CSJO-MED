@@ -176,9 +176,7 @@
 			<div id="content">
 				<div class="row">
 					<div class="col-lg-9" id="panel1">
-						<section class="panel">
-
-						</section>
+						
 					</div>
 					<div class="col-lg-3">
 						<div class="well bg-theme">
@@ -599,7 +597,7 @@
 		</div>
 
 		<!-- modal para vista previa de la receta medica -->
-		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="800">
+		<div id="md-form1_vistaReceta" class="modal fade md-stickTop" tabindex="-1" data-width="600">
 
 			<div class="moda-body" height=800 id="" style="background-color: black;">
 				<div align="center" id="loadingAni">
@@ -622,7 +620,7 @@
 
 					</svg>
 				</div>
-				<embed src="" type="" width="800" height="600" id="linkUrlPdf">
+				<embed src="" type="" width="600" height="800" id="linkUrlPdf">
 			</div>
 
 		</div>
