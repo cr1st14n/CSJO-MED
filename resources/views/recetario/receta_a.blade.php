@@ -91,7 +91,8 @@
         <tr>
             <td align="left">
                 <p>
-                    <strong>Nota: en esta seccion se dispondra de datos referentes a dosis de los medicamentos </strong>
+                    <strong>Nota:{{$descMedico}} </strong>
+                    {{$descMedico}}
                 </p>
             </td>
             <td align="right">

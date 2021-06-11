@@ -28,6 +28,7 @@ class recetarioMController extends Controller
         $rm->id_usuMed = Auth::user()->id;
         $rm->id_Paciente = $request['paciente'];
         $rm->rm_Contenido = serialize($request['data']);
+        $rm->rm_detalleRecete = $request['detalleRecete'];
 
         $rm->ca_usu_cod = Auth::user()->id;
         $rm->ca_tipo = 'create';
@@ -56,6 +57,7 @@ class recetarioMController extends Controller
         $datos = recetarioM::where('id',$data)->first();
         $medico= User::where('id',$datos['id_usuMed'])->select('usu_nombre','usu_apPaterno','usu_apMaterno')->first();
         $medic=unserialize($datos['rm_Contenido']);
+        $descMedic=$datos['rm_detalleRecete'];
         
         $Paciente= pacientes::where('pa_id',$datos['id_Paciente'])->select('pa_id','pa_nombre','pa_appaterno','pa_apmaterno')->first();
         $Paciente1=''.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno'].'';
@@ -77,7 +79,7 @@ class recetarioMController extends Controller
             array_push($receta, $data);
         }
         // return $receta;
-        $recetaB= implode(",",$receta);
+        $recetaB= implode(",",$receta); 
         // return $recetaC= $recetaA
 
         $datosQr= ''.$recetaA.''.$recetaB.'';
@@ -85,7 +87,7 @@ class recetarioMController extends Controller
         $Qr= QrCode::generate($datosQr);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
-        $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1]);
+        $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1,"descMedico"=>$descMedic,"farmacos"=>$medic]);
         $dompdf->setPaper('A5', 'portrait');
         return $dompdf->stream('invoice.pdf');
     }

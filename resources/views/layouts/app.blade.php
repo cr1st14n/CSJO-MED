@@ -534,8 +534,9 @@
 			<div class="modal-body">
 				<div class="row">
 					<form id="form-createRecetario">
-						<div class="col-lg-9">
+						<div class="col-lg-12">
 							<div class="form-group col-lg-2">
+								<label>Farmaceutico</label>
 								<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
 									<option value="">Selecionar ... </option>
 									<option value="paracetamol">paracetamol</option>
@@ -543,13 +544,13 @@
 									<option value="ibuprofeno">iboprofeno</option>
 									<option value="quetorolaco">quetorolaco </option>
 								</select>
-								<label>Farmaceutico</label>
 							</div>
 							<div class="form-group col-lg-3">
-								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
 								<label>Forma Farmaceutica</label>
+								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
 							</div>
 							<div class="form-group col-lg-2">
+								<label>Via de administración</label>
 								<select class="form-control" data-size="10" data-live-search="true" name="c_via" id="c_via" require>
 									<option value="">Selecionar ... </option>
 									<option value="I.M.">I.M.</option>
@@ -558,11 +559,10 @@
 									<option value="V.O.">V.O.</option>
 									<option value="Canalización">Canalización</option>
 								</select>
-								<label>Via de administración</label>
 							</div>
 							<div class="form-group col-lg-4">
-								<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
 								<label>Dosis Duración</label>
+								<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
 							</div>
 							<div class="form-group col-lg-1">
 								<br>
@@ -585,8 +585,8 @@
 					</table>
 				</div>
 				<div class="form-group col-lg-3">
-					<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="5"></textarea>
-					<span class="help-block "><strong>Datos del tratamiento</strong></span>
+				<label for=""> Descripion opcional del tratamiento</label>
+					<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="8"></textarea>
 				</div>
 			</div>
 			<div class="modal-footer">

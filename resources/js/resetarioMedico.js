@@ -83,6 +83,7 @@ function registerReceta(tipo) {
             data: {
                 _token: $("meta[name=csrf-token]").attr("content"),
                 paciente: $("#paciente_id_HCL").val(),
+                detalleRecete: $("#c_otroTra").val(),
                 data: Receta,
             },
             // dataType: "dataType",
