@@ -57,6 +57,9 @@ class recetarioMController extends Controller
         $datos = recetarioM::where('id',$data)->first();
         $medico= User::where('id',$datos['id_usuMed'])->select('usu_nombre','usu_apPaterno','usu_apMaterno')->first();
         $medic=unserialize($datos['rm_Contenido']);
+
+        // return $medic;
+
         $descMedic=$datos['rm_detalleRecete'];
         
         $Paciente= pacientes::where('pa_id',$datos['id_Paciente'])->select('pa_id','pa_nombre','pa_appaterno','pa_apmaterno')->first();
@@ -84,7 +87,7 @@ class recetarioMController extends Controller
 
         $datosQr= ''.$recetaA.''.$recetaB.'';
         // return $datosQr;
-        $Qr= QrCode::generate($datosQr);
+        $Qr= QrCode::generate($recetaA);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
         $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1,"descMedico"=>$descMedic,"farmacos"=>$medic]);

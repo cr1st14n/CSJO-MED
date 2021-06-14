@@ -40,7 +40,7 @@
     <table width="100%">
         <tr>
             <td width=40%><strong>Paciente:</strong>{{$paciente1}}</td>
-            <td><strong>Medico:</strong> {{$medico->usu_nombre  }} {{ $medico->usu_appaterno  }} {{  $medico->usu_apMaterno}}</td>
+            <td><strong>Medico:</strong> {{$medico->usu_nombre }} {{ $medico->usu_appaterno  }} {{ $medico->usu_apMaterno}}</td>
         </tr>
     </table>
     <table width="100%">
@@ -53,6 +53,14 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($farmacos as $key=>$medic)
+            <tr>
+                <td>{{ $farmacos[$key]['a']}}</td>
+                <td align="center">{{ $farmacos[$key]['b']}}</td>
+                <td align="center">{{ $farmacos[$key]['c']}}</td>
+                <td align="center">{{ $farmacos[$key]['d']}}</td>
+            </tr>
+            @endforeach
             <!-- <tr>
                 <th scope="row">1</th>
                 <td>Playstation IV - Black</td>
@@ -60,13 +68,6 @@
                 <td align="right">1400.00</td>
                 <td align="right">1400.00</td>
             </tr> -->
-            <tr>
-                <td>Paracetamol</td>
-                <td align="center">pastillas de 400mg</td>
-                <td align="center">I.V.</td>
-                <td align="center">tomar cada 8 horas</td>
-            </tr>
-
         </tbody>
 
         <!-- <tfoot>
