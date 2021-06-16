@@ -536,7 +536,7 @@
 					<form id="form-createRecetario">
 						<div class="col-lg-12">
 							<div class="form-group col-lg-2">
-								<label>Farmaceutico</label>
+								<label>Droga (Medicamiento)</label>
 								<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
 									<option value="">Selecionar ... </option>
 									<option value="paracetamol">paracetamol</option>
@@ -547,21 +547,39 @@
 							</div>
 							<div class="form-group col-lg-3">
 								<label>Forma Farmaceutica</label>
+								<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
+									<option value="">Selecionar ... </option>
+									<option value="paracetamol">paracetamol</option>
+									<option value="ibuprofeno">ibuprofeno</option>
+									<option value="ibuprofeno">iboprofeno</option>
+									<option value="quetorolaco">quetorolaco </option>
+								</select>
+								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
+							</div>
+							<div class="form-group col-lg-3">
+								<label>Forma Farmaceutica</label>
 								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
 							</div>
 							<div class="form-group col-lg-2">
 								<label>Via de administración</label>
 								<select class="form-control" data-size="10" data-live-search="true" name="c_via" id="c_via" require>
 									<option value="">Selecionar ... </option>
-									<option value="I.M.">I.M.</option>
-									<option value="I.V">I.V</option>
-									<option value="Sub. Cut.">Sub. Cut.</option>
-									<option value="V.O.">V.O.</option>
-									<option value="Canalización">Canalización</option>
+									<option value="ocular">Ocular</option>
+									<option value="V.Topico">Ótica</option>
+									<option value="V.Topico">Nasal</option>
+									<option value="V.Topico">Inhalatoria</option>
+									<option value="V.O.">Oral</option>
+									<option value="Sub. Cut.">Sub. Cutania</option>
+									<option value="V.Topico">Topico</option>
+									<option value="I.M.">Intra Muscular</option>
+									<option value="I.V">Intra Muscular</option>
+									<option value="V.R.">Rectal</option>
+									<option value="V.Topico">V.Vaginal</option>
+									<option value="V.Topico">Nebulización</option>
 								</select>
 							</div>
 							<div class="form-group col-lg-4">
-								<label>Dosis Duración</label>
+								<label>Duración del tratamiento</label>
 								<input type="text" class="form-control rounded" id="c_dosis" name="c_dosis" required>
 							</div>
 							<div class="form-group col-lg-1">

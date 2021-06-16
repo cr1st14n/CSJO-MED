@@ -70,23 +70,18 @@ class recetarioMController extends Controller
         '  |P.:  '.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno']  .
         '  |F.:  '.$datos['created_at']    
         ;
-        // return $recetaA;
-        $receta= array();
-        $cont=0;
-        foreach ($medic as $key => $value) {
+        // $receta= array();
+        // $cont=0;
+        // foreach ($medic as $key => $value) {
             
-            $data='  *'.($key+1).') medicamento:'. $value['a'].
-            ',Forma:'. $value['b'].
-            ',Via:'. $value['c'].
-            ',Dosis:'. $value['d'].' ';
-            array_push($receta, $data);
-        }
-        // return $receta;
-        $recetaB= implode(",",$receta); 
-        // return $recetaC= $recetaA
-
-        $datosQr= ''.$recetaA.''.$recetaB.'';
-        // return $datosQr;
+        //     $data='  *'.($key+1).') medicamento:'. $value['a'].
+        //     ',Forma:'. $value['b'].
+        //     ',Via:'. $value['c'].
+        //     ',Dosis:'. $value['d'].' ';
+        //     array_push($receta, $data);
+        // }
+        // $recetaB= implode(",",$receta); 
+        // $datosQr= ''.$recetaA.''.$recetaB.'';
         $Qr= QrCode::generate($recetaA);
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();

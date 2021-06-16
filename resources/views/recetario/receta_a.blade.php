@@ -97,6 +97,7 @@
             </tr>
         </tfoot> -->
     </table>
+    <hr>
     <table width="100%">
         <tbody>
             <tr>
@@ -105,7 +106,7 @@
                     {{$descMedico}}
                 </td>
                 <td align="right">
-                    <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="70">
+                    <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="50">
                 </td>
                 <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
             </tr>
