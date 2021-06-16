@@ -66,9 +66,9 @@ class recetarioMController extends Controller
         $Paciente1=''.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno'].'';
         // return $medic;
         $recetaA='"Centro de salud Jesus Obero"  '.
-        '  medico:  '.$medico['usu_nombre']  .$medico['usu_apPaterno']  .$medico['usu_apMaterno']  .
-        '  Paciente:  '.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno']  .
-        '  fecha:  '.$datos['created_at']  .''  
+        '  |#.:  '.$datos['id'].  
+        '  |P.:  '.$Paciente['pa_nombre'].' '.$Paciente['pa_appaterno'].'  '. $Paciente['pa_apmaterno']  .
+        '  |F.:  '.$datos['created_at']    
         ;
         // return $recetaA;
         $receta= array();
@@ -91,7 +91,7 @@ class recetarioMController extends Controller
         // return view('recetario.receta_a');
         // $dompdf = new Dompdf();
         $dompdf = PDF::loadView('recetario.receta_a',["qr"=>$Qr,"medico"=>$medico,"paciente1"=>$Paciente1,"descMedico"=>$descMedic,"farmacos"=>$medic]);
-        $dompdf->setPaper('A5', 'portrait');
+        $dompdf->setPaper(array(0,0,396.85,612.2835), 'portrait');
         return $dompdf->stream('invoice.pdf');
     }
 }

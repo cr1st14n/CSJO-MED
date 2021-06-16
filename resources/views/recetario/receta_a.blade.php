@@ -10,6 +10,14 @@
             font-family: Verdana, Arial, sans-serif;
         }
 
+        body {
+            border-style: solid;
+            border-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-color: black;
+        }
+
         table {
             font-size: x-small;
         }
@@ -43,6 +51,7 @@
             <td><strong>Medico:</strong> {{$medico->usu_nombre }} {{ $medico->usu_appaterno  }} {{ $medico->usu_apMaterno}}</td>
         </tr>
     </table>
+    <hr><br>
     <table width="100%">
         <thead style="background-color: lightgray;">
             <tr>
@@ -58,7 +67,7 @@
                 <td>{{ $farmacos[$key]['a']}}</td>
                 <td align="center">{{ $farmacos[$key]['b']}}</td>
                 <td align="center">{{ $farmacos[$key]['c']}}</td>
-                <td align="center">{{ $farmacos[$key]['d']}}</td>
+                <td align="center" style="font-size: 9px;">{{ $farmacos[$key]['d']}}</td>
             </tr>
             @endforeach
             <!-- <tr>
@@ -89,18 +98,18 @@
         </tfoot> -->
     </table>
     <table width="100%">
-        <tr>
-            <td align="left">
-                <p>
-                    <strong>Nota:{{$descMedico}} </strong>
+        <tbody>
+            <tr>
+                <td align="left" >
+                    <strong>Nota:</strong>
                     {{$descMedico}}
-                </p>
-            </td>
-            <td align="right">
-                <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="100">
-            </td>
-            <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
-        </tr>
+                </td>
+                <td align="right">
+                    <img src="data:image/png;base64,{!! base64_encode($qr)!!}" alt="" width="70">
+                </td>
+                <!-- <td valign="top" align="right"><br><img src="https://static-unitag.com/images/help/QRCode/qrcode.png?mh=07b7c2a2" width="100px" height="100px" alt=""> -->
+            </tr>
+        </tbody>
     </table>
 </body>
 
