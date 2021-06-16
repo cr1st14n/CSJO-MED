@@ -545,17 +545,7 @@
 									<option value="quetorolaco">quetorolaco </option>
 								</select>
 							</div>
-							<div class="form-group col-lg-3">
-								<label>Forma Farmaceutica</label>
-								<select class="form-control" data-size="10" data-live-search="true" name="c_medi" id="c_medi" require>
-									<option value="">Selecionar ... </option>
-									<option value="paracetamol">paracetamol</option>
-									<option value="ibuprofeno">ibuprofeno</option>
-									<option value="ibuprofeno">iboprofeno</option>
-									<option value="quetorolaco">quetorolaco </option>
-								</select>
-								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
-							</div>
+							
 							<div class="form-group col-lg-3">
 								<label>Forma Farmaceutica</label>
 								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
@@ -817,21 +807,14 @@
 									</div>
 								</div>
 								<div class="col-lg-5">
-									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Inyectable: </span>
-										<input type="text" class="form-control" name="inyectable">
-									</div>
-									<div class="col-md-12">
-										<span style="color:dimgrey ;font-weight:bolder">Suero:<span>
-												<input type="text" class="form-control" name="suero">
-									</div>
+									
 									<div class="col-md-12">
 										<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas:</span>
-										<textarea class="form-control" name="curacionSuturas" rows="2"></textarea>
+										<textarea class="form-control" name="curacionSuturas" rows="5"></textarea>
 									</div>
 									<div class="col-md-12">
 										<span style="color:dimgrey ;font-weight:bolder">Otras actividades de enfermeria:</span>
-										<textarea class="form-control" name="otros" rows="2"></textarea>
+										<textarea class="form-control" name="otros" rows="5"></textarea>
 									</div>
 								</div>
 							</div>

@@ -48,7 +48,6 @@ function listconsulmedic1(data) {
             <td>
                 <span class="tooltip-area">
                     <a href="javascript:void(0)" onclick="showConsulMedica(${i.id})" class="btn btn-default btn-sm" title="Edit"><i class="fa fa-book"></i></a>
-                    <a href="javascript:void(0)" onclick="deleteConsulMedica(${i.id})" class="btn btn-default btn-sm" title="Delete"><i class="fa fa-trash-o"></i></a>
                 </span>
             </td>
         </tr>
@@ -86,14 +85,6 @@ function showConsulMedica(id) {
                     </li>
                 </div>
                 <div class="col-lg-6">
-                    <li class="list-group-item">
-                        <label for="">Inyectable:</label>
-                        <h4>${response.b.inyectable}</h4>
-                    </li>
-                    <li class="list-group-item">
-                        <label for="">Suero:</label>
-                        <h4>${response.b.suero}</h4>
-                    </li>
                     <li class="list-group-item">
                         <label for="">Curaciones o Suturas:</label>
                         <h4>${response.b.curacionSuturas}</h4>
