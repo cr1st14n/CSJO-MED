@@ -1125,6 +1125,7 @@
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form1" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form2" onclick="showMdFormLab(2)">Coagulograma</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form3" onclick="showMdFormLab(3)">Biometria Hematica</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form4" onclick="showMdFormLab(4)">Grupo Sanguineo</button>
 							</div>
 						</div>
 					</div>
@@ -1363,6 +1364,7 @@
 		<script type="text/javascript" src="{{ asset('resources/js/servrx.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('resources/js/consultaMedica.js') }}"></script>
 		<script type="text/javascript" src="{{ asset('resources/js/laboratorio.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('resources/js/laboratorioFormulario.js') }}"></script>
 </body>
 
 </html>
