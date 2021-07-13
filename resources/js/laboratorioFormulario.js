@@ -251,47 +251,25 @@ function contentFormLab(tipo) {
                         <span class="input-group-addon">UI/mL &lt; a 200UI/mL</span>
                   </div>
             <br>
-            <h4>Widal</h4>      
-                  <div class="input-group">
-                  <span class="input-group-addon">Eberth "O"</span>
-                        <input type="text" name="EberthO" class="form-control" placeholder="O" autocomplete="off">
-                        <span class="input-group-addon"></span>
-                  </div>
-                  <div class="input-group">
-                  <span class="input-group-addon">Eberth H</span>
-                        <input type="text" name="EberthH" class="form-control" placeholder="H" autocomplete="off">
-                        <span class="input-group-addon"></span>
-                  </div>
-                  <div class="input-group">
-                  <span class="input-group-addon">Paratifus "A"</span>
-                        <input type="text" name="ParatifusA" class="form-control" placeholder="A" autocomplete="off">
-                        <span class="input-group-addon"></span>
-                  </div>
-                  <div class="input-group">
-                  <span class="input-group-addon">Paratifus "B"</span>
-                        <input type="text" name="ParatifusB" class="form-control" placeholder="B" autocomplete="off">
-                        <span class="input-group-addon"></span>
-                  </div>
-            <br>
             <h4>Antigenos Febriles (WIDAL)</h4>   
                   <div class="input-group">
-                    <span class="input-group-addon">Eberth</span>
-                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">Eberth "O"</span>
+                    <input type="text" name="EberthO" class="form-control" placeholder="Linfocitos" autocomplete="off">
                     <span class="input-group-addon">1/80</span>
                   </div>
                     <div class="input-group">
-                    <span class="input-group-addon">Eberth</span>
-                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">Eberth "H"</span>
+                    <input type="text" name="EberthH" class="form-control" placeholder="Linfocitos" autocomplete="off">
                     <span class="input-group-addon">1/40</span>
                   </div>
                   <div class="input-group">
-                    <span class="input-group-addon">Paratifus</span>
-                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">Paratifus "A"</span>
+                    <input type="text" name="ParatifusA" class="form-control" placeholder="Linfocitos" autocomplete="off">
                     <span class="input-group-addon">1/40</span>
                   </div>
                   <div class="input-group">
-                    <span class="input-group-addon">Paratifus</span>
-                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">Paratifus "B"</span>
+                    <input type="text" name="ParatifusB" class="form-control" placeholder="Linfocitos" autocomplete="off">
                     <span class="input-group-addon">1/80</span>
                   </div>
             <br>
