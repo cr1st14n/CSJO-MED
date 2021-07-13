@@ -1125,7 +1125,7 @@
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form1" onclick="showMdFormLab(1)">Bioquimica Clinica</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form2" onclick="showMdFormLab(2)">Coagulograma</button>
 								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form3" onclick="showMdFormLab(3)">Biometria Hematica</button>
-								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form4" onclick="showMdFormLab(4)">Grupo Sanguineo</button>
+								<button type="button" class="btn btn-theme-inverse  btn-transparent" id="btn_form4" onclick="showMdFormLab(4)">Serologia</button>
 							</div>
 						</div>
 					</div>

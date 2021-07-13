@@ -250,48 +250,80 @@ function contentFormLab(tipo) {
                         <input type="text" name="Cayados" class="form-control" placeholder="Cayados" autocomplete="off">
                         <span class="input-group-addon">UI/mL &lt; a 200UI/mL</span>
                   </div>
+            <br>
+            <h4>Widal</h4>      
                   <div class="input-group">
-                  <span class="input-group-addon">n</span>
-                        <input type="text" name="Neutrofilos" class="form-control" placeholder="Neutrofilos" autocomplete="off">
+                  <span class="input-group-addon">Eberth "O"</span>
+                        <input type="text" name="EberthO" class="form-control" placeholder="O" autocomplete="off">
                         <span class="input-group-addon"></span>
                   </div>
-            <br>
-            <h4>Prueba Rapida de VIH</h4>      
-
                   <div class="input-group">
-                  <span class="input-group-addon">Muestra</span>
-                        <input type="text" name="muestra" class="form-control" placeholder="Eosinófilos" autocomplete="off">
+                  <span class="input-group-addon">Eberth H</span>
+                        <input type="text" name="EberthH" class="form-control" placeholder="H" autocomplete="off">
+                        <span class="input-group-addon"></span>
                   </div>
                   <div class="input-group">
-                  <span class="input-group-addon">Examen Solicitado</span>
-                        <input type="text" name="examenSolicitado" class="form-control" placeholder="Basófilos" autocomplete="off">
+                  <span class="input-group-addon">Paratifus "A"</span>
+                        <input type="text" name="ParatifusA" class="form-control" placeholder="A" autocomplete="off">
+                        <span class="input-group-addon"></span>
                   </div>
                   <div class="input-group">
-                  <span class="input-group-addon">Resultado</span>
-                        <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                  <span class="input-group-addon">Paratifus "B"</span>
+                        <input type="text" name="ParatifusB" class="form-control" placeholder="B" autocomplete="off">
+                        <span class="input-group-addon"></span>
                   </div>
             <br>
             <h4>Antigenos Febriles (WIDAL)</h4>   
                   <div class="input-group">
-                  <span class="input-group-addon">Eberth</span>
-                  <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
-                  <span class="input-group-addon">1/80</span>
+                    <span class="input-group-addon">Eberth</span>
+                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">1/80</span>
+                  </div>
+                    <div class="input-group">
+                    <span class="input-group-addon">Eberth</span>
+                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">1/40</span>
                   </div>
                   <div class="input-group">
-                  <span class="input-group-addon">Eberth</span>
-                  <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
-                  <span class="input-group-addon">1/40</span>
+                    <span class="input-group-addon">Paratifus</span>
+                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">1/40</span>
                   </div>
                   <div class="input-group">
-                  <span class="input-group-addon">Paratifus</span>
-                  <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
-                  <span class="input-group-addon">1/40</span>
+                    <span class="input-group-addon">Paratifus</span>
+                    <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                    <span class="input-group-addon">1/80</span>
                   </div>
-                  <div class="input-group">
-                  <span class="input-group-addon">Paratifus</span>
-                  <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
-                  <span class="input-group-addon">1/80</span>
-                  </div>
+            <br>
+            <h4>Prueba Rapida de VIH</h4>      
+
+                <div class="input-group">
+                <span class="input-group-addon">Muestra</span>
+                        <input type="text" name="muestra" class="form-control" placeholder="Eosinófilos" autocomplete="off">
+                </div>
+                <div class="input-group">
+                <span class="input-group-addon">Examen Solicitado</span>
+                        <input type="text" name="examenSolicitado" class="form-control" placeholder="Basófilos" autocomplete="off">
+                </div>
+                <div class="input-group">
+                <span class="input-group-addon">Resultado</span>
+                        <input type="text" name="resultado" class="form-control" placeholder="Linfocitos" autocomplete="off">
+                </div>
+            <br>
+            <h4>Prueba de embarazo (HCG) </h4>      
+
+                <div class="input-group">
+                <span class="input-group-addon">F.U.M. </span>
+                        <input type="text" name="FUM" class="form-control" placeholder="" autocomplete="off">
+                </div>
+                <div class="input-group">
+                <span class="input-group-addon">Muestra</span>
+                        <input type="text" name="Muestra" class="form-control" placeholder="Muestra" autocomplete="off">
+                </div>
+                <div class="input-group">
+                <span class="input-group-addon">Resultado</span>
+                        <input type="text" name="resultado" class="form-control" placeholder="Resultado" autocomplete="off">
+                </div>
               </div>
           </div>
       <hr>
