@@ -99,9 +99,9 @@ function showMdFormLab(tipo) {
                 $("#lab_form1").html(contentFormLab(3));
                 $("#md_lab_form1").modal("show");
                 break;
-                case 4:
-                    $("#lab_form1").html(contentFormLab(4));
-                    $("#md_lab_form1").modal("show");
+            case 4:
+                $("#lab_form1").html(contentFormLab(4));
+                $("#md_lab_form1").modal("show");
                 break;
             default:
                 break;
@@ -469,7 +469,7 @@ function funDectTipoPago(tipo) {
 
 function regLab_create() {
     var tipoPago = $("input:radio[name=lab_TipoPago]:checked").val();
-    let medicoTratante= $('#lab_medicoTrtante').val();
+    let medicoTratante = $("#lab_medicoTrtante").val();
     switch (tipoPago) {
         case "1":
             var medioEjec = $("#inp_tipoPago_fac").val();
