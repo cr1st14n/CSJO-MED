@@ -459,6 +459,106 @@
     </table>
     <hr class="line1">
     @break
+    @case("4")
+    <table width="100%">
+        <tr>
+            <th colspan="2" align="center">Biometria Hematica</th>
+        </tr>
+        <tr>
+            <td style="width: min-content;">
+                <table width="100%">
+                    <thead style="background-color: lightgray;">
+                        <tr>
+                            <th colspan="4" align="center">Biometria Hematica</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size:xx-small">
+                        <tr>
+                            <td align="left">Globulos Rojos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][0]['value']}}</td>
+                            <td align="right">millones/mm3</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hemoglobina</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][1]['value']}}</td>
+                            <td align="right">g/dL</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Hematocrito</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][2]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">VES</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][3]['value']}}</td>
+                            <td align="right">mm/hora</td>
+                        </tr>
+                        <tr>
+                            <td align="left">LEUCOCITOS</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][4]['value']}}</td>
+                            <td align="right">x/mm3</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Cayados</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][5]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Neutrofilos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][6]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Eosinofilos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][7]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Basófilos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][8]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Linfocitos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][9]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Monocitos</td>
+                            <td align="center" bgcolor="#DADADA">{{$lbs[$clave]['data'][10]['value']}}</td>
+                            <td align="right">%</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+            <td style="width: min-content;">
+                <table width="100%">
+                    <thead style="background-color: lightgray;">
+                        <tr>
+                            <th colspan="4" align="center">Parametros de control</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="left">Tiempo de Protrombina</td>
+                            <td align="right">13 segundos</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Ac. Urico</td>
+                            <td align="right">100 %</td>
+                        </tr>
+                        <tr>
+                            <td align="left">INR</td>
+                            <td align="right">1.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr class="line1">
+    @break
 
     @endswitch
     
