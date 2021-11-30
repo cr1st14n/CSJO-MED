@@ -9,6 +9,7 @@ use App\pacientes;
 use App\recetarioM;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HistoriaClinciaController extends Controller
 {
@@ -86,13 +87,17 @@ class HistoriaClinciaController extends Controller
         ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
         ->get();
 
-        $resp=atencion::where('atencion.ate_estAteMed',0)
+        $resp=atencion::where('atencion.ate_estAteMed',0)->Where('ate_med',Auth::user()->id)
         ->join('pacientes as pa','pa.pa_id','atencion.pa_id')
-        ->select('atencion.pa_id','atencion.ate_procedimiento','pa.pa_nombre','pa.pa_appaterno')->limit('10')->get();
+        ->select('atencion.id','atencion.pa_id','atencion.ate_procedimiento','pa.pa_nombre','pa.pa_appaterno')->limit('10')->get();
         return $resp;
     }
     public function nroPacienteCola()
     {
         return citPrev::where('cp_med',17)->where('cp_estado',1)->count();
+    }
+    public function concluirAte($request)
+    {
+        
     }
 }

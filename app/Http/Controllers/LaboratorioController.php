@@ -86,11 +86,6 @@ class LaboratorioController extends Controller
             "da" => $da, "pa" => $paciente, "dp" => $datoPago, "lbs" => $lbs, "ID" => $data['id'], "medTra" => $data['lab_medTratante']
         ]);
         
-
-
-
-
-
         // return $lbs[0]['tipo'];
         // return \array_search('2',$lbs);
         // return $lab[0]['data'][1]['name'];

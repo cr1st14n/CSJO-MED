@@ -3,6 +3,7 @@
 use App\descargoMedicoCont;
 use App\Http\Controllers\conMedController;
 use App\Http\Controllers\ConsClinicaController;
+use App\Http\Controllers\HistoriaClinciaController;
 use App\Http\Controllers\LaboratorioController;
 use App\Http\Controllers\recetarioMController;
 use App\Http\Controllers\ServrxController;
@@ -21,10 +22,12 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('home', 'homeController@index')->name('home');
+
 Route::group(['prefix' => 'historiaClinica'], function () {
     Route::get('hcl', 'HistoriaClinciaController@showHCL');
-    Route::get('colaPacienteMedAten', 'HistoriaClinciaController@colaPacienteMedAten');
+    Route::get('colaPacienteMedAten', [HistoriaClinciaController::class,'colaPacienteMedAten']);
     Route::get('nroPacienteCola', 'HistoriaClinciaController@nroPacienteCola');
+    Route::post('concluirAte', [HistoriaClinciaController::class,'concluirAte']);
 });
 Route::group(['prefix' => 'cotizacion'], function () {
     Route::post('create', 'CotizacionController@create');

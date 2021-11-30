@@ -14,6 +14,7 @@ function colaPacienteMedAten() {
                                 <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/historiaClinica2.png"  width="50" height="50" /></div>
                             </div>
                             <p style=" color:tan; ">${e.ate_procedimiento}</p>
+                            <button class="btn btn-theme-inverse btn-xs" onclick="concluirCita(${e.id})"><i class="fa fa-check"></i></button>
                              <a href="#" onclick="showHistoriaClinica(${e.pa_id})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
                         </div>`;
                 })
@@ -22,6 +23,22 @@ function colaPacienteMedAten() {
         },
     });
 }
+
+// * funiones para concluir cita
+function concluirCita(id) {
+    console.log(id);
+    $.ajax({
+        type: "post",
+        url: "historiaClinica/concluirAte",
+        data: [],
+        // dataType: "dataType",
+        success: function (response) {
+            
+        }
+    });
+  }
+// *-------------------------------------
+
 
 function showHistoriaClinica(paciente) {
     console.log(paciente);

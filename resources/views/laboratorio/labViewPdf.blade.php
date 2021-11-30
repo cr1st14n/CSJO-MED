@@ -84,7 +84,7 @@
             </td>
         </tr>
     </table>
-    <hr class="line1">
+    <hr class="line1"> <button class="btn btn-theme-inverse btn-xs">Co <i class=""></i></button>
     <!-- end detalle paciente -->
     @foreach($lbs as $clave=>$lb)
 

@@ -211,7 +211,7 @@ function regLab_create() {
 function vistaPdfLab(data) {
     console.log(data);
     // * se procede a abrir modal para imprimir el recetario
-    var url = `http://192.168.0.105/CSJO-MED/laboratorio/viewPdfLabPaciente/${data}`;
+    var url = `laboratorio/viewPdfLabPaciente/${data}`;
     $("#linkUrlPdf").attr("src", url);
     $("#loadingAni").show();
     $("#md-form1_vistaReceta").modal("show");
