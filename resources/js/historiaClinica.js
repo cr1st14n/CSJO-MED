@@ -8,15 +8,15 @@ function colaPacienteMedAten() {
             console.log(response);
             var html2 = response
                 .map(function (e) {
-                    return a=`
-                        <div class="widget-mini-chart align-xs-left">
+                    return (a = `
+                        <div class="widget-mini-chart align-xs-left" id="fichaOrden_${e.id}">
                             <div class="pull-right">
                                 <div class="im-thumbnail"><img alt="" src="Plantilla/assets/img/historiaClinica2.png"  width="50" height="50" /></div>
                             </div>
-                            <p style=" color:tan; ">${e.ate_procedimiento}</p>
                             <button class="btn btn-theme-inverse btn-xs" onclick="concluirCita(${e.id})"><i class="fa fa-check"></i></button>
+                            <p style=" color:tan; ">${e.ate_procedimiento}</p>
                              <a href="#" onclick="showHistoriaClinica(${e.pa_id})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
-                        </div>`;
+                        </div>`);
                 })
                 .join(" ");
             $("#collapseSummary").html(html2);
@@ -30,19 +30,27 @@ function concluirCita(id) {
     $.ajax({
         type: "post",
         url: "historiaClinica/concluirAte",
-        data: [],
+        data: {
+            _token: $("meta[name=csrf-token]").attr("content"),
+            id: id,
+        },
         // dataType: "dataType",
         success: function (response) {
-            
-        }
+            console.log(response['estado']);
+            if (response['estado']) {
+                $('#fichaOrden_'+response['id']).remove();  
+                colaPacienteMedAten();
+            } else {
+                console.log('no funciono');
+            }
+        },
     });
-  }
+}
 // *-------------------------------------
-
 
 function showHistoriaClinica(paciente) {
     console.log(paciente);
-    idPacienteSelect=paciente;
+    idPacienteSelect = paciente;
     $("#form_new_cotizacion").trigger("reset");
     $.ajax({
         type: "GET",
@@ -55,12 +63,12 @@ function showHistoriaClinica(paciente) {
         },
     });
 }
-$('#btn_showFormConsulta').click(function () { 
+$("#btn_showFormConsulta").click(function () {
     console.log(idPacienteSelect);
 });
 function showModalFormConsulta() {
     $("#md-tipoConsulta").modal("show");
-  }
+}
 setInterval(() => {
     $.ajax({
         type: "GET",
@@ -73,7 +81,6 @@ setInterval(() => {
     });
 }, 10000);
 function showModalTipoConsulta() {
-    
     $("#md-tipoConsulta").modal("show");
 }
 function ShowModalAtencion(tipo) {
