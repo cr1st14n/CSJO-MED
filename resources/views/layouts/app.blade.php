@@ -176,7 +176,7 @@
 			<div id="content">
 				<div class="row">
 					<div class="col-lg-9" id="panel1">
-						
+
 					</div>
 					<div class="col-lg-3">
 						<div class="well bg-theme">
@@ -195,10 +195,28 @@
 						</section>
 						<section class="panel">
 							<header class="panel-heading">
-								<h5>Reportes Informes</h5>
+								<strong>Signos Vitales</strong>
 							</header>
 							<div class=" panel-body align-xs-center">
-								<button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button>
+								<!-- <button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button> -->
+								<h5>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								</h5>
+								<h5>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								Dato 1 :  <br>
+								</h5>
 							</div>
 						</section>
 					</div>
@@ -545,7 +563,7 @@
 									<option value="quetorolaco">quetorolaco </option>
 								</select>
 							</div>
-							
+
 							<div class="form-group col-lg-3">
 								<label>Forma Farmaceutica</label>
 								<input type="text" class="form-control rounded" id="c_forma" name="c_forma" required>
@@ -593,7 +611,7 @@
 					</table>
 				</div>
 				<div class="form-group col-lg-3">
-				<label for=""> Descripion opcional del tratamiento</label>
+					<label for=""> Descripion opcional del tratamiento</label>
 					<textarea class="form-control" name="c_otroTra" id="c_otroTra" cols="60" rows="8"></textarea>
 				</div>
 			</div>
@@ -807,7 +825,7 @@
 									</div>
 								</div>
 								<div class="col-lg-5">
-									
+
 									<div class="col-md-12">
 										<span style="color:dimgrey ;font-weight:bolder">Curaciones o suturas:</span>
 										<textarea class="form-control" name="curacionSuturas" rows="5"></textarea>
