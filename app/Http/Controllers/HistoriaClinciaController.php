@@ -82,14 +82,15 @@ class HistoriaClinciaController extends Controller
     }
     public function colaPacienteMedAten(Request $request)
     {
-        citPrev::join('pacientes','pacientes.pa_id','cp_paciente')
-        ->where('cp_med',17)->where('cp_estado',1)->orderBy('cp_time','asc')
-        ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
-        ->get();
+        // citPrev::join('pacientes','pacientes.pa_id','cp_paciente')
+        // ->where('cp_med',17)->where('cp_estado',1)->orderBy('cp_time','asc')
+        // ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
+        // ->get();
 
         $resp=atencion::where('atencion.ate_estAteMed',0)
         ->Where('ate_med',Auth::user()->id)
         ->Where('ate_pago','cancelado')
+        ->whereDate('atencion.created_at',Carbon::now()->format('Y-m-d'))
         ->join('pacientes as pa','pa.pa_id','atencion.pa_id')
         ->select('atencion.id','atencion.pa_id','atencion.ate_procedimiento','pa.pa_nombre','pa.pa_appaterno')->limit('10')->get();
         return $resp;
