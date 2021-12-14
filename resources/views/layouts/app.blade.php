@@ -199,24 +199,22 @@
 							</header>
 							<div class=" panel-body align-xs-center">
 								<!-- <button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button> -->
-								<h5>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								</h5>
-								<h5>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								Dato 1 :  <br>
-								</h5>
+								<table width="100%" id="table_SV_data">
+									<tr align="left">
+										<td style="width:50%">
+											P.A. : <strong>1</strong><br>
+											F.C. : <strong>1</strong><br>
+											F.R. : <strong>1</strong><br>
+											Sat. : <strong>1</strong><br>
+										</td>
+										<td style="width:50%">
+											Temp. : <strong>1</strong><br>
+											Peso : <strong>1</strong><br>
+											Talla : <strong>1</strong><br>
+											IMC : <strong>1</strong><br>
+										</td>
+									</tr>
+								</table>
 							</div>
 						</section>
 					</div>

@@ -24,7 +24,8 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('home', 'homeController@index')->name('home');
 
 Route::group(['prefix' => 'historiaClinica'], function () {
-    Route::get('hcl', 'HistoriaClinciaController@showHCL');
+    Route::get('hcl', [HistoriaClinciaController::class,'showHCL']);
+    Route::get('showSigVi', [HistoriaClinciaController::class,'showSigVi']);
     Route::get('colaPacienteMedAten', [HistoriaClinciaController::class,'colaPacienteMedAten']);
     Route::get('nroPacienteCola', 'HistoriaClinciaController@nroPacienteCola');
     Route::post('concluirAte', [HistoriaClinciaController::class,'concluirAte']);

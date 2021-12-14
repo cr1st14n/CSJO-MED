@@ -60,7 +60,23 @@ function showHistoriaClinica(paciente) {
         success: function (dat) {
             $("#panel1").html(dat);
             $("#md-listPacientesEspera").modal("hide");
+            setTimeout(() => {
+                showSigVi();
+            }, 1000);
         },
+    });
+}
+function showSigVi(e) { 
+    $.ajax({
+        type: "get",
+        url: "historiaClinica/showSigVi",
+        data: {id:idPacienteSelect},
+        // dataType: "dataType",
+        success: function (response) {
+            console.log(response);
+
+            
+        }
     });
 }
 $("#btn_showFormConsulta").click(function () {

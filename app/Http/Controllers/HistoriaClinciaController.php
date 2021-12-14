@@ -7,6 +7,7 @@ use App\citPrev;
 use App\historiaClincia;
 use App\pacientes;
 use App\recetarioM;
+use App\signosvitales;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -66,6 +67,13 @@ class HistoriaClinciaController extends Controller
         return $vista;
     }
 
+    public function showSigVi(Request $request)
+    {
+        $sv=signosvitales::where('sv_idPaciente',$request->input('id'))->latest('id')->first();
+        
+        return $sv;
+    }
+
     public function edit(historiaClincia $historiaClincia)
     {
         //
@@ -83,7 +91,7 @@ class HistoriaClinciaController extends Controller
     public function colaPacienteMedAten(Request $request)
     {
         // citPrev::join('pacientes','pacientes.pa_id','cp_paciente')
-        // ->where('cp_med',17)->where('cp_estado',1)->orderBy('cp_time','asc')
+        // ->where('cp_med',17)->where('cp_estado',1)->orderBy('cp_time','asc')W
         // ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
         // ->get();
 
