@@ -36,12 +36,12 @@ function concluirCita(id) {
         },
         // dataType: "dataType",
         success: function (response) {
-            console.log(response['estado']);
-            if (response['estado']) {
-                $('#fichaOrden_'+response['id']).remove();  
+            console.log(response["estado"]);
+            if (response["estado"]) {
+                $("#fichaOrden_" + response["id"]).remove();
                 colaPacienteMedAten();
             } else {
-                console.log('no funciono');
+                console.log("no funciono");
             }
         },
     });
@@ -60,24 +60,44 @@ function showHistoriaClinica(paciente) {
         success: function (dat) {
             $("#panel1").html(dat);
             $("#md-listPacientesEspera").modal("hide");
-            setTimeout(() => {
-                showSigVi();
-            }, 1000);
+            $("#sector_ani_carga").html(html_ani_carga);
+            showSigVi();
         },
     });
 }
-function showSigVi(e) { 
-    $.ajax({
-        type: "get",
-        url: "historiaClinica/showSigVi",
-        data: {id:idPacienteSelect},
-        // dataType: "dataType",
-        success: function (response) {
-            console.log(response);
+function showSigVi(e) {
+    setTimeout(() => {
+        $.ajax({
+            type: "get",
+            url: "historiaClinica/showSigVi",
+            data: { id: idPacienteSelect },
+            // dataType: "dataType",
+            success: function (response) {
+                console.log(response.sv);
+                console.log(response);
 
-            
-        }
-    });
+                html = `
+                <table width="100%" id="table_SV_data">
+                    <tr align="left">
+                        <td style="width:50%">
+                            P.A. : <strong>${response.sv.sv_pa}</strong><br>
+                            F.C. : <strong>${response.sv.sv_fc}</strong><br>
+                            F.R. : <strong>${response.sv.sv_fr}</strong><br>
+                            Sat. : <strong>${response.sv.sv_st}</strong><br>
+                        </td>
+                        <td style="width:50%">
+                            Temp. : <strong>${response.sv.sv_te}</strong><br>
+                            Peso : <strong>${response.sv.sv_pe}</strong><br>
+                            Talla : <strong>${response.sv.sv_ta}</strong><br>
+                            IMC : <strong>${calcularIMC1(response.sv.sv_ta, response.sv.sv_pe)}</strong><br>
+                        </td>
+                    </tr>
+                </table>
+                `;
+                $("#sector_ani_carga").html(html);
+            },
+        });
+    }, 3000);
 }
 $("#btn_showFormConsulta").click(function () {
     console.log(idPacienteSelect);
@@ -118,4 +138,3 @@ function ShowModalAtencion(tipo) {
     }
 }
 /* Show modal Formularios  */
-

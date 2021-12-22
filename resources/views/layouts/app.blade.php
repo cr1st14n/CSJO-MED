@@ -78,7 +78,73 @@
 		}
 	</style>
 	<!-- css de dropzone para carga de imagenes -->
+
+
+
+	<style>
+		#preloader_1 {
+			position: relative;
+		}
+
+		#preloader_1 span {
+			display: block;
+			bottom: 0px;
+			width: 9px;
+			height: 5px;
+			background: #9b59b6;
+			position: absolute;
+			animation: preloader_1 1.5s infinite ease-in-out;
+		}
+
+		#preloader_1 span:nth-child(2) {
+			left: 11px;
+			animation-delay: .2s;
+
+		}
+
+		#preloader_1 span:nth-child(3) {
+			left: 22px;
+			animation-delay: .4s;
+		}
+
+		#preloader_1 span:nth-child(4) {
+			left: 33px;
+			animation-delay: .6s;
+		}
+
+		#preloader_1 span:nth-child(5) {
+			left: 44px;
+			animation-delay: .8s;
+		}
+
+		@keyframes preloader_1 {
+			0% {
+				height: 5px;
+				transform: translateY(0px);
+				background: #9b59b6;
+			}
+
+			25% {
+				height: 30px;
+				transform: translateY(15px);
+				background: #3498db;
+			}
+
+			50% {
+				height: 5px;
+				transform: translateY(0px);
+				background: #9b59b6;
+			}
+
+			100% {
+				height: 5px;
+				transform: translateY(0px);
+				background: #9b59b6;
+			}
+		}
+	</style>
 	<link href="{{ asset('Plantilla/dropzone/dist/dropzone.css')}}" rel="stylesheet" />
+	<link href="{{ asset('Plantilla/diseños/barraCarga.css')}}" rel="stylesheet" />
 </head>
 
 <body>
@@ -198,8 +264,9 @@
 								<strong>Signos Vitales</strong>
 							</header>
 							<div class=" panel-body align-xs-center">
+								<div id="sector_ani_carga"></div>
 								<!-- <button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button> -->
-								<table width="100%" id="table_SV_data">
+								<!-- <table width="100%" id="table_SV_data">
 									<tr align="left">
 										<td style="width:50%">
 											P.A. : <strong>1</strong><br>
@@ -215,6 +282,19 @@
 										</td>
 									</tr>
 								</table>
+								<div class="contenedor">
+									<span class="char1">C</span>
+									<span class="char2">A</span>
+									<span class="char3">R</span>
+									<span class="char4">G</span>
+									<span class="char5">A</span>
+									<span class="char6">N</span>
+									<span class="char7">D</span>
+									<span class="char8">O</span>
+								</div>
+								<div class="carga">
+									<div class="barra"></div>
+								</div> -->
 							</div>
 						</section>
 					</div>

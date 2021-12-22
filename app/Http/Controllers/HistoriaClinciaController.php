@@ -77,7 +77,7 @@ class HistoriaClinciaController extends Controller
         } else {
             $estado = 0;
         }
-        return $date;
+        // return $date;
         return ['sv' => $sv, 'date' => $date, 'estado' => $estado];
     }
 
