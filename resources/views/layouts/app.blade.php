@@ -260,8 +260,8 @@
 							</div>
 						</section>
 						<section class="panel">
-							<header class="panel-heading">
-								<strong>Signos Vitales</strong>
+							<header class="panel-heading" id="tarjeta_signosV_title">
+								<h4><strong>Signos Vitales</strong>
 							</header>
 							<div class=" panel-body align-xs-center">
 								<div id="sector_ani_carga"></div>

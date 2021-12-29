@@ -89,12 +89,27 @@ function showSigVi(e) {
                             Temp. : <strong>${response.sv.sv_te}</strong><br>
                             Peso : <strong>${response.sv.sv_pe}</strong><br>
                             Talla : <strong>${response.sv.sv_ta}</strong><br>
-                            IMC : <strong>${calcularIMC1(response.sv.sv_ta, response.sv.sv_pe)}</strong><br>
+                            IMC : <strong>${calcularIMC1(
+                                response.sv.sv_ta,
+                                response.sv.sv_pe
+                            )}</strong><br>
                         </td>
                     </tr>
                 </table>
                 `;
+                html2="";
+                if (response.estado == "1") {
+                    html2 = `
+                <h4><strong>Signos Vitales</strong></h4> <span class="label bg-theme-inverse"> Actualizado</span>
+                `;
+                } else {
+                    html2 = `
+                    <h4><strong>Signos Vitales</strong></h4> <span class="label bg-danger"> Desactualizado</span>
+                    `; 
+                }
+                
                 $("#sector_ani_carga").html(html);
+                $("#tarjeta_signosV_title").html(html2);
             },
         });
     }, 3000);
