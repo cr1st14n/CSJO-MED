@@ -75,29 +75,43 @@ function showSigVi(e) {
             success: function (response) {
                 console.log(response.sv);
                 console.log(response);
-
-                html = `
-                <table width="100%" id="table_SV_data">
-                    <tr align="left">
-                        <td style="width:50%">
-                            P.A. : <strong>${response.sv.sv_pa}</strong><br>
-                            F.C. : <strong>${response.sv.sv_fc}</strong><br>
-                            F.R. : <strong>${response.sv.sv_fr}</strong><br>
-                            Sat. : <strong>${response.sv.sv_st}</strong><br>
-                        </td>
-                        <td style="width:50%">
-                            Temp. : <strong>${response.sv.sv_te}</strong><br>
-                            Peso : <strong>${response.sv.sv_pe}</strong><br>
-                            Talla : <strong>${response.sv.sv_ta}</strong><br>
-                            IMC : <strong>${calcularIMC1(
-                                response.sv.sv_ta,
-                                response.sv.sv_pe
-                            )}</strong><br>
-                        </td>
-                    </tr>
-                </table>
+                if (response == 'sin datos') {
+                    break;
+                }
+                html = ``;
+                if (response.sv == null) {
+                    html = `
+                <h4>Sin Registros</h4>
                 `;
-                html2="";
+                } else {
+                    html = `
+                    <table width="100%" id="table_SV_data">
+                        <tr align="left">
+                            <td style="width:50%">
+                                P.A. : <strong>${response.sv.sv_pa}</strong><br>
+                                F.C. : <strong>${response.sv.sv_fc}</strong><br>
+                                F.R. : <strong>${response.sv.sv_fr}</strong><br>
+                                Sat. : <strong>${response.sv.sv_st}</strong><br>
+                            </td>
+                            <td style="width:50%">
+                                Temp. : <strong>${
+                                    response.sv.sv_te
+                                }</strong><br>
+                                Peso : <strong>${response.sv.sv_pe}</strong><br>
+                                Talla : <strong>${
+                                    response.sv.sv_ta
+                                }</strong><br>
+                                IMC : <strong>${calcularIMC1(
+                                    response.sv.sv_ta,
+                                    response.sv.sv_pe
+                                )}</strong><br>
+                            </td>
+                        </tr>
+                    </table>
+                    `;
+                }
+
+                html2 = "";
                 if (response.estado == "1") {
                     html2 = `
                 <h4><strong>Signos Vitales</strong></h4> <span class="label bg-theme-inverse"> Actualizado</span>
@@ -105,9 +119,9 @@ function showSigVi(e) {
                 } else {
                     html2 = `
                     <h4><strong>Signos Vitales</strong></h4> <span class="label bg-danger"> Desactualizado</span>
-                    `; 
+                    `;
                 }
-                
+
                 $("#sector_ani_carga").html(html);
                 $("#tarjeta_signosV_title").html(html2);
             },

@@ -180,7 +180,7 @@
 											<option value="{{$item->id}}">{{$item->dmi_nombre}}</option>
 											@endforeach
 										</select>
-									</div>
+									</div> 
 									<div class="input-group"> <span class="input-group-addon">Cantidad</span>
 										<input type="text"  name="cantidad"  class="form-control" placeholder="....">
 									</div>

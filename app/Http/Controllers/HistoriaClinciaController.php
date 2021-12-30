@@ -70,8 +70,11 @@ class HistoriaClinciaController extends Controller
     public function showSigVi(Request $request)
     {
         $sv = signosvitales::where('sv_idPaciente', $request->input('id'))->latest('id')->first();
+        if ($sv == null) {
+            return 'sin datos';
+        }
         $date = $sv['created_at'];
-        $date = Carbon::parse($date)->format('Y-m-d');
+       return $date = Carbon::parse($date)->format('Y-m-d');
         if ($date == Carbon::now()->format('Y-m-d')) {
             $estado = 1;
         } else {
