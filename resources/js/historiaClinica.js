@@ -3,7 +3,7 @@ function colaPacienteMedAten() {
         type: "get",
         url: "historiaClinica/colaPacienteMedAten",
         data: "data",
-        dataType: "json",
+        // dataType: "json",
         success: function (response) {
             console.log(response);
             var html2 = response
@@ -76,7 +76,7 @@ function showSigVi(e) {
                 console.log(response.sv);
                 console.log(response);
                 if (response == 'sin datos') {
-                    break;
+                    
                 }
                 html = ``;
                 if (response.sv == null) {

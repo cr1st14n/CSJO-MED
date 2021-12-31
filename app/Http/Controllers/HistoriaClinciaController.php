@@ -18,38 +18,7 @@ class HistoriaClinciaController extends Controller
     {
         $this->middleware('auth');
     }
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\historiaClincia  $historiaClincia
-     * @return \Illuminate\Http\Response
-     */
     public function showHCL(Request $request)
     {
         $paciente = pacientes::where('pa_id', $request->input('id'))->first();
@@ -74,7 +43,7 @@ class HistoriaClinciaController extends Controller
             return 'sin datos';
         }
         $date = $sv['created_at'];
-       return $date = Carbon::parse($date)->format('Y-m-d');
+        return $date = Carbon::parse($date)->format('Y-m-d');
         if ($date == Carbon::now()->format('Y-m-d')) {
             $estado = 1;
         } else {
@@ -84,20 +53,6 @@ class HistoriaClinciaController extends Controller
         return ['sv' => $sv, 'date' => $date, 'estado' => $estado];
     }
 
-    public function edit(historiaClincia $historiaClincia)
-    {
-        //
-    }
-
-    public function update(Request $request, historiaClincia $historiaClincia)
-    {
-        //
-    }
-
-    public function destroy(historiaClincia $historiaClincia)
-    {
-        //
-    }
     public function colaPacienteMedAten(Request $request)
     {
         // citPrev::join('pacientes','pacientes.pa_id','cp_paciente')
@@ -105,12 +60,14 @@ class HistoriaClinciaController extends Controller
         // ->select('cit_prevs.*','pacientes.pa_nombre','pacientes.pa_appaterno')
         // ->get();
 
+
         $resp = atencion::where('atencion.ate_estAteMed', 0)
             ->Where('ate_med', Auth::user()->id)
             ->Where('ate_pago', 'cancelado')
             ->whereDate('atencion.created_at', Carbon::now()->format('Y-m-d'))
             ->join('pacientes as pa', 'pa.pa_id', 'atencion.pa_id')
             ->select('atencion.id', 'atencion.pa_id', 'atencion.ate_procedimiento', 'pa.pa_nombre', 'pa.pa_appaterno')->limit('10')->get();
+
         return $resp;
     }
     public function nroPacienteCola()
