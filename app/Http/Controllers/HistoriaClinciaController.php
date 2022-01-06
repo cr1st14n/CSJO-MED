@@ -38,6 +38,7 @@ class HistoriaClinciaController extends Controller
 
     public function showSigVi(Request $request)
     {
+        
         $sv = signosvitales::where('sv_idPaciente', $request->input('id'))->latest('id')->first();
         if ($sv == null) {
             return 'sin datos';
