@@ -297,6 +297,44 @@
 								</div> -->
 							</div>
 						</section>
+						<section class="panel">
+							<header class="panel-heading" id="tarjeta_signosV_title">
+								<h4><strong>Motivo de la Consulta</strong>
+							</header>
+							<div class=" panel-body align-xs-center">
+								<div id="sector_ani_carga_2"></div>
+								<!-- <button type="button" class="btn btn-primary btn-transparent"><i class="fa fa-comment-o"></i> Reporte RX</button> -->
+								<!-- <table width="100%" id="table_SV_data">
+									<tr align="left">
+										<td style="width:50%">
+											P.A. : <strong>1</strong><br>
+											F.C. : <strong>1</strong><br>
+											F.R. : <strong>1</strong><br>
+											Sat. : <strong>1</strong><br>
+										</td>
+										<td style="width:50%">
+											Temp. : <strong>1</strong><br>
+											Peso : <strong>1</strong><br>
+											Talla : <strong>1</strong><br>
+											IMC : <strong>1</strong><br>
+										</td>
+									</tr>
+								</table>
+								<div class="contenedor">
+									<span class="char1">C</span>
+									<span class="char2">A</span>
+									<span class="char3">R</span>
+									<span class="char4">G</span>
+									<span class="char5">A</span>
+									<span class="char6">N</span>
+									<span class="char7">D</span>
+									<span class="char8">O</span>
+								</div>
+								<div class="carga">
+									<div class="barra"></div>
+								</div> -->
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>

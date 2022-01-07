@@ -15,7 +15,7 @@ function colaPacienteMedAten() {
                             </div>
                             <button class="btn btn-theme-inverse btn-xs" onclick="concluirCita(${e.id})"><i class="fa fa-check"></i></button>
                             <p style=" color:tan; ">${e.ate_procedimiento}</p>
-                             <a href="#" onclick="showHistoriaClinica(${e.pa_id})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
+                             <a href="#" onclick="showHistoriaClinica(${e.pa_id},${e.id})" style=" color:aliceblue; "><h5>${e.pa_nombre} ${e.pa_appaterno}</h5></a>
                         </div>`);
                 })
                 .join(" ");
@@ -48,9 +48,10 @@ function concluirCita(id) {
 }
 // *-------------------------------------
 
-function showHistoriaClinica(paciente) {
-    console.log(paciente);
+function showHistoriaClinica(paciente, idAtencion) {
+    console.log(idAtencion);
     idPacienteSelect = paciente;
+    idAtencionSelect = idAtencion;
     $("#form_new_cotizacion").trigger("reset");
     $.ajax({
         type: "GET",
@@ -70,7 +71,7 @@ function showSigVi(e) {
         $.ajax({
             type: "get",
             url: "historiaClinica/showSigVi",
-            data: { id: idPacienteSelect },
+            data: { id: idPacienteSelect , id2:idAtencionSelect },
             // dataType: "dataType",
             success: function (response) {
                 console.log(response.sv);
@@ -128,6 +129,7 @@ function showSigVi(e) {
         });
     }, 3000);
 }
+
 $("#btn_showFormConsulta").click(function () {
     console.log(idPacienteSelect);
 });

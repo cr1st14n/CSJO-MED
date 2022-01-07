@@ -51,6 +51,9 @@ class HistoriaClinciaController extends Controller
             $estado = 0;
         }
         // return $date;
+
+        $mc=atencion::where('id',$request->input('id2'))->first()->value('ate_descripcion');                    
+        
         return ['sv' => $sv, 'date' => $date, 'estado' => $estado];
     }
 
