@@ -38,23 +38,28 @@ class HistoriaClinciaController extends Controller
 
     public function showSigVi(Request $request)
     {
-        
+        $sv = '';
+        $date = '';
+        $estado = '';
         $sv = signosvitales::where('sv_idPaciente', $request->input('id'))->latest('id')->first();
         if ($sv == null) {
-            return 'sin datos';
+            // return 'sin datos';
+            $sv = 'sin datos';
+            
+        }else {
+            $date = $sv['created_at'];
+            if ($date == Carbon::now()->format('Y-m-d')) {
+                $estado = 1;
+            } else {
+                $estado = 0;
+            }
         }
-        $date = $sv['created_at'];
-        return $date = Carbon::parse($date)->format('Y-m-d');
-        if ($date == Carbon::now()->format('Y-m-d')) {
-            $estado = 1;
-        } else {
-            $estado = 0;
-        }
+        // return $date = Carbon::parse($date)->format('Y-m-d');
         // return $date;
 
-        $mc=atencion::where('id',$request->input('id2'))->first()->value('ate_descripcion');                    
-        
-        return ['sv' => $sv, 'date' => $date, 'estado' => $estado];
+        $mc = atencion::where('id', $request->input('id2'))->value('ate_descripcion');
+
+        return ['sv' => $sv, 'date' => $date, 'estado' => $estado, 'mc' => $mc];
     }
 
     public function colaPacienteMedAten(Request $request)

@@ -39,6 +39,13 @@ function concluirCita(id) {
             console.log(response["estado"]);
             if (response["estado"]) {
                 $("#fichaOrden_" + response["id"]).remove();
+                $("#panel1").html('');
+                
+                $("#sector_ani_carga").html('');
+                $("#sector_ani_carga_2").html('');
+                $("#tarjeta_signosV_title").html('');
+
+
                 colaPacienteMedAten();
             } else {
                 console.log("no funciono");
@@ -62,6 +69,8 @@ function showHistoriaClinica(paciente, idAtencion) {
             $("#panel1").html(dat);
             $("#md-listPacientesEspera").modal("hide");
             $("#sector_ani_carga").html(html_ani_carga);
+            $("#sector_ani_carga_2").html("");
+
             showSigVi();
         },
     });
@@ -71,16 +80,18 @@ function showSigVi(e) {
         $.ajax({
             type: "get",
             url: "historiaClinica/showSigVi",
-            data: { id: idPacienteSelect , id2:idAtencionSelect },
+            data: { id: idPacienteSelect, id2: idAtencionSelect },
             // dataType: "dataType",
             success: function (response) {
                 console.log(response.sv);
                 console.log(response);
-                if (response == 'sin datos') {
-                    
+                if (response.mc != null) {
+                    html3 = `
+                <h4>${response.mc}</h4>
+                `;
                 }
                 html = ``;
-                if (response.sv == null) {
+                if (response.sv == "sin datos") {
                     html = `
                 <h4>Sin Registros</h4>
                 `;
@@ -125,6 +136,7 @@ function showSigVi(e) {
 
                 $("#sector_ani_carga").html(html);
                 $("#tarjeta_signosV_title").html(html2);
+                $("#sector_ani_carga_2").html(html3);
             },
         });
     }, 3000);
