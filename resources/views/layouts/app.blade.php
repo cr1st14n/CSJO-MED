@@ -921,6 +921,16 @@
 				<div class="modal-body" style="padding:0">
 					<div class="widget-im notification">
 						<div class="panel-body">
+							<h4>Datos de Facturacion</h4>
+							<div class="form-group ">
+								<div>
+									<div class="input-group"> <span class="input-group-addon"># de Factura</span>
+										<input type="text" class="form-control" placeholder="#.">
+									</div>
+
+								</div>
+							</div>
+							<hr>
 							<div class="row">
 								<div class="col-lg-7">
 									<div class="col-md-12">
